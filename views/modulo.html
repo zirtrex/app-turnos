@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contador</title>
+	<link rel='stylesheet' type="text/css" href='/stylesheets/uikit.css'></link>
+	<link rel='stylesheet' type="text/css" href='/stylesheets/style.css'></link>
+</head>
+<body class="uk-container uk-margin-medium">
+	<div id="app">
+		<h1>Módulo: {{modulo.modulo}}</h1>
+		<h2>Trámite: {{modulo.tramite}}
+			<a href="/cambiar" class="uk-button uk-button-default"> Cambiar Trámite</a>
+		</h2>
+		<p class="uk-text-large"> Actualmente estás atendiendo al número:
+			<span id="actual"> {{modulo.contador}}</span>
+		</p>
+		<hr/>
+		<button type="button" v-on:click="call_again" name="call_again" class="uk-button uk-button-secundary uk-button-large">Call Again</button>
+		<button type="button" v-on:click="contador" name="contador" class="uk-button uk-button-primary uk-button-large">Next</button>
+
+	</div>
+
+	<script src="/socket.io/socket.io.js"></script>
+    <script src="../javascripts/vue.min.js"></script>
+    <script src="../javascripts/axios.min.js"></script>
+
+	<script type="text/javascript">
+
+		var ipServidor = "";
+
+		fetch("/config.json").then(function(response) {
+		  	var contentType = response.headers.get("content-type");
+		  	if(contentType && contentType.indexOf("application/json") !== -1) {
+		    	return response.json().then(function(json) {
+			      	ipServidor = json.ip_servidor;
+			    });
+		  	} else {
+		    	console.log("Oops, we haven't got JSON!");
+		  	}
+		});
+
+		var channel = "COUNT_CHANNEL";
+		var socket = io.connect(ipServidor, {reconnection: true});
+
+		var app = new Vue({
+			el: '#app',
+			data: {
+		    	modulo: {"modulo":"", "tramite":"", "estado":false, "perAtendidas":null, "contador":0, "fecha":null}
+		  	},
+		  	created: function () {
+
+		  		this.actualizar();
+
+		  		socket.on('connect', function(data){
+
+		  			socket.emit("Creando_Modulo", { 'channel': channel});
+		  			console.log("Conectando al servidor");
+
+				});
+
+				socket.on('modulo_' + channel, function(data){
+
+		  			this.actualizar();
+
+				}.bind(this));
+
+		  	},
+		  	methods: {
+		  		call_again: function(e){
+					e.preventDefault();
+
+					if(this.modulo != null ){
+						console.log("Enviando datos al server para volver a llamar.");
+		  				socket.emit("call_again", { 'channel': channel, 'modulo': this.modulo });
+		  			}
+				},
+				contador: function(e){
+					e.preventDefault();
+
+					if(this.modulo != null ){
+						console.log("Enviando datos al server para aumentar el contador");
+		  				socket.emit("aumentar", { 'channel': channel, 'modulo': this.modulo });
+		  			}
+				},
+				actualizar: function(){
+					axios.get('/show/modulo')
+                    .then(function (response) {
+
+                    	console.log("Recibiendo modulo con Axios: ");
+                    	console.log(response.data);
+                       	this.modulo = response.data;
+
+                    }.bind(this));
+				}
+		  	}
+		});
+
+	</script>
+</body>
+</html>

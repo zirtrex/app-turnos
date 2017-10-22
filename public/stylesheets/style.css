@@ -1,0 +1,96 @@
+body {
+  padding: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.uk-cover-container{
+    position: relative;
+    width: auto;
+    margin: 0 auto;
+}
+
+#contenedor{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.uk-grid-small > * {
+    padding-left: 5px;
+}
+
+.uk-margin-bottomn {
+  display: inline-block;
+  margin-right: 0px;
+
+}
+
+.uk-card-header{
+  background-color: #A97AFF;
+  padding: 10px 20px;
+  opacity: 0.8;
+}
+
+.uk-card-header h3{
+  opacity: 1;
+}
+
+.uk-card-body{
+  background-color: #FF9100;
+  padding: 20px;
+  opacity: 0.9;
+}
+
+.uk-card-body {
+    
+}
+
+.uk-card-default{
+  background-color: #fff;
+  opacity: 0.9;
+}
+
+.uk-card-footer{
+    background-color: #7AADFF;
+    padding: 10px 20px;
+    opacity: 0.9;
+}
+
+.bounce-enter .uk-card-body{
+    animation: bounce-in 2.5s;	
+}
+
+.bounce-enter-active .uk-card-body{
+
+  animation: bounce-in 2.5s;
+}
+.bounce-leave-active .uk-card-body{
+  animation: bounce-in 2.5s reverse;
+}
+.bounce-leave .uk-card-body{
+  animation: bounce-in 2.5s reverse;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+    background-color: #fff;
+  }
+  25% {
+    background-color: #7AFF8E;
+  }
+  50% {
+    background-color: #fff;
+  }
+  75% {
+    background-color: #7AFF8E;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #fff;
+  }
+}

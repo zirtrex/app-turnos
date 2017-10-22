@@ -1,0 +1,35 @@
+extends layout
+
+block content
+	h1 #{titulo} 
+		if typeof modulo !== "undefined"
+			<span>(#{modulo})</span>
+		else
+			<span></span>
+	p Fecha: #{fecha}
+	form(action="/modulo", name="elegir-modulo", method="POST")
+		if typeof modulo !== "undefined"
+			input(type="hidden", name="modulo" value="#{modulo}")
+		else
+			div(class="uk-margin")
+				select(id="modulo", name="modulo", class="uk-select")
+					option(value="modulo_1") Módulo 1
+					option(value="modulo_2") Módulo 2
+					option(value="modulo_3") Módulo 3
+					option(value="modulo_4") Módulo 4
+					option(value="modulo_5") Módulo 5
+					option(value="modulo_6") Módulo 6
+					option(value="modulo_7") Módulo 7
+					option(value="modulo_8") Módulo 8
+					option(value="modulo_9") Módulo 9
+					option(value="modulo_10") Módulo 10
+		div(class="uk-margin")
+			select(id="tramite", name="tramite", class="uk-select")
+				option(value="pasaportes") Pasaportes
+				option(value="legalizaciones") Legalizaciones
+				option(value="cedulas") Cedulas
+				option(value="poderes") Poderes
+		div(class="uk-margin")
+			input(type="submit", value="Elegir", class="uk-button uk-button-primary")
+		
+    

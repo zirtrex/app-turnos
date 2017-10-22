@@ -1,0 +1,64 @@
+pasaportes (PA0001, PA0002 , PA0003 ,PA0004) 42 -> P1
+legalizaciones () 3 
+cédulas () 2
+poderes (P) 2
+
+	<!--<script src="/socket.io/socket.io.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.min.js"></script>-->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="/javascripts/uikit.min.js"> </script>
+		
+		
+		<div class="uk-card uk-card-default">
+	            	<div class="uk-card-header"><h3 class="uk-card-title uk-text-center uk-text-uppercase">{{modulo.tramite}}</h3></div>
+	            	<div class="uk-card-body"><h1 class="uk-text-center">{{modulo.datos.contador}}</h1></div>
+	            	<div class="uk-card-footer"><p class="uk-text-center uk-text-uppercase uk-text-large">{{ modulo.modulo 
+	            		 }}</p></div>
+	        	</div>
+				
+				<item v-for="(modulo, index) in modulos" v-bind:key="modulo.id" v-bind:data-index="index" v-bind:id="getModulo(index).modulo" class="list-complete uk-margin-bottom">
+				
+	        </item>
+			
+			v-on:before-enter="beforeEnter" v-on:enter="enter" v-on:leave="leave" v-bind:css="false"  class="uk-grid uk-child-width-1-2@s uk-child-width-1-4@m"
+
+
+/*socket.on('modulo', function(data){
+	//alert(data.modulo);
+	var contenedor = document.getElementById("contenedor");
+	var modulo = document.getElementById(data.modulo);	
+
+	if(modulo != null){
+
+		console.log("Actualizando Elemento existente!");
+
+		if(data.estado){
+			var h1 = modulo.querySelector("h1");
+			h1.innerText = data.contador;
+			//Reproducir audio
+			var audioElm = document.getElementById("audio"); // Audio element
+			audioElm.src = document.getElementById('audioFile').value;
+		    audioElm.play();
+		}
+		else{
+			contenedor.removeChild(modulo);
+		}
+			
+	}else{
+		console.log("Creando nuevo Elemento!");
+
+		var text = '<div class="uk-card uk-card-default"><div class="uk-card-header"><h3 class="uk-card-title uk-text-center uk-text-uppercase">'+data.tramite+'</h3></div><div class="uk-card-body"><h1 class="uk-text-center">'+data.contador+'</h1></div><div class="uk-card-footer"><p class="uk-text-center uk-text-uppercase uk-text-large">'+data.modulo+'</p></div></div>';
+
+		var modulo = document.createElement('div');
+		modulo.id = data.modulo;
+		modulo.classList.add("uk-margin-bottom");
+
+		modulo.innerHTML = text;
+		contenedor.appendChild(modulo);
+
+		var audioElm = document.getElementById("audio"); // Audio element
+		audioElm.src = document.getElementById('audioFile').value;
+		audioElm.play();
+	}
+	
+});*/

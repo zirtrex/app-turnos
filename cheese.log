@@ -1,0 +1,1179 @@
+[2017-10-16 22:48:55.270] [DEBUG] cheese - 2017-10-17T03:48:55.268Z
+[2017-10-16 22:49:27.512] [DEBUG] cheese - 2017-10-17T03:49:27.511Z
+[2017-10-16 22:50:18.641] [DEBUG] cheese - Nuevo: { __v: 0,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  _id: 59e57dfac5b7e530d813f90d,
+  datos: { atendidos: 0, contador: 0 } }
+[2017-10-16 22:50:50.051] [DEBUG] cheese - Numero: 0
+[2017-10-16 22:50:50.052] [DEBUG] cheese - Numeros: 0
+[2017-10-16 22:50:50.052] [DEBUG] cheese - Maximo: 0
+[2017-10-16 22:50:50.061] [DEBUG] cheese - Guardado: { _id: 59e57dfac5b7e530d813f90d,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 1, contador: 1 } }
+[2017-10-16 22:50:50.061] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 22:50:50.063] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 22:50:51.228] [DEBUG] cheese - Numero: 1
+[2017-10-16 22:50:51.229] [DEBUG] cheese - Numeros: 1
+[2017-10-16 22:50:51.229] [DEBUG] cheese - Maximo: 1
+[2017-10-16 22:50:51.234] [DEBUG] cheese - Guardado: { _id: 59e57dfac5b7e530d813f90d,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 2, contador: 2 } }
+[2017-10-16 22:50:51.234] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 22:50:51.234] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 22:50:52.251] [DEBUG] cheese - Numero: 2
+[2017-10-16 22:50:52.251] [DEBUG] cheese - Numeros: 2
+[2017-10-16 22:50:52.251] [DEBUG] cheese - Maximo: 2
+[2017-10-16 22:50:52.255] [DEBUG] cheese - Guardado: { _id: 59e57dfac5b7e530d813f90d,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 3, contador: 3 } }
+[2017-10-16 22:50:52.255] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 22:50:52.256] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 22:51:49.877] [DEBUG] cheese - 2017-10-17T03:51:49.877Z
+[2017-10-16 22:51:54.940] [DEBUG] cheese - Nuevo: { __v: 0,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  _id: 59e57e5ac5b7e530d813f90e,
+  datos: { atendidos: 0, contador: 0 } }
+[2017-10-16 22:52:21.624] [DEBUG] cheese - 2017-10-17T03:52:21.624Z
+[2017-10-16 22:53:02.555] [DEBUG] cheese - Ya existe: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 0, contador: 0 } }
+[2017-10-16 22:58:59.003] [DEBUG] cheese - Ya existe: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 0, contador: 0 } }
+[2017-10-16 22:59:01.662] [DEBUG] cheese - Numero: 3
+[2017-10-16 22:59:01.663] [DEBUG] cheese - Numero: 0
+[2017-10-16 22:59:01.663] [DEBUG] cheese - Numeros: 3,0
+[2017-10-16 22:59:01.663] [DEBUG] cheese - Maximo: 3
+[2017-10-16 22:59:01.667] [DEBUG] cheese - Guardado: { _id: 59e57dfac5b7e530d813f90d,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-14',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 4, contador: 4 } }
+[2017-10-16 22:59:01.668] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 22:59:01.670] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 22:59:06.864] [DEBUG] cheese - Numero: 4
+[2017-10-16 22:59:06.864] [DEBUG] cheese - Numero: 0
+[2017-10-16 22:59:06.864] [DEBUG] cheese - Numeros: 4,0
+[2017-10-16 22:59:06.864] [DEBUG] cheese - Maximo: 4
+[2017-10-16 22:59:06.868] [DEBUG] cheese - Guardado: { _id: 59e57dfac5b7e530d813f90d,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-14',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 5, contador: 5 } }
+[2017-10-16 22:59:06.868] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 22:59:06.870] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 22:59:12.281] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:01:42.291] [DEBUG] cheese - Ya existe: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 0, contador: 0 } }
+[2017-10-16 23:01:46.739] [DEBUG] cheese - Numero: 0
+[2017-10-16 23:01:46.740] [DEBUG] cheese - Numeros: 0
+[2017-10-16 23:01:46.740] [DEBUG] cheese - Maximo: 0
+[2017-10-16 23:01:46.750] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 1, contador: 1 } }
+[2017-10-16 23:01:46.750] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:01:46.752] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:01:48.130] [DEBUG] cheese - Numero: 1
+[2017-10-16 23:01:48.131] [DEBUG] cheese - Numeros: 1
+[2017-10-16 23:01:48.131] [DEBUG] cheese - Maximo: 1
+[2017-10-16 23:01:48.139] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 2, contador: 2 } }
+[2017-10-16 23:01:48.139] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:01:48.140] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:01:49.111] [DEBUG] cheese - Numero: 2
+[2017-10-16 23:01:49.112] [DEBUG] cheese - Numeros: 2
+[2017-10-16 23:01:49.112] [DEBUG] cheese - Maximo: 2
+[2017-10-16 23:01:49.118] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 3, contador: 3 } }
+[2017-10-16 23:01:49.118] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:01:49.119] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:02:10.477] [DEBUG] cheese - Numero: 3
+[2017-10-16 23:02:10.478] [DEBUG] cheese - Numeros: 3
+[2017-10-16 23:02:10.478] [DEBUG] cheese - Maximo: 3
+[2017-10-16 23:02:10.484] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 4, contador: 4 } }
+[2017-10-16 23:02:10.484] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:02:10.485] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:06:44.619] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:07:44.875] [DEBUG] cheese - Numero: 4
+[2017-10-16 23:07:44.875] [DEBUG] cheese - Numeros: 4
+[2017-10-16 23:07:44.875] [DEBUG] cheese - Maximo: 4
+[2017-10-16 23:07:44.899] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 5, contador: 5 } }
+[2017-10-16 23:07:44.899] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:07:44.903] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:07:54.373] [DEBUG] cheese - Numero: 5
+[2017-10-16 23:07:54.374] [DEBUG] cheese - Numeros: 5
+[2017-10-16 23:07:54.374] [DEBUG] cheese - Maximo: 5
+[2017-10-16 23:07:54.379] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 6, contador: 6 } }
+[2017-10-16 23:07:54.379] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:07:54.381] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:08:14.021] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:08:14.021] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:08:19.155] [DEBUG] cheese - Numero: 6
+[2017-10-16 23:08:19.155] [DEBUG] cheese - Numeros: 6
+[2017-10-16 23:08:19.155] [DEBUG] cheese - Maximo: 6
+[2017-10-16 23:08:19.160] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 7, contador: 7 } }
+[2017-10-16 23:08:19.160] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:08:19.161] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:08:21.321] [DEBUG] cheese - Numero: 7
+[2017-10-16 23:08:21.322] [DEBUG] cheese - Numeros: 7
+[2017-10-16 23:08:21.322] [DEBUG] cheese - Maximo: 7
+[2017-10-16 23:08:21.327] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 8, contador: 8 } }
+[2017-10-16 23:08:21.327] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:08:21.328] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:08:23.311] [DEBUG] cheese - Numero: 8
+[2017-10-16 23:08:23.312] [DEBUG] cheese - Numeros: 8
+[2017-10-16 23:08:23.312] [DEBUG] cheese - Maximo: 8
+[2017-10-16 23:08:23.318] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 9, contador: 9 } }
+[2017-10-16 23:08:23.319] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:08:23.319] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:08:24.826] [DEBUG] cheese - Numero: 9
+[2017-10-16 23:08:24.827] [DEBUG] cheese - Numeros: 9
+[2017-10-16 23:08:24.827] [DEBUG] cheese - Maximo: 9
+[2017-10-16 23:08:24.840] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 10, contador: 10 } }
+[2017-10-16 23:08:24.840] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:08:24.841] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:09:35.230] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:09:35.230] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:09:35.231] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:09:39.995] [DEBUG] cheese - Numero: 10
+[2017-10-16 23:09:39.995] [DEBUG] cheese - Numeros: 10
+[2017-10-16 23:09:39.995] [DEBUG] cheese - Maximo: 10
+[2017-10-16 23:09:40.002] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 11, contador: 11 } }
+[2017-10-16 23:09:40.002] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:09:40.003] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:09:42.220] [DEBUG] cheese - Numero: 11
+[2017-10-16 23:09:42.221] [DEBUG] cheese - Numeros: 11
+[2017-10-16 23:09:42.221] [DEBUG] cheese - Maximo: 11
+[2017-10-16 23:09:42.225] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 12, contador: 12 } }
+[2017-10-16 23:09:42.225] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:09:42.226] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:09:46.262] [DEBUG] cheese - Numero: 12
+[2017-10-16 23:09:46.262] [DEBUG] cheese - Numeros: 12
+[2017-10-16 23:09:46.262] [DEBUG] cheese - Maximo: 12
+[2017-10-16 23:09:46.269] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 13, contador: 13 } }
+[2017-10-16 23:09:46.269] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:09:46.270] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:10:05.998] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:10:05.998] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:10:05.998] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:10:05.999] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:10:11.991] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:10:11.992] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:10:11.992] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:10:11.992] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:10:11.992] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:10:15.406] [DEBUG] cheese - Numero: 13
+[2017-10-16 23:10:15.406] [DEBUG] cheese - Numeros: 13
+[2017-10-16 23:10:15.406] [DEBUG] cheese - Maximo: 13
+[2017-10-16 23:10:15.412] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 14, contador: 14 } }
+[2017-10-16 23:10:15.412] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:10:15.415] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:10:18.118] [DEBUG] cheese - Numero: 14
+[2017-10-16 23:10:18.118] [DEBUG] cheese - Numeros: 14
+[2017-10-16 23:10:18.118] [DEBUG] cheese - Maximo: 14
+[2017-10-16 23:10:18.123] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 15, contador: 15 } }
+[2017-10-16 23:10:18.123] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:10:18.124] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:10:20.033] [DEBUG] cheese - Numero: 15
+[2017-10-16 23:10:20.034] [DEBUG] cheese - Numeros: 15
+[2017-10-16 23:10:20.034] [DEBUG] cheese - Maximo: 15
+[2017-10-16 23:10:20.039] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 16, contador: 16 } }
+[2017-10-16 23:10:20.039] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:10:20.040] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:10:23.008] [DEBUG] cheese - Numero: 16
+[2017-10-16 23:10:23.008] [DEBUG] cheese - Numeros: 16
+[2017-10-16 23:10:23.008] [DEBUG] cheese - Maximo: 16
+[2017-10-16 23:10:23.013] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 17, contador: 17 } }
+[2017-10-16 23:10:23.013] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:10:23.014] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:10:24.487] [DEBUG] cheese - Numero: 17
+[2017-10-16 23:10:24.487] [DEBUG] cheese - Numeros: 17
+[2017-10-16 23:10:24.487] [DEBUG] cheese - Maximo: 17
+[2017-10-16 23:10:24.492] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 18, contador: 18 } }
+[2017-10-16 23:10:24.493] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:10:24.493] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:10:25.672] [DEBUG] cheese - Numero: 18
+[2017-10-16 23:10:25.673] [DEBUG] cheese - Numeros: 18
+[2017-10-16 23:10:25.673] [DEBUG] cheese - Maximo: 18
+[2017-10-16 23:10:25.678] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 19, contador: 19 } }
+[2017-10-16 23:10:25.679] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:10:25.680] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:10:27.168] [DEBUG] cheese - Numero: 19
+[2017-10-16 23:10:27.170] [DEBUG] cheese - Numeros: 19
+[2017-10-16 23:10:27.177] [DEBUG] cheese - Maximo: 19
+[2017-10-16 23:10:27.184] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 20, contador: 20 } }
+[2017-10-16 23:10:27.184] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:10:27.184] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:11:22.017] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:11:22.017] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:11:22.017] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:11:22.018] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:11:22.018] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:11:22.018] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:11:28.485] [DEBUG] cheese - Numero: 20
+[2017-10-16 23:11:28.485] [DEBUG] cheese - Numeros: 20
+[2017-10-16 23:11:28.485] [DEBUG] cheese - Maximo: 20
+[2017-10-16 23:11:28.496] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 21, contador: 21 } }
+[2017-10-16 23:11:28.496] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:11:28.496] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:11:30.726] [DEBUG] cheese - Numero: 21
+[2017-10-16 23:11:30.726] [DEBUG] cheese - Numeros: 21
+[2017-10-16 23:11:30.727] [DEBUG] cheese - Maximo: 21
+[2017-10-16 23:11:30.730] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 22, contador: 22 } }
+[2017-10-16 23:11:30.730] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:11:30.730] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:11:32.862] [DEBUG] cheese - Numero: 22
+[2017-10-16 23:11:32.863] [DEBUG] cheese - Numeros: 22
+[2017-10-16 23:11:32.863] [DEBUG] cheese - Maximo: 22
+[2017-10-16 23:11:32.866] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 23, contador: 23 } }
+[2017-10-16 23:11:32.866] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:11:32.867] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:11:35.531] [DEBUG] cheese - Numero: 23
+[2017-10-16 23:11:35.531] [DEBUG] cheese - Numeros: 23
+[2017-10-16 23:11:35.531] [DEBUG] cheese - Maximo: 23
+[2017-10-16 23:11:35.536] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 24, contador: 24 } }
+[2017-10-16 23:11:35.536] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:11:35.537] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:11:51.924] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:11:51.924] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:11:51.924] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:11:51.924] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:11:51.924] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:11:51.924] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:11:51.924] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:11:59.638] [DEBUG] cheese - Numero: 24
+[2017-10-16 23:11:59.638] [DEBUG] cheese - Numeros: 24
+[2017-10-16 23:11:59.638] [DEBUG] cheese - Maximo: 24
+[2017-10-16 23:11:59.641] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 25, contador: 25 } }
+[2017-10-16 23:11:59.641] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:11:59.642] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:13:12.917] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:13:12.918] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:13:12.918] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:13:12.918] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:13:12.918] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:13:12.919] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:13:12.919] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:13:12.919] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:13:17.713] [DEBUG] cheese - Numero: 25
+[2017-10-16 23:13:17.714] [DEBUG] cheese - Numeros: 25
+[2017-10-16 23:13:17.714] [DEBUG] cheese - Maximo: 25
+[2017-10-16 23:13:17.718] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 26, contador: 26 } }
+[2017-10-16 23:13:17.718] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:13:17.719] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:13:19.808] [DEBUG] cheese - Numero: 26
+[2017-10-16 23:13:19.808] [DEBUG] cheese - Numeros: 26
+[2017-10-16 23:13:19.808] [DEBUG] cheese - Maximo: 26
+[2017-10-16 23:13:19.812] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 27, contador: 27 } }
+[2017-10-16 23:13:19.812] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:13:19.812] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:13:21.575] [DEBUG] cheese - Numero: 27
+[2017-10-16 23:13:21.575] [DEBUG] cheese - Numeros: 27
+[2017-10-16 23:13:21.576] [DEBUG] cheese - Maximo: 27
+[2017-10-16 23:13:21.580] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 28, contador: 28 } }
+[2017-10-16 23:13:21.580] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:13:21.580] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:13:23.495] [DEBUG] cheese - Numero: 28
+[2017-10-16 23:13:23.495] [DEBUG] cheese - Numeros: 28
+[2017-10-16 23:13:23.495] [DEBUG] cheese - Maximo: 28
+[2017-10-16 23:13:23.500] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 29, contador: 29 } }
+[2017-10-16 23:13:23.500] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:13:23.502] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:13:24.987] [DEBUG] cheese - Numero: 29
+[2017-10-16 23:13:24.987] [DEBUG] cheese - Numeros: 29
+[2017-10-16 23:13:24.987] [DEBUG] cheese - Maximo: 29
+[2017-10-16 23:13:24.992] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 30, contador: 30 } }
+[2017-10-16 23:13:24.992] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:13:24.993] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:13:26.613] [DEBUG] cheese - Numero: 30
+[2017-10-16 23:13:26.614] [DEBUG] cheese - Numeros: 30
+[2017-10-16 23:13:26.614] [DEBUG] cheese - Maximo: 30
+[2017-10-16 23:13:26.618] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 31, contador: 31 } }
+[2017-10-16 23:13:26.619] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:13:26.619] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:15:18.236] [DEBUG] cheese - 2017-10-17T04:15:18.236Z
+[2017-10-16 23:15:25.829] [DEBUG] cheese - Nuevo: { __v: 0,
+  modulo: 'modulo_2',
+  tramite: 'legalizaciones',
+  fecha: '2017-9-16',
+  estado: true,
+  _id: 59e583dd0d967532c45c5aa3,
+  datos: { atendidos: 0, contador: 0 } }
+[2017-10-16 23:15:28.508] [DEBUG] cheese - Numero: 0
+[2017-10-16 23:15:28.509] [DEBUG] cheese - Numeros: 0
+[2017-10-16 23:15:28.509] [DEBUG] cheese - Maximo: 0
+[2017-10-16 23:15:28.524] [DEBUG] cheese - Guardado: { _id: 59e583dd0d967532c45c5aa3,
+  modulo: 'modulo_2',
+  tramite: 'legalizaciones',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 1, contador: 1 } }
+[2017-10-16 23:15:28.524] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:15:28.525] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:19:06.412] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:19:06.413] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:19:06.413] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:19:06.414] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:19:06.414] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:19:06.414] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:19:06.414] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:19:06.414] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:19:06.415] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:19:10.567] [DEBUG] cheese - Numero: 1
+[2017-10-16 23:19:10.567] [DEBUG] cheese - Numeros: 1
+[2017-10-16 23:19:10.567] [DEBUG] cheese - Maximo: 1
+[2017-10-16 23:19:10.576] [DEBUG] cheese - Guardado: { _id: 59e583dd0d967532c45c5aa3,
+  modulo: 'modulo_2',
+  tramite: 'legalizaciones',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 2, contador: 2 } }
+[2017-10-16 23:19:10.576] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:19:10.577] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:19:23.174] [DEBUG] cheese - Numero: 2
+[2017-10-16 23:19:23.174] [DEBUG] cheese - Numeros: 2
+[2017-10-16 23:19:23.174] [DEBUG] cheese - Maximo: 2
+[2017-10-16 23:19:23.178] [DEBUG] cheese - Guardado: { _id: 59e583dd0d967532c45c5aa3,
+  modulo: 'modulo_2',
+  tramite: 'legalizaciones',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 3, contador: 3 } }
+[2017-10-16 23:19:23.178] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:19:23.179] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:19:39.361] [DEBUG] cheese - Numero: 3
+[2017-10-16 23:19:39.361] [DEBUG] cheese - Numeros: 3
+[2017-10-16 23:19:39.362] [DEBUG] cheese - Maximo: 3
+[2017-10-16 23:19:39.364] [DEBUG] cheese - Guardado: { _id: 59e583dd0d967532c45c5aa3,
+  modulo: 'modulo_2',
+  tramite: 'legalizaciones',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 4, contador: 4 } }
+[2017-10-16 23:19:39.365] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:19:39.365] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:19:41.055] [DEBUG] cheese - Numero: 4
+[2017-10-16 23:19:41.056] [DEBUG] cheese - Numeros: 4
+[2017-10-16 23:19:41.056] [DEBUG] cheese - Maximo: 4
+[2017-10-16 23:19:41.064] [DEBUG] cheese - Guardado: { _id: 59e583dd0d967532c45c5aa3,
+  modulo: 'modulo_2',
+  tramite: 'legalizaciones',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 5, contador: 5 } }
+[2017-10-16 23:19:41.065] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:19:41.066] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:19:50.811] [DEBUG] cheese - Numero: 5
+[2017-10-16 23:19:50.811] [DEBUG] cheese - Numeros: 5
+[2017-10-16 23:19:50.811] [DEBUG] cheese - Maximo: 5
+[2017-10-16 23:19:50.815] [DEBUG] cheese - Guardado: { _id: 59e583dd0d967532c45c5aa3,
+  modulo: 'modulo_2',
+  tramite: 'legalizaciones',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 6, contador: 6 } }
+[2017-10-16 23:19:50.815] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:19:50.817] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:20:02.413] [DEBUG] cheese - Numero: 31
+[2017-10-16 23:20:02.413] [DEBUG] cheese - Numeros: 31
+[2017-10-16 23:20:02.413] [DEBUG] cheese - Maximo: 31
+[2017-10-16 23:20:02.421] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 32, contador: 32 } }
+[2017-10-16 23:20:02.421] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:20:02.423] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:20:06.132] [DEBUG] cheese - Numero: 32
+[2017-10-16 23:20:06.132] [DEBUG] cheese - Numeros: 32
+[2017-10-16 23:20:06.132] [DEBUG] cheese - Maximo: 32
+[2017-10-16 23:20:06.138] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 33, contador: 33 } }
+[2017-10-16 23:20:06.138] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:20:06.139] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:20:09.895] [DEBUG] cheese - Numero: 6
+[2017-10-16 23:20:09.896] [DEBUG] cheese - Numeros: 6
+[2017-10-16 23:20:09.896] [DEBUG] cheese - Maximo: 6
+[2017-10-16 23:20:09.899] [DEBUG] cheese - Guardado: { _id: 59e583dd0d967532c45c5aa3,
+  modulo: 'modulo_2',
+  tramite: 'legalizaciones',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 7, contador: 7 } }
+[2017-10-16 23:20:09.899] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:20:09.900] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:20:19.664] [DEBUG] cheese - Numero: 7
+[2017-10-16 23:20:19.664] [DEBUG] cheese - Numeros: 7
+[2017-10-16 23:20:19.665] [DEBUG] cheese - Maximo: 7
+[2017-10-16 23:20:19.668] [DEBUG] cheese - Guardado: { _id: 59e583dd0d967532c45c5aa3,
+  modulo: 'modulo_2',
+  tramite: 'legalizaciones',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 8, contador: 8 } }
+[2017-10-16 23:20:19.668] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:20:19.669] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:20:22.508] [DEBUG] cheese - Numero: 33
+[2017-10-16 23:20:22.508] [DEBUG] cheese - Numeros: 33
+[2017-10-16 23:20:22.508] [DEBUG] cheese - Maximo: 33
+[2017-10-16 23:20:22.513] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 34, contador: 34 } }
+[2017-10-16 23:20:22.513] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:20:22.513] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:21:50.139] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:21:50.139] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:21:50.139] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:21:50.140] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:21:50.140] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:21:50.140] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:21:50.140] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:21:50.140] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:21:50.140] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:21:50.140] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-16 23:22:17.897] [DEBUG] cheese - Numero: 34
+[2017-10-16 23:22:17.897] [DEBUG] cheese - Numeros: 34
+[2017-10-16 23:22:17.898] [DEBUG] cheese - Maximo: 34
+[2017-10-16 23:22:17.902] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 35, contador: 35 } }
+[2017-10-16 23:22:17.902] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:22:17.903] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:22:19.290] [DEBUG] cheese - Numero: 35
+[2017-10-16 23:22:19.290] [DEBUG] cheese - Numeros: 35
+[2017-10-16 23:22:19.290] [DEBUG] cheese - Maximo: 35
+[2017-10-16 23:22:19.295] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 36, contador: 36 } }
+[2017-10-16 23:22:19.296] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:22:19.296] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:22:20.357] [DEBUG] cheese - Numero: 36
+[2017-10-16 23:22:20.357] [DEBUG] cheese - Numeros: 36
+[2017-10-16 23:22:20.357] [DEBUG] cheese - Maximo: 36
+[2017-10-16 23:22:20.361] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 37, contador: 37 } }
+[2017-10-16 23:22:20.362] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:22:20.363] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:22:21.469] [DEBUG] cheese - Numero: 37
+[2017-10-16 23:22:21.469] [DEBUG] cheese - Numeros: 37
+[2017-10-16 23:22:21.469] [DEBUG] cheese - Maximo: 37
+[2017-10-16 23:22:21.474] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 38, contador: 38 } }
+[2017-10-16 23:22:21.474] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:22:21.475] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:24:17.601] [DEBUG] cheese - 2017-10-17T04:24:17.601Z
+[2017-10-16 23:24:25.521] [DEBUG] cheese - Nuevo: { __v: 0,
+  modulo: 'modulo_3',
+  tramite: 'cedulas',
+  fecha: '2017-9-16',
+  estado: true,
+  _id: 59e585f90d967532c45c5aa4,
+  datos: { atendidos: 0, contador: 0 } }
+[2017-10-16 23:24:31.914] [DEBUG] cheese - Ya existe: { _id: 59e585f90d967532c45c5aa4,
+  modulo: 'modulo_3',
+  tramite: 'cedulas',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 0, contador: 0 } }
+[2017-10-16 23:24:34.555] [DEBUG] cheese - Numero: 0
+[2017-10-16 23:24:34.559] [DEBUG] cheese - Numeros: 0
+[2017-10-16 23:24:34.560] [DEBUG] cheese - Maximo: 0
+[2017-10-16 23:24:34.572] [DEBUG] cheese - Guardado: { _id: 59e585f90d967532c45c5aa4,
+  modulo: 'modulo_3',
+  tramite: 'cedulas',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 1, contador: 1 } }
+[2017-10-16 23:24:34.572] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:24:34.573] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:24:40.352] [DEBUG] cheese - Numero: 1
+[2017-10-16 23:24:40.352] [DEBUG] cheese - Numeros: 1
+[2017-10-16 23:24:40.353] [DEBUG] cheese - Maximo: 1
+[2017-10-16 23:24:40.357] [DEBUG] cheese - Guardado: { _id: 59e585f90d967532c45c5aa4,
+  modulo: 'modulo_3',
+  tramite: 'cedulas',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 2, contador: 2 } }
+[2017-10-16 23:24:40.357] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:24:40.358] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:24:47.285] [DEBUG] cheese - Numero: 38
+[2017-10-16 23:24:47.285] [DEBUG] cheese - Numeros: 38
+[2017-10-16 23:24:47.285] [DEBUG] cheese - Maximo: 38
+[2017-10-16 23:24:47.288] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 39, contador: 39 } }
+[2017-10-16 23:24:47.289] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:24:47.290] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:24:53.147] [DEBUG] cheese - Numero: 2
+[2017-10-16 23:24:53.148] [DEBUG] cheese - Numeros: 2
+[2017-10-16 23:24:53.148] [DEBUG] cheese - Maximo: 2
+[2017-10-16 23:24:53.164] [DEBUG] cheese - Guardado: { _id: 59e585f90d967532c45c5aa4,
+  modulo: 'modulo_3',
+  tramite: 'cedulas',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 3, contador: 3 } }
+[2017-10-16 23:24:53.164] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:24:53.167] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:24:55.812] [DEBUG] cheese - Numero: 39
+[2017-10-16 23:24:55.813] [DEBUG] cheese - Numeros: 39
+[2017-10-16 23:24:55.815] [DEBUG] cheese - Maximo: 39
+[2017-10-16 23:24:55.823] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 40, contador: 40 } }
+[2017-10-16 23:24:55.824] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:24:55.826] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:24:56.013] [DEBUG] cheese - Numero: 3
+[2017-10-16 23:24:56.014] [DEBUG] cheese - Numeros: 3
+[2017-10-16 23:24:56.014] [DEBUG] cheese - Maximo: 3
+[2017-10-16 23:24:56.018] [DEBUG] cheese - Guardado: { _id: 59e585f90d967532c45c5aa4,
+  modulo: 'modulo_3',
+  tramite: 'cedulas',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 4, contador: 4 } }
+[2017-10-16 23:24:56.018] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:24:56.019] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:25:01.685] [DEBUG] cheese - Numero: 40
+[2017-10-16 23:25:01.686] [DEBUG] cheese - Numeros: 40
+[2017-10-16 23:25:01.686] [DEBUG] cheese - Maximo: 40
+[2017-10-16 23:25:01.690] [DEBUG] cheese - Guardado: { _id: 59e57e5ac5b7e530d813f90e,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 41, contador: 41 } }
+[2017-10-16 23:25:01.690] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:25:01.691] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-16 23:25:01.863] [DEBUG] cheese - Numero: 4
+[2017-10-16 23:25:01.863] [DEBUG] cheese - Numeros: 4
+[2017-10-16 23:25:01.863] [DEBUG] cheese - Maximo: 4
+[2017-10-16 23:25:01.871] [DEBUG] cheese - Guardado: { _id: 59e585f90d967532c45c5aa4,
+  modulo: 'modulo_3',
+  tramite: 'cedulas',
+  fecha: '2017-9-16',
+  estado: true,
+  __v: 0,
+  datos: { atendidos: 5, contador: 5 } }
+[2017-10-16 23:25:01.871] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-16 23:25:01.871] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-22 15:56:50.738] [DEBUG] cheese - Ya existe[GET]: { _id: 59ed042e6f241830e05482ec,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2017-9-22',
+  estado: true,
+  __v: 0,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-10-22T20:48:46.848Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 59ed042e6f241830e05482ed } ] }
+[2017-10-22 15:58:25.429] [DEBUG] cheese - Numero: 0
+[2017-10-22 15:58:25.432] [DEBUG] cheese - Numeros: 0
+[2017-10-22 15:58:25.433] [DEBUG] cheese - Maximo: 0
+[2017-10-22 16:11:27.488] [DEBUG] cheese - Numero: 0
+[2017-10-22 16:11:27.490] [DEBUG] cheese - Numeros: 0
+[2017-10-22 16:11:27.491] [DEBUG] cheese - Maximo: 0
+[2017-10-22 16:12:35.288] [DEBUG] cheese - Ya existe[GET]: { _id: 59ed042e6f241830e05482ec,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2017-9-22',
+  estado: true,
+  __v: 0,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-10-22T20:48:46.848Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 59ed042e6f241830e05482ed } ] }
+[2017-10-22 16:12:36.850] [DEBUG] cheese - Numero: 0
+[2017-10-22 16:12:36.851] [DEBUG] cheese - Numeros: 0
+[2017-10-22 16:12:36.851] [DEBUG] cheese - Maximo: 0
+[2017-10-22 16:12:36.864] [DEBUG] cheese - Guardado: { _id: 59ed042e6f241830e05482ec,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  indicePerAtendidas: 1,
+  contador: 1,
+  fecha: '2017-9-22',
+  estado: true,
+  __v: 1,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-10-22T20:48:46.848Z,
+       fechaFin: 2017-10-22T21:12:36.853Z,
+       minutosAtendidos: 0,
+       _id: 59ed042e6f241830e05482ed },
+     { indiceAten: 1,
+       fechaInicio: 2017-10-22T21:12:36.853Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 59ed09c45dabe107e470d292 } ] }
+[2017-10-22 16:12:36.865] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-22 16:12:36.866] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-22 16:12:45.817] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-10-22 16:32:43.702] [DEBUG] cheese - Ya existe[GET]: { _id: 59ed042e6f241830e05482ec,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  indicePerAtendidas: 1,
+  contador: 1,
+  fecha: '2017-9-22',
+  estado: true,
+  __v: 1,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-10-22T20:48:46.848Z,
+       fechaFin: 2017-10-22T21:12:36.853Z,
+       minutosAtendidos: 0,
+       _id: 59ed042e6f241830e05482ed },
+     { indiceAten: 1,
+       fechaInicio: 2017-10-22T21:12:36.853Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 59ed09c45dabe107e470d292 } ] }
+[2017-10-22 16:32:46.931] [DEBUG] cheese - Numero: 1
+[2017-10-22 16:32:46.931] [DEBUG] cheese - Numeros: 1
+[2017-10-22 16:32:46.931] [DEBUG] cheese - Maximo: 1
+[2017-10-22 16:32:46.943] [DEBUG] cheese - Guardado: { _id: 59ed042e6f241830e05482ec,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  indicePerAtendidas: 2,
+  contador: 2,
+  fecha: '2017-9-22',
+  estado: true,
+  __v: 2,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-10-22T20:48:46.848Z,
+       fechaFin: 2017-10-22T21:12:36.853Z,
+       minutosAtendidos: 0,
+       _id: 59ed042e6f241830e05482ed },
+     { indiceAten: 1,
+       fechaInicio: 2017-10-22T21:12:36.853Z,
+       fechaFin: 2017-10-22T21:32:46.933Z,
+       minutosAtendidos: 0,
+       _id: 59ed09c45dabe107e470d292 },
+     { indiceAten: 2,
+       fechaInicio: 2017-10-22T21:32:46.933Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 59ed0e7e5dabe107e470d293 } ] }
+[2017-10-22 16:32:46.943] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-22 16:32:46.946] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-22 16:34:13.493] [DEBUG] cheese - Ya existe[GET]: { _id: 59ed042e6f241830e05482ec,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  indicePerAtendidas: 2,
+  contador: 2,
+  fecha: '2017-9-22',
+  estado: true,
+  __v: 2,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-10-22T20:48:46.848Z,
+       fechaFin: 2017-10-22T21:12:36.853Z,
+       minutosAtendidos: 0,
+       _id: 59ed042e6f241830e05482ed },
+     { indiceAten: 1,
+       fechaInicio: 2017-10-22T21:12:36.853Z,
+       fechaFin: 2017-10-22T21:32:46.933Z,
+       minutosAtendidos: 0,
+       _id: 59ed09c45dabe107e470d292 },
+     { indiceAten: 2,
+       fechaInicio: 2017-10-22T21:32:46.933Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 59ed0e7e5dabe107e470d293 } ] }
+[2017-10-22 16:34:16.213] [DEBUG] cheese - Numero: 2
+[2017-10-22 16:34:16.213] [DEBUG] cheese - Numeros: 2
+[2017-10-22 16:34:16.213] [DEBUG] cheese - Maximo: 2
+[2017-10-22 16:34:16.229] [DEBUG] cheese - Guardado: { _id: 59ed042e6f241830e05482ec,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  indicePerAtendidas: 3,
+  contador: 3,
+  fecha: '2017-9-22',
+  estado: true,
+  __v: 3,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-10-22T20:48:46.848Z,
+       fechaFin: 2017-10-22T21:12:36.853Z,
+       minutosAtendidos: 0,
+       _id: 59ed042e6f241830e05482ed },
+     { indiceAten: 1,
+       fechaInicio: 2017-10-22T21:12:36.853Z,
+       fechaFin: 2017-10-22T21:32:46.933Z,
+       minutosAtendidos: 0,
+       _id: 59ed09c45dabe107e470d292 },
+     { indiceAten: 2,
+       fechaInicio: 2017-10-22T21:32:46.933Z,
+       fechaFin: 2017-10-22T21:34:16.217Z,
+       minutosAtendidos: 0,
+       _id: 59ed0e7e5dabe107e470d293 },
+     { indiceAten: 3,
+       fechaInicio: 2017-10-22T21:34:16.217Z,
+       fechaFin: null,
+       minutosAtendidos: 89284,
+       _id: 59ed0ed84dab7a33e4617a9b } ] }
+[2017-10-22 16:34:16.229] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-22 16:34:16.231] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-22 16:37:42.729] [DEBUG] cheese - Numero: 3
+[2017-10-22 16:37:42.732] [DEBUG] cheese - Numeros: 3
+[2017-10-22 16:37:42.733] [DEBUG] cheese - Maximo: 3
+[2017-10-22 16:37:42.781] [DEBUG] cheese - Guardado: { _id: 59ed042e6f241830e05482ec,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  indicePerAtendidas: 4,
+  contador: 4,
+  fecha: '2017-9-22',
+  estado: true,
+  __v: 4,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-10-22T20:48:46.848Z,
+       fechaFin: 2017-10-22T21:12:36.853Z,
+       minutosAtendidos: 0,
+       _id: 59ed042e6f241830e05482ed },
+     { indiceAten: 1,
+       fechaInicio: 2017-10-22T21:12:36.853Z,
+       fechaFin: 2017-10-22T21:32:46.933Z,
+       minutosAtendidos: 0,
+       _id: 59ed09c45dabe107e470d292 },
+     { indiceAten: 2,
+       fechaInicio: 2017-10-22T21:32:46.933Z,
+       fechaFin: 2017-10-22T21:34:16.217Z,
+       minutosAtendidos: 0,
+       _id: 59ed0e7e5dabe107e470d293 },
+     { indiceAten: 3,
+       fechaInicio: 2017-10-22T21:34:16.217Z,
+       fechaFin: 2017-10-22T21:37:42.740Z,
+       minutosAtendidos: 3.44205,
+       _id: 59ed0ed84dab7a33e4617a9b },
+     { indiceAten: 4,
+       fechaInicio: 2017-10-22T21:37:42.740Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 59ed0fa6a74c50289c5ad492 } ] }
+[2017-10-22 16:37:42.781] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-22 16:37:42.783] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-22 16:44:05.683] [DEBUG] cheese - Numero: 4
+[2017-10-22 16:44:05.683] [DEBUG] cheese - Numeros: 4
+[2017-10-22 16:44:05.684] [DEBUG] cheese - Maximo: 4
+[2017-10-22 16:44:05.694] [DEBUG] cheese - Guardado: { _id: 59ed042e6f241830e05482ec,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  indicePerAtendidas: 5,
+  contador: 5,
+  fecha: '2017-9-22',
+  estado: true,
+  __v: 5,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-10-22T20:48:46.848Z,
+       fechaFin: 2017-10-22T21:12:36.853Z,
+       minutosAtendidos: 0,
+       _id: 59ed042e6f241830e05482ed },
+     { indiceAten: 1,
+       fechaInicio: 2017-10-22T21:12:36.853Z,
+       fechaFin: 2017-10-22T21:32:46.933Z,
+       minutosAtendidos: 0,
+       _id: 59ed09c45dabe107e470d292 },
+     { indiceAten: 2,
+       fechaInicio: 2017-10-22T21:32:46.933Z,
+       fechaFin: 2017-10-22T21:34:16.217Z,
+       minutosAtendidos: 0,
+       _id: 59ed0e7e5dabe107e470d293 },
+     { indiceAten: 3,
+       fechaInicio: 2017-10-22T21:34:16.217Z,
+       fechaFin: 2017-10-22T21:37:42.740Z,
+       minutosAtendidos: 3.44205,
+       _id: 59ed0ed84dab7a33e4617a9b },
+     { indiceAten: 4,
+       fechaInicio: 2017-10-22T21:37:42.740Z,
+       fechaFin: 2017-10-22T21:44:05.686Z,
+       minutosAtendidos: 6.382433333333334,
+       _id: 59ed0fa6a74c50289c5ad492 },
+     { indiceAten: 5,
+       fechaInicio: 2017-10-22T21:44:05.686Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 59ed1125a74c50289c5ad493 } ] }
+[2017-10-22 16:44:05.695] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-22 16:44:05.696] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-22 17:11:43.632] [DEBUG] cheese - Numero: 5
+[2017-10-22 17:11:43.635] [DEBUG] cheese - Numeros: 5
+[2017-10-22 17:11:43.636] [DEBUG] cheese - Maximo: 5
+[2017-10-22 17:11:43.677] [DEBUG] cheese - Guardado: { _id: 59ed042e6f241830e05482ec,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  indicePerAtendidas: 6,
+  contador: 6,
+  fecha: '2017-9-22',
+  estado: true,
+  __v: 6,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-10-22T20:48:46.848Z,
+       fechaFin: 2017-10-22T21:12:36.853Z,
+       minutosAtendidos: 0,
+       _id: 59ed042e6f241830e05482ed },
+     { indiceAten: 1,
+       fechaInicio: 2017-10-22T21:12:36.853Z,
+       fechaFin: 2017-10-22T21:32:46.933Z,
+       minutosAtendidos: 0,
+       _id: 59ed09c45dabe107e470d292 },
+     { indiceAten: 2,
+       fechaInicio: 2017-10-22T21:32:46.933Z,
+       fechaFin: 2017-10-22T21:34:16.217Z,
+       minutosAtendidos: 0,
+       _id: 59ed0e7e5dabe107e470d293 },
+     { indiceAten: 3,
+       fechaInicio: 2017-10-22T21:34:16.217Z,
+       fechaFin: 2017-10-22T21:37:42.740Z,
+       minutosAtendidos: 3.44205,
+       _id: 59ed0ed84dab7a33e4617a9b },
+     { indiceAten: 4,
+       fechaInicio: 2017-10-22T21:37:42.740Z,
+       fechaFin: 2017-10-22T21:44:05.686Z,
+       minutosAtendidos: 6.382433333333334,
+       _id: 59ed0fa6a74c50289c5ad492 },
+     { indiceAten: 5,
+       fechaInicio: 2017-10-22T21:44:05.686Z,
+       fechaFin: 2017-10-22T22:11:43.642Z,
+       minutosAtendidos: 28,
+       _id: 59ed1125a74c50289c5ad493 },
+     { indiceAten: 6,
+       fechaInicio: 2017-10-22T22:11:43.642Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 59ed179f324a371604502be8 } ] }
+[2017-10-22 17:11:43.677] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-22 17:11:43.681] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-10-22 17:12:31.274] [DEBUG] cheese - Numero: 6
+[2017-10-22 17:12:31.274] [DEBUG] cheese - Numeros: 6
+[2017-10-22 17:12:31.274] [DEBUG] cheese - Maximo: 6
+[2017-10-22 17:12:31.286] [DEBUG] cheese - Guardado: { _id: 59ed042e6f241830e05482ec,
+  modulo: 'modulo_1',
+  tramite: 'pasaportes',
+  indicePerAtendidas: 7,
+  contador: 7,
+  fecha: '2017-9-22',
+  estado: true,
+  __v: 7,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-10-22T20:48:46.848Z,
+       fechaFin: 2017-10-22T21:12:36.853Z,
+       minutosAtendidos: 0,
+       _id: 59ed042e6f241830e05482ed },
+     { indiceAten: 1,
+       fechaInicio: 2017-10-22T21:12:36.853Z,
+       fechaFin: 2017-10-22T21:32:46.933Z,
+       minutosAtendidos: 0,
+       _id: 59ed09c45dabe107e470d292 },
+     { indiceAten: 2,
+       fechaInicio: 2017-10-22T21:32:46.933Z,
+       fechaFin: 2017-10-22T21:34:16.217Z,
+       minutosAtendidos: 0,
+       _id: 59ed0e7e5dabe107e470d293 },
+     { indiceAten: 3,
+       fechaInicio: 2017-10-22T21:34:16.217Z,
+       fechaFin: 2017-10-22T21:37:42.740Z,
+       minutosAtendidos: 3.44205,
+       _id: 59ed0ed84dab7a33e4617a9b },
+     { indiceAten: 4,
+       fechaInicio: 2017-10-22T21:37:42.740Z,
+       fechaFin: 2017-10-22T21:44:05.686Z,
+       minutosAtendidos: 6.382433333333334,
+       _id: 59ed0fa6a74c50289c5ad492 },
+     { indiceAten: 5,
+       fechaInicio: 2017-10-22T21:44:05.686Z,
+       fechaFin: 2017-10-22T22:11:43.642Z,
+       minutosAtendidos: 28,
+       _id: 59ed1125a74c50289c5ad493 },
+     { indiceAten: 6,
+       fechaInicio: 2017-10-22T22:11:43.642Z,
+       fechaFin: 2017-10-22T22:12:31.278Z,
+       minutosAtendidos: 1,
+       _id: 59ed179f324a371604502be8 },
+     { indiceAten: 7,
+       fechaInicio: 2017-10-22T22:12:31.278Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 59ed17cf324a371604502be9 } ] }
+[2017-10-22 17:12:31.286] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-10-22 17:12:31.287] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
