@@ -38,7 +38,7 @@ app.engine('html', require('ejs').renderFile);
 
 app.use(methodOverride("_method"));
 
-var MONGO_URL = 'mongodb://<rafael>:<ZTRse7en>@ds229465.mlab.com:29465/heroku_qzv4b77t'; //mongodb://localhost:27017/test
+var MONGO_URL = 'mongodb://rafael:ZTRse7en@ds229465.mlab.com:29465/heroku_qzv4b77t'; //mongodb://localhost:27017/test
 var COOKIE_SECRET = 'secretencode';
 var COOKIE_NAME = 'sid';
 
