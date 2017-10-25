@@ -35,18 +35,16 @@ a {
   opacity: 0.8;
 }
 
-.uk-card-header h3{
-  opacity: 1;
+.uk-card-body h4{
+  color: #fff;
+  word-break: break-all;
 }
 
 .uk-card-body{
-  background-color: #FF9100;
-  padding: 20px;
+  background-color: #A97AFF;
+  color: #fff;
+  padding: 20px 10px;
   opacity: 0.9;
-}
-
-.uk-card-body {
-    
 }
 
 .uk-card-default{
@@ -57,6 +55,7 @@ a {
 .uk-card-footer{
     background-color: #7AADFF;
     padding: 10px 20px;
+    color: #fff;
     opacity: 0.9;
 }
 
