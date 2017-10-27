@@ -69,6 +69,11 @@ a {
     opacity: 0.9;
 }
 
+.btn-terminar{
+  position: absolute;
+  right: 0;
+}
+
 .bounce-enter .uk-card-body{
     animation: bounce-in 2.5s;	
 }
