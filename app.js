@@ -149,11 +149,7 @@ io.on('connection', function(socket) {
                 if (err) {
                     logger.debug(err);
                 } else {
-                    logger.debug("Guardado: " + modulo.toString());                      
-                    logger.debug("Emitiendo desde el contador al canal SHOW_CHANNEL");
-                    socket.broadcast.emit('modulo_SHOW_CHANNEL', modulo); 
-                    logger.debug("Emitiendo desde el contador al canal COUNT_CHANNEL");
-                    io.emit('modulo_COUNT_CHANNEL', modulo); 
+                    logger.debug("Terminando: " + modulo.toString());
                 }
             });
         });
