@@ -1,7 +1,7 @@
 body {
   padding: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-image: url('/public/imagenes/fondo_modulo.jpg');
+  background-image: url('/images/fondo_modulo.jpg');
 }
 
 a {
