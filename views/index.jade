@@ -3,45 +3,45 @@ extends layout
 block content
 	div(class="uk-container uk-flex uk-flex-middle uk-margin-medium" uk-height-viewport)
 		div(class="uk-container-2")
-		h1 #{titulo} 
-			if typeof modulo !== "undefined"
-				<span>(#{modulo})</span>
-			else
-				<span></span>
-		p Fecha: #{fecha}
-		form(action="/modulo", name="elegir-modulo", method="POST")
-			if typeof modulo !== "undefined"
-				input(type="hidden", name="modulo" value="#{modulo}")
-			else
+			h1 #{titulo} 
+				if typeof modulo !== "undefined"
+					<span>(#{modulo})</span>
+				else
+					<span></span>
+			p Fecha: #{fecha}
+			form(action="/modulo", name="elegir-modulo", method="POST")
+				if typeof modulo !== "undefined"
+					input(type="hidden", name="modulo" value="#{modulo}")
+				else
+					div(class="uk-margin")
+						select(id="modulo", name="modulo", class="uk-select")
+							option(value="Oficina_1") Oficina_1
+							option(value="Oficina_2") Oficina_2
+							option(value="Oficina_3") Oficina_3
+							option(value="Oficina_4") Oficina_4
+							option(value="Oficina_5") Oficina_5
+							option(value="Oficina_2") Oficina_6
+							option(value="Oficina_6") Oficina_7
+							option(value="Oficina_8") Oficina_8
+							option(value="Oficina_9") Oficina_9
+							option(value="Oficina_10") Oficina_10
+							option(value="Oficina_11") Oficina_11
+							option(value="Oficina_12") Oficina_12
+							option(value="Oficina_13") Oficina_13
+							option(value="Oficina_14") Oficina_14
+							option(value="Oficina_15") Oficina_15
+							option(value="Oficina_16") Oficina_16
 				div(class="uk-margin")
-					select(id="modulo", name="modulo", class="uk-select")
-						option(value="Oficina_1") Oficina_1
-						option(value="Oficina_2") Oficina_2
-						option(value="Oficina_3") Oficina_3
-						option(value="Oficina_4") Oficina_4
-						option(value="Oficina_5") Oficina_5
-						option(value="Oficina_2") Oficina_6
-						option(value="Oficina_6") Oficina_7
-						option(value="Oficina_8") Oficina_8
-						option(value="Oficina_9") Oficina_9
-						option(value="Oficina_10") Oficina_10
-						option(value="Oficina_11") Oficina_11
-						option(value="Oficina_12") Oficina_12
-						option(value="Oficina_13") Oficina_13
-						option(value="Oficina_14") Oficina_14
-						option(value="Oficina_15") Oficina_15
-						option(value="Oficina_16") Oficina_16
-			div(class="uk-margin")
-				select(id="tramite", name="tramite", class="uk-select")
-					option(value="PODERES") PODERES
-					option(value="ID_CONSULAR") ID_CONSULAR
-					option(value="REGISTRO_CIVIL") REGISTRO_CIVIL
-					option(value="VISAS") VISAS
-					option(value="EMPADRONAMIENTO") EMPADRONAMIENTO
-					option(value="PARTIDAS_DE_NACIMIENTO") PARTIDAS_DE_NACIMIENTO
-					option(value="CEDULAS") CEDULAS
-					option(value="VARIOS") VARIOS
-			div(class="uk-margin")
-				input(type="submit", value="Elegir", class="uk-button uk-button-primary")
+					select(id="tramite", name="tramite", class="uk-select")
+						option(value="PODERES") PODERES
+						option(value="ID_CONSULAR") ID_CONSULAR
+						option(value="REGISTRO_CIVIL") REGISTRO_CIVIL
+						option(value="VISAS") VISAS
+						option(value="EMPADRONAMIENTO") EMPADRONAMIENTO
+						option(value="PARTIDAS_DE_NACIMIENTO") PARTIDAS_DE_NACIMIENTO
+						option(value="CEDULAS") CEDULAS
+						option(value="VARIOS") VARIOS
+				div(class="uk-margin")
+					input(type="submit", value="Elegir", class="uk-button uk-button-primary")
 		
     

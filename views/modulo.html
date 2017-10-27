@@ -89,8 +89,8 @@
 					e.preventDefault();
 
 					if(this.modulo != null ){
-						console.log("Enviando datos al server para aumentar el contador");
-		  				socket.emit("aumentar", { 'channel': channel, 'modulo': this.modulo });
+						console.log("Enviando datos al server para terminar el contador");
+		  				socket.emit("terminar", { 'channel': channel, 'modulo': this.modulo });
 		  			}
 				},
 				actualizar: function(){

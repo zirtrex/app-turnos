@@ -128,6 +128,38 @@ io.on('connection', function(socket) {
 
     });
 
+    socket.on('terminar', function(datos){
+
+        Modulo.findOne({'modulo': datos.modulo.modulo, 'tramite': datos.modulo.tramite, 'fecha': fechaActual}, function(err, modulo){
+
+            //Construimos el objeto perAtendidas
+            var indicePerAtendidasActual =  modulo.indicePerAtendidas;
+
+            var fechaInicioActual = new Date(modulo.perAtendidas[indicePerAtendidasActual].fechaInicio);
+            var fechaFinActual = new Date();
+            var minutosAtendidosActual = fechaFinActual.getTime() - fechaInicioActual.getTime();
+            
+            modulo.perAtendidas[indicePerAtendidasActual].fechaFin = fechaFinActual;
+            modulo.perAtendidas[indicePerAtendidasActual].minutosAtendidos = Math.round(minutosAtendidosActual / 1000 / 60);
+
+            //Elegimos el número más alto y aumentamos en 1
+            modulo.estado = false,
+
+            modulo.save(function (err) {
+                if (err) {
+                    logger.debug(err);
+                } else {
+                    logger.debug("Guardado: " + modulo.toString());                      
+                    logger.debug("Emitiendo desde el contador al canal SHOW_CHANNEL");
+                    socket.broadcast.emit('modulo_SHOW_CHANNEL', modulo); 
+                    logger.debug("Emitiendo desde el contador al canal COUNT_CHANNEL");
+                    io.emit('modulo_COUNT_CHANNEL', modulo); 
+                }
+            });
+        });
+
+    });
+
     socket.on('call_again', function(datos){
 
         Modulo.findOne({'modulo': datos.modulo.modulo, 'tramite': datos.modulo.tramite, 'fecha': fechaActual}, function(err, modulo){
