@@ -18,8 +18,9 @@
 				<span id="actual"> {{modulo.contador}}</span>
 			</p>
 			<hr/>
-			<button type="button" v-on:click="call_again" name="call_again" class="uk-button uk-button-secundary uk-button-large">Call Again</button>
-			<button type="button" v-on:click="contador" name="contador" class="uk-button uk-button-primary uk-button-large">Next</button>
+			<button type="button" v-on:click="call_again" name="call_again" class="uk-button uk-button-secundary uk-button-large">Llamar de nuevo</button>
+			<button type="button" v-on:click="contador" name="contador" class="uk-button uk-button-primary uk-button-large">Siguiente</button>
+			<button type="button" v-on:click="terminar" name="terminar" class="uk-button uk-button-danger uk-button-large">Terminar</button>
 		</div>
 	</div>
 	<script src="/socket.io/socket.io.js"></script>

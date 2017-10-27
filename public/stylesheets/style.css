@@ -46,7 +46,7 @@ a {
 }
 
 .uk-card-body h4{
-  color: #fff;
+  color: #004DA3;
   word-break: break-all;
 }
 
@@ -65,7 +65,7 @@ a {
 .uk-card-footer{
     background-color: #FFDD00;
     padding: 10px 20px;
-    color: #000;
+    color: #004DA3;
     opacity: 0.9;
 }
 
