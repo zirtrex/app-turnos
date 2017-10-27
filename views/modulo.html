@@ -85,6 +85,14 @@
 		  				socket.emit("aumentar", { 'channel': channel, 'modulo': this.modulo });
 		  			}
 				},
+				terminar: function(e){
+					e.preventDefault();
+
+					if(this.modulo != null ){
+						console.log("Enviando datos al server para aumentar el contador");
+		  				socket.emit("aumentar", { 'channel': channel, 'modulo': this.modulo });
+		  			}
+				},
 				actualizar: function(){
 					axios.get('/show/modulo')
                     .then(function (response) {
