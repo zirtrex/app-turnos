@@ -5,21 +5,22 @@
 	<link rel='stylesheet' type="text/css" href='/stylesheets/uikit.css'></link>
 	<link rel='stylesheet' type="text/css" href='/stylesheets/style.css'></link>
 </head>
-<body class="uk-container uk-margin-medium">
-	<div id="app">
-		<h1>{{modulo.modulo}}</h1>
-		<h2>Trámite: {{modulo.tramite}}
-			<a href="/cambiar" class="uk-button uk-button-default"> Cambiar Trámite</a>
-		</h2>
-		<p class="uk-text-large"> Actualmente estás atendiendo al número:
-			<span id="actual"> {{modulo.contador}}</span>
-		</p>
-		<hr/>
-		<button type="button" v-on:click="call_again" name="call_again" class="uk-button uk-button-secundary uk-button-large">Call Again</button>
-		<button type="button" v-on:click="contador" name="contador" class="uk-button uk-button-primary uk-button-large">Next</button>
+<body class="" uk-height-viewport>
+	<div class="uk-container uk-margin-medium">
+		<div id="app">
+			<h1>{{modulo.modulo}}</h1>
+			<h2>Trámite: {{modulo.tramite}}
+				<a href="/cambiar" class="uk-button uk-button-default"> Cambiar Trámite</a>
+			</h2>
+			<p class="uk-text-large"> Actualmente estás atendiendo al número:
+				<span id="actual"> {{modulo.contador}}</span>
+			</p>
+			<hr/>
+			<button type="button" v-on:click="call_again" name="call_again" class="uk-button uk-button-secundary uk-button-large">Call Again</button>
+			<button type="button" v-on:click="contador" name="contador" class="uk-button uk-button-primary uk-button-large">Next</button>
 
+		</div>
 	</div>
-
 	<script src="/socket.io/socket.io.js"></script>
     <script src="../javascripts/vue.min.js"></script>
     <script src="../javascripts/axios.min.js"></script>
