@@ -27,6 +27,9 @@ router.get('/', function(req, res, next) {
 router.get('/cambiar', function(req, res, next) {
 	logger.debug("Cambiando tipo de trámite");
 
+	var fecha = new Date();
+	var fechaActual = fecha.getFullYear() + "-" + fecha.getMonth() + "-" + fecha.getDate();
+
 	if(typeof req.session.modulo === 'undefined' && typeof req.session.tramite === 'undefined'){
 		res.redirect('/');
 	}else{

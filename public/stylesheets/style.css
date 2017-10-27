@@ -51,7 +51,7 @@ a {
 }
 
 .uk-card-body{
-  background-color: #A97AFF;
+  background-color: #ED1C24;
   color: #fff;
   padding: 20px 10px;
   opacity: 0.9;
@@ -63,9 +63,9 @@ a {
 }
 
 .uk-card-footer{
-    background-color: #7AADFF;
+    background-color: #FFDD00;
     padding: 10px 20px;
-    color: #fff;
+    color: #000;
     opacity: 0.9;
 }
 
