@@ -7,8 +7,8 @@
 	<script src="../javascripts/jquery-3.2.1.min.js"></script>
 	<script src="../javascripts/uikit.min.js"></script>
 </head>
-<body class="" uk-height-viewport>
-	<div class="uk-container uk-margin-medium uk-flex uk-flex-middle">
+<body class="uk-flex uk-flex-middle" uk-height-viewport>
+	<div class="uk-container uk-margin-medium ">
 		<div id="app">
 			<h1>{{modulo.modulo}}</h1>
 			<h2>Trámite: {{modulo.tramite}}
@@ -20,7 +20,6 @@
 			<hr/>
 			<button type="button" v-on:click="call_again" name="call_again" class="uk-button uk-button-secundary uk-button-large">Call Again</button>
 			<button type="button" v-on:click="contador" name="contador" class="uk-button uk-button-primary uk-button-large">Next</button>
-
 		</div>
 	</div>
 	<script src="/socket.io/socket.io.js"></script>
