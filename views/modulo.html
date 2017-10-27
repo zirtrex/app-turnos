@@ -8,11 +8,9 @@
 	<script src="../javascripts/uikit.min.js"></script>
 </head>
 <body class="" >
-	<div class="uk-flex uk-flex-right">
-		<button type="button" v-on:click="terminar" name="terminar" class="uk-button uk-button-danger">Terminar</button>	
-	</div>
+	
 
-	<div class="uk-container uk-flex uk-flex-middle uk-margin-medium" uk-height-viewport>
+	<div class="uk-flex uk-flex-middle uk-margin-medium" uk-height-viewport>
 		<div id="app" class="uk-container-2" >
 			<h1>{{modulo.modulo}}</h1>
 			<h2>Trámite: {{modulo.tramite}}
@@ -24,7 +22,9 @@
 			<hr/>
 			<button type="button" v-on:click="call_again" name="call_again" class="uk-button uk-button-secundary uk-button-large">Llamar de nuevo</button>
 			<button type="button" v-on:click="contador" name="contador" class="uk-button uk-button-primary uk-button-large">Siguiente</button>
-			
+			<div class="uk-flex uk-flex-right">
+				<button type="button" v-on:click="terminar" name="terminar" class="uk-button uk-button-danger">Terminar</button>	
+			</div>
 		</div>
 	</div>
 	<script src="/socket.io/socket.io.js"></script>
