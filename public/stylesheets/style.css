@@ -41,8 +41,14 @@ a {
   padding: 20px 10px;
 }
 
-.uk-card-body h4{
+.uk-card-body .title{
   word-break: break-all;
+}
+
+.uk-card-body .title span{
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 5px;
 }
 
 .uk-card-footer{
@@ -54,7 +60,7 @@ a {
   background-color: #0294D1;
 }
 
-.ID .uk-card-body h4{
+.ID .uk-card-body .title{
   color: #fff;
 }
 
@@ -68,7 +74,7 @@ a {
   background-color: #098D31;
 }
 
-.PODERES .uk-card-body h4{
+.PODERES .uk-card-body .title{
   color: #fff;
 }
 
@@ -81,7 +87,7 @@ a {
   background-color: #72480A;
 }
 
-.REGISTRO .uk-card-body h4{
+.REGISTRO .uk-card-body .title{
   color: #fff;
 }
 
@@ -95,7 +101,7 @@ a {
   background-color: #BC1212;
 }
 
-.VISAS .uk-card-body h4{
+.VISAS .uk-card-body .title{
   color: #fff;
 }
 
@@ -109,7 +115,7 @@ a {
   background-color: #0E2E96;
 }
 
-.EMPADRONAMIENTO .uk-card-body h4{
+.EMPADRONAMIENTO .uk-card-body .title{
   color: #fff;
 }
 
@@ -123,7 +129,7 @@ a {
   background-color: #74750F;
 }
 
-.PARTIDAS .uk-card-body h4{
+.PARTIDAS .uk-card-body .title{
   color: #fff;
 }
 
@@ -137,7 +143,7 @@ a {
   background-color: #14A1AE;
 }
 
-.CEDULAS .uk-card-body h4{
+.CEDULAS .uk-card-body .title{
   color: #fff;
 }
 
@@ -151,7 +157,7 @@ a {
   background-color: #1259CA;
 }
 
-.VARIOS .uk-card-body h4{
+.VARIOS .uk-card-body .title{
   color: #fff;
 }
 
