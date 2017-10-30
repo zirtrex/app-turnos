@@ -16,7 +16,7 @@
 	<audio id="audio" style="display: hidden" src="../audio/1HipHip8.wav">Canvas no Soportado<source src="" type="audio/mpeg"></audio>
 
 	<div class="uk-grid">
-		<div class="uk-width-1-2">
+		<div class="uk-width-1-5">
 			<div id="contenedor">
 				<transition-group tag="div" name="bounce" v-bind:css="true" v-on:before-enter="beforeEnter" v-on:enter="enter" v-on:leave="leave" class="uk-flex uk-flex-column uk-width-1-5 uk-grid-small">
 				    <modulo v-for="modulo,index in modulosList" 
@@ -29,7 +29,7 @@
 				</transition-group>
 			</div>	
 		</div>
-		<div class="uk-width-1-2">
+		<div class="uk-width-4-5">
 			<div class="uk-cover-container">
 			    <iframe id="playlist" width="100%" style="height: 100vh;" src="" frameborder="0" allowfullscreen></iframe>		
 			</div>
