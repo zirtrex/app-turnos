@@ -169,6 +169,20 @@ a {
 }
 
 
+.CAJA .uk-card-body{
+  background-color: #FAE862;
+}
+
+.CAJA .uk-card-body .title{
+  color: #000;
+}
+
+.CAJA .uk-card-footer{
+    background-color: #C4AE06;
+    color: #fff;
+}
+
+
 .btn-terminar{
   position: absolute;
   right: 0;
