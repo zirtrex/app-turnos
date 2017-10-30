@@ -176,12 +176,12 @@
 			    enter: function (el, done) {
 			    	var vm = this;
 			    	//Velocity(el, { opacity: 1, translateX: '0px' }, { duration: 1000, complete: function(){ done()} })
-			    	Velocity(el, { opacity: 1, scale: 1 }, { duration: 1000, complete: function(){ done() if (!vm.stop) vm.show = false} })
+			    	Velocity(el, { opacity: 1, scale: 1 }, { duration: 1000, complete: function(){ done(); if (!vm.stop) vm.show = false} })
 			    },
 			    leave: function (el, done) {
 			    	var vm = this;
 			      	//Velocity(el, { opacity: 0, translateX: '150px' }, { duration: 500, complete: function(){done()} })
-			      	Velocity(el, { opacity: 0.7 }, { duration: 1000, complete: function(){ done() vm.show = true } })
+			      	Velocity(el, { opacity: 0.7 }, { duration: 1000, complete: function(){ done(); vm.show = true } })
 			    }
 		  	}
 		});
