@@ -42,7 +42,6 @@ a {
 }
 
 .uk-card-body h4{
-  color: #fff;
   word-break: break-all;
 }
 
@@ -51,16 +50,113 @@ a {
 }
 
 
-.ID_CONSULAR .uk-card-body{
+.ID .uk-card-body{
   background-color: #0294D1;
 }
 
-.ID_CONSULAR .uk-card-body h4{
+.ID .uk-card-body h4{
   color: #fff;
 }
 
-.ID_CONSULAR .uk-card-footer{
+.ID .uk-card-footer{
     background-color: #055AAF;
+    color: #fff;
+}
+
+
+.PODERES .uk-card-body{
+  background-color: #098D31;
+}
+
+.PODERES .uk-card-body h4{
+  color: #fff;
+}
+
+.PODERES .uk-card-footer{
+    background-color: #06561E;
+    color: #fff;
+}
+
+.REGISTRO .uk-card-body{
+  background-color: #72480A;
+}
+
+.REGISTRO .uk-card-body h4{
+  color: #fff;
+}
+
+.REGISTRO .uk-card-footer{
+    background-color: #5E3C08;
+    color: #fff;
+}
+
+
+.VISAS .uk-card-body{
+  background-color: #BC1212;
+}
+
+.VISAS .uk-card-body h4{
+  color: #fff;
+}
+
+.VISAS .uk-card-footer{
+    background-color: #6D0B0B;
+    color: #fff;
+}
+
+
+.EMPADRONAMIENTO .uk-card-body{
+  background-color: #0E2E96;
+}
+
+.EMPADRONAMIENTO .uk-card-body h4{
+  color: #fff;
+}
+
+.EMPADRONAMIENTO .uk-card-footer{
+    background-color: #0C267C;
+    color: #fff;
+}
+
+
+.PARTIDAS .uk-card-body{
+  background-color: #74750F;
+}
+
+.PARTIDAS .uk-card-body h4{
+  color: #fff;
+}
+
+.PARTIDAS .uk-card-footer{
+    background-color: #64650D;
+    color: #fff;
+}
+
+
+.CEDULAS .uk-card-body{
+  background-color: #14A1AE;
+}
+
+.CEDULAS .uk-card-body h4{
+  color: #fff;
+}
+
+.CEDULAS .uk-card-footer{
+    background-color: #0B585F;
+    color: #fff;
+}
+
+
+.VARIOS .uk-card-body{
+  background-color: #1259CA;
+}
+
+.VARIOS .uk-card-body h4{
+  color: #fff;
+}
+
+.VARIOS .uk-card-footer{
+    background-color: #0D4091;
     color: #fff;
 }
 
