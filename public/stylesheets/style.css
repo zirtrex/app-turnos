@@ -33,6 +33,10 @@ a {
     padding-left: 5px;
 }
 
+.uk-margin-small-bottom {
+    margin-bottom: 2px !important;
+}
+
 .uk-card-default{
   background-color: #fff;
 }
