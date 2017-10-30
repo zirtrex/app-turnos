@@ -33,40 +33,25 @@ a {
     padding-left: 5px;
 }
 
-.uk-margin-bottomn {
-  display: inline-block;
-  margin-right: 0px;
-
+.uk-card-default{
+  background-color: #fff;
 }
 
-.uk-card-header{
-  background-color: #A97AFF;
-  padding: 10px 20px;
-  opacity: 0.8;
+.ID_CONSULAR .uk-card-body{
+  background-color: #ED1C24;
+  color: #fff;
+  padding: 20px 10px;
 }
 
-.uk-card-body h4{
+.ID_CONSULAR .uk-card-body h4{
   color: #fff;
   word-break: break-all;
 }
 
-.uk-card-body{
-  background-color: #ED1C24;
-  color: #fff;
-  padding: 20px 10px;
-  opacity: 0.9;
-}
-
-.uk-card-default{
-  background-color: #fff;
-  opacity: 0.9;
-}
-
-.uk-card-footer{
+.ID_CONSULAR .uk-card-footer{
     background-color: #FFDD00;
     padding: 10px 20px;
     color: #004DA3;
-    opacity: 0.9;
 }
 
 .btn-terminar{
