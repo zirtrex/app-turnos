@@ -15,9 +15,9 @@ router.get('/', function(req, res, next) {
 	var fecha = new Date();
 	logger.debug(fecha);
 	if(typeof req.session.modulo === 'undefined' && typeof req.session.tramite === 'undefined'){
-		res.render('index.jade', {'titulo' : "Elige el Módulo y Trámite a usar.",'fecha': fecha});
+		res.render('index.jade', {'titulo' : "Elige el Módulo y Trámite a usar.", 'fecha': fecha});
 	}else if(typeof req.session.tramite === 'undefined'){
-		res.render('index.jade', {'titulo' : "Elige el Trámite a usar.", 'modulo': req.session.modulo,'fecha': fecha} );
+		res.render('index.jade', {'titulo' : "Elige el Trámite a usar.", 'modulo': req.session.modulo, 'fecha': fecha} );
 	}else{
 		res.redirect('/modulo');
 	}
