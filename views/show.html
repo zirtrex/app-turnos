@@ -74,16 +74,16 @@
 		  	components: {
 			    modulo: {
 			      props: ['mod'],
-			      template: `<div :class="{mod.tramite: true}">
-			      				<div class="uk-card uk-card-default">
-					            	<div class="uk-card-body">
-					            		<h4 class="uk-text-center">{{ mod.tramite }} | {{ mod.contador }}</h4>
-					            	</div>
-					            	<div class="uk-card-footer">
-					            		<p class="uk-text-center uk-text-uppercase">{{ mod.modulo }}</p>
-					            	</div>
-					        	</div>
-			      			</div>`
+			      template: '<div :class="{ [`test-${mod.tramite}`]: true }">\
+			      				<div class="uk-card uk-card-default">\
+					            	<div class="uk-card-body">\
+					            		<h4 class="uk-text-center">{{ mod.tramite }} | {{ mod.contador }}</h4>\
+					            	</div>\
+					            	<div class="uk-card-footer">\
+					            		<p class="uk-text-center uk-text-uppercase">{{ mod.modulo }}</p>\
+					            	</div>\
+					        	</div>\
+			      			</div>'
 			    }
 			},
 		  	created: function () {
