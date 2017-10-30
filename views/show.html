@@ -8,17 +8,13 @@
 	<link rel='stylesheet' type="text/css" href='/stylesheets/style.css'></link>
 </head>
 <body>
-	<script type="text/javascript">
-		
-
-	</script>
 	<input type="hidden" id="audioFile" size="80" value="../audio/1HipHip8.wav">
 	<audio id="audio" style="display: hidden" src="../audio/1HipHip8.wav">Canvas no Soportado<source src="" type="audio/mpeg"></audio>
 
 	<div class="uk-grid">
-		<div class="uk-width-1-5" style="background-color: #fffs">
+		<div class="uk-width-1-5" style="background-color: #fff">
 			<div id="contenedor">
-				<transition-group tag="div" name="bounce" v-bind:css="true" v-on:before-enter="beforeEnter" v-on:enter="enter" v-on:leave="leave" class="uk-flex uk-flex-column uk-width-1-5 uk-grid-small">
+				<transition-group tag="div" name="bounce" v-bind:css="true" v-on:before-enter="beforeEnter" v-on:enter="enter" v-on:leave="leave" class="">
 				    <modulo v-for="modulo,index in modulosList" 
 				      class="modulo"
 				      v-bind:id="getModulo(index)"
