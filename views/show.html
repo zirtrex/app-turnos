@@ -16,7 +16,7 @@
 			<div id="contenedor">
 				<transition-group tag="div" name="bounce" v-bind:css="true" v-on:before-enter="beforeEnter" v-on:enter="enter" v-on:leave="leave" class="">
 				    <modulo v-for="modulo,index in modulosList" 
-				      class="modulo"
+				      class="modulo uk-margin-small-bottom"
 				      v-bind:id="getModulo(index)"
 				      v-bind:mod="modulo"
 				      v-bind:key="modulo"
@@ -74,7 +74,7 @@
 		  	components: {
 			    modulo: {
 			      props: ['mod'],
-			      template: '<div :class="{ [`test-${mod.tramite}`]: true }">\
+			      template: '<div :class="{ [`${mod.tramite}`]: true }">\
 			      				<div class="uk-card uk-card-default">\
 					            	<div class="uk-card-body">\
 					            		<h4 class="uk-text-center">{{ mod.tramite }} | {{ mod.contador }}</h4>\
