@@ -189,18 +189,16 @@ a {
   top:0;
 }
 
-.bounce-enter .uk-card-body{
+.bounce-enter .modulo{
     animation: bounce-in 2.5s;	
 }
-
-.bounce-enter-active .uk-card-body{
-
+.bounce-enter-active .modulo{
   animation: bounce-in 2.5s;
 }
-.bounce-leave-active .uk-card-body{
+.bounce-leave-active .modulo{
   animation: bounce-in 2.5s reverse;
 }
-.bounce-leave .uk-card-body{
+.bounce-leave .modulo{
   animation: bounce-in 2.5s reverse;
 }
 
