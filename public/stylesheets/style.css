@@ -187,6 +187,20 @@ a {
 }
 
 
+.INFORMACIÓN .uk-card-body{
+  background-color: #104CCC;
+}
+
+.INFORMACIÓN .uk-card-body .title{
+  color: #000;
+}
+
+.INFORMACIÓN .uk-card-footer{
+    background-color: #0C3898;
+    color: #fff;
+}
+
+
 .btn-terminar{
   position: absolute;
   right: 0;
