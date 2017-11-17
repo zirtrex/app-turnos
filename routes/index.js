@@ -53,4 +53,10 @@ router.get('/cambiar', function(req, res, next) {
 
 });
 
+router.get('/video', function(req, res, next) {
+
+		res.render('video.html', {} );
+	
+});
+
 module.exports = router;
