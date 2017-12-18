@@ -28,6 +28,21 @@ router.get('/', function(req, res, next) {
 	
 });
 
+router.get('/b', function(req, res, next) {
+
+	res.render('show_2');
+
+	req.app.io.on('connection', function(socket) {
+
+		socket.on("Creando_Vista", function (viewData) {
+			logger.debug("Se ha creado una vista b:" + viewData.channel);			
+			req.session.viewChannel = viewData.channel;			
+		});
+
+	});
+	
+});
+
 router.get('/modulo', function(req, res, next) {
 
 	var fecha = new Date();

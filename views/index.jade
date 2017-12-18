@@ -1,57 +1,76 @@
 extends layout
 
 block content
-	div(class="uk-flex uk-flex-middle" uk-height-viewport)
-		div(class="uk-container-2 uk-margin-medium")
-			h1 #{titulo} 
-				if typeof modulo !== "undefined"
-					<span>(#{modulo})</span>
-				else
-					<span></span>
-			p Fecha: #{fecha}
-			form(action="/modulo", name="elegir-modulo", method="POST")
-				if typeof modulo !== "undefined"
-					input(type="hidden", name="modulo" value="#{modulo}")
-				else
+	script(type="text/javascript").
+		var fecha = "#{fecha}";
+
+	div(class="uk-navbar-container" uk-navbar="")
+		div(class="uk-navbar-left")
+			a(href="" class="uk-navbar-item uk-logo")
+				img(src='../images/escudoArmas.bmp' class="uk-responsive-height")
+		div(class="uk-navbar-center")
+			h2(class="uk-text-center") Consulado General del Ecuador <br class="uk-hidden@l"/>en New York
+		div(class="uk-navbar-right")
+			a(href="" class="uk-navbar-item uk-logo")
+				img(src='../images/logoMinisterio.JPG' class="uk-responsive-height")
+
+	div(class="uk-flex uk-flex-middle" uk-height-viewport="offset-bottom: 80px")
+		div(style="margin: 0 auto;")
+			div(class="uk-margin uk-container-2")
+				h3 #{titulo} 
+					if typeof modulo !== "undefined"
+						<span>(#{modulo})</span>
+					else
+						<span></span>
+				
+				form(action="/modulo", name="elegir-modulo", method="POST")
+					if typeof modulo !== "undefined"
+						input(type="hidden", name="modulo" value="#{modulo}")
+					else
+						div(class="uk-margin")
+							select(id="modulo", name="modulo", class="uk-select")
+								option(value="Oficina_1") Oficina_1
+								option(value="Oficina_2") Oficina_2
+								option(value="Oficina_3") Oficina_3
+								option(value="Oficina_4") Oficina_4
+								option(value="Oficina_5") Oficina_5
+								option(value="Oficina_6") Oficina_6
+								option(value="Oficina_7") Oficina_7
+								option(value="Oficina_8") Oficina_8
+								option(value="Oficina_9") Oficina_9
+								option(value="Oficina_10") Oficina_10
+								option(value="Oficina_11") Oficina_11
+								option(value="Oficina_12") Oficina_12
+								option(value="Oficina_13") Oficina_13
+								option(value="Oficina_14") Oficina_14
+								option(value="Oficina_15") Oficina_15
+								option(value="Oficina_16") Oficina_16
+								option(value="Oficina_17") Oficina_17
+								option(value="Oficina_18") Oficina_18
+								option(value="Oficina_19") Oficina_19
+								option(value="Oficina_20") Oficina_20
+								option(value="Oficina_21") Oficina_21
+								option(value="Oficina_22") Oficina_22
+								option(value="Oficina_23") Oficina_23
 					div(class="uk-margin")
-						select(id="modulo", name="modulo", class="uk-select")
-							option(value="Oficina_1") Oficina_1
-							option(value="Oficina_2") Oficina_2
-							option(value="Oficina_3") Oficina_3
-							option(value="Oficina_4") Oficina_4
-							option(value="Oficina_5") Oficina_5
-							option(value="Oficina_6") Oficina_6
-							option(value="Oficina_7") Oficina_7
-							option(value="Oficina_8") Oficina_8
-							option(value="Oficina_9") Oficina_9
-							option(value="Oficina_10") Oficina_10
-							option(value="Oficina_11") Oficina_11
-							option(value="Oficina_12") Oficina_12
-							option(value="Oficina_13") Oficina_13
-							option(value="Oficina_14") Oficina_14
-							option(value="Oficina_15") Oficina_15
-							option(value="Oficina_16") Oficina_16
-							option(value="Oficina_17") Oficina_17
-							option(value="Oficina_18") Oficina_18
-							option(value="Oficina_19") Oficina_19
-							option(value="Oficina_20") Oficina_20
-							option(value="Oficina_21") Oficina_21
-							option(value="Oficina_22") Oficina_22
-							option(value="Oficina_23") Oficina_23
-				div(class="uk-margin")
-					select(id="tramite", name="tramite", class="uk-select")
-						option(value="PODERES") PODERES
-						option(value="ID CONSULAR") ID CONSULAR
-						option(value="REGISTRO CIVIL") REGISTRO CIVIL
-						option(value="VISAS") VISAS
-						option(value="EMPADRONAMIENTO") EMPADRONAMIENTO
-						option(value="PARTIDAS DE NACIMIENTO") PARTIDA DE NACIMIENTO
-						option(value="CEDULAS") CEDULAS
-						option(value="VARIOS") VARIOS
-						option(value="INFORMACIÓN") INFORMACIÓN
-						option(value="CAJA") CAJA
-						option(value="PASAPORTES") PASAPORTES
-				div(class="uk-margin")
-					input(type="submit", value="Elegir", class="uk-button uk-button-primary")
+						select(id="tramite", name="tramite", class="uk-select")
+							option(value="PODERES") PODERES
+							option(value="ID CONSULAR") ID CONSULAR
+							option(value="REGISTRO CIVIL") REGISTRO CIVIL
+							option(value="VISAS") VISAS
+							option(value="EMPADRONAMIENTO") EMPADRONAMIENTO
+							option(value="PARTIDAS DE NACIMIENTO") PARTIDA DE NACIMIENTO
+							option(value="CEDULAS") CEDULAS
+							option(value="VARIOS") VARIOS
+							option(value="INFORMACIÓN") INFORMACIÓN
+							option(value="CAJA") CAJA
+							option(value="PASAPORTES") PASAPORTES
+					div(class="uk-margin")
+						input(type="submit", value="Elegir", class="uk-button uk-button-primary")
+
+				div(class="uk-flex uk-flex-right")
+					p Fecha:
+						span(id="fecha") #{fecha}
+
 		
     

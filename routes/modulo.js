@@ -13,6 +13,8 @@ const logger = log4js.getLogger('cheese');
 /* GET modulo page. */
 
 router.get('/', function(req, res, next) {
+	var fecha = new Date();
+	logger.debug(fecha);
 	
 	if( typeof req.session.modulo === 'undefined' || typeof req.session.tramite === 'undefined' ){
 	
@@ -36,7 +38,7 @@ router.get('/', function(req, res, next) {
 					fecha: fechaActual,
 					estado: true
 				});
-				var perAtendidas =  {indiceAten: 0, fechaInicio: new Date(), fechaFin: null, minutosAtendidos: 0};
+				var perAtendidas =  {indiceAten: 0, fechaInicio: new Date(), fechaFin: null, fueAtendido: null, minutosAtendidos: 0};
 
 				modulo.perAtendidas.push(perAtendidas);
 				
@@ -45,7 +47,7 @@ router.get('/', function(req, res, next) {
 						logger.debug(err);
 					} else {
 						logger.debug("Nuevo[GET]: " + modulo.toString());
-						res.render('modulo.html');
+						res.render('modulo.html', {'fechaAct': fecha});
 					}
 				});
 
@@ -57,7 +59,7 @@ router.get('/', function(req, res, next) {
 						logger.debug(err);
 					} else {
 						logger.debug("Ya existe[GET]: " + modulo.toString());
-						res.render('modulo.html');
+						res.render('modulo.html', {'fechaAct': fecha});
 					}
 				});
 				
@@ -89,7 +91,7 @@ router.post('/', function(req, res, next) {
 					fecha: fechaActual,
 					estado: true
 			});
-			var perAtendidas =  {indiceAten: 0, fechaInicio: new Date(), fechaFin: null, minutosAtendidos: 0};
+			var perAtendidas =  {indiceAten: 0, fechaInicio: new Date(), fechaFin: null, fueAtendido: null, minutosAtendidos: 0};
 
 			modulo.perAtendidas.push(perAtendidas);
 			
@@ -98,7 +100,7 @@ router.post('/', function(req, res, next) {
 					logger.debug(err);
 				} else {
 					logger.debug("Nuevo[POST]: " + modulo.toString());
-					res.render('modulo.html');
+					res.render('modulo.html', {'fechaAct': fecha});
 				}
 			});
 
@@ -110,7 +112,7 @@ router.post('/', function(req, res, next) {
 					logger.debug(err);
 				} else {
 					logger.debug("Ya existe[POST]: " + modulo.toString());
-					res.render('modulo.html');
+					res.render('modulo.html', {'fechaAct': fecha});
 				}
 			});
 			

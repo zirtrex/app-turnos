@@ -38,7 +38,7 @@ app.engine('html', require('ejs').renderFile);
 
 app.use(methodOverride("_method"));
 
-var MONGO_URL = 'mongodb://rafael:ZTRse7en@ds229465.mlab.com:29465/heroku_qzv4b77t'; //mongodb://localhost:27017/test mongodb://rafael:ZTRse7en@ds229465.mlab.com:29465/heroku_qzv4b77t
+var MONGO_URL = 'mongodb://localhost:27017/test'; //mongodb://localhost:27017/test mongodb://rafael:ZTRse7en@ds229465.mlab.com:29465/heroku_qzv4b77t
 var COOKIE_SECRET = 'secretencode';
 var COOKIE_NAME = 'sid';
 
@@ -100,11 +100,12 @@ io.on('connection', function(socket) {
                 var fechaInicioActual = new Date();
                 var minutosAtendidosAnterior = fechaFinAnterior.getTime() - fechaInicioAnterior.getTime();
                 
-                var perAtendidas =  {indiceAten: indicePerAtendidasActual, fechaInicio: fechaInicioActual, fechaFin: null, minutosAtendidos: 0};
+                var perAtendidas =  {indiceAten: indicePerAtendidasActual, fechaInicio: fechaInicioActual, fechaFin: null, fueAtendido: null, minutosAtendidos: 0};
                 
                 modulo.indicePerAtendidas = indicePerAtendidasActual;
                 modulo.perAtendidas[indicePerAtendidasActual-1].fechaFin = fechaFinAnterior;
                 modulo.perAtendidas[indicePerAtendidasActual-1].minutosAtendidos = Math.round(minutosAtendidosAnterior / 1000 / 60);
+                modulo.perAtendidas[indicePerAtendidasActual-1].fueAtendido = datos.atendido;
                 modulo.perAtendidas.push(perAtendidas);
                 //Elegimos el número más alto y aumentamos en 1
                 modulo.contador = max + 1;
@@ -200,9 +201,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error.jade');
 });
-
-
-
 
 
 

@@ -1835,3 +1835,1768 @@
        _id: 5a0b4211ca75372eac36eefa } ] }
 [2017-11-14 14:20:49.495] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
 [2017-11-14 14:20:49.499] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-11-22 08:42:30.441] [DEBUG] cheese - Se ha creado una vista b:SHOW_CHANNEL
+[2017-11-22 08:44:09.667] [DEBUG] cheese - Se ha creado una vista b:SHOW_CHANNEL
+[2017-11-22 08:44:24.803] [DEBUG] cheese - Se ha creado una vista b:SHOW_CHANNEL
+[2017-11-22 08:44:24.803] [DEBUG] cheese - Se ha creado una vista b:SHOW_CHANNEL
+[2017-11-22 08:48:50.375] [DEBUG] cheese - Se ha creado una vista b:SHOW_CHANNEL
+[2017-11-22 08:48:50.375] [DEBUG] cheese - Se ha creado una vista b:SHOW_CHANNEL
+[2017-11-22 08:48:50.375] [DEBUG] cheese - Se ha creado una vista b:SHOW_CHANNEL
+[2017-11-22 08:54:41.846] [DEBUG] cheese - 2017-11-22T13:54:41.846Z
+[2017-11-22 08:58:29.098] [DEBUG] cheese - Se ha creado una vista b:SHOW_CHANNEL
+[2017-11-22 08:58:29.101] [DEBUG] cheese - Se ha creado una vista b:SHOW_CHANNEL
+[2017-11-22 08:58:29.101] [DEBUG] cheese - Se ha creado una vista b:SHOW_CHANNEL
+[2017-11-22 08:58:29.101] [DEBUG] cheese - Se ha creado una vista b:SHOW_CHANNEL
+[2017-11-22 08:59:22.763] [DEBUG] cheese - Se ha creado una vista b:SHOW_CHANNEL
+[2017-11-22 08:59:22.763] [DEBUG] cheese - Se ha creado una vista b:SHOW_CHANNEL
+[2017-11-22 08:59:22.763] [DEBUG] cheese - Se ha creado una vista b:SHOW_CHANNEL
+[2017-11-22 08:59:22.763] [DEBUG] cheese - Se ha creado una vista b:SHOW_CHANNEL
+[2017-11-22 08:59:22.763] [DEBUG] cheese - Se ha creado una vista b:SHOW_CHANNEL
+[2017-11-22 08:59:27.652] [DEBUG] cheese - Se ha creado una vista b:SHOW_CHANNEL
+[2017-11-22 08:59:27.652] [DEBUG] cheese - Se ha creado una vista b:SHOW_CHANNEL
+[2017-11-22 08:59:27.652] [DEBUG] cheese - Se ha creado una vista b:SHOW_CHANNEL
+[2017-11-22 08:59:27.653] [DEBUG] cheese - Se ha creado una vista b:SHOW_CHANNEL
+[2017-11-22 08:59:27.653] [DEBUG] cheese - Se ha creado una vista b:SHOW_CHANNEL
+[2017-11-22 08:59:27.653] [DEBUG] cheese - Se ha creado una vista b:SHOW_CHANNEL
+[2017-11-22 09:03:46.429] [DEBUG] cheese - Se ha creado una vista b:SHOW_CHANNEL
+[2017-11-22 09:03:46.429] [DEBUG] cheese - Se ha creado una vista b:SHOW_CHANNEL
+[2017-11-22 09:03:46.430] [DEBUG] cheese - Se ha creado una vista b:SHOW_CHANNEL
+[2017-11-22 09:03:46.430] [DEBUG] cheese - Se ha creado una vista b:SHOW_CHANNEL
+[2017-11-22 09:03:46.430] [DEBUG] cheese - Se ha creado una vista b:SHOW_CHANNEL
+[2017-11-22 09:03:46.431] [DEBUG] cheese - Se ha creado una vista b:SHOW_CHANNEL
+[2017-11-22 09:03:46.431] [DEBUG] cheese - Se ha creado una vista b:SHOW_CHANNEL
+[2017-11-22 09:03:54.325] [DEBUG] cheese - 2017-11-22T14:03:54.325Z
+[2017-11-22 09:03:57.686] [DEBUG] cheese - Nuevo[POST]: { __v: 0,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2017-10-22',
+  estado: true,
+  _id: 5a1583cd703c49084c4a633d,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-11-22T14:03:57.511Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a1583cd703c49084c4a633e } ] }
+[2017-11-22 09:04:00.140] [DEBUG] cheese - Numero: 0
+[2017-11-22 09:04:00.141] [DEBUG] cheese - Numeros: 0
+[2017-11-22 09:04:00.141] [DEBUG] cheese - Maximo: 0
+[2017-11-22 09:04:00.475] [DEBUG] cheese - Guardado: { _id: 5a1583cd703c49084c4a633d,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 1,
+  contador: 1,
+  fecha: '2017-10-22',
+  estado: true,
+  __v: 1,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-11-22T14:03:57.511Z,
+       fechaFin: 2017-11-22T14:04:00.298Z,
+       minutosAtendidos: 0,
+       _id: 5a1583cd703c49084c4a633e },
+     { indiceAten: 1,
+       fechaInicio: 2017-11-22T14:04:00.298Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a1583d0703c49084c4a633f } ] }
+[2017-11-22 09:04:00.475] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-11-22 09:04:00.478] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-11-22 09:09:44.956] [DEBUG] cheese - Numero: 1
+[2017-11-22 09:09:44.956] [DEBUG] cheese - Numeros: 1
+[2017-11-22 09:09:44.956] [DEBUG] cheese - Maximo: 1
+[2017-11-22 09:09:45.274] [DEBUG] cheese - Guardado: { _id: 5a1583cd703c49084c4a633d,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 2,
+  contador: 2,
+  fecha: '2017-10-22',
+  estado: true,
+  __v: 2,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-11-22T14:03:57.511Z,
+       fechaFin: 2017-11-22T14:04:00.298Z,
+       minutosAtendidos: 0,
+       _id: 5a1583cd703c49084c4a633e },
+     { indiceAten: 1,
+       fechaInicio: 2017-11-22T14:04:00.298Z,
+       fechaFin: 2017-11-22T14:09:45.112Z,
+       minutosAtendidos: 6,
+       _id: 5a1583d0703c49084c4a633f },
+     { indiceAten: 2,
+       fechaInicio: 2017-11-22T14:09:45.112Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a158529703c49084c4a6340 } ] }
+[2017-11-22 09:09:45.274] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-11-22 09:09:45.276] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-11-22 09:38:25.504] [DEBUG] cheese - Numero: 2
+[2017-11-22 09:38:25.504] [DEBUG] cheese - Numeros: 2
+[2017-11-22 09:38:25.504] [DEBUG] cheese - Maximo: 2
+[2017-11-22 09:38:25.815] [DEBUG] cheese - Guardado: { _id: 5a1583cd703c49084c4a633d,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 3,
+  contador: 3,
+  fecha: '2017-10-22',
+  estado: true,
+  __v: 3,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-11-22T14:03:57.511Z,
+       fechaFin: 2017-11-22T14:04:00.298Z,
+       minutosAtendidos: 0,
+       _id: 5a1583cd703c49084c4a633e },
+     { indiceAten: 1,
+       fechaInicio: 2017-11-22T14:04:00.298Z,
+       fechaFin: 2017-11-22T14:09:45.112Z,
+       minutosAtendidos: 6,
+       _id: 5a1583d0703c49084c4a633f },
+     { indiceAten: 2,
+       fechaInicio: 2017-11-22T14:09:45.112Z,
+       fechaFin: 2017-11-22T14:38:25.653Z,
+       minutosAtendidos: 29,
+       _id: 5a158529703c49084c4a6340 },
+     { indiceAten: 3,
+       fechaInicio: 2017-11-22T14:38:25.653Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a158be1703c49084c4a6341 } ] }
+[2017-11-22 09:38:25.815] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-11-22 09:38:25.818] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-11-22 09:38:33.782] [DEBUG] cheese - Numero: 3
+[2017-11-22 09:38:33.782] [DEBUG] cheese - Numeros: 3
+[2017-11-22 09:38:33.782] [DEBUG] cheese - Maximo: 3
+[2017-11-22 09:38:34.583] [DEBUG] cheese - Guardado: { _id: 5a1583cd703c49084c4a633d,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 4,
+  contador: 4,
+  fecha: '2017-10-22',
+  estado: true,
+  __v: 4,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-11-22T14:03:57.511Z,
+       fechaFin: 2017-11-22T14:04:00.298Z,
+       minutosAtendidos: 0,
+       _id: 5a1583cd703c49084c4a633e },
+     { indiceAten: 1,
+       fechaInicio: 2017-11-22T14:04:00.298Z,
+       fechaFin: 2017-11-22T14:09:45.112Z,
+       minutosAtendidos: 6,
+       _id: 5a1583d0703c49084c4a633f },
+     { indiceAten: 2,
+       fechaInicio: 2017-11-22T14:09:45.112Z,
+       fechaFin: 2017-11-22T14:38:25.653Z,
+       minutosAtendidos: 29,
+       _id: 5a158529703c49084c4a6340 },
+     { indiceAten: 3,
+       fechaInicio: 2017-11-22T14:38:25.653Z,
+       fechaFin: 2017-11-22T14:38:33.941Z,
+       minutosAtendidos: 0,
+       _id: 5a158be1703c49084c4a6341 },
+     { indiceAten: 4,
+       fechaInicio: 2017-11-22T14:38:33.941Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a158be9703c49084c4a6342 } ] }
+[2017-11-22 09:38:34.584] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-11-22 09:38:34.585] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-11-22 09:38:38.071] [DEBUG] cheese - Numero: 4
+[2017-11-22 09:38:38.071] [DEBUG] cheese - Numeros: 4
+[2017-11-22 09:38:38.071] [DEBUG] cheese - Maximo: 4
+[2017-11-22 09:38:38.374] [DEBUG] cheese - Guardado: { _id: 5a1583cd703c49084c4a633d,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 5,
+  contador: 5,
+  fecha: '2017-10-22',
+  estado: true,
+  __v: 5,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-11-22T14:03:57.511Z,
+       fechaFin: 2017-11-22T14:04:00.298Z,
+       minutosAtendidos: 0,
+       _id: 5a1583cd703c49084c4a633e },
+     { indiceAten: 1,
+       fechaInicio: 2017-11-22T14:04:00.298Z,
+       fechaFin: 2017-11-22T14:09:45.112Z,
+       minutosAtendidos: 6,
+       _id: 5a1583d0703c49084c4a633f },
+     { indiceAten: 2,
+       fechaInicio: 2017-11-22T14:09:45.112Z,
+       fechaFin: 2017-11-22T14:38:25.653Z,
+       minutosAtendidos: 29,
+       _id: 5a158529703c49084c4a6340 },
+     { indiceAten: 3,
+       fechaInicio: 2017-11-22T14:38:25.653Z,
+       fechaFin: 2017-11-22T14:38:33.941Z,
+       minutosAtendidos: 0,
+       _id: 5a158be1703c49084c4a6341 },
+     { indiceAten: 4,
+       fechaInicio: 2017-11-22T14:38:33.941Z,
+       fechaFin: 2017-11-22T14:38:38.211Z,
+       minutosAtendidos: 0,
+       _id: 5a158be9703c49084c4a6342 },
+     { indiceAten: 5,
+       fechaInicio: 2017-11-22T14:38:38.211Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a158bee703c49084c4a6343 } ] }
+[2017-11-22 09:38:38.374] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-11-22 09:38:38.375] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-11-22 12:16:25.104] [DEBUG] cheese - Numero: 5
+[2017-11-22 12:16:25.105] [DEBUG] cheese - Numeros: 5
+[2017-11-22 12:16:25.106] [DEBUG] cheese - Maximo: 5
+[2017-11-22 12:16:25.440] [DEBUG] cheese - Guardado: { _id: 5a1583cd703c49084c4a633d,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 6,
+  contador: 6,
+  fecha: '2017-10-22',
+  estado: true,
+  __v: 6,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-11-22T14:03:57.511Z,
+       fechaFin: 2017-11-22T14:04:00.298Z,
+       minutosAtendidos: 0,
+       _id: 5a1583cd703c49084c4a633e },
+     { indiceAten: 1,
+       fechaInicio: 2017-11-22T14:04:00.298Z,
+       fechaFin: 2017-11-22T14:09:45.112Z,
+       minutosAtendidos: 6,
+       _id: 5a1583d0703c49084c4a633f },
+     { indiceAten: 2,
+       fechaInicio: 2017-11-22T14:09:45.112Z,
+       fechaFin: 2017-11-22T14:38:25.653Z,
+       minutosAtendidos: 29,
+       _id: 5a158529703c49084c4a6340 },
+     { indiceAten: 3,
+       fechaInicio: 2017-11-22T14:38:25.653Z,
+       fechaFin: 2017-11-22T14:38:33.941Z,
+       minutosAtendidos: 0,
+       _id: 5a158be1703c49084c4a6341 },
+     { indiceAten: 4,
+       fechaInicio: 2017-11-22T14:38:33.941Z,
+       fechaFin: 2017-11-22T14:38:38.211Z,
+       minutosAtendidos: 0,
+       _id: 5a158be9703c49084c4a6342 },
+     { indiceAten: 5,
+       fechaInicio: 2017-11-22T14:38:38.211Z,
+       fechaFin: 2017-11-22T17:16:25.264Z,
+       minutosAtendidos: 158,
+       _id: 5a158bee703c49084c4a6343 },
+     { indiceAten: 6,
+       fechaInicio: 2017-11-22T17:16:25.264Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a15b0e9703c49084c4a6344 } ] }
+[2017-11-22 12:16:25.440] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-11-22 12:16:25.444] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-12-18 08:55:04.221] [DEBUG] cheese - 2017-12-18T13:55:04.220Z
+[2017-12-18 09:22:13.669] [DEBUG] cheese - 2017-12-18T14:22:13.668Z
+[2017-12-18 09:23:34.367] [DEBUG] cheese - 2017-12-18T14:23:34.366Z
+[2017-12-18 09:28:17.875] [DEBUG] cheese - 2017-12-18T14:28:17.875Z
+[2017-12-18 09:29:42.542] [DEBUG] cheese - 2017-12-18T14:29:42.541Z
+[2017-12-18 09:30:56.142] [DEBUG] cheese - 2017-12-18T14:30:56.141Z
+[2017-12-18 09:48:54.371] [DEBUG] cheese - 2017-12-18T14:48:54.370Z
+[2017-12-18 09:54:32.221] [DEBUG] cheese - 2017-12-18T14:54:32.220Z
+[2017-12-18 09:56:35.473] [DEBUG] cheese - 2017-12-18T14:56:35.472Z
+[2017-12-18 09:59:21.898] [DEBUG] cheese - 2017-12-18T14:59:21.898Z
+[2017-12-18 10:00:48.027] [DEBUG] cheese - 2017-12-18T15:00:48.026Z
+[2017-12-18 10:09:37.334] [DEBUG] cheese - 2017-12-18T15:09:37.334Z
+[2017-12-18 10:10:55.109] [DEBUG] cheese - 2017-12-18T15:10:55.108Z
+[2017-12-18 10:12:00.311] [DEBUG] cheese - 2017-12-18T15:12:00.310Z
+[2017-12-18 10:13:14.924] [DEBUG] cheese - 2017-12-18T15:13:14.924Z
+[2017-12-18 10:19:45.973] [DEBUG] cheese - 2017-12-18T15:19:45.972Z
+[2017-12-18 10:21:10.954] [DEBUG] cheese - 2017-12-18T15:21:10.953Z
+[2017-12-18 10:22:44.887] [DEBUG] cheese - 2017-12-18T15:22:44.886Z
+[2017-12-18 10:23:42.341] [DEBUG] cheese - 2017-12-18T15:23:42.340Z
+[2017-12-18 10:25:07.219] [DEBUG] cheese - 2017-12-18T15:25:07.218Z
+[2017-12-18 10:25:58.099] [DEBUG] cheese - 2017-12-18T15:25:58.098Z
+[2017-12-18 10:26:40.258] [DEBUG] cheese - 2017-12-18T15:26:40.257Z
+[2017-12-18 10:26:44.914] [DEBUG] cheese - 2017-12-18T15:26:44.914Z
+[2017-12-18 10:28:04.171] [DEBUG] cheese - 2017-12-18T15:28:04.170Z
+[2017-12-18 11:08:49.132] [DEBUG] cheese - 2017-12-18T16:08:49.131Z
+[2017-12-18 11:10:42.832] [DEBUG] cheese - 2017-12-18T16:10:42.831Z
+[2017-12-18 11:11:10.196] [DEBUG] cheese - 2017-12-18T16:11:10.196Z
+[2017-12-18 11:11:46.249] [DEBUG] cheese - 2017-12-18T16:11:46.248Z
+[2017-12-18 11:13:02.102] [DEBUG] cheese - 2017-12-18T16:13:02.102Z
+[2017-12-18 11:25:26.824] [DEBUG] cheese - 2017-12-18T16:25:26.824Z
+[2017-12-18 11:26:19.132] [DEBUG] cheese - 2017-12-18T16:26:19.131Z
+[2017-12-18 11:31:49.834] [DEBUG] cheese - 2017-12-18T16:31:49.833Z
+[2017-12-18 11:32:22.399] [DEBUG] cheese - 2017-12-18T16:32:22.398Z
+[2017-12-18 11:32:48.321] [DEBUG] cheese - 2017-12-18T16:32:48.321Z
+[2017-12-18 11:34:53.491] [DEBUG] cheese - 2017-12-18T16:34:53.490Z
+[2017-12-18 11:35:51.971] [DEBUG] cheese - 2017-12-18T16:35:51.970Z
+[2017-12-18 11:36:19.374] [DEBUG] cheese - 2017-12-18T16:36:19.374Z
+[2017-12-18 11:44:33.462] [DEBUG] cheese - 2017-12-18T16:44:33.461Z
+[2017-12-18 11:45:31.945] [DEBUG] cheese - 2017-12-18T16:45:31.944Z
+[2017-12-18 11:49:53.315] [DEBUG] cheese - 2017-12-18T16:49:53.315Z
+[2017-12-18 11:50:28.545] [DEBUG] cheese - Nuevo[POST]: { __v: 0,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2017-11-18',
+  estado: true,
+  _id: 5a37f1d4607d440f3c485feb,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T16:50:28.434Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a37f1d4607d440f3c485fec } ] }
+[2017-12-18 11:54:16.100] [DEBUG] cheese - Ya existe[GET]: { _id: 5a37f1d4607d440f3c485feb,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 0,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T16:50:28.434Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a37f1d4607d440f3c485fec } ] }
+[2017-12-18 11:54:18.713] [DEBUG] cheese - Ya existe[GET]: { _id: 5a37f1d4607d440f3c485feb,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 0,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T16:50:28.434Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a37f1d4607d440f3c485fec } ] }
+[2017-12-18 11:56:19.364] [DEBUG] cheese - Ya existe[GET]: { _id: 5a37f1d4607d440f3c485feb,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 0,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T16:50:28.434Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a37f1d4607d440f3c485fec } ] }
+[2017-12-18 11:57:15.559] [DEBUG] cheese - Ya existe[GET]: { _id: 5a37f1d4607d440f3c485feb,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 0,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T16:50:28.434Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a37f1d4607d440f3c485fec } ] }
+[2017-12-18 11:58:21.338] [DEBUG] cheese - Ya existe[GET]: { _id: 5a37f1d4607d440f3c485feb,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 0,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T16:50:28.434Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a37f1d4607d440f3c485fec } ] }
+[2017-12-18 11:59:29.398] [DEBUG] cheese - Ya existe[GET]: { _id: 5a37f1d4607d440f3c485feb,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 0,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T16:50:28.434Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a37f1d4607d440f3c485fec } ] }
+[2017-12-18 12:01:26.389] [DEBUG] cheese - Ya existe[GET]: { _id: 5a37f1d4607d440f3c485feb,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 0,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T16:50:28.434Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a37f1d4607d440f3c485fec } ] }
+[2017-12-18 12:02:12.929] [DEBUG] cheese - Ya existe[GET]: { _id: 5a37f1d4607d440f3c485feb,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 0,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T16:50:28.434Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a37f1d4607d440f3c485fec } ] }
+[2017-12-18 12:02:49.978] [DEBUG] cheese - Ya existe[GET]: { _id: 5a37f1d4607d440f3c485feb,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 0,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T16:50:28.434Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a37f1d4607d440f3c485fec } ] }
+[2017-12-18 12:03:01.558] [DEBUG] cheese - Numero: 0
+[2017-12-18 12:03:01.558] [DEBUG] cheese - Numeros: 0
+[2017-12-18 12:03:01.559] [DEBUG] cheese - Maximo: 0
+[2017-12-18 12:03:01.639] [DEBUG] cheese - Guardado: { _id: 5a37f1d4607d440f3c485feb,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 1,
+  contador: 1,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 1,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T16:50:28.434Z,
+       fechaFin: 2017-12-18T17:03:01.563Z,
+       minutosAtendidos: 13,
+       _id: 5a37f1d4607d440f3c485fec },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T17:03:01.563Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a37f4c58d1c1e2ca8544695 } ] }
+[2017-12-18 12:03:01.639] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-12-18 12:03:01.643] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-12-18 12:13:09.207] [DEBUG] cheese - 2017-12-18T17:13:09.207Z
+[2017-12-18 12:13:09.242] [DEBUG] cheese - Ya existe[GET]: { _id: 5a37f1d4607d440f3c485feb,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 1,
+  contador: 1,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 1,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T16:50:28.434Z,
+       fechaFin: 2017-12-18T17:03:01.563Z,
+       minutosAtendidos: 13,
+       _id: 5a37f1d4607d440f3c485fec },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T17:03:01.563Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a37f4c58d1c1e2ca8544695 } ] }
+[2017-12-18 12:13:50.377] [DEBUG] cheese - 2017-12-18T17:13:50.376Z
+[2017-12-18 12:13:50.413] [DEBUG] cheese - Ya existe[GET]: { _id: 5a37f1d4607d440f3c485feb,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 1,
+  contador: 1,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 1,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T16:50:28.434Z,
+       fechaFin: 2017-12-18T17:03:01.563Z,
+       minutosAtendidos: 13,
+       _id: 5a37f1d4607d440f3c485fec },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T17:03:01.563Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a37f4c58d1c1e2ca8544695 } ] }
+[2017-12-18 12:14:00.351] [DEBUG] cheese - 2017-12-18T17:14:00.351Z
+[2017-12-18 12:14:00.355] [DEBUG] cheese - Ya existe[GET]: { _id: 5a37f1d4607d440f3c485feb,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 1,
+  contador: 1,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 1,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T16:50:28.434Z,
+       fechaFin: 2017-12-18T17:03:01.563Z,
+       minutosAtendidos: 13,
+       _id: 5a37f1d4607d440f3c485fec },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T17:03:01.563Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a37f4c58d1c1e2ca8544695 } ] }
+[2017-12-18 12:16:17.825] [DEBUG] cheese - 2017-12-18T17:16:17.824Z
+[2017-12-18 12:16:17.862] [DEBUG] cheese - Ya existe[GET]: { _id: 5a37f1d4607d440f3c485feb,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 1,
+  contador: 1,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 1,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T16:50:28.434Z,
+       fechaFin: 2017-12-18T17:03:01.563Z,
+       minutosAtendidos: 13,
+       _id: 5a37f1d4607d440f3c485fec },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T17:03:01.563Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a37f4c58d1c1e2ca8544695 } ] }
+[2017-12-18 12:17:35.264] [DEBUG] cheese - 2017-12-18T17:17:35.263Z
+[2017-12-18 12:17:35.300] [DEBUG] cheese - Ya existe[GET]: { _id: 5a37f1d4607d440f3c485feb,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 1,
+  contador: 1,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 1,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T16:50:28.434Z,
+       fechaFin: 2017-12-18T17:03:01.563Z,
+       minutosAtendidos: 13,
+       _id: 5a37f1d4607d440f3c485fec },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T17:03:01.563Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a37f4c58d1c1e2ca8544695 } ] }
+[2017-12-18 12:18:21.601] [DEBUG] cheese - 2017-12-18T17:18:21.600Z
+[2017-12-18 12:18:21.635] [DEBUG] cheese - Ya existe[GET]: { _id: 5a37f1d4607d440f3c485feb,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 1,
+  contador: 1,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 1,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T16:50:28.434Z,
+       fechaFin: 2017-12-18T17:03:01.563Z,
+       minutosAtendidos: 13,
+       _id: 5a37f1d4607d440f3c485fec },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T17:03:01.563Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a37f4c58d1c1e2ca8544695 } ] }
+[2017-12-18 12:47:10.302] [DEBUG] cheese - Emitiendo desde al SHOW_CHANNEL
+[2017-12-18 12:47:19.508] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-12-18 12:49:37.890] [DEBUG] cheese - 2017-12-18T17:49:37.890Z
+[2017-12-18 12:50:13.748] [DEBUG] cheese - Nuevo[POST]: { __v: 0,
+  modulo: 'Oficina_2',
+  tramite: 'ID CONSULAR',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2017-11-18',
+  estado: true,
+  _id: 5a37ffd5e564cd501c7f5945,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T17:50:13.730Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a37ffd5e564cd501c7f5946 } ] }
+[2017-12-18 12:52:05.447] [DEBUG] cheese - 2017-12-18T17:52:05.445Z
+[2017-12-18 12:52:12.698] [DEBUG] cheese - Nuevo[POST]: { __v: 0,
+  modulo: 'Oficina_3',
+  tramite: 'REGISTRO CIVIL',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2017-11-18',
+  estado: true,
+  _id: 5a38004c318b751714add531,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T17:52:12.678Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a38004c318b751714add532 } ] }
+[2017-12-18 12:52:41.521] [DEBUG] cheese - Numero: 0
+[2017-12-18 12:52:41.522] [DEBUG] cheese - Numeros: 0
+[2017-12-18 12:52:41.522] [DEBUG] cheese - Maximo: 0
+[2017-12-18 12:52:41.538] [DEBUG] cheese - Guardado: { _id: 5a38004c318b751714add531,
+  modulo: 'Oficina_3',
+  tramite: 'REGISTRO CIVIL',
+  indicePerAtendidas: 1,
+  contador: 1,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 1,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T17:52:12.678Z,
+       fechaFin: 2017-12-18T17:52:41.527Z,
+       minutosAtendidos: 0,
+       _id: 5a38004c318b751714add532 },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T17:52:41.527Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a380069318b751714add533 } ] }
+[2017-12-18 12:52:41.538] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-12-18 12:52:41.540] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-12-18 12:52:49.708] [DEBUG] cheese - Numero: 1
+[2017-12-18 12:52:49.708] [DEBUG] cheese - Numeros: 1
+[2017-12-18 12:52:49.708] [DEBUG] cheese - Maximo: 1
+[2017-12-18 12:52:49.727] [DEBUG] cheese - Guardado: { _id: 5a38004c318b751714add531,
+  modulo: 'Oficina_3',
+  tramite: 'REGISTRO CIVIL',
+  indicePerAtendidas: 2,
+  contador: 2,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 2,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T17:52:12.678Z,
+       fechaFin: 2017-12-18T17:52:41.527Z,
+       minutosAtendidos: 0,
+       _id: 5a38004c318b751714add532 },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T17:52:41.527Z,
+       fechaFin: 2017-12-18T17:52:49.711Z,
+       minutosAtendidos: 0,
+       _id: 5a380069318b751714add533 },
+     { indiceAten: 2,
+       fechaInicio: 2017-12-18T17:52:49.711Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a380071318b751714add534 } ] }
+[2017-12-18 12:52:49.728] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-12-18 12:52:49.729] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-12-18 12:53:08.385] [DEBUG] cheese - Emitiendo desde al SHOW_CHANNEL
+[2017-12-18 12:53:14.075] [DEBUG] cheese - Emitiendo desde al SHOW_CHANNEL
+[2017-12-18 12:53:19.645] [DEBUG] cheese - Emitiendo desde al SHOW_CHANNEL
+[2017-12-18 12:53:26.334] [DEBUG] cheese - Emitiendo desde al SHOW_CHANNEL
+[2017-12-18 12:53:40.073] [DEBUG] cheese - 2017-12-18T17:53:40.073Z
+[2017-12-18 12:53:47.413] [DEBUG] cheese - 2017-12-18T17:53:47.412Z
+[2017-12-18 12:53:47.506] [DEBUG] cheese - 2017-12-18T17:53:47.506Z
+[2017-12-18 12:53:56.573] [DEBUG] cheese - Ya existe[POST]: { _id: 5a37ffd5e564cd501c7f5945,
+  modulo: 'Oficina_2',
+  tramite: 'ID CONSULAR',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 0,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T17:50:13.730Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a37ffd5e564cd501c7f5946 } ] }
+[2017-12-18 12:53:58.522] [DEBUG] cheese - Emitiendo desde al SHOW_CHANNEL
+[2017-12-18 12:54:02.105] [DEBUG] cheese - Numero: 0
+[2017-12-18 12:54:02.106] [DEBUG] cheese - Numeros: 0
+[2017-12-18 12:54:02.106] [DEBUG] cheese - Maximo: 0
+[2017-12-18 12:54:02.117] [DEBUG] cheese - Guardado: { _id: 5a37ffd5e564cd501c7f5945,
+  modulo: 'Oficina_2',
+  tramite: 'ID CONSULAR',
+  indicePerAtendidas: 1,
+  contador: 1,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 1,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T17:50:13.730Z,
+       fechaFin: 2017-12-18T17:54:02.110Z,
+       minutosAtendidos: 4,
+       _id: 5a37ffd5e564cd501c7f5946 },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T17:54:02.110Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a3800ba318b751714add535 } ] }
+[2017-12-18 12:54:02.117] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-12-18 12:54:02.118] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-12-18 13:11:20.449] [DEBUG] cheese - 2017-12-18T18:11:20.448Z
+[2017-12-18 13:11:20.484] [DEBUG] cheese - Ya existe[GET]: { _id: 5a37f1d4607d440f3c485feb,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 1,
+  contador: 1,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 1,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T16:50:28.434Z,
+       fechaFin: 2017-12-18T17:03:01.563Z,
+       minutosAtendidos: 13,
+       _id: 5a37f1d4607d440f3c485fec },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T17:03:01.563Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a37f4c58d1c1e2ca8544695 } ] }
+[2017-12-18 13:11:47.032] [DEBUG] cheese - Numero: 1
+[2017-12-18 13:11:47.033] [DEBUG] cheese - Numeros: 1
+[2017-12-18 13:11:47.033] [DEBUG] cheese - Maximo: 1
+[2017-12-18 13:11:47.048] [DEBUG] cheese - Guardado: { _id: 5a37f1d4607d440f3c485feb,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 2,
+  contador: 2,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 2,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T16:50:28.434Z,
+       fechaFin: 2017-12-18T17:03:01.563Z,
+       minutosAtendidos: 13,
+       _id: 5a37f1d4607d440f3c485fec },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T17:03:01.563Z,
+       fechaFin: 2017-12-18T18:11:47.035Z,
+       minutosAtendidos: 69,
+       _id: 5a37f4c58d1c1e2ca8544695 },
+     { indiceAten: 2,
+       fechaInicio: 2017-12-18T18:11:47.035Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a3804e3e2bb0561746c249a } ] }
+[2017-12-18 13:11:47.048] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-12-18 13:11:47.050] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-12-18 13:13:47.543] [DEBUG] cheese - 2017-12-18T18:13:47.543Z
+[2017-12-18 13:13:47.565] [DEBUG] cheese - 2017-12-18T18:13:47.565Z
+[2017-12-18 13:13:50.378] [DEBUG] cheese - Nuevo[POST]: { __v: 0,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2017-11-18',
+  estado: true,
+  _id: 5a38055ee2bb0561746c249b,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T18:13:50.369Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a38055ee2bb0561746c249c } ] }
+[2017-12-18 13:13:53.892] [DEBUG] cheese - Numero: 0
+[2017-12-18 13:13:53.892] [DEBUG] cheese - Numeros: 0
+[2017-12-18 13:13:53.892] [DEBUG] cheese - Maximo: 0
+[2017-12-18 13:13:53.905] [DEBUG] cheese - Guardado: { _id: 5a38055ee2bb0561746c249b,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 1,
+  contador: 1,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 1,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T18:13:50.369Z,
+       fechaFin: 2017-12-18T18:13:53.895Z,
+       minutosAtendidos: 0,
+       _id: 5a38055ee2bb0561746c249c },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T18:13:53.895Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a380561e2bb0561746c249d } ] }
+[2017-12-18 13:13:53.905] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-12-18 13:13:53.906] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-12-18 13:16:41.485] [DEBUG] cheese - Ya existe[POST]: { _id: 5a38055ee2bb0561746c249b,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 1,
+  contador: 1,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 1,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T18:13:50.369Z,
+       fechaFin: 2017-12-18T18:13:53.895Z,
+       minutosAtendidos: 0,
+       _id: 5a38055ee2bb0561746c249c },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T18:13:53.895Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a380561e2bb0561746c249d } ] }
+[2017-12-18 13:16:45.002] [DEBUG] cheese - Numero: 1
+[2017-12-18 13:16:45.003] [DEBUG] cheese - Numeros: 1
+[2017-12-18 13:16:45.004] [DEBUG] cheese - Maximo: 1
+[2017-12-18 13:16:45.027] [DEBUG] cheese - Guardado: { _id: 5a38055ee2bb0561746c249b,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 2,
+  contador: 2,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 2,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T18:13:50.369Z,
+       fechaFin: 2017-12-18T18:13:53.895Z,
+       minutosAtendidos: 0,
+       _id: 5a38055ee2bb0561746c249c },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T18:13:53.895Z,
+       fechaFin: 2017-12-18T18:16:45.008Z,
+       minutosAtendidos: 3,
+       _id: 5a380561e2bb0561746c249d },
+     { indiceAten: 2,
+       fechaInicio: 2017-12-18T18:16:45.008Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a38060db04e4e3e342eec83 } ] }
+[2017-12-18 13:16:45.027] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-12-18 13:16:45.030] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-12-18 13:23:14.169] [DEBUG] cheese - Ya existe[POST]: { _id: 5a38055ee2bb0561746c249b,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 2,
+  contador: 2,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 2,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T18:13:50.369Z,
+       fechaFin: 2017-12-18T18:13:53.895Z,
+       minutosAtendidos: 0,
+       _id: 5a38055ee2bb0561746c249c },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T18:13:53.895Z,
+       fechaFin: 2017-12-18T18:16:45.008Z,
+       minutosAtendidos: 3,
+       _id: 5a380561e2bb0561746c249d },
+     { indiceAten: 2,
+       fechaInicio: 2017-12-18T18:16:45.008Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a38060db04e4e3e342eec83 } ] }
+[2017-12-18 13:23:21.916] [DEBUG] cheese - Numero: 2
+[2017-12-18 13:23:21.917] [DEBUG] cheese - Numeros: 2
+[2017-12-18 13:23:21.917] [DEBUG] cheese - Maximo: 2
+[2017-12-18 13:23:21.967] [DEBUG] cheese - Guardado: { _id: 5a38055ee2bb0561746c249b,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 3,
+  contador: 3,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 3,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T18:13:50.369Z,
+       fechaFin: 2017-12-18T18:13:53.895Z,
+       minutosAtendidos: 0,
+       _id: 5a38055ee2bb0561746c249c },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T18:13:53.895Z,
+       fechaFin: 2017-12-18T18:16:45.008Z,
+       minutosAtendidos: 3,
+       _id: 5a380561e2bb0561746c249d },
+     { indiceAten: 2,
+       fechaInicio: 2017-12-18T18:16:45.008Z,
+       fechaFin: 2017-12-18T18:23:21.921Z,
+       minutosAtendidos: 7,
+       _id: 5a38060db04e4e3e342eec83 },
+     { indiceAten: 3,
+       fechaInicio: 2017-12-18T18:23:21.921Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a38079938a16c32480edabc } ] }
+[2017-12-18 13:23:21.967] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-12-18 13:23:21.968] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-12-18 13:23:26.685] [DEBUG] cheese - Numero: 3
+[2017-12-18 13:23:26.685] [DEBUG] cheese - Numeros: 3
+[2017-12-18 13:23:26.685] [DEBUG] cheese - Maximo: 3
+[2017-12-18 13:23:26.710] [DEBUG] cheese - Guardado: { _id: 5a38055ee2bb0561746c249b,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 4,
+  contador: 4,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 4,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T18:13:50.369Z,
+       fechaFin: 2017-12-18T18:13:53.895Z,
+       minutosAtendidos: 0,
+       _id: 5a38055ee2bb0561746c249c },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T18:13:53.895Z,
+       fechaFin: 2017-12-18T18:16:45.008Z,
+       minutosAtendidos: 3,
+       _id: 5a380561e2bb0561746c249d },
+     { indiceAten: 2,
+       fechaInicio: 2017-12-18T18:16:45.008Z,
+       fechaFin: 2017-12-18T18:23:21.921Z,
+       minutosAtendidos: 7,
+       _id: 5a38060db04e4e3e342eec83 },
+     { indiceAten: 3,
+       fechaInicio: 2017-12-18T18:23:21.921Z,
+       fechaFin: 2017-12-18T18:23:26.688Z,
+       minutosAtendidos: 0,
+       _id: 5a38079938a16c32480edabc },
+     { indiceAten: 4,
+       fechaInicio: 2017-12-18T18:23:26.689Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a38079e38a16c32480edabd } ] }
+[2017-12-18 13:23:26.710] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-12-18 13:23:26.712] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-12-18 13:25:07.811] [DEBUG] cheese - Ya existe[POST]: { _id: 5a38055ee2bb0561746c249b,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 4,
+  contador: 4,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 4,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T18:13:50.369Z,
+       fechaFin: 2017-12-18T18:13:53.895Z,
+       minutosAtendidos: 0,
+       _id: 5a38055ee2bb0561746c249c },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T18:13:53.895Z,
+       fechaFin: 2017-12-18T18:16:45.008Z,
+       minutosAtendidos: 3,
+       _id: 5a380561e2bb0561746c249d },
+     { indiceAten: 2,
+       fechaInicio: 2017-12-18T18:16:45.008Z,
+       fechaFin: 2017-12-18T18:23:21.921Z,
+       minutosAtendidos: 7,
+       _id: 5a38060db04e4e3e342eec83 },
+     { indiceAten: 3,
+       fechaInicio: 2017-12-18T18:23:21.921Z,
+       fechaFin: 2017-12-18T18:23:26.688Z,
+       minutosAtendidos: 0,
+       _id: 5a38079938a16c32480edabc },
+     { indiceAten: 4,
+       fechaInicio: 2017-12-18T18:23:26.689Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a38079e38a16c32480edabd } ] }
+[2017-12-18 13:25:10.068] [DEBUG] cheese - Numero: 4
+[2017-12-18 13:25:10.069] [DEBUG] cheese - Numeros: 4
+[2017-12-18 13:25:10.069] [DEBUG] cheese - Maximo: 4
+[2017-12-18 13:25:10.108] [DEBUG] cheese - Guardado: { _id: 5a38055ee2bb0561746c249b,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 5,
+  contador: 5,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 5,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T18:13:50.369Z,
+       fechaFin: 2017-12-18T18:13:53.895Z,
+       minutosAtendidos: 0,
+       _id: 5a38055ee2bb0561746c249c },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T18:13:53.895Z,
+       fechaFin: 2017-12-18T18:16:45.008Z,
+       minutosAtendidos: 3,
+       _id: 5a380561e2bb0561746c249d },
+     { indiceAten: 2,
+       fechaInicio: 2017-12-18T18:16:45.008Z,
+       fechaFin: 2017-12-18T18:23:21.921Z,
+       minutosAtendidos: 7,
+       _id: 5a38060db04e4e3e342eec83 },
+     { indiceAten: 3,
+       fechaInicio: 2017-12-18T18:23:21.921Z,
+       fechaFin: 2017-12-18T18:23:26.688Z,
+       minutosAtendidos: 0,
+       _id: 5a38079938a16c32480edabc },
+     { indiceAten: 4,
+       fechaInicio: 2017-12-18T18:23:26.689Z,
+       fechaFin: 2017-12-18T18:25:10.073Z,
+       minutosAtendidos: 2,
+       _id: 5a38079e38a16c32480edabd },
+     { indiceAten: 5,
+       fechaInicio: 2017-12-18T18:25:10.073Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a3808069d60314b08a6d3f5 } ] }
+[2017-12-18 13:25:10.109] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-12-18 13:25:10.110] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-12-18 13:25:25.750] [DEBUG] cheese - Numero: 5
+[2017-12-18 13:25:25.750] [DEBUG] cheese - Numeros: 5
+[2017-12-18 13:25:25.750] [DEBUG] cheese - Maximo: 5
+[2017-12-18 13:25:25.776] [DEBUG] cheese - Guardado: { _id: 5a38055ee2bb0561746c249b,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 6,
+  contador: 6,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 6,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T18:13:50.369Z,
+       fechaFin: 2017-12-18T18:13:53.895Z,
+       minutosAtendidos: 0,
+       _id: 5a38055ee2bb0561746c249c },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T18:13:53.895Z,
+       fechaFin: 2017-12-18T18:16:45.008Z,
+       minutosAtendidos: 3,
+       _id: 5a380561e2bb0561746c249d },
+     { indiceAten: 2,
+       fechaInicio: 2017-12-18T18:16:45.008Z,
+       fechaFin: 2017-12-18T18:23:21.921Z,
+       minutosAtendidos: 7,
+       _id: 5a38060db04e4e3e342eec83 },
+     { indiceAten: 3,
+       fechaInicio: 2017-12-18T18:23:21.921Z,
+       fechaFin: 2017-12-18T18:23:26.688Z,
+       minutosAtendidos: 0,
+       _id: 5a38079938a16c32480edabc },
+     { indiceAten: 4,
+       fechaInicio: 2017-12-18T18:23:26.689Z,
+       fechaFin: 2017-12-18T18:25:10.073Z,
+       minutosAtendidos: 2,
+       _id: 5a38079e38a16c32480edabd },
+     { indiceAten: 5,
+       fechaInicio: 2017-12-18T18:25:10.073Z,
+       fechaFin: 2017-12-18T18:25:25.756Z,
+       minutosAtendidos: 0,
+       _id: 5a3808069d60314b08a6d3f5 },
+     { indiceAten: 6,
+       fechaInicio: 2017-12-18T18:25:25.756Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a3808159d60314b08a6d3f6 } ] }
+[2017-12-18 13:25:25.776] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-12-18 13:25:25.777] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-12-18 13:57:21.574] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2017-12-18 14:20:47.591] [DEBUG] cheese - Ya existe[POST]: { _id: 5a38055ee2bb0561746c249b,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 6,
+  contador: 6,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 6,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T18:13:50.369Z,
+       fechaFin: 2017-12-18T18:13:53.895Z,
+       minutosAtendidos: 0,
+       _id: 5a38055ee2bb0561746c249c },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T18:13:53.895Z,
+       fechaFin: 2017-12-18T18:16:45.008Z,
+       minutosAtendidos: 3,
+       _id: 5a380561e2bb0561746c249d },
+     { indiceAten: 2,
+       fechaInicio: 2017-12-18T18:16:45.008Z,
+       fechaFin: 2017-12-18T18:23:21.921Z,
+       minutosAtendidos: 7,
+       _id: 5a38060db04e4e3e342eec83 },
+     { indiceAten: 3,
+       fechaInicio: 2017-12-18T18:23:21.921Z,
+       fechaFin: 2017-12-18T18:23:26.688Z,
+       minutosAtendidos: 0,
+       _id: 5a38079938a16c32480edabc },
+     { indiceAten: 4,
+       fechaInicio: 2017-12-18T18:23:26.689Z,
+       fechaFin: 2017-12-18T18:25:10.073Z,
+       minutosAtendidos: 2,
+       _id: 5a38079e38a16c32480edabd },
+     { indiceAten: 5,
+       fechaInicio: 2017-12-18T18:25:10.073Z,
+       fechaFin: 2017-12-18T18:25:25.756Z,
+       minutosAtendidos: 0,
+       _id: 5a3808069d60314b08a6d3f5 },
+     { indiceAten: 6,
+       fechaInicio: 2017-12-18T18:25:25.756Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a3808159d60314b08a6d3f6 } ] }
+[2017-12-18 14:20:52.802] [DEBUG] cheese - 2017-12-18T19:20:52.802Z
+[2017-12-18 14:20:52.813] [DEBUG] cheese - Ya existe[GET]: { _id: 5a38055ee2bb0561746c249b,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 6,
+  contador: 6,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 6,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T18:13:50.369Z,
+       fechaFin: 2017-12-18T18:13:53.895Z,
+       minutosAtendidos: 0,
+       _id: 5a38055ee2bb0561746c249c },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T18:13:53.895Z,
+       fechaFin: 2017-12-18T18:16:45.008Z,
+       minutosAtendidos: 3,
+       _id: 5a380561e2bb0561746c249d },
+     { indiceAten: 2,
+       fechaInicio: 2017-12-18T18:16:45.008Z,
+       fechaFin: 2017-12-18T18:23:21.921Z,
+       minutosAtendidos: 7,
+       _id: 5a38060db04e4e3e342eec83 },
+     { indiceAten: 3,
+       fechaInicio: 2017-12-18T18:23:21.921Z,
+       fechaFin: 2017-12-18T18:23:26.688Z,
+       minutosAtendidos: 0,
+       _id: 5a38079938a16c32480edabc },
+     { indiceAten: 4,
+       fechaInicio: 2017-12-18T18:23:26.689Z,
+       fechaFin: 2017-12-18T18:25:10.073Z,
+       minutosAtendidos: 2,
+       _id: 5a38079e38a16c32480edabd },
+     { indiceAten: 5,
+       fechaInicio: 2017-12-18T18:25:10.073Z,
+       fechaFin: 2017-12-18T18:25:25.756Z,
+       minutosAtendidos: 0,
+       _id: 5a3808069d60314b08a6d3f5 },
+     { indiceAten: 6,
+       fechaInicio: 2017-12-18T18:25:25.756Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a3808159d60314b08a6d3f6 } ] }
+[2017-12-18 14:20:55.470] [DEBUG] cheese - Numero: 6
+[2017-12-18 14:20:55.470] [DEBUG] cheese - Numeros: 6
+[2017-12-18 14:20:55.471] [DEBUG] cheese - Maximo: 6
+[2017-12-18 14:20:55.490] [DEBUG] cheese - Guardado: { _id: 5a38055ee2bb0561746c249b,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 7,
+  contador: 7,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 7,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T18:13:50.369Z,
+       fechaFin: 2017-12-18T18:13:53.895Z,
+       minutosAtendidos: 0,
+       _id: 5a38055ee2bb0561746c249c },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T18:13:53.895Z,
+       fechaFin: 2017-12-18T18:16:45.008Z,
+       minutosAtendidos: 3,
+       _id: 5a380561e2bb0561746c249d },
+     { indiceAten: 2,
+       fechaInicio: 2017-12-18T18:16:45.008Z,
+       fechaFin: 2017-12-18T18:23:21.921Z,
+       minutosAtendidos: 7,
+       _id: 5a38060db04e4e3e342eec83 },
+     { indiceAten: 3,
+       fechaInicio: 2017-12-18T18:23:21.921Z,
+       fechaFin: 2017-12-18T18:23:26.688Z,
+       minutosAtendidos: 0,
+       _id: 5a38079938a16c32480edabc },
+     { indiceAten: 4,
+       fechaInicio: 2017-12-18T18:23:26.689Z,
+       fechaFin: 2017-12-18T18:25:10.073Z,
+       minutosAtendidos: 2,
+       _id: 5a38079e38a16c32480edabd },
+     { indiceAten: 5,
+       fechaInicio: 2017-12-18T18:25:10.073Z,
+       fechaFin: 2017-12-18T18:25:25.756Z,
+       minutosAtendidos: 0,
+       _id: 5a3808069d60314b08a6d3f5 },
+     { indiceAten: 6,
+       fechaInicio: 2017-12-18T18:25:25.756Z,
+       fechaFin: 2017-12-18T19:20:55.474Z,
+       minutosAtendidos: 55,
+       _id: 5a3808159d60314b08a6d3f6 },
+     { indiceAten: 7,
+       fechaInicio: 2017-12-18T19:20:55.474Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a381517c25bc346585c5c78 } ] }
+[2017-12-18 14:20:55.491] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-12-18 14:20:55.493] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-12-18 14:21:20.059] [DEBUG] cheese - 2017-12-18T19:21:20.059Z
+[2017-12-18 14:21:20.075] [DEBUG] cheese - Nuevo[GET]: { __v: 0,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2017-11-18',
+  estado: true,
+  _id: 5a381530c25bc346585c5c79,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T19:21:20.062Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a381530c25bc346585c5c7a } ] }
+[2017-12-18 14:23:42.709] [DEBUG] cheese - 2017-12-18T19:23:42.708Z
+[2017-12-18 14:23:42.759] [DEBUG] cheese - 2017-12-18T19:23:42.759Z
+[2017-12-18 14:23:48.450] [DEBUG] cheese - Nuevo[POST]: { __v: 0,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2017-11-18',
+  estado: true,
+  _id: 5a3815c4939e063dc4cd6931,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T19:23:48.413Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a3815c4939e063dc4cd6932 } ] }
+[2017-12-18 14:23:52.228] [DEBUG] cheese - Numero: 0
+[2017-12-18 14:23:52.228] [DEBUG] cheese - Numeros: 0
+[2017-12-18 14:23:52.228] [DEBUG] cheese - Maximo: 0
+[2017-12-18 14:23:52.238] [DEBUG] cheese - Guardado: { _id: 5a3815c4939e063dc4cd6931,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 1,
+  contador: 1,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 1,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T19:23:48.413Z,
+       fechaFin: 2017-12-18T19:23:52.230Z,
+       minutosAtendidos: 0,
+       _id: 5a3815c4939e063dc4cd6932 },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T19:23:52.230Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a3815c8939e063dc4cd6933 } ] }
+[2017-12-18 14:23:52.238] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-12-18 14:23:52.240] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-12-18 14:26:13.603] [DEBUG] cheese - Nuevo[POST]: { __v: 0,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2017-11-18',
+  estado: true,
+  _id: 5a381655939e063dc4cd6934,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T19:26:13.598Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a381655939e063dc4cd6935 } ] }
+[2017-12-18 14:26:28.950] [DEBUG] cheese - Nuevo[POST]: { __v: 0,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2017-11-18',
+  estado: true,
+  _id: 5a381664939e063dc4cd6936,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T19:26:28.946Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a381664939e063dc4cd6937 } ] }
+[2017-12-18 14:28:11.289] [DEBUG] cheese - Numero: 0
+[2017-12-18 14:28:11.289] [DEBUG] cheese - Numeros: 0
+[2017-12-18 14:28:11.289] [DEBUG] cheese - Maximo: 0
+[2017-12-18 14:28:11.301] [DEBUG] cheese - Guardado: { _id: 5a381664939e063dc4cd6936,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 1,
+  contador: 1,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 1,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T19:26:28.946Z,
+       fechaFin: 2017-12-18T19:28:11.292Z,
+       minutosAtendidos: 2,
+       _id: 5a381664939e063dc4cd6937 },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T19:28:11.292Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a3816cb939e063dc4cd6938 } ] }
+[2017-12-18 14:28:11.301] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-12-18 14:28:11.302] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-12-18 14:29:41.250] [DEBUG] cheese - 2017-12-18T19:29:41.250Z
+[2017-12-18 14:29:41.289] [DEBUG] cheese - Ya existe[GET]: { _id: 5a381664939e063dc4cd6936,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 1,
+  contador: 1,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 1,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T19:26:28.946Z,
+       fechaFin: 2017-12-18T19:28:11.292Z,
+       minutosAtendidos: 2,
+       _id: 5a381664939e063dc4cd6937 },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T19:28:11.292Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a3816cb939e063dc4cd6938 } ] }
+[2017-12-18 14:29:43.076] [DEBUG] cheese - 2017-12-18T19:29:43.075Z
+[2017-12-18 14:29:43.080] [DEBUG] cheese - Ya existe[GET]: { _id: 5a381664939e063dc4cd6936,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 1,
+  contador: 1,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 1,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T19:26:28.946Z,
+       fechaFin: 2017-12-18T19:28:11.292Z,
+       minutosAtendidos: 2,
+       _id: 5a381664939e063dc4cd6937 },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T19:28:11.292Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a3816cb939e063dc4cd6938 } ] }
+[2017-12-18 14:29:57.528] [DEBUG] cheese - 2017-12-18T19:29:57.528Z
+[2017-12-18 14:29:57.551] [DEBUG] cheese - 2017-12-18T19:29:57.551Z
+[2017-12-18 14:30:00.184] [DEBUG] cheese - Nuevo[POST]: { __v: 0,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2017-11-18',
+  estado: true,
+  _id: 5a381738bb037f4110312591,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T19:30:00.171Z,
+       fechaFin: null,
+       fueAtendido: null,
+       minutosAtendidos: 0,
+       _id: 5a381738bb037f4110312592 } ] }
+[2017-12-18 14:30:24.425] [DEBUG] cheese - Numero: 0
+[2017-12-18 14:30:24.425] [DEBUG] cheese - Numeros: 0
+[2017-12-18 14:30:24.426] [DEBUG] cheese - Maximo: 0
+[2017-12-18 14:30:24.437] [DEBUG] cheese - Guardado: { _id: 5a381738bb037f4110312591,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 1,
+  contador: 1,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 1,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T19:30:00.171Z,
+       fechaFin: 2017-12-18T19:30:24.428Z,
+       fueAtendido: null,
+       minutosAtendidos: 0,
+       _id: 5a381738bb037f4110312592 },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T19:30:24.428Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a381750bb037f4110312593 } ] }
+[2017-12-18 14:30:24.437] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-12-18 14:30:24.438] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-12-18 14:30:48.053] [DEBUG] cheese - Numero: 1
+[2017-12-18 14:30:48.053] [DEBUG] cheese - Numeros: 1
+[2017-12-18 14:30:48.053] [DEBUG] cheese - Maximo: 1
+[2017-12-18 14:30:48.061] [DEBUG] cheese - Guardado: { _id: 5a381738bb037f4110312591,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 2,
+  contador: 2,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 2,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T19:30:00.171Z,
+       fechaFin: 2017-12-18T19:30:24.428Z,
+       fueAtendido: null,
+       minutosAtendidos: 0,
+       _id: 5a381738bb037f4110312592 },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T19:30:24.428Z,
+       fechaFin: 2017-12-18T19:30:48.056Z,
+       minutosAtendidos: 0,
+       _id: 5a381750bb037f4110312593 },
+     { indiceAten: 2,
+       fechaInicio: 2017-12-18T19:30:48.056Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a381768bb037f4110312594 } ] }
+[2017-12-18 14:30:48.062] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-12-18 14:30:48.063] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-12-18 14:42:08.196] [DEBUG] cheese - Numero: 2
+[2017-12-18 14:42:08.197] [DEBUG] cheese - Numeros: 2
+[2017-12-18 14:42:08.197] [DEBUG] cheese - Maximo: 2
+[2017-12-18 14:42:08.221] [DEBUG] cheese - Guardado: { _id: 5a381738bb037f4110312591,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 3,
+  contador: 3,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 3,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T19:30:00.171Z,
+       fechaFin: 2017-12-18T19:30:24.428Z,
+       fueAtendido: null,
+       minutosAtendidos: 0,
+       _id: 5a381738bb037f4110312592 },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T19:30:24.428Z,
+       fechaFin: 2017-12-18T19:30:48.056Z,
+       minutosAtendidos: 0,
+       _id: 5a381750bb037f4110312593 },
+     { indiceAten: 2,
+       fechaInicio: 2017-12-18T19:30:48.056Z,
+       fechaFin: 2017-12-18T19:42:08.198Z,
+       minutosAtendidos: 11,
+       _id: 5a381768bb037f4110312594 },
+     { indiceAten: 3,
+       fechaInicio: 2017-12-18T19:42:08.198Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a381a10bb037f4110312595 } ] }
+[2017-12-18 14:42:08.221] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-12-18 14:42:08.222] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-12-18 14:46:21.499] [DEBUG] cheese - 2017-12-18T19:46:21.498Z
+[2017-12-18 14:46:21.546] [DEBUG] cheese - Ya existe[GET]: { _id: 5a381738bb037f4110312591,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 3,
+  contador: 3,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 3,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T19:30:00.171Z,
+       fechaFin: 2017-12-18T19:30:24.428Z,
+       fueAtendido: null,
+       minutosAtendidos: 0,
+       _id: 5a381738bb037f4110312592 },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T19:30:24.428Z,
+       fechaFin: 2017-12-18T19:30:48.056Z,
+       minutosAtendidos: 0,
+       _id: 5a381750bb037f4110312593 },
+     { indiceAten: 2,
+       fechaInicio: 2017-12-18T19:30:48.056Z,
+       fechaFin: 2017-12-18T19:42:08.198Z,
+       minutosAtendidos: 11,
+       _id: 5a381768bb037f4110312594 },
+     { indiceAten: 3,
+       fechaInicio: 2017-12-18T19:42:08.198Z,
+       fechaFin: null,
+       minutosAtendidos: 0,
+       _id: 5a381a10bb037f4110312595 } ] }
+[2017-12-18 14:46:24.801] [DEBUG] cheese - Numero: 3
+[2017-12-18 14:46:24.802] [DEBUG] cheese - Numeros: 3
+[2017-12-18 14:46:24.802] [DEBUG] cheese - Maximo: 3
+[2017-12-18 14:46:24.818] [DEBUG] cheese - Guardado: { _id: 5a381738bb037f4110312591,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 4,
+  contador: 4,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 4,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T19:30:00.171Z,
+       fechaFin: 2017-12-18T19:30:24.428Z,
+       fueAtendido: null,
+       minutosAtendidos: 0,
+       _id: 5a381738bb037f4110312592 },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T19:30:24.428Z,
+       fechaFin: 2017-12-18T19:30:48.056Z,
+       minutosAtendidos: 0,
+       _id: 5a381750bb037f4110312593 },
+     { indiceAten: 2,
+       fechaInicio: 2017-12-18T19:30:48.056Z,
+       fechaFin: 2017-12-18T19:42:08.198Z,
+       minutosAtendidos: 11,
+       _id: 5a381768bb037f4110312594 },
+     { indiceAten: 3,
+       fechaInicio: 2017-12-18T19:42:08.198Z,
+       fechaFin: 2017-12-18T19:46:24.805Z,
+       minutosAtendidos: 4,
+       _id: 5a381a10bb037f4110312595 },
+     { indiceAten: 4,
+       fechaInicio: 2017-12-18T19:46:24.805Z,
+       fechaFin: null,
+       fueAtendido: true,
+       minutosAtendidos: 0,
+       _id: 5a381b100a16f531a02d32cd } ] }
+[2017-12-18 14:46:24.819] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-12-18 14:46:24.820] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-12-18 14:46:38.860] [DEBUG] cheese - Numero: 4
+[2017-12-18 14:46:38.860] [DEBUG] cheese - Numeros: 4
+[2017-12-18 14:46:38.860] [DEBUG] cheese - Maximo: 4
+[2017-12-18 14:46:38.907] [DEBUG] cheese - Guardado: { _id: 5a381738bb037f4110312591,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 5,
+  contador: 5,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 5,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T19:30:00.171Z,
+       fechaFin: 2017-12-18T19:30:24.428Z,
+       fueAtendido: null,
+       minutosAtendidos: 0,
+       _id: 5a381738bb037f4110312592 },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T19:30:24.428Z,
+       fechaFin: 2017-12-18T19:30:48.056Z,
+       minutosAtendidos: 0,
+       _id: 5a381750bb037f4110312593 },
+     { indiceAten: 2,
+       fechaInicio: 2017-12-18T19:30:48.056Z,
+       fechaFin: 2017-12-18T19:42:08.198Z,
+       minutosAtendidos: 11,
+       _id: 5a381768bb037f4110312594 },
+     { indiceAten: 3,
+       fechaInicio: 2017-12-18T19:42:08.198Z,
+       fechaFin: 2017-12-18T19:46:24.805Z,
+       minutosAtendidos: 4,
+       _id: 5a381a10bb037f4110312595 },
+     { indiceAten: 4,
+       fechaInicio: 2017-12-18T19:46:24.805Z,
+       fechaFin: 2017-12-18T19:46:38.862Z,
+       fueAtendido: true,
+       minutosAtendidos: 0,
+       _id: 5a381b100a16f531a02d32cd },
+     { indiceAten: 5,
+       fechaInicio: 2017-12-18T19:46:38.862Z,
+       fechaFin: null,
+       fueAtendido: false,
+       minutosAtendidos: 0,
+       _id: 5a381b1e0a16f531a02d32ce } ] }
+[2017-12-18 14:46:38.907] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-12-18 14:46:38.907] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-12-18 14:47:58.839] [DEBUG] cheese - Numero: 5
+[2017-12-18 14:47:58.839] [DEBUG] cheese - Numeros: 5
+[2017-12-18 14:47:58.839] [DEBUG] cheese - Maximo: 5
+[2017-12-18 14:47:58.884] [DEBUG] cheese - Guardado: { _id: 5a381738bb037f4110312591,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 6,
+  contador: 6,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 6,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T19:30:00.171Z,
+       fechaFin: 2017-12-18T19:30:24.428Z,
+       fueAtendido: null,
+       minutosAtendidos: 0,
+       _id: 5a381738bb037f4110312592 },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T19:30:24.428Z,
+       fechaFin: 2017-12-18T19:30:48.056Z,
+       minutosAtendidos: 0,
+       _id: 5a381750bb037f4110312593 },
+     { indiceAten: 2,
+       fechaInicio: 2017-12-18T19:30:48.056Z,
+       fechaFin: 2017-12-18T19:42:08.198Z,
+       minutosAtendidos: 11,
+       _id: 5a381768bb037f4110312594 },
+     { indiceAten: 3,
+       fechaInicio: 2017-12-18T19:42:08.198Z,
+       fechaFin: 2017-12-18T19:46:24.805Z,
+       minutosAtendidos: 4,
+       _id: 5a381a10bb037f4110312595 },
+     { indiceAten: 4,
+       fechaInicio: 2017-12-18T19:46:24.805Z,
+       fechaFin: 2017-12-18T19:46:38.862Z,
+       fueAtendido: true,
+       minutosAtendidos: 0,
+       _id: 5a381b100a16f531a02d32cd },
+     { indiceAten: 5,
+       fechaInicio: 2017-12-18T19:46:38.862Z,
+       fechaFin: 2017-12-18T19:47:58.841Z,
+       fueAtendido: false,
+       minutosAtendidos: 1,
+       _id: 5a381b1e0a16f531a02d32ce },
+     { indiceAten: 6,
+       fechaInicio: 2017-12-18T19:47:58.841Z,
+       fechaFin: null,
+       fueAtendido: true,
+       minutosAtendidos: 0,
+       _id: 5a381b6e0a16f531a02d32cf } ] }
+[2017-12-18 14:47:58.884] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-12-18 14:47:58.886] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-12-18 14:50:22.481] [DEBUG] cheese - 2017-12-18T19:50:22.481Z
+[2017-12-18 14:50:22.512] [DEBUG] cheese - 2017-12-18T19:50:22.512Z
+[2017-12-18 14:50:25.394] [DEBUG] cheese - Nuevo[POST]: { __v: 0,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2017-11-18',
+  estado: true,
+  _id: 5a381c019e908a3dfc939d6d,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T19:50:25.373Z,
+       fechaFin: null,
+       fueAtendido: null,
+       minutosAtendidos: 0,
+       _id: 5a381c019e908a3dfc939d6e } ] }
+[2017-12-18 14:50:30.584] [DEBUG] cheese - Numero: 0
+[2017-12-18 14:50:30.585] [DEBUG] cheese - Numeros: 0
+[2017-12-18 14:50:30.585] [DEBUG] cheese - Maximo: 0
+[2017-12-18 14:50:30.598] [DEBUG] cheese - Guardado: { _id: 5a381c019e908a3dfc939d6d,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 1,
+  contador: 1,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 1,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T19:50:25.373Z,
+       fechaFin: 2017-12-18T19:50:30.589Z,
+       fueAtendido: false,
+       minutosAtendidos: 0,
+       _id: 5a381c019e908a3dfc939d6e },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T19:50:30.589Z,
+       fechaFin: null,
+       fueAtendido: null,
+       minutosAtendidos: 0,
+       _id: 5a381c069e908a3dfc939d6f } ] }
+[2017-12-18 14:50:30.598] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-12-18 14:50:30.611] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-12-18 14:50:56.888] [DEBUG] cheese - Numero: 1
+[2017-12-18 14:50:56.888] [DEBUG] cheese - Numeros: 1
+[2017-12-18 14:50:56.889] [DEBUG] cheese - Maximo: 1
+[2017-12-18 14:50:56.913] [DEBUG] cheese - Guardado: { _id: 5a381c019e908a3dfc939d6d,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 2,
+  contador: 2,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 2,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T19:50:25.373Z,
+       fechaFin: 2017-12-18T19:50:30.589Z,
+       fueAtendido: false,
+       minutosAtendidos: 0,
+       _id: 5a381c019e908a3dfc939d6e },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T19:50:30.589Z,
+       fechaFin: 2017-12-18T19:50:56.891Z,
+       fueAtendido: true,
+       minutosAtendidos: 0,
+       _id: 5a381c069e908a3dfc939d6f },
+     { indiceAten: 2,
+       fechaInicio: 2017-12-18T19:50:56.891Z,
+       fechaFin: null,
+       fueAtendido: null,
+       minutosAtendidos: 0,
+       _id: 5a381c209e908a3dfc939d70 } ] }
+[2017-12-18 14:50:56.913] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-12-18 14:50:56.914] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-12-18 14:51:09.025] [DEBUG] cheese - Numero: 2
+[2017-12-18 14:51:09.025] [DEBUG] cheese - Numeros: 2
+[2017-12-18 14:51:09.025] [DEBUG] cheese - Maximo: 2
+[2017-12-18 14:51:09.033] [DEBUG] cheese - Guardado: { _id: 5a381c019e908a3dfc939d6d,
+  modulo: 'Oficina_1',
+  tramite: 'PODERES',
+  indicePerAtendidas: 3,
+  contador: 3,
+  fecha: '2017-11-18',
+  estado: true,
+  __v: 3,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2017-12-18T19:50:25.373Z,
+       fechaFin: 2017-12-18T19:50:30.589Z,
+       fueAtendido: false,
+       minutosAtendidos: 0,
+       _id: 5a381c019e908a3dfc939d6e },
+     { indiceAten: 1,
+       fechaInicio: 2017-12-18T19:50:30.589Z,
+       fechaFin: 2017-12-18T19:50:56.891Z,
+       fueAtendido: true,
+       minutosAtendidos: 0,
+       _id: 5a381c069e908a3dfc939d6f },
+     { indiceAten: 2,
+       fechaInicio: 2017-12-18T19:50:56.891Z,
+       fechaFin: 2017-12-18T19:51:09.027Z,
+       fueAtendido: false,
+       minutosAtendidos: 0,
+       _id: 5a381c209e908a3dfc939d70 },
+     { indiceAten: 3,
+       fechaInicio: 2017-12-18T19:51:09.027Z,
+       fechaFin: null,
+       fueAtendido: null,
+       minutosAtendidos: 0,
+       _id: 5a381c2d9e908a3dfc939d71 } ] }
+[2017-12-18 14:51:09.033] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2017-12-18 14:51:09.034] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2017-12-18 15:13:17.975] [DEBUG] cheese - 2017-12-18T20:13:17.975Z
+[2017-12-18 15:13:18.069] [DEBUG] cheese - 2017-12-18T20:13:18.069Z
