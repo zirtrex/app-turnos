@@ -105,12 +105,12 @@
 				contador: function(e){
 					e.preventDefault();
 
-					var mensaje;
+					var mensaje = null;
 
 		           	UIkit.modal.confirm('¿El usuario ha sido atendido?', { labels: { ok: 'Si', cancel: 'No' } }).then(function () {
-		               var mensaje = true;
+		               mensaje = true;
 		           	}, function () {
-		               var mensaje = false;
+		               mensaje = false;
 		           	});		       
 
 					if(this.modulo != null ){
