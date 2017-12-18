@@ -35,7 +35,7 @@ router.get('/cambiar', function(req, res, next) {
 	}else{
 		Modulo.findOne({'modulo': req.session.modulo, 'tramite': req.session.tramite, 'fecha': fechaActual}, function(err, modulo){
 
-			modulo.estado = false;
+			modulo.estado = true;
 
 			modulo.save(function (err) {
 				if (err) {

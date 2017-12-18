@@ -37,7 +37,7 @@
 				</p>
 				<hr/>
 				<button type="button" v-on:click="call_again" name="call_again" class="uk-button uk-button-secundary">Llamar de nuevo</button>				
-				<button type="button" v-on:click="contador" name="contador" class="uk-button uk-button-primary">Siguiente</button>
+				<button id="js-modal-confirm" type="button" v-on:click="contador" name="contador" class="uk-button uk-button-primary">Siguiente</button>
 				<hr/>
 				<div class="btn-terminar2">
 					<button type="button" v-on:click="terminar" name="terminar" class="uk-button uk-button-text">Terminar</button>
@@ -104,6 +104,16 @@
 				},
 				contador: function(e){
 					e.preventDefault();
+
+					UIkit.util.on('#js-modal-confirm', 'click', function (e) {
+			           e.preventDefault();
+			           e.target.blur();
+			           UIkit.modal.confirm('UIkit confirm!').then(function () {
+			               console.log('Confirmed.')
+			           }, function () {
+			               console.log('Rejected.')
+			           });
+			       });
 
 					var mensaje = confirm("¿El usuario ha sido atendido?");
 					
