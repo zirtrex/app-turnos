@@ -107,7 +107,7 @@
 
 					var mensaje = null;
 
-		           	UIkit.modal.confirm('¿El usuario ha sido atendido?', { labels: { ok: 'Si', cancel: 'No' } }).then(function () {
+		           	UIkit.modal.confirm('¿El usuario ha sido atendido?', { labels: { ok: 'Si', cancel: 'No' }, stack: true}).then(function () {
 		               mensaje = true;
 		           	}, function () {
 		               mensaje = false;
