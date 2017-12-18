@@ -105,18 +105,17 @@
 				contador: function(e){
 					e.preventDefault();
 
-					var mensaje = null;
-
 		           	UIkit.modal.confirm('¿El usuario ha sido atendido?', { labels: { ok: 'Si', cancel: 'No' }, stack: true}).then(function () {
-		               mensaje = true;
+			            if(this.modulo != null ){
+							console.log("Enviando datos al server para aumentar el contador");
+			  				socket.emit("aumentar", { 'channel': channel, 'modulo': this.modulo, 'atendido': true});
+			  			}
 		           	}, function () {
-		               mensaje = false;
-		           	});		       
-
-					if(this.modulo != null ){
-						console.log("Enviando datos al server para aumentar el contador");
-		  				socket.emit("aumentar", { 'channel': channel, 'modulo': this.modulo, 'atendido': mensaje});
-		  			}
+		               if(this.modulo != null ){
+							console.log("Enviando datos al server para aumentar el contador");
+			  				socket.emit("aumentar", { 'channel': channel, 'modulo': this.modulo, 'atendido': false});
+			  			}
+		           	});
 		  					  			
 				},
 				terminar: function(e){
