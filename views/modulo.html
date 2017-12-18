@@ -112,7 +112,7 @@
 							console.log("Enviando datos al server para aumentar el contador");
 			  				socket.emit("aumentar", { 'channel': channel, 'modulo': this.modulo, 'atendido': true});
 			  			}
-		           	}, function () {
+		           	}.bind(this), function () {
 		           		console.log('No.')
 		               	if(this.modulo != null ){
 							console.log("Enviando datos al server para aumentar el contador");
