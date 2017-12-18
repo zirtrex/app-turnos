@@ -105,16 +105,14 @@
 				contador: function(e){
 					e.preventDefault();
 
-					
-			           UIkit.modal.confirm('UIkit confirm!').then(function () {
-			               console.log('Confirmed.')
-			           }, function () {
-			               console.log('Rejected.')
-			           });
-			       
+					var mensaje;
 
-					var mensaje = confirm("¿El usuario ha sido atendido?");
-					
+		           	UIkit.modal.confirm('¿El usuario ha sido atendido?'{ labels: { ok: 'Si', cancel: 'No' } }).then(function () {
+		               var mensaje = true;
+		           	}, function () {
+		               var mensaje = false;
+		           	});		       
+
 					if(this.modulo != null ){
 						console.log("Enviando datos al server para aumentar el contador");
 		  				socket.emit("aumentar", { 'channel': channel, 'modulo': this.modulo, 'atendido': mensaje});
