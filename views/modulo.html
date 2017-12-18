@@ -107,17 +107,18 @@
 					e.target.blur();
 
 		           	UIkit.modal.confirm('¿El usuario ha sido atendido?', { labels: { ok: 'Si', cancel: 'No' }}).then(function () {
-			            console.log('Confirmed.')
+			            console.log('Si.')
 			            if(this.modulo != null ){
 							console.log("Enviando datos al server para aumentar el contador");
 			  				socket.emit("aumentar", { 'channel': channel, 'modulo': this.modulo, 'atendido': true});
 			  			}
 		           	}, function () {
-		               if(this.modulo != null ){
+		           		console.log('No.')
+		               	if(this.modulo != null ){
 							console.log("Enviando datos al server para aumentar el contador");
 			  				socket.emit("aumentar", { 'channel': channel, 'modulo': this.modulo, 'atendido': false});
 			  			}
-		           	});
+		           	}.bind(this));
 		  					  			
 				},
 				terminar: function(e){
