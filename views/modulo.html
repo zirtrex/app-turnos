@@ -26,27 +26,29 @@
 	</div>
 
 	<div class="uk-flex uk-flex-middle" uk-height-viewport="offset-bottom: 80px">
-		<div style="" class="uk-width-2-4@m ">
+		<div class="uk-width-2-4@m">
 		</div>
-		<div style="" class="uk-width-2-4@m uk-margin-large-right">
-			<div id="app">
-				<h2>{{modulo.modulo}}</h2>
-				<p>Trámite: {{modulo.tramite}}
-					<a href="/cambiar" class="uk-button uk-button-link"> Cambiar Trámite</a>
-				</p>
-				<p>Actualmente estás atendiendo al turno:
-					<span id="actual"> {{modulo.contador}}</span>
-				</p>
-				<hr/>
-				<button type="button" v-on:click="call_again" name="call_again" class="uk-button uk-button-secundary">Llamar de nuevo</button>				
-				<button id="js-modal-confirm" type="button" v-on:click="contador" name="contador" class="uk-button uk-button-primary">Siguiente</button>
-				<hr/>
-				<div class="btn-terminar2">
-					<button type="button" v-on:click="terminar" name="terminar" class="uk-button uk-button-text">Terminar</button>
-				</div>				
-			</div>
-			<div class="uk-flex uk-flex-right")>
-				<p>Fecha: <%= fechaAct %></p>
+		<div class="uk-width-2-4@m uk-margin-large-right">
+			<div style="" class="uk-container-2 uk-margin-medium">
+				<div id="app">
+					<h2>{{modulo.modulo}}</h2>
+					<p>Trámite: {{modulo.tramite}}
+						<a href="/cambiar" class="uk-button uk-button-link"> Cambiar Trámite</a>
+					</p>
+					<p>Actualmente estás atendiendo al turno:
+						<span id="actual"> {{modulo.contador}}</span>
+					</p>
+					<hr/>
+					<button type="button" v-on:click="call_again" name="call_again" class="uk-button uk-button-secundary">Llamar de nuevo</button>				
+					<button id="js-modal-confirm" type="button" v-on:click="contador" name="contador" class="uk-button uk-button-primary">Siguiente</button>
+					<hr/>
+					<div class="btn-terminar2">
+						<button type="button" v-on:click="terminar" name="terminar" class="uk-button uk-button-text">Terminar</button>
+					</div>				
+				</div>
+				<div class="uk-flex uk-flex-right")>
+					<p>Fecha: <%= fechaAct %></p>
+				</div>
 			</div>
 		</div>
 	</div>
