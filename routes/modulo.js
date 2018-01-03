@@ -25,7 +25,7 @@ router.get('/', function(req, res, next) {
 		var fecha = new Date();
 		var fechaActual = fecha.getFullYear() + "-" + (fecha.getMonth()+1) + "-" + fecha.getDate();
 		
-		Modulo.findOne({'modulo': req.session.modulo, 'tramite': req.session.tramite, '$where': 'this.fecha.toJSON().slice(0, 10) == "' + fechaActual + '"'}, function(err, modulo){
+		Modulo.findOne({'modulo': req.session.modulo, 'tramite': req.session.tramite, '$where': 'this.fecha.toJSON().slice(0, 10) == "2018-01-03"'}, function(err, modulo){
 			
 			if( typeof modulo === 'undefined' || modulo === null ){
 				
