@@ -151,7 +151,7 @@
 		  				var size = this.modulos.unshift(data);
 						setTimeout(function(){
 							if(size > 5) this.modulos.pop();
-						}.bind(this), 500);
+						}.bind(this), 1000);
 		  			}		
 				},
 				agregarModulo: function(idx, data){
@@ -161,7 +161,7 @@
 					setTimeout(function(){
 						//if(size > 5) this.modulos.splice(idx+1, 1);
 						if(size > 5) this.modulos.pop();
-					}.bind(this), 500);	
+					}.bind(this), 1000);	
 
 				},
 				reproducirAudio: function(){

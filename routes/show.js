@@ -63,7 +63,7 @@ router.get('/modulos', function(req, res, next) {
 	var fecha = new Date();
 	var fechaActual = fecha.getFullYear() + "-" + fecha.getMonth() + "-" + fecha.getDate();
 	
-	Modulo.find({'estado': true, 'fecha': fechaActual}).limit(5).exec(function(err, modulos){
+	Modulo.find({'estado': true, 'fecha': fechaActual}).limit(5).sort({'fecha': 'descending'}).exec(function(err, modulos){
 		if(err){
 			logger.debug(err);
 		}
