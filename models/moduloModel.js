@@ -15,7 +15,7 @@ var moduloSquema = new Squema({
 		fueAtendido: Boolean,
 		minutosAtendidos: Number}],
 	contador: Number,	
-	fecha: String,
+	fecha: Date,
 	estado: Boolean
 });
 
