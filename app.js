@@ -66,7 +66,7 @@ app.io = io;
 io.on('connection', function(socket) {
 
     var fecha = new Date();
-    var fechaActual = fecha.getFullYear() + "-" + fecha.getMonth() + "-" + fecha.getDate();
+    var fechaActual = fecha.getFullYear() + "-" + (fecha.getMonth()+1) + "-" + fecha.getDate();
 
     socket.on('aumentar', function(datos){
 

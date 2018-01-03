@@ -33,7 +33,7 @@ router.get('/cambiar', function(req, res, next) {
 	if(typeof req.session.modulo === 'undefined' && typeof req.session.tramite === 'undefined'){
 		res.redirect('/');
 	}else{
-		Modulo.findOne({'modulo': req.session.modulo, 'tramite': req.session.tramite, 'fecha': {"$gte": new Date(fechaActual), "$lt": new Date(fechaActual)}}, function(err, modulo){
+		Modulo.findOne({'modulo': req.session.modulo, 'tramite': req.session.tramite, 'fecha': fechaActual}, function(err, modulo){
 
 			modulo.estado = true;
 

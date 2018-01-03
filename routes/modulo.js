@@ -25,7 +25,7 @@ router.get('/', function(req, res, next) {
 		var fecha = new Date();
 		var fechaActual = fecha.getFullYear() + "-" + (fecha.getMonth()+1) + "-" + fecha.getDate();
 		
-		Modulo.findOne({'modulo': req.session.modulo, 'tramite': req.session.tramite, '$where': 'this.fecha.toJSON().slice(0, 10) == "2018-01-03"'}, function(err, modulo){
+		Modulo.findOne({'modulo': req.session.modulo, 'tramite': req.session.tramite, 'fecha': fechaActual}, function(err, modulo){
 			
 			if( typeof modulo === 'undefined' || modulo === null ){
 				
@@ -35,7 +35,7 @@ router.get('/', function(req, res, next) {
 					indicePerAtendidas: 0,			
 					perAtendidas: [],
 					contador: 0,
-					fecha: fecha,
+					fecha: fechaActual,
 					estado: true
 				});
 				var perAtendidas =  {indiceAten: 0, fechaInicio: new Date(), fechaFin: null, fueAtendido: null, minutosAtendidos: 0};
@@ -76,10 +76,9 @@ router.post('/', function(req, res, next) {
 	req.session.modulo = req.body.modulo;
 	req.session.tramite = req.body.tramite;
 	var fecha = new Date();
-	var fechaActual = fecha.getFullYear() + ", " + (fecha.getMonth()+1) + ", " + fecha.getDate();
+	var fechaActual = fecha.getFullYear() + "-" + (fecha.getMonth()+1) + "-" + fecha.getDate();
 	
-	//Buscamos en la base de datos si no se ha creado un objeto similar antes.
-	Modulo.findOne({'modulo': req.session.modulo, 'tramite': req.session.tramite, 'fecha': {"$gte": new Date(fechaActual), "$lt": new Date(fechaActual)}}, function(err, modulo){
+	Modulo.findOne({'modulo': req.session.modulo, 'tramite': req.session.tramite, 'fecha': fechaActual}, function(err, modulo){
 		
 		if( typeof modulo === 'undefined' || modulo === null ){
 			
@@ -89,7 +88,7 @@ router.post('/', function(req, res, next) {
 					indicePerAtendidas: 0,			
 					perAtendidas: [],
 					contador: 0,
-					fecha: fecha,
+					fecha: fechaActual,
 					estado: true
 			});
 			var perAtendidas =  {indiceAten: 0, fechaInicio: new Date(), fechaFin: null, fueAtendido: null, minutosAtendidos: 0};
