@@ -46,7 +46,7 @@ router.get('/b', function(req, res, next) {
 router.get('/modulo', function(req, res, next) {
 
 	var fecha = new Date();
-	var fechaActual = fecha.getFullYear() + "-" + (fecha.getMonth()+1) + "-" + fecha.getDate();
+	var fechaActual = fecha.getFullYear() + ", " + (fecha.getMonth()+1) + ", " + fecha.getDate();
 	
 	Modulo.findOne({'modulo': req.session.modulo, 'tramite': req.session.tramite, 'estado': true, 'fecha': {"$gte": new Date(fechaActual), "$lt": new Date(fechaActual)}}, function(err, modulo){
 
