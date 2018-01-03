@@ -8,6 +8,11 @@ body {
   background-size: cover;
 }
 
+@font-face {
+    font-family: "StardosStencil";
+    src: url("/fonts/StardosStencil-Regular.ttf") format("truetype");
+}
+
 a {
   color: #00B7FF;
 }
@@ -206,8 +211,8 @@ a {
   top:0;
 }
 
-h2{
-  font-family: "Stardos+Stencil";
+.uk-navbar-center h2{
+  font-family: "StardosStencil";
 }
 
 .bounce-enter .modulo{
