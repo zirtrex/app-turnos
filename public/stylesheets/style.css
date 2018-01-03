@@ -200,11 +200,14 @@ a {
     color: #fff;
 }
 
-
 .btn-terminar{
   position: absolute;
   right: 0;
   top:0;
+}
+
+h2{
+  font-family: "Stardos+Stencil";
 }
 
 .bounce-enter .modulo{
