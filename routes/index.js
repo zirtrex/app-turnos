@@ -28,12 +28,12 @@ router.get('/cambiar', function(req, res, next) {
 	logger.debug("Cambiando tipo de trámite");
 
 	var fecha = new Date();
-	var fechaActual = fecha.getFullYear() + "-" + fecha.getMonth() + "-" + fecha.getDate();
+	var fechaActual = fecha.getFullYear() + "-" + (fecha.getMonth()+1) + "-" + fecha.getDate();
 
 	if(typeof req.session.modulo === 'undefined' && typeof req.session.tramite === 'undefined'){
 		res.redirect('/');
 	}else{
-		Modulo.findOne({'modulo': req.session.modulo, 'tramite': req.session.tramite, 'fecha': fechaActual}, function(err, modulo){
+		Modulo.findOne({'modulo': req.session.modulo, 'tramite': req.session.tramite, 'fecha': {"$gte": new Date(fechaActual), "$lt": new Date(fechaActual)}}, function(err, modulo){
 
 			modulo.estado = true;
 

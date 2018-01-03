@@ -46,9 +46,9 @@ router.get('/b', function(req, res, next) {
 router.get('/modulo', function(req, res, next) {
 
 	var fecha = new Date();
-	var fechaActual = fecha.getFullYear() + "-" + fecha.getMonth() + "-" + fecha.getDate();
+	var fechaActual = fecha.getFullYear() + "-" + (fecha.getMonth()+) + "-" + fecha.getDate();
 	
-	Modulo.findOne({'modulo': req.session.modulo, 'tramite': req.session.tramite, 'estado': true, 'fecha': fechaActual}, function(err, modulo){
+	Modulo.findOne({'modulo': req.session.modulo, 'tramite': req.session.tramite, 'estado': true, 'fecha': {"$gte": new Date(fechaActual), "$lt": new Date(fechaActual)}}, function(err, modulo){
 
 	    if(err){
 			logger.debug(err);
@@ -61,9 +61,9 @@ router.get('/modulo', function(req, res, next) {
 router.get('/modulos', function(req, res, next) {
 
 	var fecha = new Date();
-	var fechaActual = fecha.getFullYear() + "-" + fecha.getMonth() + "-" + fecha.getDate();
+	var fechaActual = fecha.getFullYear() + "-" + (fecha.getMonth()+1) + "-" + fecha.getDate();
 	
-	Modulo.find({'estado': true, 'fecha': fechaActual}).limit(5).sort({'fecha': 'descending'}).exec(function(err, modulos){
+	Modulo.find({'estado': true, 'fecha': {"$gte": new Date(fechaActual), "$lt": new Date(fechaActual)}}).limit(5).sort({'fecha': 'descending'}).exec(function(err, modulos){
 		if(err){
 			logger.debug(err);
 		}
