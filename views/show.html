@@ -133,7 +133,7 @@
 				    return this.modulos[index].estado;
 				},
 				cambiarModulo: function(data){
-					console.log("Han llegado datos: " + data.toString());
+					console.log("Han llegado datos: " + data);
 		  			var modulo = this.modulos.find(function(modulo){ return modulo.modulo === data.modulo});
 
 		  			if(typeof modulo !== 'undefined'){
@@ -147,7 +147,7 @@
 						console.log(data);
 		  				
 		  			}else{
-		  				console.log("Agregando al Inicio uno nuevo.");
+		  				console.log("Agregando al Inicio uno nuevo:" + data);
 		  				var size = this.modulos.unshift(data);
 						setTimeout(function(){
 							if(size > 5) this.modulos.pop();
@@ -159,7 +159,8 @@
 					var size = this.modulos.unshift(data);
 
 					setTimeout(function(){
-						if(size > 5) this.modulos.splice(idx+1, 1);
+						//if(size > 5) this.modulos.splice(idx+1, 1);
+						if(size > 5) this.modulos.pop();
 					}.bind(this), 500);	
 
 				},
