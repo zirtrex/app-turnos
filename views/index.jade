@@ -25,7 +25,7 @@ block content
 					else
 						<span></span>
 				
-				form(action="/modulo", name="elegir-modulo", method="POST")
+				form(action="/modulo", name="elegir-modulo", method="POST", class="uk-form-horizontal")
 					if typeof modulo !== "undefined"
 						input(type="hidden", name="modulo" value="#{modulo}")
 					else
