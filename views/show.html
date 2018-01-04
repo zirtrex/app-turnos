@@ -155,13 +155,12 @@
 		  				if(oficina !== 'undefined'){
 
 		  					var idx = this.modulos.findIndex(function(modulo){ return modulo.oficina === data.modulo.oficina});
-
 			  				
 			  				var size = this.modulos.unshift(data.modulo);
 
 							setTimeout(function(){
 								if(size > 5) this.modulos.splice(idx+1, 1);
-							}.bind(this), 1000);
+							}.bind(this), 100);
 
 							this.reproducirAudio();
 
