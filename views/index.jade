@@ -24,7 +24,9 @@ block content
 
 				form(action="/modulo", name="elegir-modulo", method="POST", class="uk-form-horizontal")
 					if typeof oficina !== "undefined"
-						input(type="hidden", name="oficina" value="#{oficina}")
+						div(class="uk-margin")
+							label(class="uk-form-label", for="oficina") Oficina:
+							input(type="text", name="oficina" value="#{oficina}" readonly)
 					else
 						div(class="uk-margin")
 							label(class="uk-form-label", for="oficina") Oficina:
