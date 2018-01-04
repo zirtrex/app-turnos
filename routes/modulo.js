@@ -13,10 +13,10 @@ const logger = log4js.getLogger('cheese');
 /* GET modulo page. */
 
 router.get('/', function(req, res, next) {
+
 	var fecha = new Date();
-	logger.debug(fecha);
 	
-	if( typeof req.session.modulo === 'undefined' || typeof req.session.tramite === 'undefined' ){
+	if( typeof req.session.oficina === 'undefined' || typeof req.session.servicio === 'undefined' ){
 	
 		res.redirect('/');	
 		
@@ -25,19 +25,20 @@ router.get('/', function(req, res, next) {
 		var fecha = new Date();
 		var fechaActual = fecha.getFullYear() + "-" + (fecha.getMonth()+1) + "-" + fecha.getDate();
 		
-		Modulo.findOne({'modulo': req.session.modulo, 'tramite': req.session.tramite, 'fecha': fechaActual}, function(err, modulo){
+		Modulo.findOne({'oficina': req.session.oficina, 'servicio': req.session.servicio, 'fecha': fechaActual}, function(err, modulo){
 			
 			if( typeof modulo === 'undefined' || modulo === null ){
 				
 				var modulo = new Modulo({
-					modulo: req.session.modulo,
-					tramite: req.session.tramite,
-					indicePerAtendidas: 0,			
-					perAtendidas: [],
-					contador: 0,
-					fecha: fechaActual,
-					estado: true
+											oficina: req.session.oficina,
+											servicio: req.session.servicio,
+											indicePerAtendidas: 0,			
+											perAtendidas: [],
+											contador: 0,
+											fecha: fechaActual,
+											estado: true
 				});
+				
 				var perAtendidas =  {indiceAten: 0, fechaInicio: new Date(), fechaFin: null, fueAtendido: null, minutosAtendidos: 0};
 
 				modulo.perAtendidas.push(perAtendidas);
@@ -73,24 +74,26 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
 	
-	req.session.modulo = req.body.modulo;
-	req.session.tramite = req.body.tramite;
+	req.session.oficina = req.body.oficina;
+	req.session.servicio = req.body.servicio;
+
 	var fecha = new Date();
 	var fechaActual = fecha.getFullYear() + "-" + (fecha.getMonth()+1) + "-" + fecha.getDate();
 	
-	Modulo.findOne({'modulo': req.session.modulo, 'tramite': req.session.tramite, 'fecha': fechaActual}, function(err, modulo){
+	Modulo.findOne({'oficina': req.session.oficina, 'servicio': req.session.servicio, 'fecha': fechaActual}, function(err, modulo){
 		
 		if( typeof modulo === 'undefined' || modulo === null ){
 			
 			var modulo = new Modulo({
-				modulo: req.session.modulo,
-					tramite: req.session.tramite,
-					indicePerAtendidas: 0,			
-					perAtendidas: [],
-					contador: 0,
-					fecha: fechaActual,
-					estado: true
+										oficina: req.session.oficina,
+										servicio: req.session.servicio,
+										indicePerAtendidas: 0,			
+										perAtendidas: [],
+										contador: 0,
+										fecha: fechaActual,
+										estado: true
 			});
+
 			var perAtendidas =  {indiceAten: 0, fechaInicio: new Date(), fechaFin: null, fueAtendido: null, minutosAtendidos: 0};
 
 			modulo.perAtendidas.push(perAtendidas);

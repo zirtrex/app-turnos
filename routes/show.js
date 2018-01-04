@@ -48,7 +48,7 @@ router.get('/modulo', function(req, res, next) {
 	var fecha = new Date();
 	var fechaActual = fecha.getFullYear() + "-" + (fecha.getMonth()+1) + "-" + fecha.getDate();
 	
-	Modulo.findOne({'modulo': req.session.modulo, 'tramite': req.session.tramite, 'estado': true, 'fecha': fechaActual}, function(err, modulo){
+	Modulo.findOne({'oficina': req.session.oficina, 'servicio': req.session.servicio, 'estado': true, 'fecha': fechaActual}, function(err, modulo){
 
 	    if(err){
 			logger.debug(err);
@@ -63,7 +63,7 @@ router.get('/modulos', function(req, res, next) {
 	var fecha = new Date();
 	var fechaActual = fecha.getFullYear() + "-" + (fecha.getMonth()+1) + "-" + fecha.getDate();
 	
-	Modulo.find({'estado': true, 'fecha': fechaActual}).limit(5).sort({'fecha': 'descending'}).exec(function(err, modulos){
+	Modulo.find({'estado': true, 'fecha': fechaActual}).limit(5).sort({'oficina': 'descending'}).exec(function(err, modulos){
 		if(err){
 			logger.debug(err);
 		}

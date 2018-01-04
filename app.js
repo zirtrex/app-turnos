@@ -74,7 +74,7 @@ io.on('connection', function(socket) {
         var max;
 
         new Promise(function(done){
-            Modulo.find({'tramite': datos.modulo.tramite, 'fecha': fechaActual}, function(err, modulos){
+            Modulo.find({'servicio': datos.modulo.servicio, 'fecha': fechaActual}, function(err, modulos){
 
                 for(var i = 0; i < modulos.length; i++){
                     
@@ -91,7 +91,7 @@ io.on('connection', function(socket) {
             logger.debug("Numeros: " + numeros.toString());
             max = Math.max(...numeros); logger.debug("Maximo: " + max);
 
-            Modulo.findOne({'modulo': datos.modulo.modulo, 'tramite': datos.modulo.tramite, 'fecha': fechaActual}, function(err, modulo){
+            Modulo.findOne({'oficina': datos.modulo.oficina, 'servicio': datos.modulo.servicio, 'fecha': fechaActual}, function(err, modulo){
     
                 //Construimos el objeto perAtendidas
                 var indicePerAtendidasActual =  modulo.indicePerAtendidas + 1;
@@ -117,7 +117,7 @@ io.on('connection', function(socket) {
                     } else {
                         logger.debug("Guardado: " + modulo.toString());                      
                         logger.debug("Emitiendo desde el contador al canal SHOW_CHANNEL");
-                        socket.broadcast.emit('modulo_SHOW_CHANNEL', modulo); 
+                        socket.broadcast.emit('modulo_SHOW_CHANNEL', {'modulo': modulo, 'aumentar': false}); 
                         logger.debug("Emitiendo desde el contador al canal COUNT_CHANNEL");
                         io.emit('modulo_COUNT_CHANNEL', modulo); 
                     }
@@ -129,9 +129,20 @@ io.on('connection', function(socket) {
 
     });
 
+    socket.on('call_again', function(datos){
+
+        Modulo.findOne({'oficina': datos.modulo.oficina, 'servicio': datos.modulo.servicio, 'fecha': fechaActual}, function(err, modulo){
+
+            logger.debug("Emitiendo desde el contador al SHOW_CHANNEL");
+            socket.broadcast.emit('modulo_SHOW_CHANNEL', {'modulo': modulo, 'aumentar': false});
+
+        });
+
+    });
+
     socket.on('terminar', function(datos){
 
-        Modulo.findOne({'modulo': datos.modulo.modulo, 'tramite': datos.modulo.tramite, 'fecha': fechaActual}, function(err, modulo){
+        Modulo.findOne({'oficina': datos.modulo.oficina, 'servicio': datos.modulo.servicio, 'fecha': fechaActual}, function(err, modulo){
 
             //Construimos el objeto perAtendidas
             var indicePerAtendidasActual =  modulo.indicePerAtendidas;
@@ -157,16 +168,6 @@ io.on('connection', function(socket) {
 
     });
 
-    socket.on('call_again', function(datos){
-
-        Modulo.findOne({'modulo': datos.modulo.modulo, 'tramite': datos.modulo.tramite, 'fecha': fechaActual}, function(err, modulo){
-
-            logger.debug("Emitiendo desde al SHOW_CHANNEL");
-            socket.broadcast.emit('modulo_SHOW_CHANNEL', modulo); 
-
-        });
-
-    });
 });
 
 // uncomment after placing your favicon in /public

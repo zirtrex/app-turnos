@@ -5,8 +5,8 @@ mongoose.connect('mongodb://rafael:ZTRse7en@ds229465.mlab.com:29465/heroku_qzv4b
 mongoose.Promise = global.Promise;
 
 var moduloSquema = new Squema({ 
-	modulo: String,
-	tramite: String,
+	oficina: String,
+	servicio: String,
 	indicePerAtendidas: Number,
 	perAtendidas: [{
 		indiceAten: Number, 

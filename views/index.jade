@@ -19,20 +19,17 @@ block content
 
 		div(class="uk-width-2-4@m uk-margin-large-right")
 			div(class="uk-margin-medium uk-container-2")
-				h3 #{titulo} 
-					if typeof modulo !== "undefined"
-						<span>(#{modulo})</span>
-					else
-						<span></span>
 				
+				h3 #{titulo} 
+
 				form(action="/modulo", name="elegir-modulo", method="POST", class="uk-form-horizontal")
-					if typeof modulo !== "undefined"
-						input(type="hidden", name="modulo" value="#{modulo}")
+					if typeof oficina !== "undefined"
+						input(type="hidden", name="oficina" value="#{oficina}")
 					else
 						div(class="uk-margin")
-							label(class="uk-form-label", for="modulo") Oficina:
+							label(class="uk-form-label", for="oficina") Oficina:
 							div(class="uk-form-controls")
-								select(id="modulo", name="modulo", class="uk-select")
+								select(id="oficina", name="oficina", class="uk-select")
 									option(value="Ventanilla #1") Ventanilla #1
 									option(value="Ventanilla #2") Ventanilla #2
 									option(value="Ventanilla #3") Ventanilla #3
@@ -57,9 +54,9 @@ block content
 									option(value="Oficina #22") Oficina #22
 									option(value="Oficina #23") Oficina #23
 					div(class="uk-margin")
-						label(class="uk-form-label", for="tramite") Servicio:
+						label(class="uk-form-label", for="servicio") Servicio:
 						div(class="uk-form-controls")
-							select(id="tramite", name="tramite", class="uk-select")
+							select(id="servicio", name="servicio", class="uk-select")
 								option(value="PODERES") PODERES
 								option(value="ID CONSULAR") ID CONSULAR
 								option(value="REGISTRO CIVIL") REGISTRO CIVIL

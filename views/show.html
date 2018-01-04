@@ -17,7 +17,7 @@
 				<transition-group tag="div" name="bounce" v-bind:css="false" v-on:before-enter="beforeEnter" v-on:enter="enter" v-on:leave="leave" class="">
 				    <modulo v-for="modulo,index in modulosList" 
 				      class="modulo uk-margin-small-bottom"
-				      v-bind:id="getModulo(index)"
+				      v-bind:id="getOficina(index)"
 				      v-bind:mod="modulo"
 				      v-bind:key="modulo"
 				      v-if="true">
@@ -76,13 +76,13 @@
 		  	components: {
 			    modulo: {
 			      props: ['mod'],
-			      template: '<div :class="{ [`${mod.tramite}`]: true }">\
+			      template: '<div :class="{ [`${mod.servicio}`]: true }">\
 			      				<div class="uk-card uk-card-default">\
 					            	<div class="uk-card-body">\
-					            		<h3 class="uk-text-center title">{{ mod.tramite }} <br/> Turno: <span>{{ mod.contador }}</span></h3>\
+					            		<h3 class="uk-text-center title">{{ mod.servicio }} <br/> Turno: <span>{{ mod.contador }}</span></h3>\
 					            	</div>\
 					            	<div class="uk-card-footer">\
-					            		<p class="uk-text-center uk-text-uppercase"><strong>{{ mod.modulo }}</strong></p>\
+					            		<p class="uk-text-center uk-text-uppercase"><strong>{{ mod.oficina }}</strong></p>\
 					            	</div>\
 					        	</div>\
 			      			</div>'
@@ -126,43 +126,48 @@
 				}
 			},
 		  	methods: {
-		  		getModulo: function(index) {
-				    return this.modulos[index].modulo;
+		  		getOficina: function(index) {
+				    return this.modulos[index].oficina;
 				},
 				getVisible: function(index) {
 				    return this.modulos[index].estado;
 				},
 				cambiarModulo: function(data){
-					console.log("Han llegado datos: " + data);
-		  			var modulo = this.modulos.find(function(modulo){ return modulo.modulo === data.modulo});
+					console.log("Han llegado datos: " + data);		  			
 
-		  			if(typeof modulo !== 'undefined'){
-
-		  				var idx = this.modulos.findIndex(function(modulo){ return modulo.modulo === data.modulo});
+					//Verificamos si se quiere pasar al siguiente en cola o llamar nuevamente
+		  			if(data.modulo.aumentar){
 		  				
-		  				this.agregarModulo(idx, data);
-		  				this.reproducirAudio();
+		  				var size = this.modulos.unshift(data.modulo);
 
-		  				console.log("Agregando: " + idx);
-						console.log(data);
-		  				
-		  			}else{
-		  				console.log("Agregando al Inicio uno nuevo:" + data);
-		  				var size = this.modulos.unshift(data);
 						setTimeout(function(){
+							//if(size > 5) this.modulos.splice(idx+1, 1);
 							if(size > 5) this.modulos.pop();
 						}.bind(this), 1000);
+
+		  				this.reproducirAudio();
+		  				 
+						console.log("Aumentado:" + data.modulo);
+		  				
+		  			}else{
+		  				var oficina = this.modulos.find(function(modulo){ return modulo.oficina === data.modulo.oficina});
+
+		  				if(oficina !== 'undefined'){
+
+		  					var idx = this.modulos.findIndex(function(modulo){ return modulo.oficina === data.modulo.oficina});
+
+			  				
+			  				var size = this.modulos.unshift(data.modulo);
+
+							setTimeout(function(){
+								if(size > 5) this.modulos.splice(idx+1, 1);
+							}.bind(this), 1000);
+
+							this.reproducirAudio();
+
+							console.log("Llamando nuevamente:" + data);
+						}
 		  			}		
-				},
-				agregarModulo: function(idx, data){
-
-					var size = this.modulos.unshift(data);
-
-					setTimeout(function(){
-						//if(size > 5) this.modulos.splice(idx+1, 1);
-						if(size > 5) this.modulos.pop();
-					}.bind(this), 1000);	
-
 				},
 				reproducirAudio: function(){
 					var audioElm = document.getElementById("audio"); // Audio element

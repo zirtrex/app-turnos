@@ -12,28 +12,35 @@ const logger = log4js.getLogger('cheese');
 /* GET home page. */
 
 router.get('/', function(req, res, next) {
+
 	var fecha = new Date();
+
 	logger.debug(fecha);
-	if(typeof req.session.modulo === 'undefined' && typeof req.session.tramite === 'undefined'){
+
+	if(typeof req.session.oficina === 'undefined' && typeof req.session.servicio === 'undefined')
+	{
 		res.render('index.jade', {'titulo' : "Sistema de Turnos", 'fecha': fecha});
-	}else if(typeof req.session.tramite === 'undefined'){
-		res.render('index.jade', {'titulo' : "Sistema de Turnos", 'modulo': req.session.modulo, 'fecha': fecha} );
-	}else{
+	}
+	else if(typeof req.session.servicio === 'undefined')
+	{
+		res.render('index.jade', {'titulo' : "Sistema de Turnos", 'oficina': req.session.oficina, 'fecha': fecha} );
+	}
+	else
+	{
 		res.redirect('/modulo');
 	}
 	
 });
 
 router.get('/cambiar', function(req, res, next) {
-	logger.debug("Cambiando tipo de trámite");
 
 	var fecha = new Date();
 	var fechaActual = fecha.getFullYear() + "-" + (fecha.getMonth()+1) + "-" + fecha.getDate();
 
-	if(typeof req.session.modulo === 'undefined' && typeof req.session.tramite === 'undefined'){
+	if(typeof req.session.oficina === 'undefined' && typeof req.session.servicio === 'undefined'){
 		res.redirect('/');
 	}else{
-		Modulo.findOne({'modulo': req.session.modulo, 'tramite': req.session.tramite, 'fecha': fechaActual}, function(err, modulo){
+		Modulo.findOne({'oficina': req.session.oficina, 'servicio': req.session.servicio, 'fecha': fechaActual}, function(err, modulo){
 
 			modulo.estado = true;
 
@@ -43,7 +50,7 @@ router.get('/cambiar', function(req, res, next) {
 				} else {
 					logger.debug("Cambiando trámite: " + modulo.toString());
 
-					delete req.session.tramite;
+					delete req.session.servicio;
 					
 					res.redirect('/');
 				}
