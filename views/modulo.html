@@ -16,7 +16,7 @@
 			</a>
 		</div>
 		<div class="uk-navbar-center">
-			<h2 class="uk-text-center")> Consulado General del Ecuador <br class="uk-hidden@l"/>en New York</h2>
+			<h2 class="uk-text-center")> Consulado General del Ecuador <br class="uk-hidden@xl"/>en New York</h2>
 		</div>
 		<div class="uk-navbar-right">
 			<a href="" class="uk-navbar-item uk-logo">
@@ -31,19 +31,18 @@
 		<div class="uk-width-2-4@m uk-margin-large-right">
 			<div style="" class="uk-container-2 uk-margin-medium">
 				<div id="app">
-					<h2>{{modulo.oficina}}</h2>
-					<p>Trámite: {{modulo.servicio}}
-						<a href="/cambiar" class="uk-button uk-button-link"> Cambiar Trámite</a>
-					</p>
+					<h2>Oficina: {{modulo.oficina}}</h2>
+					<h2>Trámite: {{modulo.servicio}}</h2>
+					<hr/>
 					<p>Actualmente estás atendiendo al turno:
-						<span id="actual"> {{modulo.contador}}</span>
+						<span id="actual"> #{{modulo.contador}}</span>
 					</p>
 					<hr/>
-					<button type="button" v-on:click="call_again" name="call_again" class="uk-button uk-button-secundary">Llamar de nuevo</button>				
+					<button type="button" v-on:click="call_again" name="call_again" class="uk-button uk-button-secundary">Llamar nuevamente</button>				
 					<button id="js-modal-confirm" type="button" v-on:click="contador" name="contador" class="uk-button uk-button-primary">Siguiente</button>
 					<hr/>
 					<div class="btn-terminar2">
-						<button type="button" v-on:click="terminar" name="terminar" class="uk-button uk-button-text">Terminar</button>
+						<a href="/cambiar" class="uk-button uk-button-link">Inicio</a>
 					</div>				
 				</div>
 				<div class="uk-flex uk-flex-right")>
