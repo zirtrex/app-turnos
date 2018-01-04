@@ -31,18 +31,22 @@
 		<div class="uk-width-2-4@m uk-margin-large-right">
 			<div style="" class="uk-container-2 uk-margin-medium">
 				<div id="app">
-					<h2>Oficina: {{modulo.oficina}}</h2>
-					<h2>Trámite: {{modulo.servicio}}</h2>
+					<h3>Oficina: {{modulo.oficina}}</h3>
+					<h3>Trámite: {{modulo.servicio}}</h3>
 					<hr/>
 					<p>Actualmente estás atendiendo al turno:
 						<strong id="actual"> #{{modulo.contador}}</strong>
 					</p>
 					<hr/>
 					<button type="button" v-on:click="call_again" name="call_again" class="uk-button uk-button-secundary">Llamar nuevamente</button>				
-					<button id="js-modal-confirm" type="button" v-on:click="contador" name="contador" class="uk-button uk-button-primary">Siguiente</button>
+					<button id="js-modal-confirm" type="button" v-on:click="contador" name="contador" class="uk-button uk-button-primary"><span uk-icon="icon: arrow-right"></span> Siguiente</button>
 					<hr/>
 					<div class="btn-terminar2">
 						<a href="/cambiar" class="uk-button uk-button-link"><span uk-icon="icon: arrow-left"></span> Inicio</a>
+						|
+						<div class="btn-terminar2">
+							<button type="button" v-on:click="terminar" name="terminar" class="uk-button uk-button-text">Terminar</button>
+						</div>
 					</div>				
 				</div>
 				<div class="uk-flex uk-flex-right")>
