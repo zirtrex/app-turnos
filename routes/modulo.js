@@ -53,16 +53,27 @@ router.get('/', function(req, res, next) {
 				});
 
 			}else{
-				modulo.estado = true;
 
-				modulo.save(function (err) {
-					if (err) {
-						logger.debug(err);
-					} else {
-						logger.debug("Ya existe[GET]: " + modulo.toString());
-						res.render('modulo.html', {'fechaAct': fecha});
-					}
-				});
+				if(modulo.estado == false){
+
+					modulo.estado = true;
+
+					var perAtendidas =  {indiceAten: 0, fechaInicio: new Date(), fechaFin: null, fueAtendido: null, minutosAtendidos: 0};
+
+					modulo.perAtendidas.push(perAtendidas);
+
+					modulo.save(function (err) {
+						if (err) {
+							logger.debug(err);
+						} else {
+							logger.debug("Ya existe[GET]: " + modulo.toString());
+							
+						}
+					});
+
+				}
+
+				res.render('modulo.html', {'fechaAct': fecha});
 				
 			}		
 		});
@@ -108,17 +119,28 @@ router.post('/', function(req, res, next) {
 			});
 
 		}else{
-			modulo.estado = true;
 
-			modulo.save(function (err) {
-				if (err) {
-					logger.debug(err);
-				} else {
-					logger.debug("Ya existe[POST]: " + modulo.toString());
-					res.render('modulo.html', {'fechaAct': fecha});
-				}
-			});
-			
+			if(modulo.estado == false){
+
+				modulo.estado = true;
+
+				var perAtendidas =  {indiceAten: 0, fechaInicio: new Date(), fechaFin: null, fueAtendido: null, minutosAtendidos: 0};
+
+				modulo.perAtendidas.push(perAtendidas);
+
+				modulo.save(function (err) {
+					if (err) {
+						logger.debug(err);
+					} else {
+						logger.debug("Ya existe[POST]: " + modulo.toString());
+						
+					}
+				});
+
+			}
+
+			res.render('modulo.html', {'fechaAct': fecha});
+		
 		}		
 	});
 	
