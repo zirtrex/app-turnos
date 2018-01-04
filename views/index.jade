@@ -26,7 +26,8 @@ block content
 					if typeof oficina !== "undefined"
 						div(class="uk-margin")
 							label(class="uk-form-label", for="oficina") Oficina:
-							input(type="text", name="oficina" value="#{oficina}" class="uk-input" readonly)
+							div(class="uk-form-controls")
+								input(type="text", name="oficina" value="#{oficina}" class="uk-input" readonly)
 					else
 						div(class="uk-margin")
 							label(class="uk-form-label", for="oficina") Oficina:

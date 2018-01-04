@@ -40,22 +40,9 @@ router.get('/cambiar', function(req, res, next) {
 	if(typeof req.session.oficina === 'undefined' && typeof req.session.servicio === 'undefined'){
 		res.redirect('/');
 	}else{
-		Modulo.findOne({'oficina': req.session.oficina, 'servicio': req.session.servicio, 'fecha': fechaActual}, function(err, modulo){
-
-			modulo.estado = true;
-
-			modulo.save(function (err) {
-				if (err) {
-					logger.debug(err);
-				} else {
-					logger.debug("Cambiando trámite: " + modulo.toString());
-
-					delete req.session.servicio;
-					
-					res.redirect('/');
-				}
-			});
-		});
+		logger.debug("Cambiando trámite");
+		delete req.session.servicio;					
+		res.redirect('/');
 	}
 
 });
