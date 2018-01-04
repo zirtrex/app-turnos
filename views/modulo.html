@@ -146,7 +146,8 @@
 			  			}
 		           	}.bind(this));
 
-		           	this.$refs.btnSiguiente.readOnly = true;
+		           	this.$refs.btnSiguiente.disabled  = true;
+		           	this.$refs.btnTerminar.disabled = true;
 		           	this.$refs.btnTerminar.innerText = "Por favor, regrese al inicio.";
 
 				},
