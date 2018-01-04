@@ -35,14 +35,14 @@
 					<h2>Trámite: {{modulo.servicio}}</h2>
 					<hr/>
 					<p>Actualmente estás atendiendo al turno:
-						<span id="actual"> #{{modulo.contador}}</span>
+						<strong id="actual"> #{{modulo.contador}}</strong>
 					</p>
 					<hr/>
 					<button type="button" v-on:click="call_again" name="call_again" class="uk-button uk-button-secundary">Llamar nuevamente</button>				
 					<button id="js-modal-confirm" type="button" v-on:click="contador" name="contador" class="uk-button uk-button-primary">Siguiente</button>
 					<hr/>
 					<div class="btn-terminar2">
-						<a href="/cambiar" class="uk-button uk-button-link">Inicio</a>
+						<a href="/cambiar" class="uk-button uk-button-link"><span uk-icon="icon: arrow-left"></span> Inicio</a>
 					</div>				
 				</div>
 				<div class="uk-flex uk-flex-right")>
