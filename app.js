@@ -153,6 +153,7 @@ io.on('connection', function(socket) {
             
             modulo.perAtendidas[indicePerAtendidasActual].fechaFin = fechaFinActual;
             modulo.perAtendidas[indicePerAtendidasActual].minutosAtendidos = Math.round(minutosAtendidosActual / 1000 / 60);
+            modulo.perAtendidas[indicePerAtendidasActual].fueAtendido = datos.atendido;
 
             //Elegimos el número más alto y aumentamos en 1
             modulo.estado = false,

@@ -135,6 +135,24 @@
 						console.log("Enviando datos al server para terminar el contador");
 		  				socket.emit("terminar", { 'channel': channel, 'modulo': this.modulo });
 		  			}
+
+		  			e.preventDefault();
+					e.target.blur();
+
+		           	UIkit.modal.confirm('¿El último usuario ha sido atendido?', { labels: { ok: 'Si', cancel: 'No' }}).then(function () {
+			            console.log('Si.')
+			            if(this.modulo != null ){
+							console.log("Enviando datos al server para terminar el contador");
+			  				socket.emit("terminar", { 'channel': channel, 'modulo': this.modulo, 'atendido': true});
+			  			}
+		           	}.bind(this), function () {
+		           		console.log('No.')
+		               	if(this.modulo != null ){
+							console.log("Enviando datos al server para terminar el contador");
+			  				socket.emit("terminar", { 'channel': channel, 'modulo': this.modulo, 'atendido': false});
+			  			}
+		           	}.bind(this));
+
 				},
 				actualizar: function(){
 					axios.get('/show/modulo')
