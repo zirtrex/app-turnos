@@ -40,12 +40,12 @@
 					</p>
 					<hr/>
 					<button type="button" v-on:click="call_again" name="call_again" class="uk-button uk-button-secundary">Llamar nuevamente</button>				
-					<button id="js-modal-confirm" type="button" v-on:click="contador" name="contador" class="uk-button uk-button-primary" uk-icon="icon: arrow-right">Siguiente</button>
+					<button id="js-modal-confirm" type="button" v-on:click="contador" ref="btnSiguiente" name="btnSiguiente" class="uk-button uk-button-primary" uk-icon="icon: arrow-right">Siguiente</button>
 					<hr/>
 					<div class="btn-terminar2">
 						<a href="/cambiar" class="uk-button uk-button-link" uk-icon="icon: arrow-left">Inicio</a>
 						|
-						<button type="button" v-on:click="terminar" name="terminar" class="uk-button uk-button-link" uk-icon="icon: close">Terminar</button>
+						<button type="button" v-on:click="terminar" ref="btnTerminar" name="btnTerminar" class="uk-button uk-button-link" uk-icon="icon: close">Terminar</button>
 					</div>				
 				</div>
 				<div class="uk-flex uk-flex-right")>
@@ -129,13 +129,6 @@
 		  					  			
 				},
 				terminar: function(e){
-					e.preventDefault();
-
-					if(this.modulo != null ){
-						console.log("Enviando datos al server para terminar el contador");
-		  				socket.emit("terminar", { 'channel': channel, 'modulo': this.modulo });
-		  			}
-
 		  			e.preventDefault();
 					e.target.blur();
 
@@ -152,6 +145,9 @@
 			  				socket.emit("terminar", { 'channel': channel, 'modulo': this.modulo, 'atendido': false});
 			  			}
 		           	}.bind(this));
+
+		           	this.$refs.btnSiguiente.readOnly = true;
+		           	this.$refs.btnTerminar.innerText = "Por favor, regrese al inicio.";
 
 				},
 				actualizar: function(){
