@@ -117,7 +117,7 @@ io.on('connection', function(socket) {
                     } else {
                         logger.debug("Guardado: " + modulo.toString());                      
                         logger.debug("Emitiendo desde el contador al canal SHOW_CHANNEL");
-                        socket.broadcast.emit('modulo_SHOW_CHANNEL', {'modulo': modulo, 'aumentar': false}); 
+                        socket.broadcast.emit('modulo_SHOW_CHANNEL', {'modulo': modulo, 'aumentar': true}); 
                         logger.debug("Emitiendo desde el contador al canal COUNT_CHANNEL");
                         io.emit('modulo_COUNT_CHANNEL', modulo); 
                     }
