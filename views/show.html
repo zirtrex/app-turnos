@@ -156,11 +156,11 @@
 
 		  					var idx = this.modulos.findIndex(function(modulo){ return modulo.oficina === data.modulo.oficina});
 			  				
-			  				var size = this.modulos.length; 
+			  				var size = this.modulos.unshift(data.modulo);
 
-							if(size > 5) this.modulos.splice(idx+1, 1);
-
-							this.modulos.unshift(data.modulo);							
+							setTimeout(function(){
+								if(size > 5) this.modulos.splice(idx+1, 1);
+							}.bind(this), 5000);
 
 							this.reproducirAudio();
 
