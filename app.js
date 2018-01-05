@@ -94,7 +94,7 @@ io.on('connection', function(socket) {
             Modulo.findOne({'oficina': datos.modulo.oficina, 'servicio': datos.modulo.servicio, 'fecha': fechaActual}, function(err, modulo){
     
                 //Construimos el objeto perAtendidas
-                var indicePerAtendidasActual =  modulo.indicePerAtendidas + 1;
+                var indicePerAtendidasActual =  modulo.perAtendidas.length + 1; // He cambiado modulo.contador por modulo.perAtendidas.length
                 var fechaFinAnterior = new Date();
                 var fechaInicioAnterior = new Date(modulo.perAtendidas[indicePerAtendidasActual-1].fechaInicio);
                 var fechaInicioActual = new Date();
