@@ -15,6 +15,10 @@ const logger = log4js.getLogger('cheese');
 router.get('/', function(req, res, next) {
 
 	var fecha = new Date();
+
+	var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+	var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+	var dateFormat = days[fecha.getDate()] + " " + months[fecha.getMonth()] + " " + fecha.getDate() + " " + fecha.getFullYear();
 	
 	if( typeof req.session.oficina === 'undefined' || typeof req.session.servicio === 'undefined' ){
 	
@@ -48,7 +52,7 @@ router.get('/', function(req, res, next) {
 						logger.debug(err);
 					} else {
 						logger.debug("Nuevo[GET]: " + modulo.toString());
-						res.render('modulo.html', {'fechaAct': fecha});
+						res.render('modulo.html', {'fechaAct': dateFormat});
 					}
 				});
 
@@ -73,7 +77,7 @@ router.get('/', function(req, res, next) {
 
 				}
 
-				res.render('modulo.html', {'fechaAct': fecha});
+				res.render('modulo.html', {'fechaAct': dateFormat});
 				
 			}		
 		});
@@ -114,7 +118,7 @@ router.post('/', function(req, res, next) {
 					logger.debug(err);
 				} else {
 					logger.debug("Nuevo[POST]: " + modulo.toString());
-					res.render('modulo.html', {'fechaAct': fecha});
+					res.render('modulo.html', {'fechaAct': dateFormat});
 				}
 			});
 
@@ -139,7 +143,7 @@ router.post('/', function(req, res, next) {
 
 			}
 
-			res.render('modulo.html', {'fechaAct': fecha});
+			res.render('modulo.html', {'fechaAct': dateFormat});
 		
 		}		
 	});

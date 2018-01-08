@@ -14,16 +14,19 @@ const logger = log4js.getLogger('cheese');
 router.get('/', function(req, res, next) {
 
 	var fecha = new Date();
+	var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+	var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+	var dateFormat = days[fecha.getDate()] + " " + months[fecha.getMonth()] + " " + fecha.getDate() + " " + fecha.getFullYear();
 
 	logger.debug(fecha);
 
 	if(typeof req.session.oficina === 'undefined' && typeof req.session.servicio === 'undefined')
 	{
-		res.render('index.jade', {'titulo' : "Sistema de Turnos", 'fecha': fecha});
+		res.render('index.jade', {'titulo' : "Sistema de Turnos", 'fecha': dateFormat});
 	}
 	else if(typeof req.session.servicio === 'undefined')
 	{
-		res.render('index.jade', {'titulo' : "Sistema de Turnos", 'oficina': req.session.oficina, 'fecha': fecha} );
+		res.render('index.jade', {'titulo' : "Sistema de Turnos", 'oficina': req.session.oficina, 'fecha': dateFormat} );
 	}
 	else
 	{
@@ -33,9 +36,6 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/cambiar', function(req, res, next) {
-
-	var fecha = new Date();
-	var fechaActual = fecha.getFullYear() + "-" + (fecha.getMonth()+1) + "-" + fecha.getDate();
 
 	if(typeof req.session.oficina === 'undefined' && typeof req.session.servicio === 'undefined'){
 		res.redirect('/');
