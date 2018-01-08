@@ -16,17 +16,17 @@ router.get('/', function(req, res, next) {
 	var fecha = new Date();
 	var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 	var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-	var dateFormat = days[fecha.getDay()] + " " + months[fecha.getMonth()] + " " + fecha.getDate() + " " + fecha.getFullYear();
+	var fechaFormat = days[fecha.getDay()] + " " + months[fecha.getMonth()] + " " + fecha.getDate() + " " + fecha.getFullYear();
 
 	logger.debug(fecha);
 
 	if(typeof req.session.oficina === 'undefined' && typeof req.session.servicio === 'undefined')
 	{
-		res.render('index.jade', {'titulo' : "Sistema de Turnos", 'fecha': dateFormat});
+		res.render('index.jade', {'titulo' : "Sistema de Turnos", 'fecha': fechaFormat});
 	}
 	else if(typeof req.session.servicio === 'undefined')
 	{
-		res.render('index.jade', {'titulo' : "Sistema de Turnos", 'oficina': req.session.oficina, 'fecha': dateFormat} );
+		res.render('index.jade', {'titulo' : "Sistema de Turnos", 'oficina': req.session.oficina, 'fecha': fechaFormat} );
 	}
 	else
 	{

@@ -18,7 +18,7 @@ router.get('/', function(req, res, next) {
 
 	var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 	var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-	var dateFormat = days[fecha.getDay()] + " " + months[fecha.getMonth()] + " " + fecha.getDate() + " " + fecha.getFullYear();
+	var fechaFormat = days[fecha.getDay()] + " " + months[fecha.getMonth()] + " " + fecha.getDate() + " " + fecha.getFullYear();
 	
 	if( typeof req.session.oficina === 'undefined' || typeof req.session.servicio === 'undefined' ){
 	
@@ -52,7 +52,7 @@ router.get('/', function(req, res, next) {
 						logger.debug(err);
 					} else {
 						logger.debug("Nuevo[GET]: " + modulo.toString());
-						res.render('modulo.html', {'fechaAct': dateFormat});
+						res.render('modulo.html', {'fechaAct': fechaFormat});
 					}
 				});
 
@@ -93,6 +93,11 @@ router.post('/', function(req, res, next) {
 	req.session.servicio = req.body.servicio;
 
 	var fecha = new Date();
+
+	var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+	var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+	var fechaFormat = days[fecha.getDay()] + " " + months[fecha.getMonth()] + " " + fecha.getDate() + " " + fecha.getFullYear();
+
 	var fechaActual = fecha.getFullYear() + "-" + (fecha.getMonth()+1) + "-" + fecha.getDate();
 	
 	Modulo.findOne({'oficina': req.session.oficina, 'servicio': req.session.servicio, 'fecha': fechaActual}, function(err, modulo){
@@ -118,7 +123,7 @@ router.post('/', function(req, res, next) {
 					logger.debug(err);
 				} else {
 					logger.debug("Nuevo[POST]: " + modulo.toString());
-					res.render('modulo.html', {'fechaAct': dateFormat});
+					res.render('modulo.html', {'fechaAct': fechaFormat});
 				}
 			});
 
@@ -143,7 +148,7 @@ router.post('/', function(req, res, next) {
 
 			}
 
-			res.render('modulo.html', {'fechaAct': dateFormat});
+			res.render('modulo.html', {'fechaAct': fechaFormat});
 		
 		}		
 	});
