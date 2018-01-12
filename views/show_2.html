@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Show</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='stylesheet' type="text/css" href='/stylesheets/uikit.css'></link>
+	<link rel='stylesheet' type="text/css" href='/stylesheets/style.css'></link>
+	<link href="http://vjs.zencdn.net/6.2.0/video-js.css" rel="stylesheet">
+  	<!-- If you'd like to support IE8 --> 
+  	<script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+</head>
+<body>
+	<input type="hidden" id="audioFile" size="80" value="../audio/1HipHip8.wav">
+	<audio id="audio" style="display: hidden" src="../audio/1HipHip8.wav">Canvas no Soportado<source src="" type="audio/mpeg"></audio>
+
+	<div class="uk-grid-collapse uk-grid">
+		<div class="uk-width-1-5" style="background-color: #fff">
+			<div id="contenedor">
+				<transition-group tag="div" name="bounce" v-bind:css="false" v-on:before-enter="beforeEnter" v-on:enter="enter" v-on:leave="leave" class="">
+				    <modulo v-for="modulo,index in modulosList" 
+				      class="modulo uk-margin-small-bottom"
+				      v-bind:id="getModulo(index)"
+				      v-bind:mod="modulo"
+				      v-bind:key="modulo"
+				      v-if="true">
+				    </modulo>
+				</transition-group>
+			</div>	
+		</div>
+		<div class="uk-width-4-5">
+			<div class="uk-cover-container">
+			    <video id="my-video" class="video-js" controls preload="auto" width="auto" height="auto" data-setup='{"techorder" : ["flash"]}'>
+				    <source src="rtmp://192.168.8.101:1935/live/1234" type="rtmp/mp4">                                                                                                                           
+				    <p class="vjs-no-js">
+				      To view this video please enable JavaScript, and consider upgrading to a web browser that
+				      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+				    </p>
+				</video>	
+			</div>
+		</div>
+	</div>
+	
+	<script src="http://vjs.zencdn.net/6.2.0/video.js"></script>
+  	<script src="../javascripts/videojs-flash.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="../javascripts/velocity.min.js"></script>
+    <!--<script src="https://unpkg.com/vue/dist/vue.js"></script>-->
+    <script src="../javascripts/vue.min.js"></script>
+    <script src="../javascripts/axios.min.js"></script>
+
+	<script type="text/javascript">
+
+		var ipServidor = "";
+
+		fetch("/config.json").then(function(response) {
+		  	var contentType = response.headers.get("content-type");
+		  	if(contentType && contentType.indexOf("application/json") !== -1) {
+		    	return response.json().then(function(json) {
+			      	ipServidor = json.ip_servidor;
+			    });
+		  	} else {
+		    	console.log("Oops, we haven't got JSON!");
+		  	}
+		});
+
+		var channel = "SHOW_CHANNEL";
+		var socket = io.connect(ipServidor, {reconnection: true});
+
+		var app = new Vue({
+			el: '#contenedor',
+			data: {
+		    	modulos: [],
+		    	modulosList: [],
+		    	show: true,
+		    	stop: false
+		  	},
+		  	components: {
+			    modulo: {
+			      props: ['mod'],
+			      template: '<div :class="{ [`${mod.servicio}`]: true }">\
+			      				<div class="uk-card uk-card-default">\
+					            	<div class="uk-card-body">\
+					            		<h3 class="uk-text-center title">{{ mod.servicio }} <br/> Turno: <span>{{ mod.contador }}</span></h3>\
+					            	</div>\
+					            	<div class="uk-card-footer">\
+					            		<p class="uk-text-center uk-text-uppercase"><strong>{{ mod.modulo }}</strong></p>\
+					            	</div>\
+					        	</div>\
+			      			</div>'
+			    }
+			},
+		  	created: function () {
+
+		  		// get already connected users first
+                axios.get('/show/modulos')
+                    .then(function (response) {
+
+                    	console.log("Recibiendo datos con Axios: ");
+                    	console.log(response.data);
+                       	this.modulos = response.data;
+
+                    }.bind(this));
+
+
+		  		socket.on('connect', function(data){
+
+		  			socket.emit("Creando_Vista", { 'channel': channel });
+		  			console.log("Conectando al servidor");					
+
+				});
+
+				socket.on('modulo_' + channel, function(data){
+
+		  			this.cambiarModulo(data);
+		  			console.log("Recibiendo datos del servidor aumentar");
+
+				}.bind(this));
+		  		
+		  	},
+			mounted: function () {
+			    this.show = false
+			},
+			watch: {
+				//cuando 'question' cambie, se ejecutará esta función
+				modulos: function (modulos) {
+					this.modulosList = modulos;
+				}
+			},
+		  	methods: {
+		  		getModulo: function(index) {
+				    return this.modulos[index].modulo;
+				},
+				getVisible: function(index) {
+				    return this.modulos[index].estado;
+				},
+				cambiarModulo: function(data){
+					console.log("Han llegado datos: " + data.toString());
+		  			var modulo = this.modulos.find(function(modulo){ return modulo.modulo === data.modulo});
+
+		  			if(typeof modulo !== 'undefined'){
+
+		  				var idx = this.modulos.findIndex(function(modulo){ return modulo.modulo === data.modulo});
+		  				
+		  				this.agregarModulo(idx, data);
+		  				this.reproducirAudio();
+
+		  				console.log("Agregando: " + idx);
+						console.log(data);
+		  				
+		  			}else{
+		  				console.log("Agregando al Inicio uno nuevo.");
+		  				var size = this.modulos.unshift(data);
+						setTimeout(function(){
+							if(size > 5) this.modulos.pop();
+						}.bind(this), 500);
+		  			}		
+				},
+				agregarModulo: function(idx, data){
+
+					var size = this.modulos.unshift(data);
+
+					setTimeout(function(){
+						if(size > 5) this.modulos.splice(idx+1, 1);
+					}.bind(this), 500);	
+
+				},
+				reproducirAudio: function(){
+					var audioElm = document.getElementById("audio"); // Audio element
+					audioElm.src = document.getElementById('audioFile').value;
+				    audioElm.play();
+				},
+				beforeEnter: function (el) {
+			    	el.style.opacity = 0;
+			    	el.style.scale = 0;
+			    	//el.style.translateX= '-150px'
+			    },
+			    enter: function (el, done) {
+			    	var vm = this;
+			    	Velocity(el, { opacity: 1, scale: 0.8 }, { loop: 5 }, { duration: 1000} );
+			    	Velocity(el, { opacity: 1, scale: 1  }, {duration: 500, complete:  done })
+			    },
+			    leave: function (el, done) {
+			    	var vm = this;
+			      	//Velocity(el, { opacity: 0, translateX: '150px' }, { duration: 500, complete: function(){done()} })
+			      	Velocity(el, { opacity: 0, scale: 0 }, { duration: 500, complete: done })
+			    }
+		  	}
+		});
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Show</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='stylesheet' type="text/css" href='/stylesheets/uikit.css'></link>
+	<link rel='stylesheet' type="text/css" href='/stylesheets/style.css'></link>
+</head>
+<body>
+	<input type="hidden" id="audioFile" size="80" value="../audio/1HipHip8.wav">
+	<audio id="audio" style="display: hidden" src="../audio/1HipHip8.wav">Canvas no Soportado<source src="" type="audio/mpeg"></audio>
+
+	<div class="uk-grid-collapse uk-grid">
+		<div class="uk-width-1-5" style="background-color: #fff">
+			<div id="contenedor">
+				<transition-group tag="div" name="bounce" v-bind:css="false" v-on:before-enter="beforeEnter" v-on:enter="enter" v-on:leave="leave" class="">
+				    <modulo v-for="modulo,index in modulosList" 
+				      class="modulo uk-margin-small-bottom"
+				      v-bind:id="getOficina(index)"
+				      v-bind:mod="modulo"
+				      v-bind:key="modulo"
+				      v-if="true">
+				    </modulo>
+				</transition-group>
+			</div>	
+		</div>
+		<div class="uk-width-4-5">
+			<div class="uk-cover-container">
+			    <iframe id="playlist" width="100%" style="height: 100vh;" src="" frameborder="0" allowfullscreen></iframe>
+			    <!--<iframe width="100%" style="height: 100vh;" src="https://www.youtube.com/embed/LkjwN-LQmDI" frameborder="0" allowfullscreen></iframe>-->	
+			</div>
+		</div>
+	</div>
+	
+
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="../javascripts/velocity.min.js"></script>
+    <!--<script src="https://unpkg.com/vue/dist/vue.js"></script>-->
+    <script src="../javascripts/vue.min.js"></script>
+    <script src="../javascripts/axios.min.js"></script>
+
+
+	<script type="text/javascript">
+
+		var playlist = document.getElementById("playlist");
+		var index = Math.floor((Math.random() * 40) + 1);
+		var list = "PLEQ2sMVkjQ2mxhnKWpl6XqGxno80F837r";
+		var src = "https://www.youtube.com/embed/videoseries?list="+list+"&autoplay=1&rel=0&amp&index="+index+";controls=0&amp;showinfo=0";
+		playlist.src = src;
+
+		var ipServidor = "";
+
+		fetch("/config.json").then(function(response) {
+		  	var contentType = response.headers.get("content-type");
+		  	if(contentType && contentType.indexOf("application/json") !== -1) {
+		    	return response.json().then(function(json) {
+			      	ipServidor = json.ip_servidor;
+			    });
+		  	} else {
+		    	console.log("Oops, we haven't got JSON!");
+		  	}
+		});
+
+		var channel = "SHOW_CHANNEL";
+		var socket = io.connect(ipServidor, {reconnection: true});
+
+		var app = new Vue({
+			el: '#contenedor',
+			data: {
+		    	modulos: [],
+		    	modulosList: [],
+		    	show: true,
+		    	stop: false
+		  	},
+		  	components: {
+			    modulo: {
+			      props: ['mod'],
+			      template: '<div :class="{ [`${mod.servicio}`]: true }">\
+			      				<div class="uk-card uk-card-default">\
+					            	<div class="uk-card-body">\
+					            		<h3 class="uk-text-center title">{{ mod.servicio }} <br/> Turno: <span>{{ mod.contador }}</span></h3>\
+					            	</div>\
+					            	<div class="uk-card-footer">\
+					            		<p class="uk-text-center uk-text-uppercase"><strong>{{ mod.oficina }}</strong></p>\
+					            	</div>\
+					        	</div>\
+			      			</div>'
+			    }
+			},
+		  	created: function () {
+
+		  		// get already connected users first
+                axios.get('/show/modulos')
+                    .then(function (response) {
+
+                    	console.log("Recibiendo datos con Axios: ");
+                    	console.log(response.data);
+                       	this.modulos = response.data;
+
+                    }.bind(this));
+
+
+		  		socket.on('connect', function(data){
+
+		  			socket.emit("Creando_Vista", { 'channel': channel });
+		  			console.log("Conectando al servidor");					
+
+				});
+
+				socket.on('modulo_' + channel, function(data){
+
+		  			this.cambiarModulo(data);
+		  			console.log("Recibiendo datos del servidor aumentar");
+
+				}.bind(this));
+		  		
+		  	},
+			mounted: function () {
+			    this.show = false
+			},
+			watch: {
+				//cuando 'question' cambie, se ejecutará esta función
+				modulos: function (modulos) {
+					this.modulosList = modulos;
+				}
+			},
+		  	methods: {
+		  		getOficina: function(index) {
+				    return this.modulos[index].oficina;
+				},
+				getVisible: function(index) {
+				    return this.modulos[index].estado;
+				},
+				cambiarModulo: function(data){
+					console.log("Han llegado datos: " + data);		  			
+
+					//Verificamos si se quiere pasar al siguiente en cola o llamar nuevamente
+		  			if(data.aumentar){
+		  				
+		  				var size = this.modulos.unshift(data.modulo);
+
+						setTimeout(function(){
+							//if(size > 5) this.modulos.splice(idx+1, 1);
+							if(size > 5) this.modulos.pop();
+						}.bind(this), 1000);
+
+		  				this.reproducirAudio();
+		  				 
+						console.log("Aumentado:" + data.modulo);
+		  				
+		  			}else{
+		  				var oficina = this.modulos.find(function(modulo){ return modulo.oficina === data.modulo.oficina});
+
+		  				if(oficina !== 'undefined'){
+
+		  					var idx = this.modulos.findIndex(function(modulo){ return modulo.oficina === data.modulo.oficina});
+			  				
+			  				var size = this.modulos.unshift(data.modulo);
+
+							setTimeout(function(){
+								if(size > 5) this.modulos.splice(idx+1, 1);
+							}.bind(this), 100);
+
+							this.reproducirAudio();
+
+							console.log("Llamando nuevamente:" + data);
+						}
+		  			}		
+				},
+				reproducirAudio: function(){
+					var audioElm = document.getElementById("audio"); // Audio element
+					audioElm.src = document.getElementById('audioFile').value;
+				    audioElm.play();
+				},
+				beforeEnter: function (el) {
+			    	el.style.opacity = 0;
+			    	el.style.scale = 0;
+			    	//el.style.translateX= '-150px'
+			    },
+			    enter: function (el, done) {
+			    	var vm = this;
+			    	Velocity(el, { opacity: 1, scale: 0.8 }, { loop: 5 }, { duration: 1000} );
+			    	Velocity(el, { opacity: 1, scale: 1  }, {duration: 500, complete:  done })
+			    },
+			    leave: function (el, done) {
+			    	var vm = this;
+			      	//Velocity(el, { opacity: 0, translateX: '150px' }, { duration: 500, complete: function(){done()} })
+			      	Velocity(el, { opacity: 0, scale: 0 }, { duration: 500, complete: done })
+			    }
+		  	}
+		});
+
+	</script>
+</body>
+</html>

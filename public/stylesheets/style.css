@@ -1,0 +1,242 @@
+body {
+  margin: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url('/images/fondo_modulo.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+@font-face {
+    font-family: "StardosStencil";
+    src: url("/fonts/StardosStencil-Regular.ttf") format("truetype");
+}
+
+a {
+  color: #00B7FF;
+}
+
+.uk-container-2{
+    background-color: rgba(255,255,255,0.9);
+    padding: 20px 30px;
+}
+
+.container{
+    /*width: 100%;
+    position: absolute;
+    bottom: 0;*/
+}
+
+#contenedor{
+    /*width: 100%;
+    position: absolute;
+    bottom: 0;*/
+}
+
+.uk-grid-small > * {
+    padding-left: 5px;
+}
+
+.uk-margin-small-bottom {
+    margin-bottom: 2px !important;
+}
+
+.uk-card-default{
+  background-color: #fff;
+}
+
+.uk-card-body{
+  padding: 10px 5px;
+}
+
+.uk-card-body .title{
+  word-break: break-all;
+}
+
+.uk-card-body .title span{
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 2px 10px;
+  color: #000;
+  text-shadow: 2px 1px 1px #5c5c5c;
+}
+
+.uk-card-footer{
+    padding: 10px 20px;
+}
+
+
+.ID .uk-card-body{
+  background-color: #0294D1;
+}
+
+.ID .uk-card-body .title{
+  color: #fff;
+}
+
+.ID .uk-card-footer{
+    background-color: #055AAF;
+    color: #fff;
+}
+
+
+.PODERES .uk-card-body{
+  background-color: #098D31;
+}
+
+.PODERES .uk-card-body .title{
+  color: #fff;
+}
+
+.PODERES .uk-card-footer{
+    background-color: #06561E;
+    color: #fff;
+}
+
+.REGISTRO .uk-card-body{
+  background-color: #72480A;
+}
+
+.REGISTRO .uk-card-body .title{
+  color: #fff;
+}
+
+.REGISTRO .uk-card-footer{
+    background-color: #5E3C08;
+    color: #fff;
+}
+
+
+.VISAS .uk-card-body{
+  background-color: #1281E8;
+}
+
+.VISAS .uk-card-body .title{
+  color: #fff;
+}
+
+.VISAS .uk-card-footer{
+    background-color: #1073D0;
+    color: #fff;
+}
+
+
+.EMPADRONAMIENTO .uk-card-body{
+  background-color: #5C6284;
+}
+
+.EMPADRONAMIENTO .uk-card-body .title{
+  color: #fff;
+}
+
+.EMPADRONAMIENTO .uk-card-footer{
+    background-color: #3C4056;
+    color: #fff;
+}
+
+
+.PARTIDAS .uk-card-body{
+  background-color: #14A7CC;
+}
+
+.PARTIDAS .uk-card-body .title{
+  color: #fff;
+}
+
+.PARTIDAS .uk-card-footer{
+    background-color: #0E738C;
+    color: #fff;
+}
+
+
+.CEDULAS .uk-card-body{
+  background-color: #14A1AE;
+}
+
+.CEDULAS .uk-card-body .title{
+  color: #fff;
+}
+
+.CEDULAS .uk-card-footer{
+    background-color: #0B585F;
+    color: #fff;
+}
+
+
+.VARIOS .uk-card-body{
+  background-color: #1259CA;
+}
+
+.VARIOS .uk-card-body .title{
+  color: #fff;
+}
+
+.VARIOS .uk-card-footer{
+    background-color: #0D4091;
+    color: #fff;
+}
+
+
+.CAJA .uk-card-body{
+  background-color: #FAE862;
+}
+
+.CAJA .uk-card-body .title{
+  color: #000;
+}
+
+.CAJA .uk-card-footer{
+    background-color: #C4AE06;
+    color: #fff;
+}
+
+
+.INFORMACIÓN .uk-card-body{
+  background-color: #104CCC;
+}
+
+.INFORMACIÓN .uk-card-body .title{
+  color: #fff;
+}
+
+.INFORMACIÓN .uk-card-footer{
+    background-color: #0C3898;
+    color: #fff;
+}
+
+.btn-terminar{
+  position: absolute;
+  right: 0;
+  top:0;
+}
+
+.uk-navbar-center h2{
+  font-family: "StardosStencil";
+  margin-top: 20px;
+}
+
+.bounce-enter .modulo{
+    animation: bounce-in 2.5s;	
+}
+.bounce-enter-active .modulo{
+  animation: bounce-in 2.5s;
+}
+.bounce-leave-active .modulo{
+  animation: bounce-in 2.5s reverse;
+}
+.bounce-leave .modulo{
+  animation: bounce-in 2.5s reverse;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

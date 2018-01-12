@@ -1,0 +1,82 @@
+extends layout
+
+block content
+	script(type="text/javascript").
+		var fecha = "#{fecha}";
+
+	div(class="uk-navbar-container" uk-navbar="")
+		div(class="uk-navbar-left")
+			a(href="" class="uk-navbar-item uk-logo")
+				img(src='../images/gobierno.png' class="uk-responsive-height")
+		div(class="uk-navbar-center")
+			h2(class="uk-text-center") Consulado General del Ecuador <br class="uk-hidden@xl"/>en New York
+		div(class="uk-navbar-right")
+			a(href="" class="uk-navbar-item uk-logo")
+				img(src='../images/Ministerio.png' class="uk-responsive-height")
+
+	div(class="uk-flex uk-flex-middle" uk-height-viewport="offset-bottom: 80px")
+		div(class="uk-width-2-4@m")
+
+		div(class="uk-width-2-4@m uk-margin-large-right")
+			div(class="uk-margin-medium uk-container-2")
+				
+				h3 #{titulo} 
+
+				form(action="/modulo", name="elegir-modulo", method="POST", class="uk-form-horizontal")
+					if typeof oficina !== "undefined"
+						div(class="uk-margin")
+							label(class="uk-form-label", for="oficina") Oficina:
+							div(class="uk-form-controls")
+								input(type="text", name="oficina" value="#{oficina}" class="uk-input" readonly)
+					else
+						div(class="uk-margin")
+							label(class="uk-form-label", for="oficina") Oficina:
+							div(class="uk-form-controls")
+								select(id="oficina", name="oficina", class="uk-select")
+									option(value="Ventanilla #1") Ventanilla #1
+									option(value="Ventanilla #2") Ventanilla #2
+									option(value="Ventanilla #3") Ventanilla #3
+									option(value="Ventanilla #4") Ventanilla #4
+									option(value="Oficina #5") Oficina #5
+									option(value="Oficina #6") Oficina #6
+									option(value="Oficina #7") Oficina #7
+									option(value="Oficina #8") Oficina #8
+									option(value="Oficina #9") Oficina #9
+									option(value="Oficina #10") Oficina #10
+									option(value="Oficina #11") Oficina #11
+									option(value="Oficina #12") Oficina #12
+									option(value="Oficina #13") Oficina #13
+									option(value="Oficina #14") Oficina #14
+									option(value="Oficina #15") Oficina #15
+									option(value="Oficina #16") Oficina #16
+									option(value="Oficina #17") Oficina #17
+									option(value="Oficina #18") Oficina #18
+									option(value="Oficina #19") Oficina #19
+									option(value="Oficina #20") Oficina #20
+									option(value="Oficina #21") Oficina #21
+									option(value="Oficina #22") Oficina #22
+									option(value="Oficina #23") Oficina #23
+					div(class="uk-margin")
+						label(class="uk-form-label", for="servicio") Servicio:
+						div(class="uk-form-controls")
+							select(id="servicio", name="servicio", class="uk-select")
+								option(value="PODERES") PODERES
+								option(value="ID CONSULAR") ID CONSULAR
+								option(value="REGISTRO CIVIL") REGISTRO CIVIL
+								option(value="VISAS") VISAS
+								option(value="EMPADRONAMIENTO") EMPADRONAMIENTO
+								option(value="PARTIDAS DE NACIMIENTO") PARTIDA DE NACIMIENTO
+								option(value="CEDULAS") CEDULAS
+								option(value="VARIOS") VARIOS
+								option(value="INFORMACIÓN") INFORMACIÓN
+								option(value="CAJA") CAJA
+								option(value="PASAPORTES") PASAPORTES
+					div(class="uk-margin")
+						input(type="submit", value="Elegir", class="uk-button uk-button-primary")
+
+				div(class="uk-flex uk-flex-right")
+					p 
+						span(id="fecha") #{fecha}
+
+		
+    

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contador</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='stylesheet' type="text/css" href='/stylesheets/uikit.css'></link>
+	<link rel='stylesheet' type="text/css" href='/stylesheets/style.css'></link>
+	<script src="../javascripts/jquery-3.2.1.min.js"></script>
+	<script src="../javascripts/uikit.min.js"></script>
+	<script src="../javascripts/uikit-icons.js"></script>
+</head>
+<body class="" >
+	<div class="uk-navbar-container" uk-navbar="">
+		<div class="uk-navbar-left">
+			<a href="" class="uk-navbar-item uk-logo">
+				<img src='../images/gobierno.png' class="uk-responsive-height"/>
+			</a>
+		</div>
+		<div class="uk-navbar-center">
+			<h2 class="uk-text-center")> Consulado General del Ecuador <br class="uk-hidden@xl"/>en New York</h2>
+		</div>
+		<div class="uk-navbar-right">
+			<a href="" class="uk-navbar-item uk-logo">
+				<img src='../images/Ministerio.png' class="uk-responsive-height" />
+			</a>
+		</div>
+	</div>
+
+	<div class="uk-flex uk-flex-middle" uk-height-viewport="offset-bottom: 80px">
+		<div class="uk-width-2-4@m">
+		</div>
+		<div class="uk-width-2-4@m uk-margin-large-right">
+			<div style="" class="uk-container-2 uk-margin-medium">
+				<div id="app">
+					<h3>{{modulo.oficina}}</h3>
+					<h3>Trámite: {{modulo.servicio}}</h3>
+					<hr/>
+					<p>Actualmente estás atendiendo al turno:
+						<strong id="actual"> #{{modulo.contador}}</strong>
+					</p>
+					<hr/>
+					<button type="button" v-on:click="call_again" name="call_again" class="uk-button uk-button-secundary">Llamar nuevamente</button>				
+					<button id="js-modal-confirm" type="button" v-on:click="contador" ref="btnSiguiente" name="btnSiguiente" class="uk-button uk-button-primary" uk-icon="icon: arrow-right">Siguiente</button>
+					<hr/>
+					<div class="btn-terminar2">
+						<a href="/cambiar" class="uk-button uk-button-link" uk-icon="icon: arrow-left">Inicio</a>
+						|
+						<button type="button" v-on:click="terminar" ref="btnTerminar" name="btnTerminar" class="uk-button uk-button-link" uk-icon="icon: close">Terminar</button>
+					</div>				
+				</div>
+				<div class="uk-flex uk-flex-right")>
+					<p><%= fechaAct %></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="/socket.io/socket.io.js"></script>
+    <script src="../javascripts/vue.min.js"></script>
+    <script src="../javascripts/axios.min.js"></script>
+
+	<script type="text/javascript">
+
+		var ipServidor = "";
+
+		fetch("/config.json").then(function(response) {
+		  	var contentType = response.headers.get("content-type");
+		  	if(contentType && contentType.indexOf("application/json") !== -1) {
+		    	return response.json().then(function(json) {
+			      	ipServidor = json.ip_servidor;
+			    });
+		  	} else {
+		    	console.log("Oops, we haven't got JSON!");
+		  	}
+		});
+
+		var channel = "COUNT_CHANNEL";
+		var socket = io.connect(ipServidor, {reconnection: true});
+
+		var app = new Vue({
+			el: '#app',
+			data: {
+		    	modulo: {"oficina":"", "servicio":"", "estado":false, "perAtendidas":null, "contador":0, "fecha":null}
+		  	},
+		  	created: function () {
+
+		  		this.actualizar();
+
+		  		socket.on('connect', function(data){
+
+		  			socket.emit("Creando_Modulo", { 'channel': channel});
+		  			console.log("Conectando al servidor");
+
+				});
+
+				socket.on('modulo_' + channel, function(data){
+
+		  			this.actualizar();
+
+				}.bind(this));
+
+		  	},
+		  	methods: {
+		  		call_again: function(e){
+					e.preventDefault();
+
+					if(this.modulo != null ){
+						console.log("Enviando datos al server para llamar nuevamente.");
+		  				socket.emit("call_again", { 'channel': channel, 'modulo': this.modulo });
+		  			}
+		  			
+				},
+				contador: function(e){
+					e.preventDefault();
+					e.target.blur();
+
+		           	UIkit.modal.confirm('¿El usuario ha sido atendido?', { labels: { ok: 'Si', cancel: 'No' }}).then(function () {
+			            console.log('Si.')
+			            if(this.modulo != null ){
+							console.log("Enviando datos al server para aumentar el contador");
+			  				socket.emit("aumentar", { 'channel': channel, 'modulo': this.modulo, 'atendido': true});
+			  			}
+		           	}.bind(this), function () {
+		           		console.log('No.')
+		               	if(this.modulo != null ){
+							console.log("Enviando datos al server para aumentar el contador");
+			  				socket.emit("aumentar", { 'channel': channel, 'modulo': this.modulo, 'atendido': false});
+			  			}
+		           	}.bind(this));
+		  					  			
+				},
+				terminar: function(e){
+		  			e.preventDefault();
+					e.target.blur();
+
+		           	UIkit.modal.confirm('¿El último usuario ha sido atendido?', { labels: { ok: 'Si', cancel: 'No' }}).then(function () {
+			            console.log('Si.')
+			            if(this.modulo != null ){
+							console.log("Enviando datos al server para terminar el contador");
+			  				socket.emit("terminar", { 'channel': channel, 'modulo': this.modulo, 'atendido': true});
+			  			}
+		           	}.bind(this), function () {
+		           		console.log('No.')
+		               	if(this.modulo != null ){
+							console.log("Enviando datos al server para terminar el contador");
+			  				socket.emit("terminar", { 'channel': channel, 'modulo': this.modulo, 'atendido': false});
+			  			}
+		           	}.bind(this));
+
+		           	this.$refs.btnSiguiente.disabled  = true;
+		           	this.$refs.btnTerminar.disabled = true;
+		           	this.$refs.btnTerminar.innerText = "Por favor, regrese al inicio.";
+
+				},
+				actualizar: function(){
+					axios.get('/show/modulo')
+                    .then(function (response) {
+
+                    	console.log("Recibiendo modulo con Axios: ");
+                    	console.log(response.data);
+                       	this.modulo = response.data;
+
+                    }.bind(this));
+				}
+		  	}
+		});
+
+	</script>
+</body>
+</html>
