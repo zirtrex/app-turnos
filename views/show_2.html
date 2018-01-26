@@ -15,7 +15,7 @@
 	<audio id="audio" style="display: hidden" src="../audio/1HipHip8.wav">Canvas no Soportado<source src="" type="audio/mpeg"></audio>
 
 	<div class="uk-grid-collapse uk-grid">
-		<div class="uk-width-1-5" style="background-color: #fff">
+		<div class="uk-width-2-6" style="background-color: #fff">
 			<div id="contenedor">
 				<transition-group tag="div" name="bounce" v-bind:css="false" v-on:before-enter="beforeEnter" v-on:enter="enter" v-on:leave="leave" class="">
 				    <modulo v-for="modulo,index in modulosList" 
@@ -28,7 +28,7 @@
 				</transition-group>
 			</div>	
 		</div>
-		<div class="uk-width-4-5">
+		<div class="uk-width-4-6">
 			<div class="uk-cover-container">
 			    <video id="my-video" class="video-js" controls preload="auto" width="auto" height="auto" data-setup='{"techorder" : ["flash"]}'>
 				    <source src="rtmp://192.168.8.101:1935/live/1234" type="rtmp/mp4">                                                                                                                           
