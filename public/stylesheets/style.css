@@ -10,7 +10,7 @@
   display: block;
   font-size: 30px;
   text-shadow: 2px 1px 1px #5c5c5c;
-  padding-top: 10px;
+  padding: 10px 10px;
 }
 
 .uk-card-body{
