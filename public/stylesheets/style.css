@@ -2,7 +2,8 @@
   background-color: #000;
   color: #fff;
   text-shadow: 2px 1px 1px #fff;
-  padding-left: 25px;
+  padding-left: 0;
+  text-align: center;
 }
 
 .contador span{
