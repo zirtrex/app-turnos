@@ -7,12 +7,12 @@
 	<link rel='stylesheet' type="text/css" href='/stylesheets/uikit.css'></link>
 	<link rel='stylesheet' type="text/css" href='/stylesheets/style.css'></link>
 </head>
-<body>
+<body style="background-color: #fff">
 	<input type="hidden" id="audioFile" size="80" value="../audio/1HipHip8.wav">
 	<audio id="audio" style="display: hidden" src="../audio/1HipHip8.wav">Canvas no Soportado<source src="" type="audio/mpeg"></audio>
 
 	<div class="uk-grid-collapse uk-flex uk-flex-middle uk-grid" uk-grid>
-		<div class="uk-width-1-4" style="background-color: #fff">
+		<div class="uk-width-1-4" >
 			<div id="contenedor" class="">
 				<transition-group tag="div" name="bounce" v-bind:css="false" v-on:before-enter="beforeEnter" v-on:enter="enter" v-on:leave="leave" class="">
 				    <modulo v-for="modulo,index in modulosList" 
