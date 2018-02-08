@@ -6,7 +6,7 @@
 }
 
 .contador span{
-  width: 50px;
+  width: 40px;
   display: block;
   font-size: 30px;
   text-shadow: 2px 1px 1px #5c5c5c;
@@ -78,7 +78,9 @@ a {
 
 
 .uk-card-footer{
+    font-size: 35px;
     padding: 10px 20px;
+    text-align: center;
 }
 
 
