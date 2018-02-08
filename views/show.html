@@ -124,11 +124,11 @@
 			mounted: function () {
 			    this.show = false
 
-			    var moduloWH = document.getElementsByClassName("modulo")[0];
+			    var moduloWH = document.getElementsByClassName("modulo");
 				this.moduloHeight = moduloWH.offsetHeight;
 				this.windowHeight = this.tamVentana()[1];
 
-			    console.log(this.moduloHeight);
+			    console.log(moduloWH);
 			    console.log(this.windowHeight);
 			},
 			watch: {
