@@ -124,9 +124,9 @@
 			mounted: function () {
 			    this.show = false
 
-			    var moduloWH = document.getElementsByClassName("modulo");
+			    var moduloWH = document.getElementsByClassName("modulo")[0];
 				this.moduloHeight = moduloWH.offsetHeight;
-				this.windowHeight = this.tamVentana[1];
+				this.windowHeight = this.tamVentana()[1];
 
 			    console.log(this.moduloHeight);
 			    console.log(this.windowHeight);
