@@ -4,6 +4,7 @@
   text-shadow: 2px 1px 1px #fff;
   padding-left: 0;
   text-align: center;
+  border-left: 1px solid #fff;
 }
 
 .contador span{
@@ -97,7 +98,7 @@ a {
 }
 
 .ID .contador{
-  background-color: #098D31;
+  background-color: #0294D1;
   color: #fff;
 }
 
@@ -134,7 +135,7 @@ a {
 }
 
 .REGISTRO .contador{
-  background-color: #098D31;
+  background-color: #72480A;
   color: #fff;
 }
 
@@ -153,7 +154,7 @@ a {
 }
 
 .VISAS .contador{
-  background-color: #098D31;
+  background-color: #1281E8;
   color: #fff;
 }
 
@@ -172,7 +173,7 @@ a {
 }
 
 .EMPADRONAMIENTO .contador{
-  background-color: #098D31;
+  background-color: #5C6284;
   color: #fff;
 }
 
@@ -191,7 +192,7 @@ a {
 }
 
 .PARTIDAS .contador{
-  background-color: #098D31;
+  background-color: #14A7CC;
   color: #fff;
 }
 
@@ -210,7 +211,7 @@ a {
 }
 
 .CEDULAS .contador{
-  background-color: #098D31;
+  background-color: #14A1AE;
   color: #fff;
 }
 
@@ -229,7 +230,7 @@ a {
 }
 
 .VARIOS .contador{
-  background-color: #098D31;
+  background-color: #1259CA;
   color: #fff;
 }
 
@@ -248,7 +249,7 @@ a {
 }
 
 .CAJA .contador{
-  background-color: #098D31;
+  background-color: #FAE862;
   color: #fff;
 }
 
@@ -267,7 +268,7 @@ a {
 }
 
 .INFORMACIÓN .contador{
-  background-color: #098D31;
+  background-color: #104CCC;
   color: #fff;
 }
 
