@@ -71,7 +71,8 @@
 		    	modulos: [],
 		    	modulosList: [],
 		    	show: true,
-		    	stop: false
+		    	stop: false,
+		    	height: 0
 		  	},
 		  	components: {
 			    modulo: {
@@ -121,6 +122,10 @@
 		  	},
 			mounted: function () {
 			    this.show = false
+
+			    this.height = 100px;
+
+			    console.log(this.height);
 			},
 			watch: {
 				//cuando 'question' cambie, se ejecutará esta función
