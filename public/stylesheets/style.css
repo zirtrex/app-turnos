@@ -96,6 +96,11 @@ a {
   color: #fff;
 }
 
+.ID .contador{
+  background-color: #098D31;
+  color: #fff;
+}
+
 .ID .uk-card-footer{
     background-color: #055AAF;
     color: #fff;
@@ -110,6 +115,11 @@ a {
   color: #fff;
 }
 
+.PODERES .contador{
+  background-color: #098D31;
+  color: #fff;
+}
+
 .PODERES .uk-card-footer{
     background-color: #06561E;
     color: #fff;
@@ -120,6 +130,11 @@ a {
 }
 
 .REGISTRO .uk-card-body .title{
+  color: #fff;
+}
+
+.REGISTRO .contador{
+  background-color: #098D31;
   color: #fff;
 }
 
@@ -137,6 +152,11 @@ a {
   color: #fff;
 }
 
+.VISAS .contador{
+  background-color: #098D31;
+  color: #fff;
+}
+
 .VISAS .uk-card-footer{
     background-color: #1073D0;
     color: #fff;
@@ -148,6 +168,11 @@ a {
 }
 
 .EMPADRONAMIENTO .uk-card-body .title{
+  color: #fff;
+}
+
+.EMPADRONAMIENTO .contador{
+  background-color: #098D31;
   color: #fff;
 }
 
@@ -165,6 +190,11 @@ a {
   color: #fff;
 }
 
+.PARTIDAS .contador{
+  background-color: #098D31;
+  color: #fff;
+}
+
 .PARTIDAS .uk-card-footer{
     background-color: #0E738C;
     color: #fff;
@@ -176,6 +206,11 @@ a {
 }
 
 .CEDULAS .uk-card-body .title{
+  color: #fff;
+}
+
+.CEDULAS .contador{
+  background-color: #098D31;
   color: #fff;
 }
 
@@ -193,6 +228,11 @@ a {
   color: #fff;
 }
 
+.VARIOS .contador{
+  background-color: #098D31;
+  color: #fff;
+}
+
 .VARIOS .uk-card-footer{
     background-color: #0D4091;
     color: #fff;
@@ -207,6 +247,11 @@ a {
   color: #000;
 }
 
+.CAJA .contador{
+  background-color: #098D31;
+  color: #fff;
+}
+
 .CAJA .uk-card-footer{
     background-color: #C4AE06;
     color: #fff;
@@ -218,6 +263,11 @@ a {
 }
 
 .INFORMACIÓN .uk-card-body .title{
+  color: #fff;
+}
+
+.INFORMACIÓN .contador{
+  background-color: #098D31;
   color: #fff;
 }
 
