@@ -25,6 +25,10 @@
   padding: 10px 20px;
 }
 
+.uk-card-default .uk-card-footer {
+  border-top: 0;
+}
+
 
 body {
   margin: 0;
@@ -67,17 +71,13 @@ a {
 }
 
 .uk-margin-small-bottom {
-    margin-bottom: 2px !important;
+    margin-bottom: 0 !important;
 }
 
 .uk-card-default{
   background-color: #fff;
+  border: 3px solid #fff;
 }
-
-
-
-
-
 
 
 .uk-card-footer{
