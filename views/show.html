@@ -72,8 +72,7 @@
 		    	modulosList: [],
 		    	show: true,
 		    	stop: false,
-		    	moduloHeight: 0,
-		    	windowHeight: 0
+		    	cantidadModulos: 0
 		  	},
 		  	components: {
 			    modulo: {
@@ -124,16 +123,20 @@
 			mounted: function () {
 			    this.show = false
 
-			    var moduloWH = document.getElementsByClassName("modulo")[0];
-			    if(moduloWH != undefined){
-					this.moduloHeight = moduloWH.clientHeight;
-				}else{
-					this.moduloHeight = 116;
-				}
-				this.windowHeight = this.tamVentana()[1];
+			    var moduloHeight = 0;
+			    var windowHeight = 0;
 
-			    console.log(this.moduloHeight);
-			    console.log(this.windowHeight);
+			    var moduloWH = document.getElementsByClassName("modulo")[0];
+
+			    if(moduloWH != undefined){
+					moduloHeight = moduloWH.clientHeight;
+				}else{
+					moduloHeight = 116;
+				}
+
+				windowHeight = this.tamVentana()[1];
+
+			    this.cantidadModulos = Math.floor(windowHeight/moduloHeight);
 			},
 			watch: {
 				//cuando 'question' cambie, se ejecutará esta función
@@ -158,7 +161,7 @@
 
 						setTimeout(function(){
 							//if(size > 5) this.modulos.splice(idx+1, 1);
-							if(size > 5) this.modulos.pop();
+							if(size > this.cantidadModulos) this.modulos.pop();
 						}.bind(this), 1000);
 
 		  				this.reproducirAudio();
@@ -175,7 +178,7 @@
 			  				var size = this.modulos.unshift(data.modulo);
 
 							setTimeout(function(){
-								if(size > 5) this.modulos.splice(idx+1, 1);
+								if(size > this.cantidadModulosthis.cantidadModulos) this.modulos.splice(idx+1, 1);
 							}.bind(this), 100);
 
 							this.reproducirAudio();
