@@ -72,7 +72,8 @@
 		    	modulosList: [],
 		    	show: true,
 		    	stop: false,
-		    	height: 0
+		    	moduloHeight: 0,
+		    	windowHeight: 0
 		  	},
 		  	components: {
 			    modulo: {
@@ -123,9 +124,12 @@
 			mounted: function () {
 			    this.show = false
 
-			    this.height = 100;
+			    var moduloWH = document.getElementsByClassName("modulo");
+				this.moduloHeight = moduloWH.offsetHeight;
+				this.windowHeight = this.tamVentana[1];
 
-			    console.log(this.height);
+			    console.log(this.moduloHeight);
+			    console.log(this.windowHeight);
 			},
 			watch: {
 				//cuando 'question' cambie, se ejecutará esta función
@@ -180,6 +184,29 @@
 					var audioElm = document.getElementById("audio"); // Audio element
 					audioElm.src = document.getElementById('audioFile').value;
 				    audioElm.play();
+				},
+				tamVentana: function() {
+				  var tam = [0, 0];
+				  if (typeof window.innerWidth != 'undefined')
+				  {
+				    tam = [window.innerWidth,window.innerHeight];
+				  }
+				  else if (typeof document.documentElement != 'undefined'
+				      && typeof document.documentElement.clientWidth !=
+				      'undefined' && document.documentElement.clientWidth != 0)
+				  {
+				    tam = [
+				        document.documentElement.clientWidth,
+				        document.documentElement.clientHeight
+				    ];
+				  }
+				  else   {
+				    tam = [
+				        document.getElementsByTagName('body')[0].clientWidth,
+				        document.getElementsByTagName('body')[0].clientHeight
+				    ];
+				  }
+				  return tam;
 				},
 				beforeEnter: function (el) {
 			    	el.style.opacity = 0;
