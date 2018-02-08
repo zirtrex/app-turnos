@@ -87,6 +87,10 @@ a {
     text-align: center;
 }
 
+.uk-card-footer h3{
+    color: #fff;
+}
+
 
 .ID .uk-card-body{
   background-color: #0294D1;
