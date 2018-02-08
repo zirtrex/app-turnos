@@ -13,8 +13,8 @@
 
 	<div class="uk-grid-collapse uk-flex uk-flex-middle uk-grid" uk-grid>
 		<div class="uk-width-1-4" style="background-color: #fff">
-			<div id="contenedor" class="uk-inline">
-				<transition-group tag="div" name="bounce" v-bind:css="false" v-on:before-enter="beforeEnter" v-on:enter="enter" v-on:leave="leave" class="uk-position-center-left">
+			<div id="contenedor" class="">
+				<transition-group tag="div" name="bounce" v-bind:css="false" v-on:before-enter="beforeEnter" v-on:enter="enter" v-on:leave="leave" class="">
 				    <modulo v-for="modulo,index in modulosList" 
 				      class="modulo uk-margin-small-bottom"
 				      v-bind:id="getOficina(index)"
