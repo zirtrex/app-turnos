@@ -11,7 +11,7 @@
 	<input type="hidden" id="audioFile" size="80" value="../audio/1HipHip8.wav">
 	<audio id="audio" style="display: hidden" src="../audio/1HipHip8.wav">Canvas no Soportado<source src="" type="audio/mpeg"></audio>
 
-	<div class="uk-grid-collapse uk-grid">
+	<div class="uk-grid-collapse uk-flex uk-flex-middle uk-grid" uk-grid>
 		<div class="uk-width-1-4" style="background-color: #fff">
 			<div id="contenedor" class="uk-inline">
 				<transition-group tag="div" name="bounce" v-bind:css="false" v-on:before-enter="beforeEnter" v-on:enter="enter" v-on:leave="leave" class="uk-position-center-left">
