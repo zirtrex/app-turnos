@@ -79,13 +79,13 @@
 			      template: '<div :class="{ [`${mod.servicio}`]: true }">\
 			      				<div class="uk-card uk-card-default">\
 					            	<div class="uk-card-body">\
-					            		<div class="uk-grid" uk-grid="">\
-					            			<div class="uk-width-3-4"><h3 class="uk-text-center title">{{ mod.servicio }}</h3></div>\
-					            			<div class="uk-width-1-4"><span>{{ mod.contador }}</span></div>\
+					            		<div class="uk-grid uk-grid-collapse" uk-grid="">\
+					            			<div class="uk-width-expand"><h3 class="title">{{ mod.servicio }}</h3></div>\
+					            			<div class="uk-width-auto contador"><span>{{ mod.contador }}</span></div>\
 					            		</div>\
 					            	</div>\
 					            	<div class="uk-card-footer">\
-					            		<p class="uk-text-center uk-text-uppercase"><strong>{{ mod.oficina }}</strong></p>\
+					            		<p class="uk-text-uppercase"><strong>{{ mod.oficina }}</strong></p>\
 					            	</div>\
 					        	</div>\
 			      			</div>'
