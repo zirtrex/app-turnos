@@ -77,7 +77,7 @@ router.get('/', function(req, res, next) {
 
 				}
 
-				res.render('modulo.html', {'fechaAct': dateFormat});
+				res.render('modulo.html', {'fechaAct': fechaFormat});
 				
 			}		
 		});
