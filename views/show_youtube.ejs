@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Show</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+	<%if (index != 0 && v != "" && list != "") { %>
+		<iframe width="960" height="640" src="https://www.youtube.com/embed/<%= v %>?list=<%= list %>&index=<%= index %>&controls=0&amp;showinfo=0&autoplay=1" frameborder="0" allow="autoplay=; encrypted-media" allowfullscreen></iframe>
+	<% } %>
+
+	
+</body>
+</html>

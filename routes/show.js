@@ -43,6 +43,30 @@ router.get('/b', function(req, res, next) {
 	
 });
 
+router.get('/youtube', function(req, res, next) {
+
+	var index = req.query.index || 1;
+	var v = req.query.v || 'vdKqtpO6v7w'; 
+	var list = req.query.list || 'PLDF959CB2F49BFC23';
+
+	res.render('show_youtube.ejs', {
+        "index": index,
+        "v": v,
+        "list": list
+    });
+	
+});
+
+router.get('/facebook', function(req, res, next) {
+
+	var v = req.query.v || 'https://web.facebook.com/nvar.realestate/videos/10155690399177182/';
+
+	res.render('show_facebook.ejs', {
+        "v": v,
+    });
+	
+});
+
 router.get('/modulo', function(req, res, next) {
 
 	var fecha = new Date();

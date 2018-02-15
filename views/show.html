@@ -8,8 +8,8 @@
 	<link rel='stylesheet' type="text/css" href='/stylesheets/style.css'></link>
 </head>
 <body style="background-image: url('/images/fondo_modulo_2.jpg');">
-	<input type="hidden" id="audioFile" size="80" value="../audio/1HipHip8.wav">
-	<audio id="audio" style="display: hidden" src="../audio/1HipHip8.wav">Canvas no Soportado<source src="" type="audio/mpeg"></audio>
+	<input type="hidden" id="audioFile" size="80" value="../audio/bell.mp3">
+	<audio id="audio" style="display: hidden" src="../audio/bell.mp3">Canvas no Soportado<source src="" type="audio/mp3"></audio>
 
 	<div class="uk-grid-collapse uk-flex uk-flex-middle uk-grid" uk-grid>
 		<div class="uk-width-1-3" >
@@ -81,12 +81,16 @@
 			      				<div class="uk-card uk-card-default">\
 					            	<div class="uk-card-body">\
 					            		<div class="uk-grid uk-grid-medium" uk-grid="">\
-					            			<div class="uk-width-expand"><h3 class="title">{{ mod.servicio }}</h3></div>\
-					            			<div class="uk-width-auto contador"><span>{{ mod.contador }}</span></div>\
+					            			<div class="uk-width-expand">\
+					            				<h3 class="title">{{ mod.servicio }}</h3>\
+					            				<div class="oficina">\
+					            					<h3 class="uk-text-capitalize">{{ mod.oficina }}</h3>\
+					            				</div>\
+					            			</div>\
+					            			<div class="uk-width-auto contador">\
+					            				<span class="">{{ mod.contador }}</span>\
+					            			</div>\
 					            		</div>\
-					            	</div>\
-					            	<div class="uk-card-footer">\
-					            		<h3 class="uk-text-capitalize">{{ mod.oficina }}</h3>\
 					            	</div>\
 					        	</div>\
 			      			</div>'

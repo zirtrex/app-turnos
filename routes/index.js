@@ -41,6 +41,7 @@ router.get('/cambiar', function(req, res, next) {
 		res.redirect('/');
 	}else{
 		logger.debug("Cambiando trámite");
+		delete req.session.oficina;
 		delete req.session.servicio;					
 		res.redirect('/');
 	}
