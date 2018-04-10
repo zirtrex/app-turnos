@@ -16,16 +16,11 @@ const logger = log4js.getLogger('cheese');
 
 router.get('/', function(req, res, next) {
 
-	res.render('reports.ejs');
+	res.render('reports.ejs', {
+        "v": "Algo",
+    });
 
-	req.app.io.on('connection', function(socket) {
-
-		socket.on("Creando_Vista", function (viewData) {
-			logger.debug("Se ha creado una vista:" + viewData.channel);			
-			req.session.viewChannel = viewData.channel;			
-		});
-
-	});
+	Console.log("Se ha creado una vista:" + viewData.channel);			
 	
 });
 
