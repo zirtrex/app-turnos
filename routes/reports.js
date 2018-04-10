@@ -16,11 +16,12 @@ const logger = log4js.getLogger('cheese');
 
 router.get('/', function(req, res, next) {
 
+	console.log("Se ha creado la página principal de reporte:");	
+
 	res.render('reports.ejs', {
         "v": "Algo",
     });
-
-	Console.log("Se ha creado una vista:" + viewData.channel);			
+			
 	
 });
 
