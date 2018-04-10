@@ -11,6 +11,7 @@ var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var Modulo = require('./models/moduloModel').Modulo;
 var log4js = require('log4js');
+
 log4js.configure({
   appenders: { cheese: { type: 'file', filename: 'cheese.log' } },
   categories: { default: { appenders: ['cheese'], level: 'debug' } }
@@ -22,6 +23,7 @@ const logger = log4js.getLogger('cheese');
 var index = require('./routes/index');
 var modulo = require('./routes/modulo');
 var show = require('./routes/show');
+var reports = require('./routes/reports');
 
 var app = express();
 var server = http.Server(app); //createServer
@@ -221,6 +223,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/modulo', modulo);
 app.use('/show', show);
+app.use('/reports', reports);
 
 
 // catch 404 and forward to error handler
