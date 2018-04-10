@@ -94,7 +94,11 @@
 
 				socket.on('modulo_' + channel, function(data){
 
-		  			this.actualizar();
+		  			if(data.error){
+						UIkit.modal.alert(data.msgError);
+					}else{
+						this.actualizar();
+					}
 
 				}.bind(this));
 

@@ -18,7 +18,7 @@ router.get('/', function(req, res, next) {
 	var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 	var fechaFormat = days[fecha.getDay()] + " " + months[fecha.getMonth()] + " " + fecha.getDate() + " " + fecha.getFullYear();
 
-	logger.debug(fecha);
+	logger.debug("Fecha: " + fecha);
 
 	if(typeof req.session.oficina === 'undefined' && typeof req.session.servicio === 'undefined')
 	{

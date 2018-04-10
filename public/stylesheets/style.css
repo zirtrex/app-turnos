@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-image: url('/images/fondo_modulo.jpg');
   background-repeat: no-repeat;
   background-position: center left;
@@ -17,6 +17,14 @@ a {
   color: #00B7FF;
 }
 
+h3{
+  font-size: 34px;  
+  font-weight: bold;
+}
+
+
+
+
 .uk-container-2{
     background-color: rgba(255,255,255,0.9);
     padding: 30px 40px;
@@ -29,10 +37,9 @@ a {
     bottom: 0;*/
 }
 
-#contenedor{
-    /*width: 100%;
-    position: absolute;
-    bottom: 0;*/
+#contenedor div{
+    overflow: hidden;
+    max-height: 100vh;
 }
 
 .uk-grid-small > * {
@@ -61,6 +68,7 @@ a {
   padding: 2px 10px;
   color: #000;
   text-shadow: 2px 1px 1px #5c5c5c;
+  font-weight: bold;
 }
 
 .oficina{
@@ -132,16 +140,20 @@ a {
   margin: 0;
 }
 
-.ID .uk-card-body .title{
+.TARJETAS .uk-card-body{
+  background-color: #0294D1;
+}
+
+.TARJETAS .uk-card-body .title{
   color: #fff;
 }
 
-.ID .contador{
+.TARJETAS .contador{
   background-color: #0294D1;
   color: #fff;
 }
 
-.ID .oficina{
+.TARJETAS .oficina{
     background-color: #055AAF;
     color: #fff;
 }
@@ -289,12 +301,17 @@ a {
 
 .CAJA .contador{
   background-color: #FAE862;
-  color: #fff;
+  color: #000;
 }
 
 .CAJA .oficina{
     background-color: #C4AE06;
-    color: #fff;
+    color: #000;
+}
+
+
+.CAJA .oficina h3{
+    color: #000 !important;
 }
 
 
@@ -347,7 +364,7 @@ a {
 }
 
 .bounce-enter .modulo{
-    animation: bounce-in 2.5s;  
+    animation: bounce-in 2.5s;	
 }
 .bounce-enter-active .modulo{
   animation: bounce-in 2.5s;
