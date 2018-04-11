@@ -16,12 +16,19 @@ const logger = log4js.getLogger('cheese');
 
 router.get('/', function(req, res, next) {
 
-	console.log("Se ha creado la página principal de reporte:");	
+	console.log("Se ha creado la página principal de reporte:");
 
-	res.render('reports.ejs', {
-        "v": "Algo",
-    });
-			
+	var fecha = new Date();
+	var fechaActual = fecha.getFullYear() + "-" + (fecha.getMonth()+1) + "-" + fecha.getDate();
+	
+	Modulo.find({}).sort({}).exec(function(err, modulos){
+		if(err){
+			logger.debug(err);
+		}
+		res.render('reports.ejs', {
+	        "modulos": modulos,
+	    });
+	});
 	
 });
 
