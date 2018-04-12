@@ -86,8 +86,6 @@ router.get('/', function(req, res, next) {
 /* POST modulo page. */
 
 router.post('/', function(req, res, next) {
-
-	console.log("Aquí");
 	
 	req.session.oficina = req.body.oficina;
 	req.session.servicio = req.body.servicio;
