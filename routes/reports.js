@@ -81,18 +81,32 @@ router.post('/', function(req, res, next) {
 
 	Modulo.find({"oficina": oficina, "servicio": servicio, "estado": true, "perAtendidas.fechaInicio": {  $gte : fechaInicio, $lte : fechaFin} })
 	.limit(10)
-	.sort({'perAtendidas.fechaInicio': 'ascending'})
+	.sort({'perAtendidas.fechaInicio': 'descending'})
 	.exec()
 	.then(function(modulos){		
 
 		var fechas = [];
 		var personasAtendidas = [];
+		var promMinutosAtendidos = [];
 
 
         modulos.forEach(function(modulo){
         	console.log("Fecha: " + modulo.fecha + ", se atendió a " + modulo.indicePerAtendidas + " personas");
             fechas.push(modulo.fecha);
             personasAtendidas.push(modulo.indicePerAtendidas);
+
+            var sumatoria = 0;
+
+            for(var i = 1; i < modulo.perAtendidas.length; i++){
+                    
+                sumatoria+= modulo.perAtendidas[i].minutosAtendidos;
+
+            }
+
+            var promedio = Math.round(sumatoria / modulo.perAtendidas.length - 1);
+
+            promMinutosAtendidos.push(promedio);
+
         });
 
         //console.log(labels);
@@ -103,8 +117,9 @@ router.post('/', function(req, res, next) {
 	        "oficinas": [{"oficina": oficina}] ,
 	        "servicios": [{"servicio": servicio}] ,
 	        "resultados": true,
-	        "labels": fechas,
-	        "data": personasAtendidas
+	        "labels": fechas.reverse(),
+	        "personasAtendidas": personasAtendidas.reverse(),
+	        "promMinutosAtendidos": promMinutosAtendidos.reverse()
 	    });	
 	}).catch(function(error){
 		console.log(error);
