@@ -61,13 +61,13 @@ router.post('/', function(req, res, next) {
 	console.log ("Servicio:" + servicio);
 
 	if(oficina != "" && servicio != ""){
-		var modulosQuery = Modulo.find({"oficina": oficina, "servicio": servicio, "perAtendidas.fechaInicio": {  $gte : fechaInicio, $lte : fechaFin} }).limit(20).sort({'perAtendidas.fechaInicio': 'descending'}).exec();
+		var modulosQuery = Modulo.find({"oficina": oficina, "servicio": servicio, "perAtendidas.fechaInicio": {  $gte : fechaInicio, $lte : fechaFin} }).limit(30).sort({'perAtendidas.fechaInicio': 'descending'}).exec();
 	}else if(oficina != "" && servicio == ""){
-		var modulosQuery = Modulo.find({"oficina": oficina, "perAtendidas.fechaInicio": {  $gte : fechaInicio, $lte : fechaFin} }).limit(20).sort({'perAtendidas.fechaInicio': 'descending'}).exec();
+		var modulosQuery = Modulo.find({"oficina": oficina, "perAtendidas.fechaInicio": {  $gte : fechaInicio, $lte : fechaFin} }).limit(30).sort({'perAtendidas.fechaInicio': 'descending'}).exec();
 	}else if(oficina == "" && servicio != ""){
-		var modulosQuery = Modulo.find({"servicio": servicio, "perAtendidas.fechaInicio": {  $gte : fechaInicio, $lte : fechaFin} }).limit(20).sort({'perAtendidas.fechaInicio': 'descending'}).exec();	
+		var modulosQuery = Modulo.find({"servicio": servicio, "perAtendidas.fechaInicio": {  $gte : fechaInicio, $lte : fechaFin} }).limit(30).sort({'perAtendidas.fechaInicio': 'descending'}).exec();	
 	}else{
-		var modulosQuery = Modulo.find({"perAtendidas.fechaInicio": {  $gte : fechaInicio, $lte : fechaFin} }).limit(20).sort({'perAtendidas.fechaInicio': 'descending'}).exec();	
+		var modulosQuery = Modulo.find({"perAtendidas.fechaInicio": {  $gte : fechaInicio, $lte : fechaFin} }).limit(30).sort({'perAtendidas.fechaInicio': 'descending'}).exec();	
 	}
 
 	modulosQuery.then(function(modulos){
@@ -81,7 +81,9 @@ router.post('/', function(req, res, next) {
 
             var sumatoria = 0, promedio=0;
 
-            if(modulo.perAtendidas.length > 0){
+            console.log(modulo.perAtendidas.length);
+
+            if(modulo.perAtendidas.length > 1){
 
             	for(var i = 1; i < modulo.perAtendidas.length; i++){
                     
@@ -89,17 +91,17 @@ router.post('/', function(req, res, next) {
 
             	}
             	promedio = Math.round(sumatoria / modulo.perAtendidas.length);
+
+            	fechasLabels.push(modulo.fecha);           
+	            personasAtendidas.push(modulo.perAtendidas.length - 1);
+	            promMinutosAtendidos.push(promedio);
+
+	            resultadoFinal.push({"fecha" : modulo.fecha, "oficina": modulo.oficina,"servicio": modulo.servicio,"pA": modulo.perAtendidas.length - 1, "pMA": promedio});
         	}
-
-            fechasLabels.push(modulo.fecha);           
-            personasAtendidas.push(modulo.indicePerAtendidas);
-            promMinutosAtendidos.push(promedio);
-
-            resultadoFinal.push({"fecha" : modulo.fecha, "servicio": modulo.servicio,"pA": modulo.indicePerAtendidas, "pMA": promedio});
 
         });
 
-        console.log(resultadoFinal);
+        //console.log(resultadoFinal);
 
 		res.render('reporte_general.ejs', {
 			"fechaInicio": req.body.fechaInicio,
@@ -125,24 +127,18 @@ router.get('/servicio', function(req, res, next) {
 	console.log("Se ha creado el reporte de servicios:");
 
 	var fecha = new Date();
-	var fechaActual = fecha.getFullYear() + "-" + (fecha.getMonth()+1) + "-" + fecha.getDate();
 
 	var servicios = Modulo.find({}).select({ "servicio": 1,"_id": 0 }).sort({'servicio': 'ascending'}).exec();
 
 	Promise.all([servicios])
 	.then(function(modulos){
 
-		var hash = {};
-		servicios = modulos[0].filter(function(current) {
-		  var exists = !hash[current.servicio] || false;
-		  hash[current.servicio] = true;
-		  return exists;
-		});
+		var serviciosSelect = util.eliminarDuplicados(modulos[0], "servicio");
 
 		res.render('reporte_servicio.ejs', {
 			"fechaInicio": "2018-01-01",
-			"fechaFin": "2018-04-12",
-	        "servicios": servicios,
+			"fechaFin": util.formatDate(fecha),
+	        "servicios": serviciosSelect,
 	        "resultados": false,
 	        "labels": [],
 	        "data": []
@@ -150,8 +146,7 @@ router.get('/servicio', function(req, res, next) {
 
 	}).catch(function(err){
 		console.log(err);	
-	});
-	
+	});	
 
 });
 
@@ -182,12 +177,11 @@ router.post('/servicio', function(req, res, next) {
 		var serviciosUnique = [];
 		var serviciosFinal = [];
 
-        modulos.forEach(function(modulo){
-        	console.log("Servicios: " + modulo.servicio + ", se atendió a " + modulo.indicePerAtendidas + " personas");
+        modulos.forEach(function(modulo){        	
 
             var sumatoria = 0, promedio = 0;
 
-            if(modulo.perAtendidas.length > 0){
+            if(modulo.perAtendidas.length > 1){
 
             	for(var i = 1; i < modulo.perAtendidas.length; i++){
             	                   
@@ -196,21 +190,15 @@ router.post('/servicio', function(req, res, next) {
 
                 promedio = Math.round(sumatoria / modulo.perAtendidas.length);
 
-            }           
+                servicios.push({"servicio" : modulo.servicio, "pA": modulo.perAtendidas.length - 1, "pMA": promedio});
 
-            servicios.push({"servicio" : modulo.servicio, "pA": modulo.indicePerAtendidas, "pMA": promedio});
+            }   
 
         });
 
-        var hash = {};
-		serviciosUnique = servicios.filter(function(current) {
-		  var exists = !hash[current.servicio] || false;
-		  hash[current.servicio] = true;
-		  return exists;
-		});
+		serviciosUnique = util.eliminarDuplicados(servicios, "servicio");
 
 		serviciosUnique.forEach(function(servicioU){
-
 			
 			var pA = 0 , pMA = 0 , cantidad = 0;
 
@@ -238,10 +226,8 @@ router.post('/servicio', function(req, res, next) {
 			
 		});
 
-
 		//console.log(serviciosUnique);
-        console.log(serviciosFinal);
-        
+        console.log(serviciosFinal);        
 
 		res.render('reporte_servicio.ejs', {
 			"fechaInicio": req.body.fechaInicio,
@@ -252,13 +238,138 @@ router.post('/servicio', function(req, res, next) {
 	        "personasAtendidas": personasAtendidas,
 	        "promMinutosAtendidos": promMinutosAtendidos,
 	        "serviciosFinal" : serviciosFinal
-	    });	
+	    });
+
 	}).catch(function(error){
 		console.log(error);
 	});
 
 });
 
+
+/* GET Reporte por Oficina.  */
+router.get('/oficina', function(req, res, next) {
+
+	console.log("Se ha creado el reporte de oficinas:");
+
+	var fecha = new Date();
+
+	var oficinas = Modulo.find({}).select({ "oficina": 1,"_id": 0 }).sort({'oficina': 'ascending'}).exec();
+
+	Promise.all([oficinas])
+	.then(function(modulos){
+
+		var oficinasSelect = util.eliminarDuplicados(modulos[0], "oficina");
+
+		res.render('reporte_oficina.ejs', {
+			"fechaInicio": "2018-01-01",
+			"fechaFin": util.formatDate(fecha),
+	        "oficinas": oficinasSelect,
+	        "resultados": false,
+	        "labels": [],
+	        "data": []
+	    });
+
+	}).catch(function(err){
+		console.log(err);	
+	});	
+
+});
+
+
+/* POST Reporte por Oficina. */
+router.post('/oficina', function(req, res, next) {
+
+	var fechaInicio = new Date(req.body.fechaInicio).toISOString();
+	var fechaFin = new Date(req.body.fechaFin).toISOString();
+	var oficina = (req.body.oficina) ? req.body.oficina : "";
+
+	console.log ("Fecha Inicio:" + req.body.fechaInicio);
+	console.log ("Fecha Fin:" + req.body.fechaFin);
+	console.log ("Oficina:" + oficina);
+
+	if(oficina != ""){
+		var modulos = Modulo.find({"oficina": oficina, "perAtendidas.fechaInicio": {  $gte : fechaInicio, $lte : fechaFin} }).sort({'oficina': 1}).exec();
+	}else{
+		var modulos = Modulo.find({"perAtendidas.fechaInicio": {  $gte : fechaInicio, $lte : fechaFin} }).exists('servicio', true).sort({'oficina': 1}).exec();
+	}
+	
+	modulos.then(function(modulos){		
+
+		var oficinas = [];
+		var oficinasLabel = [];
+		var personasAtendidas = [];
+		var promMinutosAtendidos = [];
+		var oficinasUnique = [];
+		var oficinasFinal = [];
+
+        modulos.forEach(function(modulo){        	
+
+            var sumatoria = 0, promedio = 0;
+
+            if(modulo.perAtendidas.length > 1){
+
+            	for(var i = 1; i < modulo.perAtendidas.length; i++){
+            	                   
+                	sumatoria+= modulo.perAtendidas[i].minutosAtendidos;
+                }
+
+                promedio = Math.round(sumatoria / modulo.perAtendidas.length);
+
+                oficinas.push({"oficina" : modulo.oficina, "pA": modulo.perAtendidas.length - 1, "pMA": promedio});
+
+            }   
+
+        });
+
+		oficinasUnique = util.eliminarDuplicados(oficinas, "oficina");
+
+		oficinasUnique.forEach(function(oficinaU){
+			
+			var pA = 0 , pMA = 0 , cantidad = 0;
+
+			for(var i = 0; i < oficinas.length; i++){
+
+				if(oficinaU.oficina == oficinas[i].oficina){
+
+					pA += oficinas[i].pA;
+					pMA += oficinas[i].pMA;
+					cantidad++;
+				}
+
+			}
+
+			oficinasFinal.push({"oficina" : oficinaU.oficina, "pA": pA, "pMA": Math.round(pMA / cantidad)});
+
+		});
+
+		oficinasFinal.forEach(function(oficina){
+			
+			oficinasLabel.push(oficina.oficina);
+			personasAtendidas.push(oficina.pA);
+			promMinutosAtendidos.push(oficina.pMA);
+			
+		});
+
+		//console.log(serviciosUnique);
+        console.log(oficinasFinal);        
+
+		res.render('reporte_oficina.ejs', {
+			"fechaInicio": req.body.fechaInicio,
+			"fechaFin": req.body.fechaFin,
+	        "oficinas": [{"oficina": oficina}] ,
+	        "resultados": true,
+	        "labels": oficinasLabel,
+	        "personasAtendidas": personasAtendidas,
+	        "promMinutosAtendidos": promMinutosAtendidos,
+	        "oficinasFinal" : oficinasFinal
+	    });
+
+	}).catch(function(error){
+		console.log(error);
+	});
+
+});
 
 
 router.get('/modulo', function(req, res, next) {

@@ -54,14 +54,15 @@
 
 	<%if (resultados) { %>
 
-		<table class="uk-table uk-table-divider">
+		<table class="uk-table uk-table-striped">
 			<thead>
 			<tr>
 				<th>#</th>
 				<th>Fecha</th>
+				<th>Oficina</th>
 				<th>Servicio</th>
-				<th>Personas Atendidas</th>
-				<th>Promedio en Minutos</th>
+				<th style="text-align: center;">Personas Atendidas</th>
+				<th style="text-align: center;">Promedio en Minutos</th>
 			</tr>
 			</thead>
 			<tbody>
@@ -71,9 +72,10 @@
 				<tr>
 					<td><%= index %></td>
 		        	<td><%= resultado.fecha %></td>
+		        	<td><%= resultado.oficina %></td>
 		        	<td><%= resultado.servicio %></td>
-		        	<td><%= resultado.pA %></td>
-		        	<td><%= resultado.pMA %></td>
+		        	<td style="text-align: center;"><%= resultado.pA %></td>
+		        	<td style="text-align: center;"><%= resultado.pMA %></td>
 		    	</tr>
 		    <% }); %>
 		    </tbody>
@@ -81,9 +83,10 @@
 			<tr>
 				<th>-</th>
 				<th>-</th>
+				<th>-</th>
 				<th>Total: </th>
-				<th><%= pATotal %></th>
-				<th><%= Math.round(pMATotal/index) %></th>
+				<th style="text-align: center;"><%= pATotal %></th>
+				<th style="text-align: center;"><%= Math.round(pMATotal/index) %></th>
 			</tr>
 			</tfoot>
 		</table>
