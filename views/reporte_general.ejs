@@ -54,46 +54,69 @@
 
 	<%if (resultados) { %>
 
-	<canvas id="myChart" width="400" height="150"></canvas>
+		<table class="uk-table uk-table-divider">
+			<thead>
+			<tr>
+				<th>#</th>
+				<th>Fecha</th>
+				<th>Personas Atendidas</th>
+				<th>Promedio en Minutos</th>
+			</tr>
+			</thead>
+			<tbody>
+			<% var index = 0; %>
+			<% resultadoFinal.forEach(function(resultado) { %>
+				<% index++; %>
+				<tr>
+					<td><%= index %></td>
+		        	<td><%= resultado.fecha %></td>
+		        	<td><%= resultado.pA %></td>
+		        	<td><%= resultado.pMA %></td>
+		    	</tr>
+		    <% }); %>
+		    </tbody>
+		</table>
 
-	<script>
-	var labelIn = <%- JSON.stringify(labels) %>;
-	var personasAtendidas = <%- JSON.stringify(personasAtendidas) %>;
-	var promMinutosAtendidos = <%- JSON.stringify(promMinutosAtendidos) %>;
+		<canvas id="myChart" width="400" height="150"></canvas>
 
-	var ctx = document.getElementById("myChart");
-	var myChart = new Chart(ctx, {
-	    type: 'bar',
-	    data: {
-	        labels: labelIn,
-	        datasets: [
-	        {
-	            label: 'Número de atenciones',
-	            data: personasAtendidas,
-	            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-	            borderColor: 'rgba(255,99,132,1)',
-	            borderWidth: 1
-	        },
-	        {
-	            label: 'Tiempo Promedio',
-	            data: promMinutosAtendidos,
-	            backgroundColor: 'rgba(54, 162, 235, 0.2)',
-	            borderColor: 'rgba(54, 162, 235, 1)',
-	            borderWidth: 1
-	        }
-	        ]
-	    },
-	    options: {
-	        scales: {
-	            yAxes: [{
-	                ticks: {
-	                    beginAtZero:true
-	                }
-	            }]
-	        }
-	    }
-	});
-	</script>
+		<script>
+		var labelIn = <%- JSON.stringify(labels) %>;
+		var personasAtendidas = <%- JSON.stringify(personasAtendidas) %>;
+		var promMinutosAtendidos = <%- JSON.stringify(promMinutosAtendidos) %>;
+
+		var ctx = document.getElementById("myChart");
+		var myChart = new Chart(ctx, {
+		    type: 'bar',
+		    data: {
+		        labels: labelIn,
+		        datasets: [
+		        {
+		            label: 'Número de atenciones',
+		            data: personasAtendidas,
+		            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+		            borderColor: 'rgba(255,99,132,1)',
+		            borderWidth: 1
+		        },
+		        {
+		            label: 'Tiempo Promedio',
+		            data: promMinutosAtendidos,
+		            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+		            borderColor: 'rgba(54, 162, 235, 1)',
+		            borderWidth: 1
+		        }
+		        ]
+		    },
+		    options: {
+		        scales: {
+		            yAxes: [{
+		                ticks: {
+		                    beginAtZero:true
+		                }
+		            }]
+		        }
+		    }
+		});
+		</script>
 	<% } %>
 </div>	
 </body>

@@ -3,6 +3,7 @@ var router = express.Router();
 var Modulo = require('../models/moduloModel').Modulo;
 var path    = require("path");
 var log4js = require('log4js');
+var util = require('../models/util');
 
 log4js.configure({
   appenders: { cheese: { type: 'file', filename: 'cheese.log' } },
@@ -13,14 +14,11 @@ const logger = log4js.getLogger('cheese');
 
 
 /* GET Reports page. */
-
 router.get('/', function(req, res, next) {
 
 	console.log("Se ha creado la página principal de reporte:");
 
 	var fecha = new Date();
-	var fechaActual = fecha.getFullYear() + "-" + (fecha.getMonth()+1) + "-" + fecha.getDate();
-
 
 	var oficinas = Modulo.find({}).select({ "oficina": 1,"_id": 0 }).sort({'oficina': 'ascending'}).exec();
 
@@ -29,25 +27,13 @@ router.get('/', function(req, res, next) {
 	Promise.all([oficinas, servicios])
 	.then(function(modulos){
 
-		//console.log(modulos[1]);
+		oficinas = util.eliminarDuplicados(modulos[0], "oficina");
 
-		var hash = {};
-		oficinas = modulos[0].filter(function(current) {
-		  var exists = !hash[current.oficina] || false;
-		  hash[current.oficina] = true;
-		  return exists;
-		});
-
-		var hash = {};
-		servicios = modulos[1].filter(function(current) {
-		  var exists = !hash[current.servicio] || false;
-		  hash[current.servicio] = true;
-		  return exists;
-		});
+		servicios = util.eliminarDuplicados(modulos[1], "servicio");
 
 		res.render('reporte_general.ejs', {
 			"fechaInicio": "2018-01-01",
-			"fechaFin": "",
+			"fechaFin": util.formatDate(fecha),
 	        "oficinas": oficinas ,
 	        "servicios": servicios ,
 	        "resultados": false,
@@ -57,59 +43,63 @@ router.get('/', function(req, res, next) {
 
 	}).catch(function(err){
 		console.log(err);	
-	});
-	
+	});	
 
 });
 
 /* POST Reporte General. */
-
 router.post('/', function(req, res, next) {
 
 	var fechaInicio = new Date(req.body.fechaInicio).toISOString();
 	var fechaFin = new Date(req.body.fechaFin).toISOString();
-	var oficina = req.body.oficina;
-	var servicio = req.body.servicio;
+	var oficina = (req.body.oficina) ? req.body.oficina : "";
+	var servicio = (req.body.servicio) ? req.body.servicio : "";
 
-	console.log ("fecha:" + fechaInicio);
-	console.log ("fecha:" + req.body.fechaInicio);
-	console.log ("fecha:" + fechaFin);
-	console.log ("fecha:" + req.body.fechaFin);
-
+	console.log ("Fecha Inicio:" + req.body.fechaInicio);
+	console.log ("Fecha Fin:" + req.body.fechaFin);
 	console.log ("Oficina:" + oficina);
 	console.log ("Servicio:" + servicio);
 
-	Modulo.find({"oficina": oficina, "servicio": servicio, "estado": true, "perAtendidas.fechaInicio": {  $gte : fechaInicio, $lte : fechaFin} })
-	.limit(10)
-	.sort({'perAtendidas.fechaInicio': 'descending'})
-	.exec()
-	.then(function(modulos){		
+	if(oficina != "" && servicio != ""){
+		var modulosQuery = Modulo.find({"oficina": oficina, "servicio": servicio, "perAtendidas.fechaInicio": {  $gte : fechaInicio, $lte : fechaFin} }).limit(20).sort({'perAtendidas.fechaInicio': 'descending'}).exec();
+	}else if(oficina != "" && servicio == ""){
+		var modulosQuery = Modulo.find({"oficina": oficina, "perAtendidas.fechaInicio": {  $gte : fechaInicio, $lte : fechaFin} }).limit(20).sort({'perAtendidas.fechaInicio': 'descending'}).exec();
+	}else if(oficina == "" && servicio != ""){
+		var modulosQuery = Modulo.find({"servicio": servicio, "perAtendidas.fechaInicio": {  $gte : fechaInicio, $lte : fechaFin} }).limit(20).sort({'perAtendidas.fechaInicio': 'descending'}).exec();	
+	}else{
+		var modulosQuery = Modulo.find({"perAtendidas.fechaInicio": {  $gte : fechaInicio, $lte : fechaFin} }).limit(20).sort({'perAtendidas.fechaInicio': 'descending'}).exec();	
+	}
 
-		var fechas = [];
+	modulosQuery.then(function(modulos){
+
+		var fechasLabels = [];
 		var personasAtendidas = [];
 		var promMinutosAtendidos = [];
+		var resultadoFinal = [];
 
+        modulos.forEach(function(modulo){            
 
-        modulos.forEach(function(modulo){
-        	console.log("Fecha: " + modulo.fecha + ", se atendió a " + modulo.indicePerAtendidas + " personas");
-            fechas.push(modulo.fecha);
-            personasAtendidas.push(modulo.indicePerAtendidas);
+            var sumatoria = 0, promedio=0;
 
-            var sumatoria = 0;
+            if(modulo.perAtendidas.length > 0){
 
-            for(var i = 1; i < modulo.perAtendidas.length; i++){
+            	for(var i = 1; i < modulo.perAtendidas.length; i++){
                     
-                sumatoria+= modulo.perAtendidas[i].minutosAtendidos;
+                	sumatoria+= modulo.perAtendidas[i].minutosAtendidos;
 
-            }
+            	}
+            	promedio = Math.round(sumatoria / modulo.perAtendidas.length);
+        	}
 
-            var promedio = Math.round(sumatoria / modulo.perAtendidas.length - 1);
-
+            fechasLabels.push(modulo.fecha);           
+            personasAtendidas.push(modulo.indicePerAtendidas);
             promMinutosAtendidos.push(promedio);
+
+            resultadoFinal.push({"fecha" : modulo.fecha, "pA": modulo.indicePerAtendidas, "pMA": promedio});
 
         });
 
-        //console.log(labels);
+        console.log(resultadoFinal);
 
 		res.render('reporte_general.ejs', {
 			"fechaInicio": req.body.fechaInicio,
@@ -117,18 +107,19 @@ router.post('/', function(req, res, next) {
 	        "oficinas": [{"oficina": oficina}] ,
 	        "servicios": [{"servicio": servicio}] ,
 	        "resultados": true,
-	        "labels": fechas.reverse(),
+	        "labels": fechasLabels.reverse(),
 	        "personasAtendidas": personasAtendidas.reverse(),
-	        "promMinutosAtendidos": promMinutosAtendidos.reverse()
+	        "promMinutosAtendidos": promMinutosAtendidos.reverse(),
+	        "resultadoFinal" : resultadoFinal.reverse()
 	    });	
+
 	}).catch(function(error){
 		console.log(error);
 	});
 
 });
 
-/* GET Reporte por Trámite.  */
-
+/* GET Reporte por Servicios.  */
 router.get('/servicio', function(req, res, next) {
 
 	console.log("Se ha creado el reporte de servicios:");
@@ -165,8 +156,7 @@ router.get('/servicio', function(req, res, next) {
 });
 
 
-/* POST Reporte por Trámite. */
-
+/* POST Reporte por Servicios. */
 router.post('/servicio', function(req, res, next) {
 
 	var fechaInicio = new Date(req.body.fechaInicio).toISOString();
