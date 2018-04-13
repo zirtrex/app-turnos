@@ -59,22 +59,33 @@
 			<tr>
 				<th>#</th>
 				<th>Fecha</th>
+				<th>Servicio</th>
 				<th>Personas Atendidas</th>
 				<th>Promedio en Minutos</th>
 			</tr>
 			</thead>
 			<tbody>
-			<% var index = 0; %>
+			<% var index = 0, pATotal=0, pMATotal=0; %>
 			<% resultadoFinal.forEach(function(resultado) { %>
-				<% index++; %>
+				<% index++; pATotal+=resultado.pA; pMATotal+=resultado.pMA %>
 				<tr>
 					<td><%= index %></td>
 		        	<td><%= resultado.fecha %></td>
+		        	<td><%= resultado.servicio %></td>
 		        	<td><%= resultado.pA %></td>
 		        	<td><%= resultado.pMA %></td>
 		    	</tr>
 		    <% }); %>
 		    </tbody>
+		    <tfoot>
+			<tr>
+				<th>-</th>
+				<th>-</th>
+				<th>Total: </th>
+				<th><%= pATotal %></th>
+				<th><%= Math.round(pMATotal/index) %></th>
+			</tr>
+			</tfoot>
 		</table>
 
 		<canvas id="myChart" width="400" height="150"></canvas>

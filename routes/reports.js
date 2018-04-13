@@ -95,7 +95,7 @@ router.post('/', function(req, res, next) {
             personasAtendidas.push(modulo.indicePerAtendidas);
             promMinutosAtendidos.push(promedio);
 
-            resultadoFinal.push({"fecha" : modulo.fecha, "pA": modulo.indicePerAtendidas, "pMA": promedio});
+            resultadoFinal.push({"fecha" : modulo.fecha, "servicio": modulo.servicio,"pA": modulo.indicePerAtendidas, "pMA": promedio});
 
         });
 
