@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Reports</title>	
+	<title>Reporte por Trámite</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel='stylesheet' href='/stylesheets/style.css' />
@@ -17,22 +17,13 @@
 
 	<h1>Ingrese los parámetros de búsqueda</h1>
 
-	<form action="/reports" method="POST" class="uk-grid-small" uk-grid>
+	<form action="/reports/servicio" method="POST" class="uk-grid-small" uk-grid>
 		<div class="uk-width-1-4">
 	        <input class="uk-input" type="date" id="fechaInicio" name="fechaInicio" value="<%= fechaInicio %>">
 	    </div>
 	    <div class="uk-width-1-4">
 	        <input class="uk-input" type="date" id="fechaFin" name="fechaFin" value="<%= fechaFin %>">
 	    </div>
-	    <div class="uk-width-1-4">
-		    <select name="oficina" class="uk-select">
-		        <%if (oficinas != "") { %>
-					<% oficinas.forEach(function(oficina) { %>
-				        <option value="<%= oficina.oficina %>"><%= oficina.oficina %></option>
-				    <% }); %>
-				<% } %>
-		    </select>
-		</div>
 		<div class="uk-width-1-4">
 		    <select name="servicio" class="uk-select">
 		        <%if (servicios != "") { %>
@@ -46,13 +37,32 @@
 		    <input type="submit" name="buscar" value="Buscar" class="uk-button uk-button-primary uk-width-1-2">
 		</div>
 		<div class="uk-width-1-2">
-		    <a href="/reports" class="uk-button uk-button-secondary uk-width-1-2">Ejecutar otra búsqueda</a>
+		    <a href="/reports/servicio" class="uk-button uk-button-secondary uk-width-1-2">Ejecutar otra búsqueda</a>
 		</div>
 	</form>
 
 	<hr/>
 
 	<%if (resultados) { %>
+
+	<table class="uk-table uk-table-divider">
+		<thead>
+		<tr>
+			<th>Servicio</th>
+			<th>Personas Atendidas</th>
+			<th>Promedio en Minutos</th>
+		</tr>
+		</thead>
+		<tbody>
+		<% serviciosFinal.forEach(function(servicio) { %>
+			<tr>
+	        	<td><%= servicio.servicio %></td>
+	        	<td><%= servicio.pA %></td>
+	        	<td><%= servicio.pMA %></td>
+	    	</tr>
+	    <% }); %>
+	    </tbody>
+	</table>
 
 	<canvas id="myChart" width="400" height="150"></canvas>
 
