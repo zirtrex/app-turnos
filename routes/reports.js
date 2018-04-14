@@ -4,6 +4,7 @@ var Modulo = require('../models/moduloModel').Modulo;
 var path    = require("path");
 var log4js = require('log4js');
 var util = require('../models/util');
+var PDFDocument = require('pdfkit');
 
 log4js.configure({
   appenders: { cheese: { type: 'file', filename: 'cheese.log' } },
@@ -370,6 +371,21 @@ router.post('/oficina', function(req, res, next) {
 	});
 
 });
+
+/* POST Reporte por Oficina PDF. */
+router.get('/oficina/pdf', (req, res) => {
+  const doc = new PDFDocument()
+
+  // Setting response to 'attachment' (download).
+  // If you use 'inline' here it will automatically open the PDF
+  res.setHeader('Content-disposition', 'attachment; filename="' + 'demo.pdf' + '"');
+  res.setHeader('Content-type', 'application/pdf');
+  const content = "req.body.content";
+  doc.y = 300;
+  doc.text(content, 50, 50);
+  doc.pipe(res);
+  doc.end();
+})
 
 
 router.get('/modulo', function(req, res, next) {

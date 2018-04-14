@@ -10,6 +10,8 @@
 	<script src="/javascripts/jquery-3.2.1.min.js"></script>
 	<script src="/javascripts/uikit.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+	<script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
+	<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 </head>
 <body style="background: none">
 
@@ -26,9 +28,11 @@
 	    </div>
 		<div class="uk-width-1-4">
 		    <select name="oficina" class="uk-select">
-		        <%if (oficinas != "") { %>
+		    	<% var oficinaS = "hola" %>
+		        <% if (oficinas != "") { %>
 					<% oficinas.forEach(function(oficina) { %>
 				        <option value="<%= oficina.oficina %>"><%= oficina.oficina %></option>
+				        <% oficinaS = oficina.oficina %>
 				    <% }); %>
 				<% } %>
 		    </select>
@@ -42,41 +46,43 @@
 	</form>
 
 	<hr/>
-
+	
 	<%if (resultados) { %>
-
-	<table class="uk-table uk-table-striped">
-		<thead>
-		<tr>
-			<th>#</th>
-			<th>Oficina</th>
-			<th style="text-align: center;">Personas Atendidas</th>
-			<th style="text-align: center;">Promedio en Minutos</th>
-		</tr>
-		</thead>
-		<tbody>
-		<% var index = 0, pATotal=0, pMATotal=0; %>
-		<% oficinasFinal.forEach(function(oficina) { %>
-			<% index++; pATotal+=oficina.pA; pMATotal+=oficina.pMA %>
+	<div class="report">
+	<div id="top">
+		<h2 style="word-break: break-all;">Reporte de atenciones agrupados por Oficina <%= oficinaS %></h2>
+		<table class="uk-table uk-table-striped" width="100%" id="table">
+			<thead>
 			<tr>
-				<td><%= index %></td>
-	        	<td><%= oficina.oficina %></td>
-	        	<td style="text-align: center;"><%= oficina.pA %></td>
-	        	<td style="text-align: center;"><%= oficina.pMA %></td>
-	    	</tr>
-	    <% }); %>
-	    </tbody>
-	    <tfoot>
-		<tr>
-			<th>-</th>
-			<th>Total</th>
-			<th style="text-align: center;"><%= pATotal %></th>
-			<th style="text-align: center;"><%= Math.round(pMATotal/index) %></th>
-		</tr>
-		</tfoot>
-	</table>
-
-	<canvas id="myChart" width="400" height="200"></canvas>
+				<th width="15%">#</th>
+				<th width="25%">Oficina</th>
+				<th style="text-align: center;" width="30%">Personas <br/>Atendidas</th>
+				<th style="text-align: center;" width="30%">Promedio <br/>en Minutos</th>
+			</tr>
+			</thead>
+			<tbody>
+			<% var index = 0, pATotal=0, pMATotal=0; %>
+			<% oficinasFinal.forEach(function(oficina) { %>
+				<% index++; pATotal+=oficina.pA; pMATotal+=oficina.pMA %>
+				<tr>
+					<td><%= index %></td>
+		        	<td><%= oficina.oficina %></td>
+		        	<td style="text-align: center;"><%= oficina.pA %></td>
+		        	<td style="text-align: center;"><%= oficina.pMA %></td>
+		    	</tr>
+		    <% }); %>
+		    </tbody>
+		    <tfoot>
+			<tr>
+				<th>-</th>
+				<th>Total</th>
+				<th style="text-align: center;"><%= pATotal %></th>
+				<th style="text-align: center;"><%= Math.round(pMATotal/index) %></th>
+			</tr>
+			</tfoot>
+		</table>
+	</div>
+	<canvas id="myChart" width="1000" height="500"></canvas>
 
 	<script>
 	var labelIn = <%- JSON.stringify(labels) %>;
@@ -106,17 +112,78 @@
 	        ]
 	    },
 	    options: {
+	    	responsive: false,
 	        scales: {
 	            yAxes: [{
+	            	stacked: false,
 	                ticks: {
 	                    beginAtZero:true
 	                }
-	            }]
+	            }],
+	            xAxes: [{
+			      	gridLines: {
+			        	display: true
+			      	}
+			    }]
 	        }
 	    }
 	});
 	</script>
+		<input type="button" name="" onclick="print_report()" value="print_report" />
+		<script type="text/javascript">
+
+		var divHeight;
+		var obj = document.getElementById('top');
+		var oficina = "<%= oficinaS %>" ;
+		var ptExtra = 0;
+
+		if(obj.offsetHeight) {
+			divHeight=obj.offsetHeight;
+		} else if(obj.style.pixelHeight){
+			divHeight=obj.style.pixelHeight;
+		}
+
+		if(oficina != "") {ptExtra = 90} else{ ptExtra = 10};
+
+		function print_report(){
+
+			html2canvas(document.querySelector("#myChart")).then(function (canvas) {
+
+				var myImage = canvas.toDataURL("image/png");
+				// Adjust width and height
+				var imgWidth = (canvas.width * 20) / 38;
+				var imgHeight = (canvas.height * 20) / 38; 
+				var tableHeight = (divHeight * 20) / 38;
+
+				var doc = new jsPDF('p','pt','a4');
+
+				// We'll make our own renderer to skip this editor
+				var specialElementHandlers = {
+					'#editor': function(element, renderer){
+						return true;
+					},
+					'.controls': function(element, renderer){
+						return true;
+					}
+				};
+
+				// All units are in the set measurement for the document
+				// This can be changed to "pt" (points), "mm" (Default), "cm", "in"
+				doc.fromHTML($('.report').get(0), 45, 35, {
+					'width': 500,
+					//'elementHandlers': specialElementHandlers
+				});
+				//doc.addPage();
+				doc.addImage(myImage, 'JPEG', 35, tableHeight + ptExtra, imgWidth, imgHeight); // 2: 19
+				doc.save("Reporte_Oficina.pdf");
+			});
+		}
+
+	</script>
+	</div>
 	<% } %>
-</div>	
+	
+</div>
+
 </body>
 </html>
