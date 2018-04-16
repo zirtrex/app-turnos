@@ -26,6 +26,7 @@
 	    </div>
 	    <div class="uk-width-1-4">
 		    <select name="oficina" class="uk-select">
+		    	<option value="">Seleccione una Oficina</option>
 		        <%if (oficinas != "") { %>
 					<% oficinas.forEach(function(oficina) { %>
 				        <option value="<%= oficina.oficina %>"><%= oficina.oficina %></option>
@@ -35,6 +36,7 @@
 		</div>
 		<div class="uk-width-1-4">
 		    <select name="servicio" class="uk-select">
+		    	<option value="">Seleccione un Servicio</option>
 		        <%if (servicios != "") { %>
 					<% servicios.forEach(function(servicio) { %>
 				        <option value="<%= servicio.servicio %>"><%= servicio.servicio %></option>
