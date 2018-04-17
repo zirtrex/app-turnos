@@ -2720,3 +2720,116 @@
 [2018-04-12 16:33:45.333] [DEBUG] cheese - Numero: 2018-2-27
 [2018-04-12 16:33:45.333] [DEBUG] cheese - Numero: 2018-2-28
 [2018-04-13 13:39:40.952] [DEBUG] cheese - Fecha: Fri Apr 13 2018 13:39:40 GMT-0500 (SA Pacific Standard Time)
+[2018-04-16 19:10:00.621] [DEBUG] cheese - Fecha: Mon Apr 16 2018 19:10:00 GMT-0500 (SA Pacific Standard Time)
+[2018-04-16 19:10:01.453] [DEBUG] cheese - Nuevo[GET]: { __v: 0,
+  oficina: 'Ventanilla #1',
+  servicio: 'PODERES',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2018-4-16',
+  estado: true,
+  _id: 5ad53b59de059c34b0b67c76,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2018-04-17T00:10:01.232Z,
+       fechaFin: null,
+       fueAtendido: null,
+       minutosAtendidos: 0,
+       _id: 5ad53b59de059c34b0b67c77 } ] }
+[2018-04-16 19:10:24.822] [DEBUG] cheese - Numero: 0
+[2018-04-16 19:10:24.824] [DEBUG] cheese - Numeros: 0
+[2018-04-16 19:10:24.825] [DEBUG] cheese - Maximo: 0
+[2018-04-16 19:10:24.994] [DEBUG] cheese - Fecha:2018-4-16
+[2018-04-16 19:10:24.998] [DEBUG] cheese - Modulo:{ _id: 5ad53b59de059c34b0b67c76,
+  oficina: 'Ventanilla #1',
+  servicio: 'PODERES',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2018-4-16',
+  estado: true,
+  __v: 0,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2018-04-17T00:10:01.232Z,
+       fechaFin: null,
+       fueAtendido: null,
+       minutosAtendidos: 0,
+       _id: 5ad53b59de059c34b0b67c77 } ] }
+[2018-04-16 19:10:25.215] [DEBUG] cheese - Guardado: { _id: 5ad53b59de059c34b0b67c76,
+  oficina: 'Ventanilla #1',
+  servicio: 'PODERES',
+  indicePerAtendidas: 1,
+  contador: 1,
+  fecha: '2018-4-16',
+  estado: true,
+  __v: 1,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2018-04-17T00:10:01.232Z,
+       fechaFin: 2018-04-17T00:10:24.998Z,
+       fueAtendido: false,
+       minutosAtendidos: 0,
+       _id: 5ad53b59de059c34b0b67c77 },
+     { indiceAten: 1,
+       fechaInicio: 2018-04-17T00:10:24.999Z,
+       fechaFin: null,
+       fueAtendido: null,
+       minutosAtendidos: 0,
+       _id: 5ad53b71de059c34b0b67c78 } ] }
+[2018-04-16 19:10:25.216] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2018-04-16 19:10:25.223] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2018-04-16 19:10:37.354] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2018-04-16 19:10:51.566] [DEBUG] cheese - Numero: 1
+[2018-04-16 19:10:51.567] [DEBUG] cheese - Numeros: 1
+[2018-04-16 19:10:51.567] [DEBUG] cheese - Maximo: 1
+[2018-04-16 19:10:51.778] [DEBUG] cheese - Fecha:2018-4-16
+[2018-04-16 19:10:51.780] [DEBUG] cheese - Modulo:{ _id: 5ad53b59de059c34b0b67c76,
+  oficina: 'Ventanilla #1',
+  servicio: 'PODERES',
+  indicePerAtendidas: 1,
+  contador: 1,
+  fecha: '2018-4-16',
+  estado: true,
+  __v: 1,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2018-04-17T00:10:01.232Z,
+       fechaFin: 2018-04-17T00:10:24.998Z,
+       fueAtendido: false,
+       minutosAtendidos: 0,
+       _id: 5ad53b59de059c34b0b67c77 },
+     { indiceAten: 1,
+       fechaInicio: 2018-04-17T00:10:24.999Z,
+       fechaFin: null,
+       fueAtendido: null,
+       minutosAtendidos: 0,
+       _id: 5ad53b71de059c34b0b67c78 } ] }
+[2018-04-16 19:10:52.300] [DEBUG] cheese - Guardado: { _id: 5ad53b59de059c34b0b67c76,
+  oficina: 'Ventanilla #1',
+  servicio: 'PODERES',
+  indicePerAtendidas: 2,
+  contador: 2,
+  fecha: '2018-4-16',
+  estado: true,
+  __v: 2,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2018-04-17T00:10:01.232Z,
+       fechaFin: 2018-04-17T00:10:24.998Z,
+       fueAtendido: false,
+       minutosAtendidos: 0,
+       _id: 5ad53b59de059c34b0b67c77 },
+     { indiceAten: 1,
+       fechaInicio: 2018-04-17T00:10:24.999Z,
+       fechaFin: 2018-04-17T00:10:51.780Z,
+       fueAtendido: true,
+       minutosAtendidos: 0,
+       _id: 5ad53b71de059c34b0b67c78 },
+     { indiceAten: 2,
+       fechaInicio: 2018-04-17T00:10:51.780Z,
+       fechaFin: null,
+       fueAtendido: null,
+       minutosAtendidos: 0,
+       _id: 5ad53b8bde059c34b0b67c79 } ] }
+[2018-04-16 19:10:52.300] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2018-04-16 19:10:52.303] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL

@@ -14,10 +14,84 @@ log4js.configure({
 const logger = log4js.getLogger('cheese');
 
 
-/* GET Reports page. */
+/* GET Reporte General. */
 router.get('/', function(req, res, next) {
 
 	console.log("Se ha creado la página principal de reporte:");
+
+	var fechaInicio = new Date("2018-01-01").toISOString();
+	var fechaFin = new Date().toISOString();
+
+	console.log ("Fecha Inicio:" + fechaInicio);
+	console.log ("Fecha Fin:" + fechaFin);
+
+	var modulosQuery = Modulo.find({"perAtendidas.fechaInicio": {  $gte : fechaInicio, $lte : fechaFin} }).sort({'perAtendidas.fechaInicio': 'descending'}).exec();	
+	
+
+	modulosQuery.then(function(modulos){
+
+		var personasAtendidas = [];
+		var promMinutosAtendidos = [];
+		var resultadoPrevio = [];
+		var resultadoFinal = [];
+
+        modulos.forEach(function(modulo){            
+
+            var sumatoria = 0, promedio=0;
+
+            console.log(modulo.perAtendidas.length);
+
+            if(modulo.perAtendidas.length > 1){
+
+            	for(var i = 1; i < modulo.perAtendidas.length; i++){
+                    
+                	sumatoria+= modulo.perAtendidas[i].minutosAtendidos;
+
+            	}
+            	promedio = Math.round(sumatoria / modulo.perAtendidas.length);
+
+	            personasAtendidas.push(modulo.perAtendidas.length - 1);
+	            promMinutosAtendidos.push(promedio);
+
+	            resultadoPrevio.push({"pA": modulo.perAtendidas.length - 1, "pMA": promedio});
+        	}
+
+        });
+        
+			
+		var pA = 0 , pMA = 0 , cantidad = 0;
+
+		for(var i = 0; i < resultadoPrevio.length; i++){				
+
+			pA += resultadoPrevio[i].pA;
+			pMA += resultadoPrevio[i].pMA;
+			cantidad++;				
+
+		}
+
+		personasAtendidas.push(pA);
+		promMinutosAtendidos.push(pMA);
+		resultadoFinal.push({"pA": pA, "pMA": Math.round(pMA / cantidad)});
+
+        console.log(resultadoFinal);
+
+		res.render('reporte_general.ejs', {
+	        "resultados": true,
+	        "personasAtendidas": personasAtendidas,
+	        "promMinutosAtendidos": promMinutosAtendidos,
+	        "resultadoFinal" : resultadoFinal
+	    });	
+
+	}).catch(function(error){
+		console.log(error);
+	});
+
+});
+
+/* GET Reports page. */
+router.get('/dias', function(req, res, next) {
+
+	console.log("Se ha creado la página de reporte por días:");
 
 	var fecha = new Date();
 
@@ -32,7 +106,7 @@ router.get('/', function(req, res, next) {
 
 		servicios = util.eliminarDuplicados(modulos[1], "servicio");
 
-		res.render('reporte_general.ejs', {
+		res.render('reporte_dias.ejs', {
 			"fechaInicio": "2018-01-01",
 			"fechaFin": util.formatDate(fecha),
 	        "oficinas": oficinas ,
@@ -49,7 +123,7 @@ router.get('/', function(req, res, next) {
 });
 
 /* POST Reporte General. */
-router.post('/', function(req, res, next) {
+router.post('/dias', function(req, res, next) {
 
 	var fechaInicio = new Date(req.body.fechaInicio).toISOString();
 	var fechaFin = new Date(req.body.fechaFin).toISOString();
@@ -104,7 +178,7 @@ router.post('/', function(req, res, next) {
 
         //console.log(resultadoFinal);
 
-		res.render('reporte_general.ejs', {
+		res.render('reporte_dias.ejs', {
 			"fechaInicio": req.body.fechaInicio,
 			"fechaFin": req.body.fechaFin,
 	        "oficinas": [{"oficina": oficina}] ,

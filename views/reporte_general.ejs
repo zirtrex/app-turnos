@@ -15,125 +15,82 @@
 
 <div class="uk-container">
 
-	<h1>Ingrese los parámetros de búsqueda</h1>
+	<h1>Reportes</h1>
 
-	<form action="/reports" method="POST" class="uk-grid-small" uk-grid>
-		<div class="uk-width-1-4">
-	        <input class="uk-input" type="date" id="fechaInicio" name="fechaInicio" value="<%= fechaInicio %>">
-	    </div>
-	    <div class="uk-width-1-4">
-	        <input class="uk-input" type="date" id="fechaFin" name="fechaFin" value="<%= fechaFin %>">
-	    </div>
-	    <div class="uk-width-1-4">
-		    <select name="oficina" class="uk-select">
-		    	<option value="">Seleccione una Oficina</option>
-		        <%if (oficinas != "") { %>
-					<% oficinas.forEach(function(oficina) { %>
-				        <option value="<%= oficina.oficina %>"><%= oficina.oficina %></option>
-				    <% }); %>
-				<% } %>
-		    </select>
-		</div>
-		<div class="uk-width-1-4">
-		    <select name="servicio" class="uk-select">
-		    	<option value="">Seleccione un Servicio</option>
-		        <%if (servicios != "") { %>
-					<% servicios.forEach(function(servicio) { %>
-				        <option value="<%= servicio.servicio %>"><%= servicio.servicio %></option>
-				    <% }); %>
-				<% } %>
-		    </select>
-		</div>
-		<div class="uk-width-1-2">
-		    <input type="submit" name="buscar" value="Buscar" class="uk-button uk-button-primary uk-width-1-2">
-		</div>
-		<div class="uk-width-1-2">
-		    <a href="/reports" class="uk-button uk-button-secondary uk-width-1-2">Ejecutar otra búsqueda</a>
-		</div>
-	</form>
+	<h3>Resumen Deneral del Total de personas atendidas y el Tiempo de atención promedio</h3>
 
 	<hr/>
 
-	<%if (resultados) { %>
+	<div class="ul-grid" uk-grid>
 
-		<table class="uk-table uk-table-striped">
-			<thead>
-			<tr>
-				<th>#</th>
-				<th>Fecha</th>
-				<th>Oficina</th>
-				<th>Servicio</th>
-				<th style="text-align: center;">Personas Atendidas</th>
-				<th style="text-align: center;">Promedio en Minutos</th>
-			</tr>
-			</thead>
-			<tbody>
-			<% var index = 0, pATotal=0, pMATotal=0; %>
-			<% resultadoFinal.forEach(function(resultado) { %>
-				<% index++; pATotal+=resultado.pA; pMATotal+=resultado.pMA %>
+		<div class="uk-width-1-2">
+			<table class="uk-table uk-table-striped">
+				<thead>
 				<tr>
-					<td><%= index %></td>
-		        	<td><%= resultado.fecha %></td>
-		        	<td><%= resultado.oficina %></td>
-		        	<td><%= resultado.servicio %></td>
-		        	<td style="text-align: center;"><%= resultado.pA %></td>
-		        	<td style="text-align: center;"><%= resultado.pMA %></td>
-		    	</tr>
-		    <% }); %>
-		    </tbody>
-		    <tfoot>
-			<tr>
-				<th>-</th>
-				<th>-</th>
-				<th>-</th>
-				<th>Total: </th>
-				<th style="text-align: center;"><%= pATotal %></th>
-				<th style="text-align: center;"><%= Math.round(pMATotal/index) %></th>
-			</tr>
-			</tfoot>
-		</table>
+					<th>#</th>
+					<th style="text-align: center;">Personas Atendidas</th>
+					<th style="text-align: center;">Promedio de Minutos</th>
+				</tr>
+				</thead>
+				<tbody>
+				<% var index = 0, pATotal=0, pMATotal=0; %>
+				<% resultadoFinal.forEach(function(resultado) { %>
+					<% index++; pATotal+=resultado.pA; pMATotal+=resultado.pMA %>
+					<tr>
+						<td><%= index %></td>
+			        	<td style="text-align: center;"><%= resultado.pA %></td>
+			        	<td style="text-align: center;"><%= resultado.pMA %></td>
+			    	</tr>
+			    <% }); %>
+			    </tbody>
+			</table>
+		</div>
+		<div class="uk-width-1-2">
+			<canvas id="myChart" width="300" height="150"></canvas>
+		</div>
 
-		<canvas id="myChart" width="400" height="150"></canvas>
+	</div>
 
-		<script>
-		var labelIn = <%- JSON.stringify(labels) %>;
+	<hr/>
+
+	<h3>Otros reportes:</h3>
+
+	<div uk-grid>
+		<div class="uk-width-1-3">
+			<a href="/reports/dias" >Reporte por Días</a>
+		</div>
+		<div class="uk-width-1-3">
+			<a href="/reports/oficina" >Reporte por Oficina</a>
+		</div>
+		<div class="uk-width-1-3">
+			<a href="/reports/servicio" >Reporte por Servicio</a>
+		</div>
+	</div>
+
+	<script>
 		var personasAtendidas = <%- JSON.stringify(personasAtendidas) %>;
 		var promMinutosAtendidos = <%- JSON.stringify(promMinutosAtendidos) %>;
 
 		var ctx = document.getElementById("myChart");
 		var myChart = new Chart(ctx, {
-		    type: 'bar',
+		    type: 'pie',
 		    data: {
-		        labels: labelIn,
+		        labels: ["Personas atendidas", "Promedio de minutos"],
 		        datasets: [
 		        {
 		            label: 'Número de atenciones',
-		            data: personasAtendidas,
-		            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-		            borderColor: 'rgba(255,99,132,1)',
-		            borderWidth: 1
-		        },
-		        {
-		            label: 'Tiempo Promedio',
-		            data: promMinutosAtendidos,
-		            backgroundColor: 'rgba(54, 162, 235, 0.2)',
-		            borderColor: 'rgba(54, 162, 235, 1)',
+		            data: [100, 5],
+		            backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)'],
+		            borderColor: ['rgba(255,99,132,1)', 'rgba(54, 162, 235, 1)'],
 		            borderWidth: 1
 		        }
 		        ]
 		    },
 		    options: {
-		        scales: {
-		            yAxes: [{
-		                ticks: {
-		                    beginAtZero:true
-		                }
-		            }]
-		        }
 		    }
 		});
-		</script>
-	<% } %>
+	</script>
+
 </div>	
 </body>
 </html>
