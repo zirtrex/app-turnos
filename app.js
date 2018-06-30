@@ -11,6 +11,7 @@ var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var Modulo = require('./models/moduloModel').Modulo;
 var log4js = require('log4js');
+
 log4js.configure({
   appenders: { cheese: { type: 'file', filename: 'cheese.log' } },
   categories: { default: { appenders: ['cheese'], level: 'debug' } }
@@ -22,6 +23,7 @@ const logger = log4js.getLogger('cheese');
 var index = require('./routes/index');
 var modulo = require('./routes/modulo');
 var show = require('./routes/show');
+var reports = require('./routes/reports');
 
 var app = express();
 var server = http.Server(app); //createServer
@@ -38,7 +40,8 @@ app.engine('html', require('ejs').renderFile);
 
 app.use(methodOverride("_method"));
 
-var MONGO_URL = 'mongodb://rafael:ZTRse7en@ds229465.mlab.com:29465/heroku_qzv4b77t'; //mongodb://localhost:27017/test mongodb://rafael:ZTRse7en@ds229465.mlab.com:29465/heroku_qzv4b77t
+var MONGO_URL = 'mongodb://localhost:27017/consuladoApp';
+//mongodb://localhost:27017/consuladoApp mongodb://rafael:ZTRse7en@ds229465.mlab.com:29465/heroku_qzv4b77t
 var COOKIE_SECRET = 'secretencode';
 var COOKIE_NAME = 'sid';
 
@@ -71,60 +74,87 @@ io.on('connection', function(socket) {
     socket.on('aumentar', function(datos){
 
         var numeros = [];
-        var max;
+        var max = 0;
 
         new Promise(function(done){
-            Modulo.find({'servicio': datos.modulo.servicio, 'fecha': fechaActual}, function(err, modulos){
+            Modulo.find({'servicio': datos.modulo.servicio, 'fecha': fechaActual})
+            .exec()
+            .then(function (modulos){
 
                 for(var i = 0; i < modulos.length; i++){
                     
                     logger.debug("Numero: " + modulos[i].contador);
                     numeros.push(modulos[i].contador);
 
-                }
+                }                
 
                 done();
 
-            }); 
+            })
+            .catch(function(err){
+                logger.debug("Error al conectarse a la Base de datos: " + err);
+            });
+
         }).then(function(){
 
             logger.debug("Numeros: " + numeros.toString());
-            max = Math.max(...numeros); logger.debug("Maximo: " + max);
 
-            Modulo.findOne({'oficina': datos.modulo.oficina, 'servicio': datos.modulo.servicio, 'fecha': fechaActual}, function(err, modulo){
-    
-                //Construimos el objeto perAtendidas
-                var indicePerAtendidasActual =  modulo.perAtendidas.length; // He cambiado modulo.contador por modulo.perAtendidas.length
-                var fechaFinAnterior = new Date();
-                var fechaInicioAnterior = new Date(modulo.perAtendidas[indicePerAtendidasActual-1].fechaInicio);
-                var fechaInicioActual = new Date();
-                var minutosAtendidosAnterior = fechaFinAnterior.getTime() - fechaInicioAnterior.getTime();
-                
-                var perAtendidas =  {indiceAten: indicePerAtendidasActual, fechaInicio: fechaInicioActual, fechaFin: null, fueAtendido: null, minutosAtendidos: 0};
-                
-                modulo.indicePerAtendidas = indicePerAtendidasActual;
-                modulo.perAtendidas[indicePerAtendidasActual-1].fechaFin = fechaFinAnterior;
-                modulo.perAtendidas[indicePerAtendidasActual-1].minutosAtendidos = Math.round(minutosAtendidosAnterior / 1000 / 60);
-                modulo.perAtendidas[indicePerAtendidasActual-1].fueAtendido = datos.atendido;
-                modulo.perAtendidas.push(perAtendidas);
-                //Elegimos el número más alto y aumentamos en 1
-                modulo.contador = max + 1;
-                modulo.estado = true,
+            if(numeros.length > 0){
+                max = Math.max(...numeros);                
+            }
 
-                modulo.save(function (err) {
-                    if (err) {
-                        logger.debug(err);
-                    } else {
+            logger.debug("Maximo: " + max);
+
+            Modulo.findOne({'oficina': datos.modulo.oficina, 'servicio': datos.modulo.servicio, 'fecha': fechaActual})
+            .exec()
+            .then(function (modulo){
+                logger.debug("Fecha:" + fechaActual);
+                logger.debug("Modulo:" + modulo);
+
+                if(modulo){
+                     //Construimos el objeto perAtendidas
+                    var indicePerAtendidasActual =  modulo.perAtendidas.length; // He cambiado modulo.contador por modulo.perAtendidas.length
+                    var fechaFinAnterior = new Date();
+                    var fechaInicioAnterior = new Date(modulo.perAtendidas[indicePerAtendidasActual-1].fechaInicio);
+                    var fechaInicioActual = new Date();
+                    var minutosAtendidosAnterior = fechaFinAnterior.getTime() - fechaInicioAnterior.getTime();
+                    
+                    var perAtendidas =  {indiceAten: indicePerAtendidasActual, fechaInicio: fechaInicioActual, fechaFin: null, fueAtendido: null, minutosAtendidos: 0};
+                    
+                    modulo.indicePerAtendidas = indicePerAtendidasActual;
+                    modulo.perAtendidas[indicePerAtendidasActual-1].fechaFin = fechaFinAnterior;
+                    modulo.perAtendidas[indicePerAtendidasActual-1].minutosAtendidos = Math.round(minutosAtendidosAnterior / 1000 / 60);
+                    modulo.perAtendidas[indicePerAtendidasActual-1].fueAtendido = datos.atendido;
+                    modulo.perAtendidas.push(perAtendidas);
+                    //Elegimos el número más alto y aumentamos en 1
+                    modulo.contador = max + 1;
+                    modulo.estado = true,
+
+                    modulo.save()
+                    .then(function (modulo){
+                        
                         logger.debug("Guardado: " + modulo.toString());                      
                         logger.debug("Emitiendo desde el contador al canal SHOW_CHANNEL");
-                        socket.broadcast.emit('modulo_SHOW_CHANNEL', {'modulo': modulo, 'aumentar': true}); 
+                        socket.broadcast.emit('modulo_SHOW_CHANNEL', {'modulo': modulo, 'aumentar': true, 'quitar': false}); 
                         logger.debug("Emitiendo desde el contador al canal COUNT_CHANNEL");
                         io.emit('modulo_COUNT_CHANNEL', modulo); 
-                    }
-                });
+                        
+                    })
+                    .catch(function(err){
+                        logger.debug("Ha ocurrido un error al guardar " + err);
+                        io.emit('modulo_COUNT_CHANNEL', {'modulo': modulo, 'error': true, 'msgError': err});
+                    });
 
+                }else{
+                    logger.debug("Error al encontrar el módulo, seguro se ha eliminado");
+                    io.emit('modulo_COUNT_CHANNEL', {'modulo': modulo, 'error': true, 'msgError': "No se ha podido encontrar la Oficina o el Trámite, por favor recargue la página. Si el problema persiste comuníquese con el administrador del sistema."});
+                }
+
+            })
+            .catch(function(err){
+                logger.debug("Error al conectarse a la Base de datos: " + err);
+                io.emit('modulo_COUNT_CHANNEL', {'modulo': modulo, 'error': true, 'msgError': err});
             });
-
         });
 
     });
@@ -133,8 +163,12 @@ io.on('connection', function(socket) {
 
         Modulo.findOne({'oficina': datos.modulo.oficina, 'servicio': datos.modulo.servicio, 'fecha': fechaActual}, function(err, modulo){
 
-            logger.debug("Emitiendo desde el contador al SHOW_CHANNEL");
-            socket.broadcast.emit('modulo_SHOW_CHANNEL', {'modulo': modulo, 'aumentar': false});
+            if(modulo){
+
+                logger.debug("Call Again: Emitiendo desde el contador al SHOW_CHANNEL");
+                socket.broadcast.emit('modulo_SHOW_CHANNEL', {'modulo': modulo, 'aumentar': false, 'quitar': false});
+            
+            }
 
         });
 
@@ -144,27 +178,32 @@ io.on('connection', function(socket) {
 
         Modulo.findOne({'oficina': datos.modulo.oficina, 'servicio': datos.modulo.servicio, 'fecha': fechaActual}, function(err, modulo){
 
-            //Construimos el objeto perAtendidas
-            var indicePerAtendidasActual =  modulo.indicePerAtendidas;
+            if(modulo){
 
-            var fechaInicioActual = new Date(modulo.perAtendidas[indicePerAtendidasActual].fechaInicio);
-            var fechaFinActual = new Date();
-            var minutosAtendidosActual = fechaFinActual.getTime() - fechaInicioActual.getTime();
-            
-            modulo.perAtendidas[indicePerAtendidasActual].fechaFin = fechaFinActual;
-            modulo.perAtendidas[indicePerAtendidasActual].minutosAtendidos = Math.round(minutosAtendidosActual / 1000 / 60);
-            modulo.perAtendidas[indicePerAtendidasActual].fueAtendido = datos.atendido;
+                //Construimos el objeto perAtendidas
+                var indicePerAtendidasActual =  modulo.indicePerAtendidas;
 
-            //Elegimos el número más alto y aumentamos en 1
-            modulo.estado = false,
+                var fechaInicioActual = new Date(modulo.perAtendidas[indicePerAtendidasActual].fechaInicio);
+                var fechaFinActual = new Date();
+                var minutosAtendidosActual = fechaFinActual.getTime() - fechaInicioActual.getTime();
+                
+                modulo.perAtendidas[indicePerAtendidasActual].fechaFin = fechaFinActual;
+                modulo.perAtendidas[indicePerAtendidasActual].minutosAtendidos = Math.round(minutosAtendidosActual / 1000 / 60);
+                modulo.perAtendidas[indicePerAtendidasActual].fueAtendido = datos.atendido;
 
-            modulo.save(function (err) {
-                if (err) {
-                    logger.debug(err);
-                } else {
-                    logger.debug("Terminando: " + modulo.toString());
-                }
-            });
+                //Elegimos el número más alto y aumentamos en 1
+                modulo.estado = false,
+
+                modulo.save(function (err) {
+                    if (err) {
+                        logger.debug(err);
+                    } else {
+                        logger.debug("Terminando: " + modulo.toString());
+                        socket.broadcast.emit('modulo_SHOW_CHANNEL', {'modulo': modulo, 'aumentar': false, 'quitar': true});
+                    }
+                });
+
+            }
         });
 
     });
@@ -184,6 +223,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/modulo', modulo);
 app.use('/show', show);
+app.use('/reports', reports);
 
 
 // catch 404 and forward to error handler

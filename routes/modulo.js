@@ -20,17 +20,20 @@ router.get('/', function(req, res, next) {
 	var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 	var fechaFormat = days[fecha.getDay()] + " " + months[fecha.getMonth()] + " " + fecha.getDate() + " " + fecha.getFullYear();
 	
+	//Verificamos si existen las sesiones para oficina y servicio
+	//Si no existe alguna de ellas redirigimos al formulario para iniciar sesión
 	if( typeof req.session.oficina === 'undefined' || typeof req.session.servicio === 'undefined' ){
 	
-		res.redirect('/');	
-		
+		res.redirect('/');
+	
+	//Si existen las variables de sesión creamos el registro
 	}else{	
 
-		var fecha = new Date();
 		var fechaActual = fecha.getFullYear() + "-" + (fecha.getMonth()+1) + "-" + fecha.getDate();
 		
 		Modulo.findOne({'oficina': req.session.oficina, 'servicio': req.session.servicio, 'fecha': fechaActual}, function(err, modulo){
 			
+			//Si el módulo aún no existe creamos uno nuevo
 			if( typeof modulo === 'undefined' || modulo === null ){
 				
 				var modulo = new Modulo({
@@ -56,28 +59,23 @@ router.get('/', function(req, res, next) {
 					}
 				});
 
-			}else{
+			//Si ya existe cambiamos sus datos
+			}else{				
 
-				if(modulo.estado == false){
+				modulo.estado = true;
 
-					modulo.estado = true;
+				var perAtendidas =  {indiceAten: 0, fechaInicio: new Date(), fechaFin: null, fueAtendido: null, minutosAtendidos: 0};
 
-					var perAtendidas =  {indiceAten: 0, fechaInicio: new Date(), fechaFin: null, fueAtendido: null, minutosAtendidos: 0};
+				modulo.perAtendidas.push(perAtendidas);
 
-					modulo.perAtendidas.push(perAtendidas);
-
-					modulo.save(function (err) {
-						if (err) {
-							logger.debug(err);
-						} else {
-							logger.debug("Ya existe[GET]: " + modulo.toString());
-							
-						}
-					});
-
-				}
-
-				res.render('modulo.html', {'fechaAct': dateFormat});
+				modulo.save(function (err) {
+					if (err) {
+						logger.debug(err);
+					} else {
+						logger.debug("Ya existe[GET]: " + modulo.toString());
+						res.render('modulo.html', {'fechaAct': fechaFormat});
+					}
+				});
 				
 			}		
 		});
@@ -102,6 +100,9 @@ router.post('/', function(req, res, next) {
 	
 	Modulo.findOne({'oficina': req.session.oficina, 'servicio': req.session.servicio, 'fecha': fechaActual}, function(err, modulo){
 		
+		console.log("Aquí 2");
+	
+
 		if( typeof modulo === 'undefined' || modulo === null ){
 			
 			var modulo = new Modulo({
@@ -129,26 +130,21 @@ router.post('/', function(req, res, next) {
 
 		}else{
 
-			if(modulo.estado == false){
+			modulo.estado = true;
 
-				modulo.estado = true;
+			var perAtendidas =  {indiceAten: 0, fechaInicio: new Date(), fechaFin: null, fueAtendido: null, minutosAtendidos: 0};
 
-				var perAtendidas =  {indiceAten: 0, fechaInicio: new Date(), fechaFin: null, fueAtendido: null, minutosAtendidos: 0};
+			modulo.perAtendidas.push(perAtendidas);
 
-				modulo.perAtendidas.push(perAtendidas);
-
-				modulo.save(function (err) {
-					if (err) {
-						logger.debug(err);
-					} else {
-						logger.debug("Ya existe[POST]: " + modulo.toString());
-						
-					}
-				});
-
-			}
-
-			res.render('modulo.html', {'fechaAct': fechaFormat});
+			modulo.save(function (err) {
+				if (err) {
+					logger.debug(err);
+				} else {
+					logger.debug("Ya existe[POST]: " + modulo.toString());
+					res.render('modulo.html', {'fechaAct': fechaFormat});						
+				}
+			});
+					
 		
 		}		
 	});
