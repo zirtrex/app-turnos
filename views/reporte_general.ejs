@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reporte General</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+	<link rel='stylesheet' href='/stylesheets/uikit.css' />
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Stardos+Stencil'/>
+	<script src="/javascripts/jquery-3.2.1.min.js"></script>
+	<script src="/javascripts/uikit.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+<body style="background: none">
+
+<div class="uk-container">
+
+	<h1>Reportes</h1>
+
+	<h3>Resumen Deneral del Total de personas atendidas y el Tiempo de atención promedio</h3>
+
+	<hr/>
+
+	<div class="ul-grid" uk-grid>
+
+		<div class="uk-width-1-2">
+			<table class="uk-table uk-table-striped">
+				<thead>
+				<tr>
+					<th>#</th>
+					<th style="text-align: center;">Personas Atendidas</th>
+					<th style="text-align: center;">Promedio de Minutos</th>
+				</tr>
+				</thead>
+				<tbody>
+				<% var index = 0, pATotal=0, pMATotal=0; %>
+				<% resultadoFinal.forEach(function(resultado) { %>
+					<% index++; pATotal+=resultado.pA; pMATotal+=resultado.pMA %>
+					<tr>
+						<td><%= index %></td>
+			        	<td style="text-align: center;"><%= resultado.pA %></td>
+			        	<td style="text-align: center;"><%= resultado.pMA %></td>
+			    	</tr>
+			    <% }); %>
+			    </tbody>
+			</table>
+		</div>
+		<div class="uk-width-1-2">
+			<canvas id="myChart" width="300" height="150"></canvas>
+		</div>
+
+	</div>
+
+	<hr/>
+
+	<h3>Otros reportes:</h3>
+
+	<div uk-grid>
+		<div class="uk-width-1-3">
+			<a href="/reports/dias" >Reporte por Días</a>
+		</div>
+		<div class="uk-width-1-3">
+			<a href="/reports/oficina" >Reporte por Oficina</a>
+		</div>
+		<div class="uk-width-1-3">
+			<a href="/reports/servicio" >Reporte por Servicio</a>
+		</div>
+	</div>
+
+	<script>
+		var personasAtendidas = <%- JSON.stringify(personasAtendidas) %>;
+		var promMinutosAtendidos = <%- JSON.stringify(promMinutosAtendidos) %>;
+
+		var ctx = document.getElementById("myChart");
+		var myChart = new Chart(ctx, {
+		    type: 'pie',
+		    data: {
+		        labels: ["Personas atendidas", "Promedio de minutos"],
+		        datasets: [
+		        {
+		            label: 'Número de atenciones',
+		            data: [100, 5],
+		            backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)'],
+		            borderColor: ['rgba(255,99,132,1)', 'rgba(54, 162, 235, 1)'],
+		            borderWidth: 1
+		        }
+		        ]
+		    },
+		    options: {
+		    }
+		});
+	</script>
+
+</div>	
+</body>
+</html>
