@@ -121,7 +121,7 @@ router.post('/', function(req, res, next) {
 			modulo.save(function (err) {
 				if (err) {
 					logger.debug(err);
-					console.log(err);
+					console.log("1-" + err);
 				} else {
 					logger.debug("Nuevo[POST]: " + modulo.toString());
 					console.log("Nuevo[POST]: " + modulo.toString());
@@ -140,7 +140,7 @@ router.post('/', function(req, res, next) {
 			modulo.save(function (err) {
 				if (err) {
 					logger.debug(err);
-					console.log(err);
+					console.log("2-" + err);
 				} else {
 					logger.debug("Ya existe[POST]: " + modulo.toString());
 					console.log("Nuevo[POST]: " + modulo.toString());
