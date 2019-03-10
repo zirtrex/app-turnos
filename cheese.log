@@ -3059,3 +3059,4 @@
        _id: 5aecaa5c8209560f10add792 } ] }
 [2018-05-04 13:45:48.688] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
 [2018-05-04 13:45:48.690] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2018-07-10 21:46:14.700] [DEBUG] cheese - Fecha: Tue Jul 10 2018 21:46:14 GMT-0500 (SA Pacific Standard Time)

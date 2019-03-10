@@ -39,14 +39,14 @@
 						<strong id="actual"> #{{modulo.contador}}</strong>
 					</p>
 					<hr/>
-					<button type="button" v-on:click="call_again" name="call_again" class="uk-button uk-button-secundary">Llamar nuevamente</button>				
+					<button type="button" v-on:click="call_again" name="call_again" class="uk-button uk-button-secundary">Llamar nuevamente</button>
 					<button id="js-modal-confirm" type="button" v-on:click="contador" ref="btnSiguiente" name="btnSiguiente" class="uk-button uk-button-primary" uk-icon="icon: arrow-right">Siguiente</button>
 					<hr/>
 					<div class="btn-terminar2">
 						<a href="/cambiar" class="uk-button uk-button-link" uk-icon="icon: arrow-left">Inicio</a>
 						|
 						<button type="button" v-on:click="terminar" ref="btnTerminar" name="btnTerminar" class="uk-button uk-button-link" uk-icon="icon: close">Terminar</button>
-					</div>				
+					</div>
 				</div>
 				<div class="uk-flex uk-flex-right")>
 					<p><%= fechaAct %></p>
@@ -111,7 +111,7 @@
 						console.log("Enviando datos al server para llamar nuevamente.");
 		  				socket.emit("call_again", { 'channel': channel, 'modulo': this.modulo });
 		  			}
-		  			
+
 				},
 				contador: function(e){
 					e.preventDefault();
@@ -130,7 +130,7 @@
 			  				socket.emit("aumentar", { 'channel': channel, 'modulo': this.modulo, 'atendido': false});
 			  			}
 		           	}.bind(this));
-		  					  			
+
 				},
 				terminar: function(e){
 		  			e.preventDefault();
@@ -139,9 +139,9 @@
 		           	UIkit.modal.confirm('¿El último usuario ha sido atendido?', { labels: { ok: 'Si', cancel: 'No' }}).then(function () {
 			            console.log('Si.')
 			            if(this.modulo != null ){
-							console.log("Enviando datos al server para terminar el contador");
-			  				socket.emit("terminar", { 'channel': channel, 'modulo': this.modulo, 'atendido': true});
-			  			}
+												console.log("Enviando datos al server para terminar el contador");
+			  							socket.emit("terminar", { 'channel': channel, 'modulo': this.modulo, 'atendido': true});
+			  					}
 		           	}.bind(this), function () {
 		           		console.log('No.')
 		               	if(this.modulo != null ){
@@ -164,7 +164,7 @@
                        	this.modulo = response.data;
 
                     }.bind(this));
-				}
+									}
 		  	}
 		});
 
