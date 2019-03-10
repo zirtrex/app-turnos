@@ -18,7 +18,7 @@ var moduloSquema = new Squema({
 	contador: Number,
 	fecha: String,
 	estado: Boolean
-}); //, { versionKey: false }
+}, {usePushEach: true}); //, { versionKey: false }
 
 var Modulo = mongoose.model('Modulo', moduloSquema);
 
