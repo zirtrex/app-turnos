@@ -90,82 +90,81 @@
 		  			socket.emit("Creando_Modulo", { 'channel': channel});
 		  			console.log("Conectando al servidor");
 
-				});
+					});
 
-				socket.on('modulo_' + channel, function(data){
+					socket.on('modulo_' + channel, function(data){
 
 		  			if(data.error){
-						UIkit.modal.alert(data.msgError);
-					}else{
-						this.actualizar();
-					}
+							UIkit.modal.alert(data.msgError);
+						}else{
+							this.actualizar();
+						}
 
-				}.bind(this));
+					}.bind(this));
 
 		  	},
 		  	methods: {
 		  		call_again: function(e){
-					e.preventDefault();
+						e.preventDefault();
 
-					if(this.modulo != null ){
-						console.log("Enviando datos al server para llamar nuevamente.");
-		  				socket.emit("call_again", { 'channel': channel, 'modulo': this.modulo });
-		  			}
-
-				},
-				contador: function(e){
-					e.preventDefault();
-					e.target.blur();
-
-		           	UIkit.modal.confirm('¿El usuario ha sido atendido?', { labels: { ok: 'Si', cancel: 'No' }}).then(function () {
-			            console.log('Si.')
-			            if(this.modulo != null ){
-							console.log("Enviando datos al server para aumentar el contador");
-			  				socket.emit("aumentar", { 'channel': channel, 'modulo': this.modulo, 'atendido': true});
+						if(this.modulo != null ){
+							console.log("Enviando datos al server para llamar nuevamente.");
+			  				socket.emit("call_again", { 'channel': channel, 'modulo': this.modulo });
 			  			}
-		           	}.bind(this), function () {
-		           		console.log('No.')
-		               	if(this.modulo != null ){
-							console.log("Enviando datos al server para aumentar el contador");
-			  				socket.emit("aumentar", { 'channel': channel, 'modulo': this.modulo, 'atendido': false});
-			  			}
-		           	}.bind(this));
 
-				},
-				terminar: function(e){
-		  			e.preventDefault();
-					e.target.blur();
+					},
+					contador: function(e){
+						e.preventDefault();
+						e.target.blur();
 
-		           	UIkit.modal.confirm('¿El último usuario ha sido atendido?', { labels: { ok: 'Si', cancel: 'No' }}).then(function () {
-			            console.log('Si.')
-			            if(this.modulo != null ){
-												console.log("Enviando datos al server para terminar el contador");
-			  							socket.emit("terminar", { 'channel': channel, 'modulo': this.modulo, 'atendido': true});
-			  					}
-		           	}.bind(this), function () {
-		           		console.log('No.')
-		               	if(this.modulo != null ){
-							console.log("Enviando datos al server para terminar el contador");
-			  				socket.emit("terminar", { 'channel': channel, 'modulo': this.modulo, 'atendido': false});
-			  			}
-		           	}.bind(this));
+			      UIkit.modal.confirm('¿El usuario ha sido atendido?', { labels: { ok: 'Si', cancel: 'No' }}).then(function () {
+					  	console.log('Si.')
+				      if(this.modulo != null ){
+								console.log("Enviando datos al server para aumentar el contador");
+				  			socket.emit("aumentar", { 'channel': channel, 'modulo': this.modulo, 'atendido': true});
+				  		}
+			   		}.bind(this), function () {
+			      	console.log('No.')
+			        if(this.modulo != null ){
+								console.log("Enviando datos al server para aumentar el contador");
+				  			socket.emit("aumentar", { 'channel': channel, 'modulo': this.modulo, 'atendido': false});
+				  		}
+			      }.bind(this));
 
-		           	this.$refs.btnSiguiente.disabled  = true;
-		           	this.$refs.btnTerminar.disabled = true;
-		           	this.$refs.btnTerminar.innerText = "Por favor, regrese al inicio.";
+					},
+					terminar: function(e){
+			  			e.preventDefault();
+						e.target.blur();
 
-				},
-				actualizar: function(){
-					axios.get('/show/modulo')
-                    .then(function (response) {
+			           	UIkit.modal.confirm('¿El último usuario ha sido atendido?', { labels: { ok: 'Si', cancel: 'No' }}).then(function () {
+				            console.log('Si.')
+				            if(this.modulo != null ){
+								console.log("Enviando datos al server para terminar el contador");
+				  				socket.emit("terminar", { 'channel': channel, 'modulo': this.modulo, 'atendido': true});
+				  			}
+			           	}.bind(this), function () {
+			           		console.log('No.')
+			               	if(this.modulo != null ){
+								console.log("Enviando datos al server para terminar el contador");
+				  				socket.emit("terminar", { 'channel': channel, 'modulo': this.modulo, 'atendido': false});
+				  			}
+			           	}.bind(this));
 
-                    	console.log("Recibiendo modulo con Axios: ");
-                    	console.log(response.data);
-                       	this.modulo = response.data;
+			           	this.$refs.btnSiguiente.disabled  = true;
+			           	this.$refs.btnTerminar.disabled = true;
+			           	this.$refs.btnTerminar.innerText = "Por favor, regrese al inicio.";
 
-                    }.bind(this));
-									}
-		  	}
+					},
+					actualizar: function(){
+						axios.get('/show/modulo')
+	                    .then(function (response) {
+	                    	console.log("Recibiendo modulo con Axios: ");
+	                    	console.log(response.data);
+	                       	this.modulo = response.data;
+
+	                    }.bind(this));
+					}
+				}
 		});
 
 	</script>

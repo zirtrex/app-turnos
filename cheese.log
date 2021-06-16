@@ -3060,3 +3060,309 @@
 [2018-05-04 13:45:48.688] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
 [2018-05-04 13:45:48.690] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
 [2018-07-10 21:46:14.700] [DEBUG] cheese - Fecha: Tue Jul 10 2018 21:46:14 GMT-0500 (SA Pacific Standard Time)
+[2019-03-10 03:32:52.126] [DEBUG] cheese - Fecha: Sun Mar 10 2019 03:32:52 GMT-0500 (SA Pacific Standard Time)
+[2019-03-10 03:33:02.721] [DEBUG] cheese - Nuevo[POST]: { __v: 0,
+  oficina: 'Ventanilla #1',
+  servicio: 'PODERES',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2019-3-10',
+  estado: true,
+  _id: 5c84cbbe83adde132832f94c,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2019-03-10T08:33:02.502Z,
+       fechaFin: null,
+       fueAtendido: null,
+       minutosAtendidos: 0,
+       _id: 5c84cbbe83adde132832f94d } ] }
+[2019-03-10 03:33:11.410] [DEBUG] cheese - { MongoError: Unknown modifier: $pushAll
+    at Function.MongoError.create (R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb-core\lib\error.js:31:11)
+    at toError (R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb\lib\utils.js:139:22)
+    at R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb\lib\collection.js:1060:67
+    at R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb-core\lib\connection\pool.js:469:18
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+  name: 'MongoError',
+  message: 'Unknown modifier: $pushAll',
+  driver: true,
+  index: 0,
+  code: 9,
+  errmsg: 'Unknown modifier: $pushAll' }
+[2019-03-10 03:35:11.439] [DEBUG] cheese - { MongoError: Unknown modifier: $pushAll
+    at Function.MongoError.create (R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb-core\lib\error.js:31:11)
+    at toError (R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb\lib\utils.js:139:22)
+    at R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb\lib\collection.js:1060:67
+    at R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb-core\lib\connection\pool.js:469:18
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+  name: 'MongoError',
+  message: 'Unknown modifier: $pushAll',
+  driver: true,
+  index: 0,
+  code: 9,
+  errmsg: 'Unknown modifier: $pushAll' }
+[2019-03-10 03:37:11.449] [DEBUG] cheese - { MongoError: Unknown modifier: $pushAll
+    at Function.MongoError.create (R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb-core\lib\error.js:31:11)
+    at toError (R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb\lib\utils.js:139:22)
+    at R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb\lib\collection.js:1060:67
+    at R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb-core\lib\connection\pool.js:469:18
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+  name: 'MongoError',
+  message: 'Unknown modifier: $pushAll',
+  driver: true,
+  index: 0,
+  code: 9,
+  errmsg: 'Unknown modifier: $pushAll' }
+[2019-03-10 03:39:11.429] [DEBUG] cheese - { MongoError: Unknown modifier: $pushAll
+    at Function.MongoError.create (R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb-core\lib\error.js:31:11)
+    at toError (R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb\lib\utils.js:139:22)
+    at R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb\lib\collection.js:1060:67
+    at R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb-core\lib\connection\pool.js:469:18
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+  name: 'MongoError',
+  message: 'Unknown modifier: $pushAll',
+  driver: true,
+  index: 0,
+  code: 9,
+  errmsg: 'Unknown modifier: $pushAll' }
+[2019-03-10 03:40:44.583] [DEBUG] cheese - { MongoError: Unknown modifier: $pushAll
+    at Function.MongoError.create (R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb-core\lib\error.js:31:11)
+    at toError (R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb\lib\utils.js:139:22)
+    at R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb\lib\collection.js:1060:67
+    at R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb-core\lib\connection\pool.js:469:18
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+  name: 'MongoError',
+  message: 'Unknown modifier: $pushAll',
+  driver: true,
+  index: 0,
+  code: 9,
+  errmsg: 'Unknown modifier: $pushAll' }
+[2019-03-10 03:42:44.571] [DEBUG] cheese - { MongoError: Unknown modifier: $pushAll
+    at Function.MongoError.create (R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb-core\lib\error.js:31:11)
+    at toError (R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb\lib\utils.js:139:22)
+    at R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb\lib\collection.js:1060:67
+    at R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb-core\lib\connection\pool.js:469:18
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+  name: 'MongoError',
+  message: 'Unknown modifier: $pushAll',
+  driver: true,
+  index: 0,
+  code: 9,
+  errmsg: 'Unknown modifier: $pushAll' }
+[2019-03-10 03:44:50.015] [DEBUG] cheese - Fecha: Sun Mar 10 2019 03:44:50 GMT-0500 (SA Pacific Standard Time)
+[2019-03-10 03:44:50.786] [DEBUG] cheese - { MongoError: Unknown modifier: $pushAll
+    at Function.MongoError.create (R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb-core\lib\error.js:31:11)
+    at toError (R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb\lib\utils.js:139:22)
+    at R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb\lib\collection.js:1060:67
+    at R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb-core\lib\connection\pool.js:469:18
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+  name: 'MongoError',
+  message: 'Unknown modifier: $pushAll',
+  driver: true,
+  index: 0,
+  code: 9,
+  errmsg: 'Unknown modifier: $pushAll' }
+[2019-03-10 03:46:50.707] [DEBUG] cheese - { MongoError: Unknown modifier: $pushAll
+    at Function.MongoError.create (R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb-core\lib\error.js:31:11)
+    at toError (R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb\lib\utils.js:139:22)
+    at R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb\lib\collection.js:1060:67
+    at R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb-core\lib\connection\pool.js:469:18
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+  name: 'MongoError',
+  message: 'Unknown modifier: $pushAll',
+  driver: true,
+  index: 0,
+  code: 9,
+  errmsg: 'Unknown modifier: $pushAll' }
+[2019-03-10 03:48:50.720] [DEBUG] cheese - { MongoError: Unknown modifier: $pushAll
+    at Function.MongoError.create (R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb-core\lib\error.js:31:11)
+    at toError (R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb\lib\utils.js:139:22)
+    at R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb\lib\collection.js:1060:67
+    at R:\Dropbox\Rafael\Proyectos\Proyectos_Web\consuladoApp\node_modules\mongoose\node_modules\mongodb-core\lib\connection\pool.js:469:18
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+  name: 'MongoError',
+  message: 'Unknown modifier: $pushAll',
+  driver: true,
+  index: 0,
+  code: 9,
+  errmsg: 'Unknown modifier: $pushAll' }
+[2019-03-10 03:56:45.359] [DEBUG] cheese - Fecha: Sun Mar 10 2019 03:56:45 GMT-0500 (SA Pacific Standard Time)
+[2019-03-10 03:56:53.309] [DEBUG] cheese - Nuevo[POST]: { __v: 0,
+  oficina: 'Ventanilla #4',
+  servicio: 'VISAS',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2019-3-10',
+  estado: true,
+  _id: 5c84d155b2e6ea5534b3434f,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2019-03-10T08:56:53.217Z,
+       fechaFin: null,
+       fueAtendido: null,
+       minutosAtendidos: 0,
+       _id: 5c84d155b2e6ea5534b34350 } ] }
+[2019-03-10 03:57:59.204] [DEBUG] cheese - Numero: 0
+[2019-03-10 03:57:59.206] [DEBUG] cheese - Numeros: 0
+[2019-03-10 03:57:59.206] [DEBUG] cheese - Maximo: 0
+[2019-03-10 03:57:59.213] [DEBUG] cheese - Fecha:2019-3-10
+[2019-03-10 03:57:59.216] [DEBUG] cheese - Modulo:{ _id: 5c84d155b2e6ea5534b3434f,
+  oficina: 'Ventanilla #4',
+  servicio: 'VISAS',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2019-3-10',
+  estado: true,
+  __v: 0,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2019-03-10T08:56:53.217Z,
+       fechaFin: null,
+       fueAtendido: null,
+       minutosAtendidos: 0,
+       _id: 5c84d155b2e6ea5534b34350 } ] }
+[2019-03-10 03:57:59.238] [DEBUG] cheese - Guardado: { _id: 5c84d155b2e6ea5534b3434f,
+  oficina: 'Ventanilla #4',
+  servicio: 'VISAS',
+  indicePerAtendidas: 1,
+  contador: 1,
+  fecha: '2019-3-10',
+  estado: true,
+  __v: 1,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2019-03-10T08:56:53.217Z,
+       fechaFin: 2019-03-10T08:57:59.217Z,
+       fueAtendido: false,
+       minutosAtendidos: 1,
+       _id: 5c84d155b2e6ea5534b34350 },
+     { indiceAten: 1,
+       fechaInicio: 2019-03-10T08:57:59.217Z,
+       fechaFin: null,
+       fueAtendido: null,
+       minutosAtendidos: 0,
+       _id: 5c84d197b2e6ea5534b34351 } ] }
+[2019-03-10 03:57:59.238] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2019-03-10 03:57:59.241] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2019-03-10 03:58:09.967] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2019-03-10 03:58:33.736] [DEBUG] cheese - Numero: 1
+[2019-03-10 03:58:33.736] [DEBUG] cheese - Numeros: 1
+[2019-03-10 03:58:33.736] [DEBUG] cheese - Maximo: 1
+[2019-03-10 03:58:33.739] [DEBUG] cheese - Fecha:2019-3-10
+[2019-03-10 03:58:33.741] [DEBUG] cheese - Modulo:{ _id: 5c84d155b2e6ea5534b3434f,
+  oficina: 'Ventanilla #4',
+  servicio: 'VISAS',
+  indicePerAtendidas: 1,
+  contador: 1,
+  fecha: '2019-3-10',
+  estado: true,
+  __v: 1,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2019-03-10T08:56:53.217Z,
+       fechaFin: 2019-03-10T08:57:59.217Z,
+       fueAtendido: false,
+       minutosAtendidos: 1,
+       _id: 5c84d155b2e6ea5534b34350 },
+     { indiceAten: 1,
+       fechaInicio: 2019-03-10T08:57:59.217Z,
+       fechaFin: null,
+       fueAtendido: null,
+       minutosAtendidos: 0,
+       _id: 5c84d197b2e6ea5534b34351 } ] }
+[2019-03-10 03:58:33.749] [DEBUG] cheese - Guardado: { _id: 5c84d155b2e6ea5534b3434f,
+  oficina: 'Ventanilla #4',
+  servicio: 'VISAS',
+  indicePerAtendidas: 2,
+  contador: 2,
+  fecha: '2019-3-10',
+  estado: true,
+  __v: 2,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2019-03-10T08:56:53.217Z,
+       fechaFin: 2019-03-10T08:57:59.217Z,
+       fueAtendido: false,
+       minutosAtendidos: 1,
+       _id: 5c84d155b2e6ea5534b34350 },
+     { indiceAten: 1,
+       fechaInicio: 2019-03-10T08:57:59.217Z,
+       fechaFin: 2019-03-10T08:58:33.741Z,
+       fueAtendido: true,
+       minutosAtendidos: 1,
+       _id: 5c84d197b2e6ea5534b34351 },
+     { indiceAten: 2,
+       fechaInicio: 2019-03-10T08:58:33.741Z,
+       fechaFin: null,
+       fueAtendido: null,
+       minutosAtendidos: 0,
+       _id: 5c84d1b9b2e6ea5534b34352 } ] }
+[2019-03-10 03:58:33.750] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2019-03-10 03:58:33.753] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2019-03-10 03:58:40.113] [DEBUG] cheese - Cambiando trámite
+[2019-03-10 03:58:40.140] [DEBUG] cheese - Fecha: Sun Mar 10 2019 03:58:40 GMT-0500 (SA Pacific Standard Time)
+[2019-03-10 03:58:45.286] [DEBUG] cheese - Nuevo[POST]: { __v: 0,
+  oficina: 'Oficina #5',
+  servicio: 'EMPADRONAMIENTO',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2019-3-10',
+  estado: true,
+  _id: 5c84d1c5b2e6ea5534b34353,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2019-03-10T08:58:45.278Z,
+       fechaFin: null,
+       fueAtendido: null,
+       minutosAtendidos: 0,
+       _id: 5c84d1c5b2e6ea5534b34354 } ] }
+[2019-03-10 03:58:50.922] [DEBUG] cheese - Numero: 0
+[2019-03-10 03:58:50.922] [DEBUG] cheese - Numeros: 0
+[2019-03-10 03:58:50.922] [DEBUG] cheese - Maximo: 0
+[2019-03-10 03:58:50.924] [DEBUG] cheese - Fecha:2019-3-10
+[2019-03-10 03:58:50.925] [DEBUG] cheese - Modulo:{ _id: 5c84d1c5b2e6ea5534b34353,
+  oficina: 'Oficina #5',
+  servicio: 'EMPADRONAMIENTO',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2019-3-10',
+  estado: true,
+  __v: 0,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2019-03-10T08:58:45.278Z,
+       fechaFin: null,
+       fueAtendido: null,
+       minutosAtendidos: 0,
+       _id: 5c84d1c5b2e6ea5534b34354 } ] }
+[2019-03-10 03:58:50.933] [DEBUG] cheese - Guardado: { _id: 5c84d1c5b2e6ea5534b34353,
+  oficina: 'Oficina #5',
+  servicio: 'EMPADRONAMIENTO',
+  indicePerAtendidas: 1,
+  contador: 1,
+  fecha: '2019-3-10',
+  estado: true,
+  __v: 1,
+  perAtendidas: 
+   [ { indiceAten: 0,
+       fechaInicio: 2019-03-10T08:58:45.278Z,
+       fechaFin: 2019-03-10T08:58:50.926Z,
+       fueAtendido: true,
+       minutosAtendidos: 0,
+       _id: 5c84d1c5b2e6ea5534b34354 },
+     { indiceAten: 1,
+       fechaInicio: 2019-03-10T08:58:50.926Z,
+       fechaFin: null,
+       fueAtendido: null,
+       minutosAtendidos: 0,
+       _id: 5c84d1cab2e6ea5534b34355 } ] }
+[2019-03-10 03:58:50.933] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2019-03-10 03:58:50.935] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL

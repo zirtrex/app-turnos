@@ -100,8 +100,7 @@ router.post('/', function(req, res, next) {
 	
 	Modulo.findOne({'oficina': req.session.oficina, 'servicio': req.session.servicio, 'fecha': fechaActual}, function(err, modulo){
 		
-		console.log("Aquí 2");
-	
+		console.log("Metodo post para leer una sesion");	
 
 		if( typeof modulo === 'undefined' || modulo === null ){
 			
@@ -122,8 +121,10 @@ router.post('/', function(req, res, next) {
 			modulo.save(function (err) {
 				if (err) {
 					logger.debug(err);
+					console.log("1-" + err);
 				} else {
 					logger.debug("Nuevo[POST]: " + modulo.toString());
+					console.log("Nuevo[POST]: " + modulo.toString());
 					res.render('modulo.html', {'fechaAct': fechaFormat});
 				}
 			});
@@ -139,8 +140,10 @@ router.post('/', function(req, res, next) {
 			modulo.save(function (err) {
 				if (err) {
 					logger.debug(err);
+					console.log("2-" + err);
 				} else {
 					logger.debug("Ya existe[POST]: " + modulo.toString());
+					console.log("Nuevo[POST]: " + modulo.toString());
 					res.render('modulo.html', {'fechaAct': fechaFormat});						
 				}
 			});

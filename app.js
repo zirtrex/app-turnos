@@ -40,7 +40,7 @@ app.engine('html', require('ejs').renderFile);
 
 app.use(methodOverride("_method"));
 
-var MONGO_URL = 'mongodb://localhost:27017/consuladoApp';
+var MONGO_URL = 'mongodb://rafael:ZTRse7en@ds229465.mlab.com:29465/heroku_qzv4b77t';
 //mongodb://localhost:27017/consuladoApp mongodb://rafael:ZTRse7en@ds229465.mlab.com:29465/heroku_qzv4b77t
 var COOKIE_SECRET = 'secretencode';
 var COOKIE_NAME = 'sid';
@@ -82,11 +82,11 @@ io.on('connection', function(socket) {
             .then(function (modulos){
 
                 for(var i = 0; i < modulos.length; i++){
-                    
+
                     logger.debug("Numero: " + modulos[i].contador);
                     numeros.push(modulos[i].contador);
 
-                }                
+                }
 
                 done();
 
@@ -100,7 +100,7 @@ io.on('connection', function(socket) {
             logger.debug("Numeros: " + numeros.toString());
 
             if(numeros.length > 0){
-                max = Math.max(...numeros);                
+                max = Math.max(...numeros);
             }
 
             logger.debug("Maximo: " + max);
@@ -118,9 +118,9 @@ io.on('connection', function(socket) {
                     var fechaInicioAnterior = new Date(modulo.perAtendidas[indicePerAtendidasActual-1].fechaInicio);
                     var fechaInicioActual = new Date();
                     var minutosAtendidosAnterior = fechaFinAnterior.getTime() - fechaInicioAnterior.getTime();
-                    
+
                     var perAtendidas =  {indiceAten: indicePerAtendidasActual, fechaInicio: fechaInicioActual, fechaFin: null, fueAtendido: null, minutosAtendidos: 0};
-                    
+
                     modulo.indicePerAtendidas = indicePerAtendidasActual;
                     modulo.perAtendidas[indicePerAtendidasActual-1].fechaFin = fechaFinAnterior;
                     modulo.perAtendidas[indicePerAtendidasActual-1].minutosAtendidos = Math.round(minutosAtendidosAnterior / 1000 / 60);
@@ -132,13 +132,13 @@ io.on('connection', function(socket) {
 
                     modulo.save()
                     .then(function (modulo){
-                        
-                        logger.debug("Guardado: " + modulo.toString());                      
+
+                        logger.debug("Guardado: " + modulo.toString());
                         logger.debug("Emitiendo desde el contador al canal SHOW_CHANNEL");
-                        socket.broadcast.emit('modulo_SHOW_CHANNEL', {'modulo': modulo, 'aumentar': true, 'quitar': false}); 
+                        socket.broadcast.emit('modulo_SHOW_CHANNEL', {'modulo': modulo, 'aumentar': true, 'quitar': false});
                         logger.debug("Emitiendo desde el contador al canal COUNT_CHANNEL");
-                        io.emit('modulo_COUNT_CHANNEL', modulo); 
-                        
+                        io.emit('modulo_COUNT_CHANNEL', modulo);
+
                     })
                     .catch(function(err){
                         logger.debug("Ha ocurrido un error al guardar " + err);
@@ -167,7 +167,7 @@ io.on('connection', function(socket) {
 
                 logger.debug("Call Again: Emitiendo desde el contador al SHOW_CHANNEL");
                 socket.broadcast.emit('modulo_SHOW_CHANNEL', {'modulo': modulo, 'aumentar': false, 'quitar': false});
-            
+
             }
 
         });
@@ -186,7 +186,7 @@ io.on('connection', function(socket) {
                 var fechaInicioActual = new Date(modulo.perAtendidas[indicePerAtendidasActual].fechaInicio);
                 var fechaFinActual = new Date();
                 var minutosAtendidosActual = fechaFinActual.getTime() - fechaInicioActual.getTime();
-                
+
                 modulo.perAtendidas[indicePerAtendidasActual].fechaFin = fechaFinActual;
                 modulo.perAtendidas[indicePerAtendidasActual].minutosAtendidos = Math.round(minutosAtendidosActual / 1000 / 60);
                 modulo.perAtendidas[indicePerAtendidasActual].fueAtendido = datos.atendido;
@@ -254,7 +254,7 @@ app.use(function(err, req, res, next) {
 /**
  * Listen on provided port, on all network interfaces.
  */
- 
+
 
 server.listen(port);
 server.on('error', onError);
