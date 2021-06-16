@@ -1,4 +1,20 @@
-require('events').EventEmitter.prototype._maxListeners = 0;
+const http = require('http');
+
+const hostname = '127.0.0.1';
+const port = normalizePort(process.env.PORT || '3000');
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hola Mundo');
+});
+
+server.listen(port, hostname, () => {
+  console.log(`El servidor se está ejecutando en http://${hostname}:${port}/`);
+});
+
+
+/*require('events').EventEmitter.prototype._maxListeners = 0;
 var express = require('express');
 var http = require('http');
 var router = express.Router();
@@ -255,7 +271,7 @@ app.use(function(err, req, res, next) {
  * Listen on provided port, on all network interfaces.
  */
 
-
+/*
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
@@ -263,7 +279,7 @@ server.on('listening', onListening);
 /**
  * Normalize a port into a number, string, or false.
  */
-
+/*
 function normalizePort(val) {
     var port = parseInt(val, 10);
 
@@ -285,7 +301,7 @@ function normalizePort(val) {
 /**
  * Event listener for HTTP server "error" event.
  */
-
+/*
 function onError(error) {
     if (error.syscall !== 'listen') {
         throw error;
@@ -313,7 +329,7 @@ function onError(error) {
 /**
  * Event listener for HTTP server "listening" event.
  */
-
+/*
 function onListening() {
     var addr = server.address();
     var bind = typeof addr === 'string'
@@ -324,3 +340,4 @@ function onListening() {
 
 
 module.exports = app;
+*/
