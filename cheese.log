@@ -3366,3 +3366,60 @@
        _id: 5c84d1cab2e6ea5534b34355 } ] }
 [2019-03-10 03:58:50.933] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
 [2019-03-10 03:58:50.935] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2021-06-16 12:05:39.663] [DEBUG] cheese - Fecha: Wed Jun 16 2021 12:05:39 GMT-0500 (GMT-05:00)
+[2021-06-16 12:05:44.171] [DEBUG] cheese - Nuevo[POST]: {
+  __v: 0,
+  oficina: 'Ventanilla #1',
+  servicio: 'PODERES',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2021-6-16',
+  estado: true,
+  _id: ObjectID {
+    _bsontype: 'ObjectID',
+    id: <Buffer 60 ca 2f 68 fa 43 f1 0a 08 7d 90 08>
+  },
+  perAtendidas: [
+    {
+      indiceAten: 0,
+      fechaInicio: 2021-06-16T17:05:44.148Z,
+      fechaFin: null,
+      fueAtendido: null,
+      minutosAtendidos: 0,
+      _id: [ObjectID]
+    }
+  ]
+}
+[2021-06-16 12:07:31.594] [DEBUG] cheese - Call Again: Emitiendo desde el contador al SHOW_CHANNEL
+[2021-06-16 12:07:39.479] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2021-06-16 12:08:14.624] [DEBUG] cheese - Ya existe[GET]: {
+  _id: ObjectID {
+    _bsontype: 'ObjectID',
+    id: <Buffer 60 ca 2f 68 fa 43 f1 0a 08 7d 90 08>
+  },
+  oficina: 'Ventanilla #1',
+  servicio: 'PODERES',
+  indicePerAtendidas: 0,
+  contador: 0,
+  fecha: '2021-6-16',
+  estado: true,
+  __v: 1,
+  perAtendidas: [
+    {
+      indiceAten: 0,
+      fechaInicio: 2021-06-16T17:05:44.148Z,
+      fechaFin: null,
+      fueAtendido: null,
+      minutosAtendidos: 0,
+      _id: [ObjectID]
+    },
+    {
+      indiceAten: 0,
+      fechaInicio: 2021-06-16T17:08:14.619Z,
+      fechaFin: null,
+      fueAtendido: null,
+      minutosAtendidos: 0,
+      _id: [ObjectID]
+    }
+  ]
+}
