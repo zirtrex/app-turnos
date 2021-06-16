@@ -1,20 +1,4 @@
-const http = require('http');
-
-const hostname = '127.0.0.1';
-const port = process.env.PORT || '3000';
-
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hola Mundo');
-});
-
-server.listen(port, hostname, () => {
-  console.log(`El servidor se está ejecutando en http://${hostname}:${port}/`);
-});
-
-
-/*require('events').EventEmitter.prototype._maxListeners = 0;
+require('events').EventEmitter.prototype._maxListeners = 0;
 var express = require('express');
 var http = require('http');
 var router = express.Router();
@@ -35,11 +19,10 @@ log4js.configure({
 
 const logger = log4js.getLogger('cheese');
 
-
 var index = require('./routes/index');
-var modulo = require('./routes/modulo');
-var show = require('./routes/show');
-var reports = require('./routes/reports');
+//var modulo = require('./routes/modulo');
+//var show = require('./routes/show');
+//var reports = require('./routes/reports');
 
 var app = express();
 var server = http.Server(app); //createServer
@@ -55,7 +38,7 @@ app.engine('html', require('ejs').renderFile);
 
 
 app.use(methodOverride("_method"));
-
+/*
 var MONGO_URL = 'mongodb://localhost:27017/consuladoApp';
 //mongodb://localhost:27017/consuladoApp mongodb://rafael:ZTRse7en@ds229465.mlab.com:29465/heroku_qzv4b77t
 var COOKIE_SECRET = 'secretencode';
@@ -72,7 +55,7 @@ var sessionMiddleware = session({
         url: MONGO_URL,
         autoReconnect: true
     })
-});
+});*/
 
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
@@ -228,8 +211,8 @@ io.on('connection', function(socket) {
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(cookieParser(COOKIE_SECRET));
-app.use(sessionMiddleware);
+//app.use(cookieParser(COOKIE_SECRET));
+//app.use(sessionMiddleware);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
@@ -237,9 +220,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/', index);
-app.use('/modulo', modulo);
-app.use('/show', show);
-app.use('/reports', reports);
+//app.use('/modulo', modulo);
+//app.use('/show', show);
+//app.use('/reports', reports);
 
 
 // catch 404 and forward to error handler
@@ -271,7 +254,7 @@ app.use(function(err, req, res, next) {
  * Listen on provided port, on all network interfaces.
  */
 
-/*
+
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
@@ -279,7 +262,6 @@ server.on('listening', onListening);
 /**
  * Normalize a port into a number, string, or false.
  */
-/*
 function normalizePort(val) {
     var port = parseInt(val, 10);
 
@@ -301,7 +283,6 @@ function normalizePort(val) {
 /**
  * Event listener for HTTP server "error" event.
  */
-/*
 function onError(error) {
     if (error.syscall !== 'listen') {
         throw error;
@@ -329,7 +310,6 @@ function onError(error) {
 /**
  * Event listener for HTTP server "listening" event.
  */
-/*
 function onListening() {
     var addr = server.address();
     var bind = typeof addr === 'string'
@@ -340,4 +320,3 @@ function onListening() {
 
 
 module.exports = app;
-*/
