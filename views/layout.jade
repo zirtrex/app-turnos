@@ -3,11 +3,16 @@ html
 	head
 		title= title
 		meta(name="viewport" content="width=device-width, initial-scale=1")
-		link(rel='stylesheet', href='/stylesheets/style.css')
-		link(rel='stylesheet', href='/stylesheets/uikit.css')
 		link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Stardos+Stencil')
+		link(rel='stylesheet', href='/stylesheets/uikit.css')
+		link(rel='stylesheet', href='/stylesheets/style.css')
 		script(src="/javascripts/jquery-3.2.1.min.js")
-		script(src="/javascripts/uikit.min.js") 		
+		script(src="/javascripts/uikit.min.js")
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		script(src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js")
+		<!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+		script(src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js")
+		
 		
 	body(class="")
 		block content

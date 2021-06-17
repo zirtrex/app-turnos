@@ -33,7 +33,7 @@
 			<div style="" class="uk-container-2 uk-margin-medium">
 				<div id="app">
 					<h3>{{modulo.oficina}}</h3>
-					<h3>Trámite: {{modulo.servicio}}</h3>
+					<h3>Trámite: {{modulo.servicio}} </h3>
 					<hr/>
 					<p>Actualmente estás atendiendo al turno:
 						<strong id="actual"> #{{modulo.contador}}</strong>
@@ -53,11 +53,11 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>	
+	
 	<script src="/socket.io/socket.io.js"></script>
-    <script src="../javascripts/vue.min.js"></script>
-    <script src="../javascripts/axios.min.js"></script>
-
+	<script src="../javascripts/vue.min.js"></script>
+	<script src="../javascripts/axios.min.js"></script>
 	<script type="text/javascript">
 
 		var ipServidor = "";
@@ -82,17 +82,14 @@
 		    	modulo: {"oficina":"", "servicio":"", "estado":false, "perAtendidas":null, "contador":0, "fecha":null}
 		  	},
 		  	created: function () {
-
 		  		this.actualizar();
 
-		  		socket.on('connect', function(data){
-
+		  		socket.on('connect', function(data) {
 		  			socket.emit("Creando_Modulo", { 'channel': channel});
 		  			console.log("Conectando al servidor");
-
 					});
 
-					socket.on('modulo_' + channel, function(data){
+					socket.on('modulo_' + channel, function(data) {
 
 		  			if(data.error){
 							UIkit.modal.alert(data.msgError);
@@ -101,19 +98,17 @@
 						}
 
 					}.bind(this));
-
 		  	},
 		  	methods: {
 		  		call_again: function(e){
 						e.preventDefault();
-
 						if(this.modulo != null ){
 							console.log("Enviando datos al server para llamar nuevamente.");
-			  				socket.emit("call_again", { 'channel': channel, 'modulo': this.modulo });
-			  			}
+							socket.emit("call_again", { 'channel': channel, 'modulo': this.modulo });
+						}
 
 					},
-					contador: function(e){
+					contador: function(e) {
 						e.preventDefault();
 						e.target.blur();
 
@@ -155,14 +150,14 @@
 			           	this.$refs.btnTerminar.innerText = "Por favor, regrese al inicio.";
 
 					},
-					actualizar: function(){
+					actualizar: function() {
 						axios.get('/show/modulo')
-	                    .then(function (response) {
-	                    	console.log("Recibiendo modulo con Axios: ");
-	                    	console.log(response.data);
-	                       	this.modulo = response.data;
+						.then(function (response) {
+							console.log("Recibiendo modulo con Axios: ");
+							console.log(response.data);
+								this.modulo = response.data;
 
-	                    }.bind(this));
+						}.bind(this));
 					}
 				}
 		});

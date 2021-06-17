@@ -3423,3 +3423,266 @@
     }
   ]
 }
+[2021-06-16 16:29:49.213] [DEBUG] cheese - Fecha: Wed Jun 16 2021 16:29:49 GMT-0500 (GMT-05:00)
+[2021-06-16 16:30:33.252] [DEBUG] cheese - Fecha: Wed Jun 16 2021 16:30:33 GMT-0500 (GMT-05:00)
+[2021-06-16 16:30:58.037] [DEBUG] cheese - Fecha: Wed Jun 16 2021 16:30:58 GMT-0500 (GMT-05:00)
+[2021-06-16 16:32:04.547] [DEBUG] cheese - Fecha: Wed Jun 16 2021 16:32:04 GMT-0500 (GMT-05:00)
+[2021-06-16 16:32:12.241] [DEBUG] cheese - Fecha: Wed Jun 16 2021 16:32:12 GMT-0500 (GMT-05:00)
+[2021-06-16 16:33:20.142] [DEBUG] cheese - Fecha: Wed Jun 16 2021 16:33:20 GMT-0500 (GMT-05:00)
+[2021-06-16 16:34:24.682] [DEBUG] cheese - Fecha: Wed Jun 16 2021 16:34:24 GMT-0500 (GMT-05:00)
+[2021-06-17 10:54:20.019] [DEBUG] cheese - Nuevo[GET]: [object Object]
+[2021-06-17 11:01:04.266] [DEBUG] cheese - Fecha: Thu Jun 17 2021 11:01:04 GMT-0500 (GMT-05:00)
+[2021-06-17 11:01:18.620] [DEBUG] cheese - Fecha: Thu Jun 17 2021 11:01:18 GMT-0500 (GMT-05:00)
+[2021-06-17 11:01:36.390] [DEBUG] cheese - Fecha: Thu Jun 17 2021 11:01:36 GMT-0500 (GMT-05:00)
+[2021-06-17 11:02:21.289] [DEBUG] cheese - Fecha: Thu Jun 17 2021 11:02:21 GMT-0500 (GMT-05:00)
+[2021-06-17 11:03:04.259] [DEBUG] cheese - Nuevo[GET]: [object Object]
+[2021-06-17 11:13:14.270] [DEBUG] cheese - Fecha: Thu Jun 17 2021 11:13:14 GMT-0500 (GMT-05:00)
+[2021-06-17 11:13:22.508] [DEBUG] cheese - Nuevo[GET]: [object Object]
+[2021-06-17 11:15:11.018] [DEBUG] cheese - Fecha: Thu Jun 17 2021 11:15:11 GMT-0500 (GMT-05:00)
+[2021-06-17 11:15:20.326] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 11:15:58.688] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 11:16:25.398] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 11:23:56.520] [DEBUG] cheese - Fecha: Thu Jun 17 2021 11:23:56 GMT-0500 (GMT-05:00)
+[2021-06-17 11:23:59.271] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 11:24:36.205] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 11:30:53.114] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 11:35:02.810] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 11:36:02.541] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 11:38:35.424] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 11:38:57.622] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 11:39:37.219] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 11:42:11.616] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 11:43:26.459] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 11:50:56.518] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2021-06-17 11:56:58.904] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 12:01:16.764] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2021-06-17 12:02:19.110] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 12:07:46.869] [DEBUG] cheese - Fecha: Thu Jun 17 2021 12:07:46 GMT-0500 (GMT-05:00)
+[2021-06-17 12:08:01.405] [DEBUG] cheese - Fecha: Thu Jun 17 2021 12:08:01 GMT-0500 (GMT-05:00)
+[2021-06-17 12:08:04.449] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 12:09:30.595] [DEBUG] cheese - Fecha: Thu Jun 17 2021 12:09:30 GMT-0500 (GMT-05:00)
+[2021-06-17 12:09:36.290] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 12:10:22.139] [DEBUG] cheese - Nuevo[GET]: [object Object]
+[2021-06-17 12:11:25.267] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 12:11:39.697] [DEBUG] cheese - Nuevo[GET]: [object Object]
+[2021-06-17 12:13:39.095] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 12:15:41.488] [DEBUG] cheese - Nuevo[GET]: [object Object]
+[2021-06-17 12:19:15.262] [DEBUG] cheese - Nuevo[GET]: [object Object]
+[2021-06-17 12:20:40.125] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 12:20:55.371] [DEBUG] cheese - Call Again: Emitiendo desde el contador al SHOW_CHANNEL
+[2021-06-17 12:24:52.478] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 12:51:03.798] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 12:51:09.168] [DEBUG] cheese - Numero: 0
+[2021-06-17 12:52:15.969] [DEBUG] cheese - Numero: 0
+[2021-06-17 12:55:03.886] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 12:55:09.036] [DEBUG] cheese - Numero: 0
+[2021-06-17 12:55:09.037] [DEBUG] cheese - Numeros: 0
+[2021-06-17 12:55:09.037] [DEBUG] cheese - Maximo: 0
+[2021-06-17 12:55:09.315] [DEBUG] cheese - Error al encontrar el módulo, seguro se ha eliminado
+[2021-06-17 12:57:55.253] [DEBUG] cheese - Numero: 0
+[2021-06-17 12:57:55.254] [DEBUG] cheese - Numeros: 0
+[2021-06-17 12:57:55.254] [DEBUG] cheese - Maximo: 0
+[2021-06-17 12:57:55.535] [DEBUG] cheese - Error al encontrar el módulo, seguro se ha eliminado
+[2021-06-17 13:03:34.092] [DEBUG] cheese - Numero: 0
+[2021-06-17 13:03:34.093] [DEBUG] cheese - Numeros: 0
+[2021-06-17 13:03:34.093] [DEBUG] cheese - Maximo: 0
+[2021-06-17 13:03:34.367] [DEBUG] cheese - Error al encontrar el módulo, seguro se ha eliminado
+[2021-06-17 13:04:06.273] [DEBUG] cheese - Numero: 0
+[2021-06-17 13:04:06.274] [DEBUG] cheese - Numeros: 0
+[2021-06-17 13:04:06.274] [DEBUG] cheese - Maximo: 0
+[2021-06-17 13:26:17.571] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 13:30:45.978] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 13:34:57.863] [DEBUG] cheese - Nuevo[GET]: [object Object]
+[2021-06-17 13:35:10.864] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 13:35:39.226] [DEBUG] cheese - Numero: 0
+[2021-06-17 13:35:39.226] [DEBUG] cheese - Numeros: 0
+[2021-06-17 13:35:39.226] [DEBUG] cheese - Maximo: 0
+[2021-06-17 13:35:40.018] [DEBUG] cheese - Guardado: [object Object]
+[2021-06-17 13:35:40.018] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2021-06-17 13:35:40.019] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2021-06-17 13:57:33.861] [DEBUG] cheese - Numero: 1
+[2021-06-17 13:57:33.862] [DEBUG] cheese - Numeros: 1
+[2021-06-17 13:57:33.862] [DEBUG] cheese - Maximo: 1
+[2021-06-17 13:57:34.423] [DEBUG] cheese - Guardado: [object Object]
+[2021-06-17 13:57:34.423] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2021-06-17 13:57:34.424] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2021-06-17 14:02:09.971] [DEBUG] cheese - Nuevo[GET]: [object Object]
+[2021-06-17 14:02:28.225] [DEBUG] cheese - Numero: 0
+[2021-06-17 14:02:28.225] [DEBUG] cheese - Numeros: 0
+[2021-06-17 14:02:28.225] [DEBUG] cheese - Maximo: 0
+[2021-06-17 14:02:28.773] [DEBUG] cheese - Guardado: [object Object]
+[2021-06-17 14:02:28.773] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2021-06-17 14:02:28.774] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2021-06-17 14:04:07.260] [DEBUG] cheese - Numero: 1
+[2021-06-17 14:04:07.260] [DEBUG] cheese - Numeros: 1
+[2021-06-17 14:04:07.260] [DEBUG] cheese - Maximo: 1
+[2021-06-17 14:04:07.811] [DEBUG] cheese - Guardado: [object Object]
+[2021-06-17 14:04:07.811] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2021-06-17 14:04:07.812] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2021-06-17 14:07:30.597] [DEBUG] cheese - Numero: 2
+[2021-06-17 14:07:30.598] [DEBUG] cheese - Numeros: 2
+[2021-06-17 14:07:30.598] [DEBUG] cheese - Maximo: 2
+[2021-06-17 14:07:31.148] [DEBUG] cheese - Guardado: [object Object]
+[2021-06-17 14:07:31.148] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2021-06-17 14:07:31.149] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2021-06-17 14:09:11.480] [DEBUG] cheese - Numero: 3
+[2021-06-17 14:09:11.480] [DEBUG] cheese - Numeros: 3
+[2021-06-17 14:09:11.480] [DEBUG] cheese - Maximo: 3
+[2021-06-17 14:09:12.039] [DEBUG] cheese - Guardado: [object Object]
+[2021-06-17 14:09:12.039] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2021-06-17 14:09:12.039] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2021-06-17 14:11:37.144] [DEBUG] cheese - Numero: 4
+[2021-06-17 14:11:37.144] [DEBUG] cheese - Numeros: 4
+[2021-06-17 14:11:37.144] [DEBUG] cheese - Maximo: 4
+[2021-06-17 14:11:37.709] [DEBUG] cheese - Guardado: [object Object]
+[2021-06-17 14:11:37.709] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2021-06-17 14:11:37.710] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2021-06-17 14:12:34.481] [DEBUG] cheese - Numero: 5
+[2021-06-17 14:12:34.481] [DEBUG] cheese - Numeros: 5
+[2021-06-17 14:12:34.481] [DEBUG] cheese - Maximo: 5
+[2021-06-17 14:12:35.040] [DEBUG] cheese - Guardado: [object Object]
+[2021-06-17 14:12:35.040] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2021-06-17 14:12:35.040] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2021-06-17 14:13:37.220] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 14:13:55.550] [DEBUG] cheese - Numero: 6
+[2021-06-17 14:13:55.550] [DEBUG] cheese - Numeros: 6
+[2021-06-17 14:13:55.550] [DEBUG] cheese - Maximo: 6
+[2021-06-17 14:13:56.095] [DEBUG] cheese - Guardado: [object Object]
+[2021-06-17 14:13:56.095] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2021-06-17 14:13:56.096] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2021-06-17 14:14:15.626] [DEBUG] cheese - Numero: 7
+[2021-06-17 14:14:15.626] [DEBUG] cheese - Numeros: 7
+[2021-06-17 14:14:15.626] [DEBUG] cheese - Maximo: 7
+[2021-06-17 14:14:16.172] [DEBUG] cheese - Guardado: [object Object]
+[2021-06-17 14:14:16.172] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2021-06-17 14:14:16.172] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2021-06-17 14:14:20.438] [DEBUG] cheese - Numero: 8
+[2021-06-17 14:14:20.438] [DEBUG] cheese - Numeros: 8
+[2021-06-17 14:14:20.438] [DEBUG] cheese - Maximo: 8
+[2021-06-17 14:14:20.997] [DEBUG] cheese - Guardado: [object Object]
+[2021-06-17 14:14:20.997] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2021-06-17 14:14:20.997] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2021-06-17 14:15:57.080] [DEBUG] cheese - Nuevo[GET]: [object Object]
+[2021-06-17 14:16:17.352] [DEBUG] cheese - Numero: 0
+[2021-06-17 14:16:17.352] [DEBUG] cheese - Numeros: 0
+[2021-06-17 14:16:17.352] [DEBUG] cheese - Maximo: 0
+[2021-06-17 14:16:17.872] [DEBUG] cheese - Guardado: [object Object]
+[2021-06-17 14:16:17.872] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2021-06-17 14:16:17.873] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2021-06-17 14:18:37.758] [DEBUG] cheese - Nuevo[GET]: [object Object]
+[2021-06-17 14:18:40.737] [DEBUG] cheese - Numero: 0
+[2021-06-17 14:18:40.737] [DEBUG] cheese - Numeros: 0
+[2021-06-17 14:18:40.738] [DEBUG] cheese - Maximo: 0
+[2021-06-17 14:18:41.283] [DEBUG] cheese - Guardado: [object Object]
+[2021-06-17 14:18:41.283] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2021-06-17 14:18:41.285] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2021-06-17 14:22:15.168] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 14:22:19.264] [DEBUG] cheese - Numero: 1
+[2021-06-17 14:22:19.265] [DEBUG] cheese - Numeros: 1
+[2021-06-17 14:22:19.265] [DEBUG] cheese - Maximo: 1
+[2021-06-17 14:22:19.834] [DEBUG] cheese - Guardado: [object Object]
+[2021-06-17 14:22:19.834] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2021-06-17 14:22:19.835] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2021-06-17 14:55:25.467] [DEBUG] cheese - Numero: 2
+[2021-06-17 14:55:25.468] [DEBUG] cheese - Numeros: 2
+[2021-06-17 14:55:25.468] [DEBUG] cheese - Maximo: 2
+[2021-06-17 14:55:26.041] [DEBUG] cheese - Guardado: [object Object]
+[2021-06-17 14:55:26.041] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2021-06-17 14:55:26.042] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2021-06-17 14:57:58.404] [DEBUG] cheese - Numero: 3
+[2021-06-17 14:57:58.405] [DEBUG] cheese - Numeros: 3
+[2021-06-17 14:57:58.405] [DEBUG] cheese - Maximo: 3
+[2021-06-17 14:57:58.964] [DEBUG] cheese - Guardado: [object Object]
+[2021-06-17 14:57:58.965] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2021-06-17 14:57:58.965] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2021-06-17 14:58:13.457] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 14:58:18.031] [DEBUG] cheese - Numero: 4
+[2021-06-17 14:58:18.031] [DEBUG] cheese - Numeros: 4
+[2021-06-17 14:58:18.031] [DEBUG] cheese - Maximo: 4
+[2021-06-17 14:58:18.647] [DEBUG] cheese - Guardado: [object Object]
+[2021-06-17 14:58:18.647] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2021-06-17 14:58:18.648] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2021-06-17 14:59:15.306] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 15:02:05.642] [DEBUG] cheese - Numero: 5
+[2021-06-17 15:02:05.642] [DEBUG] cheese - Numeros: 5
+[2021-06-17 15:02:05.642] [DEBUG] cheese - Maximo: 5
+[2021-06-17 15:02:06.191] [DEBUG] cheese - Guardado: [object Object]
+[2021-06-17 15:02:06.191] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2021-06-17 15:02:06.192] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2021-06-17 15:04:12.981] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 15:04:17.052] [DEBUG] cheese - Numero: 6
+[2021-06-17 15:04:17.052] [DEBUG] cheese - Numeros: 6
+[2021-06-17 15:04:17.052] [DEBUG] cheese - Maximo: 6
+[2021-06-17 15:04:17.595] [DEBUG] cheese - Guardado: [object Object]
+[2021-06-17 15:04:17.595] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2021-06-17 15:04:17.596] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2021-06-17 15:39:08.204] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2021-06-17 15:45:47.990] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2021-06-17 15:49:12.362] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2021-06-17 15:49:50.232] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2021-06-17 15:51:02.975] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2021-06-17 15:53:22.691] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2021-06-17 15:54:51.384] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2021-06-17 16:00:27.547] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2021-06-17 16:00:27.548] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2021-06-17 16:00:46.374] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2021-06-17 16:00:55.517] [DEBUG] cheese - Numero: 7
+[2021-06-17 16:00:55.517] [DEBUG] cheese - Numeros: 7
+[2021-06-17 16:00:55.518] [DEBUG] cheese - Maximo: 7
+[2021-06-17 16:00:56.086] [DEBUG] cheese - Guardado: [object Object]
+[2021-06-17 16:00:56.086] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2021-06-17 16:00:56.087] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2021-06-17 16:00:59.644] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 16:01:02.260] [DEBUG] cheese - Numero: 8
+[2021-06-17 16:01:02.261] [DEBUG] cheese - Numeros: 8
+[2021-06-17 16:01:02.261] [DEBUG] cheese - Maximo: 8
+[2021-06-17 16:01:02.805] [DEBUG] cheese - Guardado: [object Object]
+[2021-06-17 16:01:02.805] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2021-06-17 16:01:02.806] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2021-06-17 16:05:43.253] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2021-06-17 16:05:43.254] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2021-06-17 16:07:51.921] [DEBUG] cheese - Numero: 9
+[2021-06-17 16:07:51.921] [DEBUG] cheese - Numeros: 9
+[2021-06-17 16:07:51.922] [DEBUG] cheese - Maximo: 9
+[2021-06-17 16:07:52.534] [DEBUG] cheese - Guardado: [object Object]
+[2021-06-17 16:07:52.534] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2021-06-17 16:07:52.534] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2021-06-17 16:14:15.711] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2021-06-17 16:14:15.711] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2021-06-17 16:14:15.711] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2021-06-17 16:14:41.440] [DEBUG] cheese - Numero: 10
+[2021-06-17 16:14:41.440] [DEBUG] cheese - Numeros: 10
+[2021-06-17 16:14:41.440] [DEBUG] cheese - Maximo: 10
+[2021-06-17 16:14:41.992] [DEBUG] cheese - Guardado: [object Object]
+[2021-06-17 16:14:41.992] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2021-06-17 16:14:41.993] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2021-06-17 16:14:50.357] [DEBUG] cheese - Numero: 11
+[2021-06-17 16:14:50.357] [DEBUG] cheese - Numeros: 11
+[2021-06-17 16:14:50.357] [DEBUG] cheese - Maximo: 11
+[2021-06-17 16:14:50.875] [DEBUG] cheese - Guardado: [object Object]
+[2021-06-17 16:14:50.875] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2021-06-17 16:14:50.876] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2021-06-17 16:14:56.128] [DEBUG] cheese - Numero: 12
+[2021-06-17 16:14:56.128] [DEBUG] cheese - Numeros: 12
+[2021-06-17 16:14:56.128] [DEBUG] cheese - Maximo: 12
+[2021-06-17 16:14:56.722] [DEBUG] cheese - Guardado: [object Object]
+[2021-06-17 16:14:56.722] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2021-06-17 16:14:56.723] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL
+[2021-06-17 16:22:50.695] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2021-06-17 16:22:50.695] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2021-06-17 16:22:50.695] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2021-06-17 16:22:50.695] [DEBUG] cheese - Se ha creado una vista b:SHOW_CHANNEL
+[2021-06-17 16:22:50.695] [DEBUG] cheese - Se ha creado una vista:SHOW_CHANNEL
+[2021-06-17 16:23:00.744] [DEBUG] cheese - Cambiando trámite
+[2021-06-17 16:23:00.760] [DEBUG] cheese - Fecha: Thu Jun 17 2021 16:23:00 GMT-0500 (GMT-05:00)
+[2021-06-17 16:23:09.054] [DEBUG] cheese - Ya existe[GET]: [object Object]
+[2021-06-17 16:23:12.169] [DEBUG] cheese - Numero: 0
+[2021-06-17 16:23:12.169] [DEBUG] cheese - Numeros: 0
+[2021-06-17 16:23:12.169] [DEBUG] cheese - Maximo: 0
+[2021-06-17 16:23:46.164] [DEBUG] cheese - Nuevo[GET]: [object Object]
+[2021-06-17 16:23:52.501] [DEBUG] cheese - Numero: 0
+[2021-06-17 16:23:52.501] [DEBUG] cheese - Numeros: 0
+[2021-06-17 16:23:52.501] [DEBUG] cheese - Maximo: 0
+[2021-06-17 16:23:53.058] [DEBUG] cheese - Guardado: [object Object]
+[2021-06-17 16:23:53.058] [DEBUG] cheese - Emitiendo desde el contador al canal SHOW_CHANNEL
+[2021-06-17 16:23:53.058] [DEBUG] cheese - Emitiendo desde el contador al canal COUNT_CHANNEL

@@ -1,4 +1,24 @@
-var mongoose = require('mongoose');
+const admin = require("firebase-admin");
+const firebase = require('firebase');
+
+var serviceAccount = require("../app-turnos-6624f-firebase-adminsdk-ekay6-b93aea0f85.json");
+
+const firebaseConfig = {
+    credential: admin.credential.cert(serviceAccount),
+    //databaseURL: 'https://app-turnos-6624f-default-rtdb.firebaseio.com/'   
+};
+
+admin.initializeApp(firebaseConfig);
+//firebase.analytics();
+
+//const database = admin.database();
+const database = admin.firestore();
+
+//database.ref('modulos').push({hola:'hola'});
+
+module.exports.database = database;
+
+/*var mongoose = require('mongoose');
 var Squema = mongoose.Schema;
 
 mongoose.connect('mongodb://localhost:27017/consuladoApp', { useMongoClient: true });
@@ -22,4 +42,4 @@ var moduloSquema = new Squema({
 
 var Modulo = mongoose.model('Modulo', moduloSquema);
 
-module.exports.Modulo = Modulo;
+module.exports.Modulo = Modulo;*/

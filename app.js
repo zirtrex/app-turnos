@@ -9,19 +9,19 @@ var favicon = require('serve-favicon');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
-var Modulo = require('./models/moduloModel').Modulo;
+const admin = require("firebase-admin");
+var database = require('./models/moduloModel').database;
+var moment = require('moment');
 var log4js = require('log4js');
-
 log4js.configure({
   appenders: { cheese: { type: 'file', filename: 'cheese.log' } },
   categories: { default: { appenders: ['cheese'], level: 'debug' } }
 });
-
 const logger = log4js.getLogger('cheese');
 
 var index = require('./routes/index');
-//var modulo = require('./routes/modulo');
-//var show = require('./routes/show');
+var modulo = require('./routes/modulo');
+var show = require('./routes/show');
 //var reports = require('./routes/reports');
 
 var app = express();
@@ -30,17 +30,13 @@ var debug = require('debug')('myapp:server');
 
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'jade');
-
 app.set('view engine', 'html');
 app.engine('html', require('ejs').renderFile);
 
-
 app.use(methodOverride("_method"));
-/*
-var MONGO_URL = 'mongodb://localhost:27017/consuladoApp';
-//mongodb://localhost:27017/consuladoApp mongodb://rafael:ZTRse7en@ds229465.mlab.com:29465/heroku_qzv4b77t
+
 var COOKIE_SECRET = 'secretencode';
 var COOKIE_NAME = 'sid';
 
@@ -50,12 +46,8 @@ var sessionMiddleware = session({
     resave: true,
     saveUninitialized: true,
     name: 'express.sid',
-    key: 'express.sid',
-    store: new MongoStore({
-        url: MONGO_URL,
-        autoReconnect: true
-    })
-});*/
+    key: 'express.sid'
+});
 
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
@@ -66,153 +58,132 @@ var io = require("socket.io")(server);
 app.io = io;
 
 io.on('connection', function(socket) {
-
+    const modulosRef = database.collection('modulos');
     var fecha = new Date();
     var fechaActual = fecha.getFullYear() + "-" + (fecha.getMonth()+1) + "-" + fecha.getDate();
 
-    socket.on('aumentar', function(datos){
-
+    socket.on('aumentar', async function(datos) {
         var numeros = [];
         var max = 0;
-
-        new Promise(function(done){
-            Modulo.find({'servicio': datos.modulo.servicio, 'fecha': fechaActual})
-            .exec()
-            .then(function (modulos){
-
-                for(var i = 0; i < modulos.length; i++){
-
-                    logger.debug("Numero: " + modulos[i].contador);
-                    numeros.push(modulos[i].contador);
-
-                }
-
-                done();
-
-            })
-            .catch(function(err){
-                logger.debug("Error al conectarse a la Base de datos: " + err);
-            });
-
-        }).then(function(){
-
+        new Promise(async function(done) {
+            const queryRef = await modulosRef.where('servicio', '==', datos.modulo.servicio)
+                                        .where('fecha', '==', fechaActual).get();        
+            if (!queryRef.empty) {
+                queryRef.forEach(doc => {
+                    logger.debug("Numero: " + doc.data().contador);
+                    numeros.push(doc.data().contador);
+                });                
+            }
+            done();
+        }).then(async function(){
             logger.debug("Numeros: " + numeros.toString());
-
-            if(numeros.length > 0){
+            if (numeros.length > 0) {
                 max = Math.max(...numeros);
             }
-
             logger.debug("Maximo: " + max);
 
-            Modulo.findOne({'oficina': datos.modulo.oficina, 'servicio': datos.modulo.servicio, 'fecha': fechaActual})
-            .exec()
-            .then(function (modulo){
-                logger.debug("Fecha:" + fechaActual);
-                logger.debug("Modulo:" + modulo);
+            const queryRef = await modulosRef.where('oficina', '==', datos.modulo.oficina)
+                                        .where('servicio', '==', datos.modulo.servicio)
+                                        .where('fecha', '==', fechaActual).get();        
+            if (!queryRef.empty) {
+                var id, modulo;
+                queryRef.forEach(doc => {
+                    modulo = doc.data();
+                    id = doc.id;
+                });
+                console.log(modulo);
+                if (typeof modulo !== 'undefined') {
+                    //Construimos el objeto perAtendidas
+                    var indicePerAtendidasActual =  modulo.perAtendidas.length - 1; // He cambiado modulo.contador por modulo.perAtendidas.length
+                    var fechaFinAnterior = moment();
+                    var fechaInicioAnterior = moment(modulo.perAtendidas[indicePerAtendidasActual].fechaInicio.toDate());
+                    var fechaInicioActual = moment();
+                    var minutosAtendidosAnterior = Math.ceil(fechaFinAnterior.diff(fechaInicioAnterior, "minutes", true));
 
-                if(modulo){
-                     //Construimos el objeto perAtendidas
-                    var indicePerAtendidasActual =  modulo.perAtendidas.length; // He cambiado modulo.contador por modulo.perAtendidas.length
-                    var fechaFinAnterior = new Date();
-                    var fechaInicioAnterior = new Date(modulo.perAtendidas[indicePerAtendidasActual-1].fechaInicio);
-                    var fechaInicioActual = new Date();
-                    var minutosAtendidosAnterior = fechaFinAnterior.getTime() - fechaInicioAnterior.getTime();
-
-                    var perAtendidas =  {indiceAten: indicePerAtendidasActual, fechaInicio: fechaInicioActual, fechaFin: null, fueAtendido: null, minutosAtendidos: 0};
-
-                    modulo.indicePerAtendidas = indicePerAtendidasActual;
-                    modulo.perAtendidas[indicePerAtendidasActual-1].fechaFin = fechaFinAnterior;
-                    modulo.perAtendidas[indicePerAtendidasActual-1].minutosAtendidos = Math.round(minutosAtendidosAnterior / 1000 / 60);
-                    modulo.perAtendidas[indicePerAtendidasActual-1].fueAtendido = datos.atendido;
-                    modulo.perAtendidas.push(perAtendidas);
+                    modulo.indicePerAtendidas = indicePerAtendidasActual + 1;
+                    modulo.perAtendidas[indicePerAtendidasActual].fechaFin = fechaFinAnterior;
+                    modulo.perAtendidas[indicePerAtendidasActual].minutosAtendidos = minutosAtendidosAnterior;
+                    modulo.perAtendidas[indicePerAtendidasActual].fueAtendido = datos.atendido;
+                    
                     //Elegimos el número más alto y aumentamos en 1
                     modulo.contador = max + 1;
                     modulo.estado = true,
-
-                    modulo.save()
-                    .then(function (modulo){
-
+                    modulosRef.doc(id).update(modulo).then(function(){
+                        var perAtendidas =  {indiceAten: indicePerAtendidasActual + 1, fechaInicio: fechaInicioActual, fechaFin: null, fueAtendido: null, minutosAtendidos: 0};
+                        modulosRef.doc(id).update({
+                            'perAtendidas': admin.firestore.FieldValue.arrayUnion(perAtendidas)										
+                        });
                         logger.debug("Guardado: " + modulo.toString());
                         logger.debug("Emitiendo desde el contador al canal SHOW_CHANNEL");
                         socket.broadcast.emit('modulo_SHOW_CHANNEL', {'modulo': modulo, 'aumentar': true, 'quitar': false});
                         logger.debug("Emitiendo desde el contador al canal COUNT_CHANNEL");
                         io.emit('modulo_COUNT_CHANNEL', modulo);
-
-                    })
-                    .catch(function(err){
-                        logger.debug("Ha ocurrido un error al guardar " + err);
-                        io.emit('modulo_COUNT_CHANNEL', {'modulo': modulo, 'error': true, 'msgError': err});
+                    }).catch(error => {
+                        logger.debug("Error: " + modulo.toString());
                     });
-
-                }else{
+                } else {
                     logger.debug("Error al encontrar el módulo, seguro se ha eliminado");
                     io.emit('modulo_COUNT_CHANNEL', {'modulo': modulo, 'error': true, 'msgError': "No se ha podido encontrar la Oficina o el Trámite, por favor recargue la página. Si el problema persiste comuníquese con el administrador del sistema."});
                 }
-
-            })
-            .catch(function(err){
-                logger.debug("Error al conectarse a la Base de datos: " + err);
-                io.emit('modulo_COUNT_CHANNEL', {'modulo': modulo, 'error': true, 'msgError': err});
-            });
-        });
-
-    });
-
-    socket.on('call_again', function(datos){
-
-        Modulo.findOne({'oficina': datos.modulo.oficina, 'servicio': datos.modulo.servicio, 'fecha': fechaActual}, function(err, modulo){
-
-            if(modulo){
-
-                logger.debug("Call Again: Emitiendo desde el contador al SHOW_CHANNEL");
-                socket.broadcast.emit('modulo_SHOW_CHANNEL', {'modulo': modulo, 'aumentar': false, 'quitar': false});
-
+            } else {
+                io.emit('modulo_COUNT_CHANNEL', {'modulo': modulo, 'error': true, 'msgError': "No se ha podido encontrar la Oficina o el Trámite, por favor recargue la página. Si el problema persiste comuníquese con el administrador del sistema."});
             }
-
         });
-
     });
 
-    socket.on('terminar', function(datos){
+    socket.on('call_again', async function(datos) {
+        const queryRef = await modulosRef.where('oficina', '==', datos.modulo.oficina)
+                                        .where('servicio', '==', datos.modulo.servicio)
+                                        .where('fecha', '==', fechaActual).get();        
+        if (!queryRef.empty) {
+            logger.debug("Call Again: Emitiendo desde el contador al SHOW_CHANNEL");
+            var modulo;
+			queryRef.forEach(doc => {
+				modulo = doc.data();
+			});
+            socket.broadcast.emit('modulo_SHOW_CHANNEL', {'modulo': modulo, 'aumentar': false, 'quitar': false});
+        }
+    });
 
-        Modulo.findOne({'oficina': datos.modulo.oficina, 'servicio': datos.modulo.servicio, 'fecha': fechaActual}, function(err, modulo){
-
-            if(modulo){
-
-                //Construimos el objeto perAtendidas
+    socket.on('terminar', async function(datos) {
+        const queryRef = await modulosRef.where('oficina', '==', datos.modulo.oficina)
+                                        .where('servicio', '==', datos.modulo.servicio)
+                                        .where('fecha', '==', fechaActual).get();        
+        if (!queryRef.empty) {
+            var id, modulo;
+            queryRef.forEach(doc => {
+                modulo = doc.data();
+                id = doc.id;
+            });
+            if (modulo) {
                 var indicePerAtendidasActual =  modulo.indicePerAtendidas;
 
-                var fechaInicioActual = new Date(modulo.perAtendidas[indicePerAtendidasActual].fechaInicio);
-                var fechaFinActual = new Date();
-                var minutosAtendidosActual = fechaFinActual.getTime() - fechaInicioActual.getTime();
+                var fechaInicioActual = new Date(modulo.perAtendidas[indicePerAtendidasActual].fechaInicio.toDate());
+                var fechaFinActual = new moment();
+                var minutosAtendidosActual = Math.ceil(fechaFinActual.diff(fechaInicioActual, "minutes", true));
 
                 modulo.perAtendidas[indicePerAtendidasActual].fechaFin = fechaFinActual;
-                modulo.perAtendidas[indicePerAtendidasActual].minutosAtendidos = Math.round(minutosAtendidosActual / 1000 / 60);
+                modulo.perAtendidas[indicePerAtendidasActual].minutosAtendidos = minutosAtendidosActual;
                 modulo.perAtendidas[indicePerAtendidasActual].fueAtendido = datos.atendido;
+                modulo.estado = false;
 
-                //Elegimos el número más alto y aumentamos en 1
-                modulo.estado = false,
-
-                modulo.save(function (err) {
-                    if (err) {
-                        logger.debug(err);
-                    } else {
-                        logger.debug("Terminando: " + modulo.toString());
-                        socket.broadcast.emit('modulo_SHOW_CHANNEL', {'modulo': modulo, 'aumentar': false, 'quitar': true});
-                    }
+                modulosRef.doc(id).update(modulo).then(() => {               
+                    logger.debug("Terminando: " + modulo.toString());
+                    socket.broadcast.emit('modulo_SHOW_CHANNEL', {'modulo': modulo, 'aumentar': false, 'quitar': true});
+                    
+                }).catch(error => {
+                    logger.debug("Error: " + error);
                 });
-
             }
-        });
-
+        }
     });
 
 });
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-//app.use(cookieParser(COOKIE_SECRET));
-//app.use(sessionMiddleware);
+app.use(cookieParser(COOKIE_SECRET));
+app.use(sessionMiddleware);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
@@ -220,8 +191,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/', index);
-//app.use('/modulo', modulo);
-//app.use('/show', show);
+app.use('/modulo', modulo);
+app.use('/show', show);
 //app.use('/reports', reports);
 
 
@@ -243,18 +214,13 @@ app.use(function(err, req, res, next) {
   res.render('error.jade');
 });
 
-
-
 /**
  * Create HTTP server.
  */
 
-
 /**
  * Listen on provided port, on all network interfaces.
  */
-
-
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
@@ -277,8 +243,6 @@ function normalizePort(val) {
 
     return false;
 }
-
-
 
 /**
  * Event listener for HTTP server "error" event.
